@@ -2290,9 +2290,9 @@
 				</dict>
 			</array>
 		</dict>
-		<real>332689324.169936</real>
-		<string>{0, 2137}</string>
-		<string>{593, 0}</string>
+		<real>332697104.85426599</real>
+		<string>{0, 2131}</string>
+		<string>{595, 0}</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -2434,7 +2434,7 @@
 				</dict>
 			</array>
 		</dict>
-		<real>332696138.85129303</real>
+		<real>332697018.46416801</real>
 		<string>{936, 2016}</string>
 		<string>{2784, 0}</string>
 		<dict>
@@ -3657,7 +3657,7 @@
 				<integer>284</integer>
 			</dict>
 			<key>NS.time</key>
-			<real>332696406.64596897</real>
+			<real>332697079.055538</real>
 		</dict>
 		<dict>
 			<key>$classes</key>
@@ -3668,7 +3668,7 @@
 			<key>$classname</key>
 			<string>NSDate</string>
 		</dict>
-		<string>Today at 12:40 PM</string>
+		<string>Today at 12:51 PM</string>
 		<integer>106</integer>
 		<dict>
 			<key>$class</key>
@@ -3751,7 +3751,7 @@
 				<integer>290</integer>
 			</dict>
 		</dict>
-		<string>file://localhost/Users/gonzaloaizpun/Source/ios/PDFLibrary/PDFLibrary/PDFLibrary/XIBs/HomeController-landscape2.xib</string>
+		<string>file://localhost/Users/gonzaloaizpun/Source/ios/PDFLibrary/PDFLibrary/PDFLibrary/Core/PDFLibraryAppDelegate.m</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -3769,7 +3769,7 @@
 				<integer>292</integer>
 			</dict>
 		</dict>
-		<string>file://localhost/Users/gonzaloaizpun/Source/ios/PDFLibrary/PDFLibrary/PDFLibrary/Controllers/HomeController.m</string>
+		<string>file://localhost/Users/gonzaloaizpun/Source/ios/PDFLibrary/PDFLibrary/PDFLibrary/XIBs/HomeController-landscape2.xib</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -3787,7 +3787,7 @@
 				<integer>294</integer>
 			</dict>
 		</dict>
-		<string>file://localhost/Users/gonzaloaizpun/Source/ios/PDFLibrary/PDFLibrary/PDFLibrary/XIBs/HomeController-landscape.xib</string>
+		<string>file://localhost/Users/gonzaloaizpun/Source/ios/PDFLibrary/PDFLibrary/PDFLibrary/Controllers/HomeController.m</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -3805,7 +3805,7 @@
 				<integer>296</integer>
 			</dict>
 		</dict>
-		<string>file://localhost/Users/gonzaloaizpun/Source/ios/PDFLibrary/PDFLibrary/PDFLibrary/XIBs/HomeController-portrait.xib</string>
+		<string>file://localhost/Users/gonzaloaizpun/Source/ios/PDFLibrary/PDFLibrary/PDFLibrary/XIBs/HomeController-landscape.xib</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -3823,7 +3823,7 @@
 				<integer>298</integer>
 			</dict>
 		</dict>
-		<string>file://localhost/Users/gonzaloaizpun/Source/ios/PDFLibrary/PDFLibrary/PDFLibrary/XIBs/MainWindow.xib</string>
+		<string>file://localhost/Users/gonzaloaizpun/Source/ios/PDFLibrary/PDFLibrary/PDFLibrary/XIBs/HomeController-portrait.xib</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -3841,7 +3841,7 @@
 				<integer>300</integer>
 			</dict>
 		</dict>
-		<string>file://localhost/Users/gonzaloaizpun/Source/ios/PDFLibrary/PDFLibrary/PDFLibrary/Controllers/HomeController.h</string>
+		<string>file://localhost/Users/gonzaloaizpun/Source/ios/PDFLibrary/PDFLibrary/PDFLibrary/XIBs/MainWindow.xib</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -3859,7 +3859,7 @@
 				<integer>302</integer>
 			</dict>
 		</dict>
-		<string>file://localhost/Users/gonzaloaizpun/Source/ios/PDFLibrary/PDFLibrary/PDFLibrary/Core/PDFLibraryAppDelegate.m</string>
+		<string>file://localhost/Users/gonzaloaizpun/Source/ios/PDFLibrary/PDFLibrary/PDFLibrary/Controllers/HomeController.h</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -3953,7 +3953,7 @@
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>484</integer>
+					<integer>485</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
@@ -3965,7 +3965,7 @@
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>485</integer>
+					<integer>486</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
@@ -4065,7 +4065,7 @@
 		<string>IDEShowUtilities</string>
 		<string>IDEEditorArea</string>
 		<true/>
-		<string>HomeController-landscape2.xib</string>
+		<string>PDFLibraryAppDelegate.m</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -4202,7 +4202,7 @@
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>332</integer>
+					<integer>333</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
@@ -4801,11 +4801,11 @@
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>415</integer>
+					<integer>417</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>440</integer>
+					<integer>442</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
@@ -4817,11 +4817,11 @@
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>475</integer>
+					<integer>476</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>483</integer>
+					<integer>484</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
@@ -4841,7 +4841,7 @@
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
-				<integer>414</integer>
+				<integer>416</integer>
 			</dict>
 			<key>geniusEditorContextNode</key>
 			<dict>
@@ -4856,14 +4856,14 @@
 			<key>rootLayoutTreeNode</key>
 			<dict>
 				<key>CF$UID</key>
-				<integer>411</integer>
+				<integer>413</integer>
 			</dict>
 		</dict>
 		<dict>
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
-				<integer>413</integer>
+				<integer>415</integer>
 			</dict>
 			<key>children</key>
 			<dict>
@@ -4882,19 +4882,19 @@
 			<key>parent</key>
 			<dict>
 				<key>CF$UID</key>
-				<integer>411</integer>
+				<integer>413</integer>
 			</dict>
 		</dict>
 		<dict>
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
-				<integer>410</integer>
+				<integer>412</integer>
 			</dict>
 			<key>DocumentLocation</key>
 			<dict>
 				<key>CF$UID</key>
-				<integer>407</integer>
+				<integer>409</integer>
 			</dict>
 			<key>DomainIdentifier</key>
 			<dict>
@@ -4927,15 +4927,15 @@
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>403</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
 					<integer>404</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>405</integer>
+					<integer>406</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>407</integer>
 				</dict>
 			</array>
 		</dict>
@@ -4943,14 +4943,15 @@
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
-				<integer>402</integer>
+				<integer>403</integer>
 			</dict>
 			<key>Identifier</key>
 			<dict>
 				<key>CF$UID</key>
-				<integer>352</integer>
+				<integer>402</integer>
 			</dict>
 		</dict>
+		<string>PDFLibraryAppDelegate.m</string>
 		<dict>
 			<key>$classes</key>
 			<array>
@@ -4964,19 +4965,20 @@
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
-				<integer>402</integer>
+				<integer>403</integer>
 			</dict>
 			<key>Identifier</key>
 			<dict>
 				<key>CF$UID</key>
-				<integer>351</integer>
+				<integer>405</integer>
 			</dict>
 		</dict>
+		<string>Core</string>
 		<dict>
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
-				<integer>402</integer>
+				<integer>403</integer>
 			</dict>
 			<key>Identifier</key>
 			<dict>
@@ -4988,12 +4990,12 @@
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
-				<integer>402</integer>
+				<integer>403</integer>
 			</dict>
 			<key>Identifier</key>
 			<dict>
 				<key>CF$UID</key>
-				<integer>406</integer>
+				<integer>408</integer>
 			</dict>
 		</dict>
 		<string>PDFLibrary</string>
@@ -5001,12 +5003,12 @@
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
-				<integer>409</integer>
+				<integer>411</integer>
 			</dict>
 			<key>documentURL</key>
 			<dict>
 				<key>CF$UID</key>
-				<integer>408</integer>
+				<integer>410</integer>
 			</dict>
 			<key>timestamp</key>
 			<dict>
@@ -5021,7 +5023,7 @@
 				<integer>26</integer>
 			</dict>
 			<key>NS.string</key>
-			<string>file://localhost/Users/gonzaloaizpun/Source/ios/PDFLibrary/PDFLibrary/PDFLibrary/XIBs/HomeController-landscape2.xib</string>
+			<string>file://localhost/Users/gonzaloaizpun/Source/ios/PDFLibrary/PDFLibrary/PDFLibrary/Core/PDFLibraryAppDelegate.m</string>
 		</dict>
 		<dict>
 			<key>$classes</key>
@@ -5045,12 +5047,12 @@
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
-				<integer>413</integer>
+				<integer>415</integer>
 			</dict>
 			<key>children</key>
 			<dict>
 				<key>CF$UID</key>
-				<integer>412</integer>
+				<integer>414</integer>
 			</dict>
 			<key>contentType</key>
 			<integer>0</integer>
@@ -5109,14 +5111,6 @@
 			<array>
 				<dict>
 					<key>CF$UID</key>
-					<integer>416</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>417</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
 					<integer>418</integer>
 				</dict>
 				<dict>
@@ -5131,6 +5125,14 @@
 					<key>CF$UID</key>
 					<integer>421</integer>
 				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>422</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>423</integer>
+				</dict>
 			</array>
 			<key>NS.objects</key>
 			<array>
@@ -5140,15 +5142,7 @@
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>422</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
 					<integer>424</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>48</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
@@ -5156,7 +5150,15 @@
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>434</integer>
+					<integer>48</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>428</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>436</integer>
 				</dict>
 			</array>
 		</dict>
@@ -5176,7 +5178,7 @@
 			<array>
 				<dict>
 					<key>CF$UID</key>
-					<integer>423</integer>
+					<integer>425</integer>
 				</dict>
 			</array>
 			<key>NS.objects</key>
@@ -5198,7 +5200,7 @@
 			<array>
 				<dict>
 					<key>CF$UID</key>
-					<integer>425</integer>
+					<integer>427</integer>
 				</dict>
 			</array>
 			<key>NS.objects</key>
@@ -5227,7 +5229,7 @@
 			<array>
 				<dict>
 					<key>CF$UID</key>
-					<integer>427</integer>
+					<integer>429</integer>
 				</dict>
 			</array>
 		</dict>
@@ -5241,11 +5243,11 @@
 			<array>
 				<dict>
 					<key>CF$UID</key>
-					<integer>428</integer>
+					<integer>430</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>431</integer>
+					<integer>433</integer>
 				</dict>
 			</array>
 		</dict>
@@ -5270,11 +5272,11 @@
 			<array>
 				<dict>
 					<key>CF$UID</key>
-					<integer>429</integer>
+					<integer>431</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>430</integer>
+					<integer>432</integer>
 				</dict>
 			</array>
 		</dict>
@@ -5301,11 +5303,11 @@
 			<array>
 				<dict>
 					<key>CF$UID</key>
-					<integer>432</integer>
+					<integer>434</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>433</integer>
+					<integer>435</integer>
 				</dict>
 			</array>
 		</dict>
@@ -5328,7 +5330,7 @@
 			<array>
 				<dict>
 					<key>CF$UID</key>
-					<integer>435</integer>
+					<integer>437</integer>
 				</dict>
 			</array>
 		</dict>
@@ -5342,11 +5344,11 @@
 			<array>
 				<dict>
 					<key>CF$UID</key>
-					<integer>436</integer>
+					<integer>438</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>438</integer>
+					<integer>440</integer>
 				</dict>
 			</array>
 		</dict>
@@ -5371,11 +5373,11 @@
 			<array>
 				<dict>
 					<key>CF$UID</key>
-					<integer>429</integer>
+					<integer>431</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>437</integer>
+					<integer>439</integer>
 				</dict>
 			</array>
 		</dict>
@@ -5401,37 +5403,15 @@
 			<array>
 				<dict>
 					<key>CF$UID</key>
-					<integer>432</integer>
+					<integer>434</integer>
 				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>439</integer>
-				</dict>
-			</array>
-		</dict>
-		<real>556</real>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>46</integer>
-			</dict>
-			<key>NS.keys</key>
-			<array>
 				<dict>
 					<key>CF$UID</key>
 					<integer>441</integer>
 				</dict>
 			</array>
-			<key>NS.objects</key>
-			<array>
-				<dict>
-					<key>CF$UID</key>
-					<integer>442</integer>
-				</dict>
-			</array>
 		</dict>
-		<string>EditorLayout_PersistentRepresentation</string>
+		<real>556</real>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -5453,6 +5433,28 @@
 				</dict>
 			</array>
 		</dict>
+		<string>EditorLayout_PersistentRepresentation</string>
+		<dict>
+			<key>$class</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>46</integer>
+			</dict>
+			<key>NS.keys</key>
+			<array>
+				<dict>
+					<key>CF$UID</key>
+					<integer>445</integer>
+				</dict>
+			</array>
+			<key>NS.objects</key>
+			<array>
+				<dict>
+					<key>CF$UID</key>
+					<integer>446</integer>
+				</dict>
+			</array>
+		</dict>
 		<string>Main</string>
 		<dict>
 			<key>$class</key>
@@ -5464,22 +5466,22 @@
 			<array>
 				<dict>
 					<key>CF$UID</key>
-					<integer>445</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>446</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
 					<integer>447</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>448</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>449</integer>
 				</dict>
 			</array>
 			<key>NS.objects</key>
 			<array>
 				<dict>
 					<key>CF$UID</key>
-					<integer>448</integer>
+					<integer>450</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
@@ -5487,7 +5489,7 @@
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>473</integer>
+					<integer>474</integer>
 				</dict>
 			</array>
 		</dict>
@@ -5504,7 +5506,7 @@
 			<array>
 				<dict>
 					<key>CF$UID</key>
-					<integer>449</integer>
+					<integer>451</integer>
 				</dict>
 			</array>
 		</dict>
@@ -5516,14 +5518,6 @@
 			</dict>
 			<key>NS.keys</key>
 			<array>
-				<dict>
-					<key>CF$UID</key>
-					<integer>450</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>451</integer>
-				</dict>
 				<dict>
 					<key>CF$UID</key>
 					<integer>452</integer>
@@ -5544,9 +5538,6 @@
 					<key>CF$UID</key>
 					<integer>456</integer>
 				</dict>
-			</array>
-			<key>NS.objects</key>
-			<array>
 				<dict>
 					<key>CF$UID</key>
 					<integer>457</integer>
@@ -5555,25 +5546,36 @@
 					<key>CF$UID</key>
 					<integer>458</integer>
 				</dict>
+			</array>
+			<key>NS.objects</key>
+			<array>
 				<dict>
 					<key>CF$UID</key>
-					<integer>465</integer>
+					<integer>459</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>470</integer>
+					<integer>460</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>352</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>17</integer>
+					<integer>467</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
 					<integer>471</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>402</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>20</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>472</integer>
 				</dict>
 			</array>
 		</dict>
@@ -5584,17 +5586,17 @@
 		<string>DocumentNavigableItemName</string>
 		<string>DocumentExtensionIdentifier</string>
 		<string>DocumentURL</string>
-		<string>com.apple.InterfaceBuilder3.CocoaTouch.XIB</string>
+		<string>public.objective-c-source</string>
 		<dict>
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
-				<integer>410</integer>
+				<integer>412</integer>
 			</dict>
 			<key>DocumentLocation</key>
 			<dict>
 				<key>CF$UID</key>
-				<integer>407</integer>
+				<integer>409</integer>
 			</dict>
 			<key>DomainIdentifier</key>
 			<dict>
@@ -5604,7 +5606,7 @@
 			<key>IdentifierPath</key>
 			<dict>
 				<key>CF$UID</key>
-				<integer>459</integer>
+				<integer>461</integer>
 			</dict>
 			<key>IndexOfDocumentIdentifier</key>
 			<dict>
@@ -5622,19 +5624,19 @@
 			<array>
 				<dict>
 					<key>CF$UID</key>
-					<integer>460</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>461</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
 					<integer>462</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
 					<integer>463</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>464</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>465</integer>
 				</dict>
 			</array>
 		</dict>
@@ -5642,31 +5644,31 @@
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
-				<integer>402</integer>
+				<integer>403</integer>
 			</dict>
 			<key>Identifier</key>
 			<dict>
 				<key>CF$UID</key>
-				<integer>352</integer>
+				<integer>402</integer>
 			</dict>
 		</dict>
 		<dict>
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
-				<integer>402</integer>
+				<integer>403</integer>
 			</dict>
 			<key>Identifier</key>
 			<dict>
 				<key>CF$UID</key>
-				<integer>351</integer>
+				<integer>405</integer>
 			</dict>
 		</dict>
 		<dict>
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
-				<integer>402</integer>
+				<integer>403</integer>
 			</dict>
 			<key>Identifier</key>
 			<dict>
@@ -5678,12 +5680,12 @@
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
-				<integer>402</integer>
+				<integer>403</integer>
 			</dict>
 			<key>Identifier</key>
 			<dict>
 				<key>CF$UID</key>
-				<integer>464</integer>
+				<integer>466</integer>
 			</dict>
 		</dict>
 		<string>PDFLibrary</string>
@@ -5697,110 +5699,45 @@
 			<array>
 				<dict>
 					<key>CF$UID</key>
-					<integer>41</integer>
+					<integer>158</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>42</integer>
+					<integer>159</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>43</integer>
+					<integer>160</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>44</integer>
+					<integer>161</integer>
 				</dict>
 			</array>
 			<key>NS.objects</key>
 			<array>
-				<dict>
-					<key>CF$UID</key>
-					<integer>466</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>467</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>44</integer>
-				</dict>
 				<dict>
 					<key>CF$UID</key>
 					<integer>468</integer>
-				</dict>
-			</array>
-		</dict>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>46</integer>
-			</dict>
-			<key>NS.keys</key>
-			<array/>
-			<key>NS.objects</key>
-			<array/>
-		</dict>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>49</integer>
-			</dict>
-			<key>NS.objects</key>
-			<array>
-				<dict>
-					<key>CF$UID</key>
-					<integer>48</integer>
-				</dict>
-			</array>
-		</dict>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>46</integer>
-			</dict>
-			<key>NS.keys</key>
-			<array>
-				<dict>
-					<key>CF$UID</key>
-					<integer>51</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>52</integer>
-				</dict>
-			</array>
-			<key>NS.objects</key>
-			<array>
-				<dict>
-					<key>CF$UID</key>
-					<integer>53</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
 					<integer>469</integer>
 				</dict>
-			</array>
-		</dict>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>49</integer>
-			</dict>
-			<key>NS.objects</key>
-			<array>
 				<dict>
 					<key>CF$UID</key>
-					<integer>48</integer>
+					<integer>15</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>470</integer>
 				</dict>
 			</array>
 		</dict>
-		<string>View</string>
+		<real>332697104.854913</real>
+		<string>{0, 2131}</string>
+		<string>{595, 0}</string>
+		<string>-application:didFinishLaunchingWithOptions:</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -5815,10 +5752,10 @@
 			<key>NS.relative</key>
 			<dict>
 				<key>CF$UID</key>
-				<integer>472</integer>
+				<integer>473</integer>
 			</dict>
 		</dict>
-		<string>file://localhost/Users/gonzaloaizpun/Source/ios/PDFLibrary/PDFLibrary/PDFLibrary/XIBs/HomeController-landscape2.xib</string>
+		<string>file://localhost/Users/gonzaloaizpun/Source/ios/PDFLibrary/PDFLibrary/PDFLibrary/Core/PDFLibraryAppDelegate.m</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -5829,11 +5766,11 @@
 			<array>
 				<dict>
 					<key>CF$UID</key>
-					<integer>474</integer>
+					<integer>475</integer>
 				</dict>
 			</array>
 		</dict>
-		<string>{{0, 0}, {855, 780}}</string>
+		<string>{{0, 0}, {855, 802}}</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -5851,7 +5788,7 @@
 			<array>
 				<dict>
 					<key>CF$UID</key>
-					<integer>476</integer>
+					<integer>477</integer>
 				</dict>
 			</array>
 		</dict>
@@ -5865,11 +5802,11 @@
 			<array>
 				<dict>
 					<key>CF$UID</key>
-					<integer>477</integer>
+					<integer>478</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>480</integer>
+					<integer>481</integer>
 				</dict>
 			</array>
 		</dict>
@@ -5894,11 +5831,11 @@
 			<array>
 				<dict>
 					<key>CF$UID</key>
-					<integer>478</integer>
+					<integer>479</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>479</integer>
+					<integer>480</integer>
 				</dict>
 			</array>
 		</dict>
@@ -5925,11 +5862,11 @@
 			<array>
 				<dict>
 					<key>CF$UID</key>
-					<integer>481</integer>
+					<integer>482</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>482</integer>
+					<integer>483</integer>
 				</dict>
 			</array>
 		</dict>
