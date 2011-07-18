@@ -17,8 +17,15 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    HomeController * controller;
+    
+    if(UIInterfaceOrientationIsLandscape([UIApplication sharedApplication].statusBarOrientation)){
+        controller = [[HomeController alloc] initWithNibName:@"HomeController-landscape2" bundle:nil];
+    } else {
+        controller = [[HomeController alloc] initWithNibName:@"HomeController-portrait" bundle:nil];
+    }
+    
     [self.window makeKeyAndVisible];
-    HomeController * controller = [[HomeController alloc] initWithNibName:@"HomeController-portrait" bundle:nil];
     [self.window addSubview:[controller view]];
     return YES;
 }
