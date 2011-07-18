@@ -83,30 +83,41 @@
 	return YES;
 }
 
-//- (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-- (void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)
-interfaceOrientation duration:(NSTimeInterval)duration {
-    if (interfaceOrientation == UIInterfaceOrientationPortrait ||
-        interfaceOrientation == UIInterfaceOrientationPortraitUpsideDown) {
-
-        // Load Portrait
-        //HomeController * controller = [[HomeController alloc] initWithNibName:@"HomeController-portrait" bundle:nil];
-        //[self.navigationController pushViewController:controller animated:NO];
-        //[[NSBundle mainBundle] loadNibNamed:@"HomeController-portrait" owner:self options:nil];			
+- (void) willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
+{
+    if(UIInterfaceOrientationIsPortrait(toInterfaceOrientation)) 
+    {
+        HomeController* port = [[HomeController alloc] initWithNibName:@"HomeController-portrait" bundle:[NSBundle mainBundle]];
+        CGAffineTransform transform = port.view.transform;
         
-        UINib *nib = [UINib nibWithNibName:@"HomeController-portrait" bundle:nil];
-        UIView *portraitView = [[nib instantiateWithOwner:self options:nil] objectAtIndex:0];
-        self.view = portraitView;
+        if(toInterfaceOrientation == UIInterfaceOrientationPortraitUpsideDown)
+            transform = CGAffineTransformRotate(transform, (-M_PI));
+        
+        if(toInterfaceOrientation == UIInterfaceOrientationPortrait)
+            transform = CGAffineTransformRotate(transform, (2*M_PI));
+        
+        port.view.transform = transform;
+        
+        self.view = port.view;
+        [port release];
         
         
-    } else {
+    } 
+    else if(UIInterfaceOrientationIsLandscape(toInterfaceOrientation))
+    {		
+        HomeController* land = [[HomeController alloc] initWithNibName:@"HomeController-landscape" bundle:[NSBundle mainBundle]];
+        CGAffineTransform transform = land.view.transform;
         
-        //[self.navigationController popViewControllerAnimated:NO];
-        //[[NSBundle mainBundle] loadNibNamed:@"HomeController-landscape" owner:self options:nil];			
+        if(toInterfaceOrientation == UIInterfaceOrientationLandscapeLeft)
+            transform = CGAffineTransformRotate(transform, (-M_PI/2));
         
-        UINib *nib = [UINib nibWithNibName:@"HomeController-landscape2" bundle:nil];
-        UIView *landscapeView = [[nib instantiateWithOwner:self options:nil] objectAtIndex:0];
-        self.view = landscapeView;
+        if(toInterfaceOrientation == UIInterfaceOrientationLandscapeRight)
+            transform = CGAffineTransformRotate(transform, (+M_PI/2));
+        
+        land.view.transform = transform;
+        
+        self.view = land.view;
+        [land release];
         
     }
 }

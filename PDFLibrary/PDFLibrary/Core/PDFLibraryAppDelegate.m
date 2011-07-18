@@ -20,7 +20,7 @@
     HomeController * controller;
     
     if(UIInterfaceOrientationIsLandscape([UIApplication sharedApplication].statusBarOrientation)){
-        controller = [[HomeController alloc] initWithNibName:@"HomeController-landscape2" bundle:nil];
+        controller = [[HomeController alloc] initWithNibName:@"HomeController-landscape" bundle:nil];
     } else {
         controller = [[HomeController alloc] initWithNibName:@"HomeController-portrait" bundle:nil];
     }
