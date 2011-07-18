@@ -1,0 +1,315 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		27D23ACC13D45F5A000D3FD5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27D23ACB13D45F5A000D3FD5 /* UIKit.framework */; };
+		27D23ACE13D45F5A000D3FD5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27D23ACD13D45F5A000D3FD5 /* Foundation.framework */; };
+		27D23AD013D45F5A000D3FD5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27D23ACF13D45F5A000D3FD5 /* CoreGraphics.framework */; };
+		27D23AE813D460FF000D3FD5 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27D23AE713D460FF000D3FD5 /* MainWindow.xib */; };
+		27D23AEB13D46111000D3FD5 /* PDFLibraryAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 27D23AEA13D46111000D3FD5 /* PDFLibraryAppDelegate.m */; };
+		27D23AF713D462DF000D3FD5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 27D23AF413D462DF000D3FD5 /* main.m */; };
+		27D23AFA13D463A2000D3FD5 /* PDFLibrary-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 27D23AF913D463A2000D3FD5 /* PDFLibrary-Info.plist */; };
+		27D23B0113D46D9E000D3FD5 /* landscape-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 27D23B0013D46D9E000D3FD5 /* landscape-bg.png */; };
+		27D23B0313D46EBD000D3FD5 /* HomeController-portrait.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27D23B0213D46EBC000D3FD5 /* HomeController-portrait.xib */; };
+		27D23B0613D46F29000D3FD5 /* HomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27D23B0513D46F29000D3FD5 /* HomeController.m */; };
+		27D23B0813D46F34000D3FD5 /* HomeController-landscape.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27D23B0713D46F34000D3FD5 /* HomeController-landscape.xib */; };
+		27D23B0A13D46F5D000D3FD5 /* portrait-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 27D23B0913D46F5D000D3FD5 /* portrait-bg.png */; };
+		27D23B0C13D489E4000D3FD5 /* HomeController-landscape2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27D23B0B13D489E4000D3FD5 /* HomeController-landscape2.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		27D23AC713D45F5A000D3FD5 /* PDFLibrary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PDFLibrary.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		27D23ACB13D45F5A000D3FD5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		27D23ACD13D45F5A000D3FD5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		27D23ACF13D45F5A000D3FD5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		27D23AE713D460FF000D3FD5 /* MainWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MainWindow.xib; path = XIBs/MainWindow.xib; sourceTree = "<group>"; };
+		27D23AE913D46111000D3FD5 /* PDFLibraryAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PDFLibraryAppDelegate.h; path = Core/PDFLibraryAppDelegate.h; sourceTree = "<group>"; };
+		27D23AEA13D46111000D3FD5 /* PDFLibraryAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PDFLibraryAppDelegate.m; path = Core/PDFLibraryAppDelegate.m; sourceTree = "<group>"; };
+		27D23AF413D462DF000D3FD5 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		27D23AF613D462DF000D3FD5 /* PDFLibrary-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PDFLibrary-Prefix.pch"; sourceTree = "<group>"; };
+		27D23AF913D463A2000D3FD5 /* PDFLibrary-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "PDFLibrary-Info.plist"; sourceTree = "<group>"; };
+		27D23B0013D46D9E000D3FD5 /* landscape-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "landscape-bg.png"; path = "Resources/Images/landscape-bg.png"; sourceTree = "<group>"; };
+		27D23B0213D46EBC000D3FD5 /* HomeController-portrait.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = "HomeController-portrait.xib"; path = "XIBs/HomeController-portrait.xib"; sourceTree = "<group>"; };
+		27D23B0413D46F29000D3FD5 /* HomeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomeController.h; path = Controllers/HomeController.h; sourceTree = "<group>"; };
+		27D23B0513D46F29000D3FD5 /* HomeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomeController.m; path = Controllers/HomeController.m; sourceTree = "<group>"; };
+		27D23B0713D46F34000D3FD5 /* HomeController-landscape.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = "HomeController-landscape.xib"; path = "XIBs/HomeController-landscape.xib"; sourceTree = "<group>"; };
+		27D23B0913D46F5D000D3FD5 /* portrait-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "portrait-bg.png"; path = "Resources/Images/portrait-bg.png"; sourceTree = "<group>"; };
+		27D23B0B13D489E4000D3FD5 /* HomeController-landscape2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = "HomeController-landscape2.xib"; path = "XIBs/HomeController-landscape2.xib"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		27D23AC413D45F59000D3FD5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27D23ACC13D45F5A000D3FD5 /* UIKit.framework in Frameworks */,
+				27D23ACE13D45F5A000D3FD5 /* Foundation.framework in Frameworks */,
+				27D23AD013D45F5A000D3FD5 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		27D23ABC13D45F59000D3FD5 = {
+			isa = PBXGroup;
+			children = (
+				27D23AD113D45F5A000D3FD5 /* PDFLibrary */,
+				27D23ACA13D45F5A000D3FD5 /* Frameworks */,
+				27D23AC813D45F5A000D3FD5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		27D23AC813D45F5A000D3FD5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				27D23AC713D45F5A000D3FD5 /* PDFLibrary.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		27D23ACA13D45F5A000D3FD5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				27D23ACB13D45F5A000D3FD5 /* UIKit.framework */,
+				27D23ACD13D45F5A000D3FD5 /* Foundation.framework */,
+				27D23ACF13D45F5A000D3FD5 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		27D23AD113D45F5A000D3FD5 /* PDFLibrary */ = {
+			isa = PBXGroup;
+			children = (
+				27D23AED13D461DE000D3FD5 /* Resources */,
+				27D23AEC13D461C6000D3FD5 /* Controllers */,
+				27D23AE513D46017000D3FD5 /* Core */,
+				27D23AE613D4602D000D3FD5 /* XIBs */,
+				27D23AD213D45F5A000D3FD5 /* Supporting Files */,
+			);
+			path = PDFLibrary;
+			sourceTree = "<group>";
+		};
+		27D23AD213D45F5A000D3FD5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				27D23AF913D463A2000D3FD5 /* PDFLibrary-Info.plist */,
+				27D23AF413D462DF000D3FD5 /* main.m */,
+				27D23AF613D462DF000D3FD5 /* PDFLibrary-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		27D23AE513D46017000D3FD5 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				27D23AE913D46111000D3FD5 /* PDFLibraryAppDelegate.h */,
+				27D23AEA13D46111000D3FD5 /* PDFLibraryAppDelegate.m */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+		27D23AE613D4602D000D3FD5 /* XIBs */ = {
+			isa = PBXGroup;
+			children = (
+				27D23AE713D460FF000D3FD5 /* MainWindow.xib */,
+				27D23B0713D46F34000D3FD5 /* HomeController-landscape.xib */,
+				27D23B0213D46EBC000D3FD5 /* HomeController-portrait.xib */,
+				27D23B0B13D489E4000D3FD5 /* HomeController-landscape2.xib */,
+			);
+			name = XIBs;
+			sourceTree = "<group>";
+		};
+		27D23AEC13D461C6000D3FD5 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				27D23B0413D46F29000D3FD5 /* HomeController.h */,
+				27D23B0513D46F29000D3FD5 /* HomeController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		27D23AED13D461DE000D3FD5 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				27D23AEE13D461E8000D3FD5 /* Images */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		27D23AEE13D461E8000D3FD5 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				27D23B0913D46F5D000D3FD5 /* portrait-bg.png */,
+				27D23B0013D46D9E000D3FD5 /* landscape-bg.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		27D23AC613D45F59000D3FD5 /* PDFLibrary */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 27D23AE213D45F5A000D3FD5 /* Build configuration list for PBXNativeTarget "PDFLibrary" */;
+			buildPhases = (
+				27D23AC313D45F59000D3FD5 /* Sources */,
+				27D23AC413D45F59000D3FD5 /* Frameworks */,
+				27D23AC513D45F59000D3FD5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PDFLibrary;
+			productName = PDFLibrary;
+			productReference = 27D23AC713D45F5A000D3FD5 /* PDFLibrary.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		27D23ABE13D45F59000D3FD5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = TheAppMaster;
+			};
+			buildConfigurationList = 27D23AC113D45F59000D3FD5 /* Build configuration list for PBXProject "PDFLibrary" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 27D23ABC13D45F59000D3FD5;
+			productRefGroup = 27D23AC813D45F5A000D3FD5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				27D23AC613D45F59000D3FD5 /* PDFLibrary */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		27D23AC513D45F59000D3FD5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27D23AE813D460FF000D3FD5 /* MainWindow.xib in Resources */,
+				27D23AFA13D463A2000D3FD5 /* PDFLibrary-Info.plist in Resources */,
+				27D23B0113D46D9E000D3FD5 /* landscape-bg.png in Resources */,
+				27D23B0313D46EBD000D3FD5 /* HomeController-portrait.xib in Resources */,
+				27D23B0813D46F34000D3FD5 /* HomeController-landscape.xib in Resources */,
+				27D23B0A13D46F5D000D3FD5 /* portrait-bg.png in Resources */,
+				27D23B0C13D489E4000D3FD5 /* HomeController-landscape2.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		27D23AC313D45F59000D3FD5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27D23AEB13D46111000D3FD5 /* PDFLibraryAppDelegate.m in Sources */,
+				27D23AF713D462DF000D3FD5 /* main.m in Sources */,
+				27D23B0613D46F29000D3FD5 /* HomeController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		27D23AE013D45F5A000D3FD5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_UNIVERSAL_IPHONE_OS)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		27D23AE113D45F5A000D3FD5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_UNIVERSAL_IPHONE_OS)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Release;
+		};
+		27D23AE313D45F5A000D3FD5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PDFLibrary/PDFLibrary-Prefix.pch";
+				INFOPLIST_FILE = "PDFLibrary/PDFLibrary-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		27D23AE413D45F5A000D3FD5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PDFLibrary/PDFLibrary-Prefix.pch";
+				INFOPLIST_FILE = "PDFLibrary/PDFLibrary-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		27D23AC113D45F59000D3FD5 /* Build configuration list for PBXProject "PDFLibrary" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				27D23AE013D45F5A000D3FD5 /* Debug */,
+				27D23AE113D45F5A000D3FD5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		27D23AE213D45F5A000D3FD5 /* Build configuration list for PBXNativeTarget "PDFLibrary" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				27D23AE313D45F5A000D3FD5 /* Debug */,
+				27D23AE413D45F5A000D3FD5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 27D23ABE13D45F59000D3FD5 /* Project object */;
+}
