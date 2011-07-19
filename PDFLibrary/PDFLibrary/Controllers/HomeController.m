@@ -11,8 +11,6 @@
 
 @implementation HomeController
 
-
-
 - (IBAction) btnHomePressed {
     NSLog(@"HomePressed");
 }
@@ -35,6 +33,11 @@
 
 - (IBAction) btnSearchPressed {
     NSLog(@"SearchPressed");    
+}
+
+- (IBAction) btnCategoryPressed:(id)sender {
+    int index = [(UIButton *)sender tag];
+    NSLog(@"%u", index);
 }
 
 
@@ -67,7 +70,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    // Do any additional setup after loading the view from its nib.    
 }
 
 - (void)viewDidUnload
@@ -85,41 +88,37 @@
 
 - (void) willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
 {
+    HomeController * controller;
+    
     if(UIInterfaceOrientationIsPortrait(toInterfaceOrientation)) 
     {
-        HomeController* port = [[HomeController alloc] initWithNibName:@"HomeController-portrait" bundle:[NSBundle mainBundle]];
-        CGAffineTransform transform = port.view.transform;
+        controller = [[HomeController alloc] initWithNibName:@"HomeController-portrait" bundle:nil];
+        CGAffineTransform transform = controller.view.transform;
         
         if(toInterfaceOrientation == UIInterfaceOrientationPortraitUpsideDown)
             transform = CGAffineTransformRotate(transform, (-M_PI));
         
         if(toInterfaceOrientation == UIInterfaceOrientationPortrait)
             transform = CGAffineTransformRotate(transform, (2*M_PI));
-        
-        port.view.transform = transform;
-        
-        self.view = port.view;
-        [port release];
-        
-        
+
+        controller.view.transform = transform;
     } 
     else if(UIInterfaceOrientationIsLandscape(toInterfaceOrientation))
     {		
-        HomeController* land = [[HomeController alloc] initWithNibName:@"HomeController-landscape" bundle:[NSBundle mainBundle]];
-        CGAffineTransform transform = land.view.transform;
+        controller = [[HomeController alloc] initWithNibName:@"HomeController-landscape" bundle:nil];
+        CGAffineTransform transform = controller.view.transform;
         
         if(toInterfaceOrientation == UIInterfaceOrientationLandscapeLeft)
             transform = CGAffineTransformRotate(transform, (-M_PI/2));
         
         if(toInterfaceOrientation == UIInterfaceOrientationLandscapeRight)
             transform = CGAffineTransformRotate(transform, (+M_PI/2));
-        
-        land.view.transform = transform;
-        
-        self.view = land.view;
-        [land release];
-        
+     
+        controller.view.transform = transform;
     }
+    
+    self.view = controller.view;
+    //[controller release];   NUNCAAAAA!!! FUCK! 
 }
 
 @end

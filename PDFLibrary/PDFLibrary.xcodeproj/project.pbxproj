@@ -19,7 +19,10 @@
 		27D23B0613D46F29000D3FD5 /* HomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27D23B0513D46F29000D3FD5 /* HomeController.m */; };
 		27D23B0813D46F34000D3FD5 /* HomeController-landscape.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27D23B0713D46F34000D3FD5 /* HomeController-landscape.xib */; };
 		27D23B0A13D46F5D000D3FD5 /* portrait-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 27D23B0913D46F5D000D3FD5 /* portrait-bg.png */; };
-		27D23B0C13D489E4000D3FD5 /* HomeController-landscape2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27D23B0B13D489E4000D3FD5 /* HomeController-landscape2.xib */; };
+		27F537E013D4DAF100A9B2A5 /* landscape-homepage.png in Resources */ = {isa = PBXBuildFile; fileRef = 27F537DF13D4DAF100A9B2A5 /* landscape-homepage.png */; };
+		27F537E313D4DC6000A9B2A5 /* landscape-homepage-featured.png in Resources */ = {isa = PBXBuildFile; fileRef = 27F537E213D4DC6000A9B2A5 /* landscape-homepage-featured.png */; };
+		27F537E613D4DE0500A9B2A5 /* portrait-homepage-featured.png in Resources */ = {isa = PBXBuildFile; fileRef = 27F537E413D4DE0500A9B2A5 /* portrait-homepage-featured.png */; };
+		27F537E713D4DE0500A9B2A5 /* portrait-homepage.png in Resources */ = {isa = PBXBuildFile; fileRef = 27F537E513D4DE0500A9B2A5 /* portrait-homepage.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,7 +42,10 @@
 		27D23B0513D46F29000D3FD5 /* HomeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomeController.m; path = Controllers/HomeController.m; sourceTree = "<group>"; };
 		27D23B0713D46F34000D3FD5 /* HomeController-landscape.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = "HomeController-landscape.xib"; path = "XIBs/HomeController-landscape.xib"; sourceTree = "<group>"; };
 		27D23B0913D46F5D000D3FD5 /* portrait-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "portrait-bg.png"; path = "Resources/Images/portrait-bg.png"; sourceTree = "<group>"; };
-		27D23B0B13D489E4000D3FD5 /* HomeController-landscape2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = "HomeController-landscape2.xib"; path = "XIBs/HomeController-landscape2.xib"; sourceTree = "<group>"; };
+		27F537DF13D4DAF100A9B2A5 /* landscape-homepage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "landscape-homepage.png"; path = "Resources/Images/landscape-homepage.png"; sourceTree = "<group>"; };
+		27F537E213D4DC6000A9B2A5 /* landscape-homepage-featured.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "landscape-homepage-featured.png"; path = "Resources/Images/landscape-homepage-featured.png"; sourceTree = "<group>"; };
+		27F537E413D4DE0500A9B2A5 /* portrait-homepage-featured.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "portrait-homepage-featured.png"; path = "Resources/Images/portrait-homepage-featured.png"; sourceTree = "<group>"; };
+		27F537E513D4DE0500A9B2A5 /* portrait-homepage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "portrait-homepage.png"; path = "Resources/Images/portrait-homepage.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,7 +126,6 @@
 				27D23AE713D460FF000D3FD5 /* MainWindow.xib */,
 				27D23B0713D46F34000D3FD5 /* HomeController-landscape.xib */,
 				27D23B0213D46EBC000D3FD5 /* HomeController-portrait.xib */,
-				27D23B0B13D489E4000D3FD5 /* HomeController-landscape2.xib */,
 			);
 			name = XIBs;
 			sourceTree = "<group>";
@@ -145,6 +150,10 @@
 		27D23AEE13D461E8000D3FD5 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				27F537E413D4DE0500A9B2A5 /* portrait-homepage-featured.png */,
+				27F537E513D4DE0500A9B2A5 /* portrait-homepage.png */,
+				27F537E213D4DC6000A9B2A5 /* landscape-homepage-featured.png */,
+				27F537DF13D4DAF100A9B2A5 /* landscape-homepage.png */,
 				27D23B0913D46F5D000D3FD5 /* portrait-bg.png */,
 				27D23B0013D46D9E000D3FD5 /* landscape-bg.png */,
 			);
@@ -207,7 +216,10 @@
 				27D23B0313D46EBD000D3FD5 /* HomeController-portrait.xib in Resources */,
 				27D23B0813D46F34000D3FD5 /* HomeController-landscape.xib in Resources */,
 				27D23B0A13D46F5D000D3FD5 /* portrait-bg.png in Resources */,
-				27D23B0C13D489E4000D3FD5 /* HomeController-landscape2.xib in Resources */,
+				27F537E013D4DAF100A9B2A5 /* landscape-homepage.png in Resources */,
+				27F537E313D4DC6000A9B2A5 /* landscape-homepage-featured.png in Resources */,
+				27F537E613D4DE0500A9B2A5 /* portrait-homepage-featured.png in Resources */,
+				27F537E713D4DE0500A9B2A5 /* portrait-homepage.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,6 +320,7 @@
 				27D23AE413D45F5A000D3FD5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

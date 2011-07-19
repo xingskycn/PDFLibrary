@@ -10,12 +10,7 @@
 
 
 @interface HomeController : UIViewController {
-    IBOutlet UIButton * btnHome;
-    IBOutlet UIButton * btnCategories;
-    IBOutlet UIButton * btnLanguages;
-    IBOutlet UIButton * btnMyLibrary;
-    IBOutlet UIButton * btnContact;
-    IBOutlet UIButton * btnSearch;
+
 }
 
 - (IBAction) btnHomePressed;
@@ -24,6 +19,7 @@
 - (IBAction) btnMyLibraryPressed;
 - (IBAction) btnContactPressed;
 - (IBAction) btnSearchPressed;
+- (IBAction) btnCategoryPressed:(id)sender;
 
 
 @end
