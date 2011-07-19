@@ -10,7 +10,8 @@
 
 
 @interface HomeController : UIViewController {
-
+    IBOutlet UIImageView * imgPopoverCategories;
+    IBOutlet UIImageView * imgPopoverLanguages;
 }
 
 - (IBAction) btnHomePressed;

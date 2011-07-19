@@ -12,32 +12,32 @@
 @implementation HomeController
 
 - (IBAction) btnHomePressed {
-    NSLog(@"HomePressed");
+    [[[[UIAlertView alloc] initWithTitle:@"TODO" message:@"Home Tapped. Load HomeController" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil] autorelease] show];
 }
 
 - (IBAction) btnCategoriesPressed {
-    NSLog(@"CategoriesPressed");    
+    imgPopoverCategories.hidden = NO; 
 }
 
 - (IBAction) btnLanguagesPressed {
-    NSLog(@"LanguagesPressed");    
+    imgPopoverLanguages.hidden = NO; 
 }
 
 - (IBAction) btnMyLibraryPressed {
-    NSLog(@"MyLibraryPressed");    
+    [[[[UIAlertView alloc] initWithTitle:@"TODO" message:@"My Library Tapped. Load MyLibraryController" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil] autorelease] show];   
 }
 
 - (IBAction) btnContactPressed {
-    NSLog(@"ContactPressed");    
+    [[[[UIAlertView alloc] initWithTitle:@"TODO" message:@"Contact Tapped. Load ContactController" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil] autorelease] show];    
 }
 
 - (IBAction) btnSearchPressed {
-    NSLog(@"SearchPressed");    
+    [[[[UIAlertView alloc] initWithTitle:@"TODO" message:@"Search Tapped. Load SearchController" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil] autorelease] show];    
 }
 
 - (IBAction) btnCategoryPressed:(id)sender {
-    int index = [(UIButton *)sender tag];
-    NSLog(@"%u", index);
+   // int index = [(UIButton *)sender tag];
+    [[[[UIAlertView alloc] initWithTitle:@"TODO" message:@"Category Tapped. Load CategoryController" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil] autorelease] show];
 }
 
 
@@ -70,7 +70,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.    
+    // Do any additional setup after loading the view from its nib.
+    
+    imgPopoverLanguages.hidden = YES;
+    imgPopoverCategories.hidden = YES;
 }
 
 - (void)viewDidUnload
@@ -119,6 +122,21 @@
     
     self.view = controller.view;
     //[controller release];   NUNCAAAAA!!! FUCK! 
+}
+
+
+// ******************************************
+
+- (void) touchesEnded: (NSSet *) touches withEvent: (UIEvent *) event 
+{
+    // Process the single tap here
+    //NSLog(@"Scroll view single tapped. touches count : %d", touches.count);
+    //UITouch *touch = [touches anyObject]; 
+    //UIImageView *imgView = (UIImageView*)touch.view;
+    //NSLog(@"tag is %@", imgView.tag);
+    
+    imgPopoverCategories.hidden = YES;
+    imgPopoverLanguages.hidden = YES;
 }
 
 @end
