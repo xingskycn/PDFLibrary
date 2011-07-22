@@ -1,32 +1,32 @@
 //
-//  EbookController.m
+//  RequestCopyController.m
 //  PDFLibrary
 //
 //  Created by Gonzalo Aizpun on 7/18/11.
 //  Copyright 2011 TheAppMaster. All rights reserved.
 //
 
-#import "EbookController.h"
+#import "RequestCopyController.h"
 
 
-@implementation EbookController
+@implementation RequestCopyController
+bool hardCopyPressed = NO;
 
-
-- (IBAction) btnRequestCopyPressed {
-    RequestCopyController * controller;
-    
-    if(UIInterfaceOrientationIsLandscape([UIApplication sharedApplication].statusBarOrientation)){
-        controller = [[RequestCopyController alloc] initWithNibName:@"RequestCopyController-landscape" bundle:nil];
-    } else {
-        controller = [[RequestCopyController alloc] initWithNibName:@"RequestCopyController-portrait" bundle:nil];
-    }   
-    
-    [self presentModalViewController:controller animated:YES];
-    [self dismissModalViewControllerAnimated:NO];
+- (IBAction) btnSendPressed {
+    [[[[UIAlertView alloc] initWithTitle:@"TODO" message:@"Send Tapped. Request WebService" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil] autorelease] show]; 
 }
 
+- (IBAction) btnSendCopyPressed {
+    hardCopyPressed = !hardCopyPressed;
+    if(hardCopyPressed) {
+        [btnSendHardCopy setBackgroundImage:[UIImage imageNamed:@"btn-checkbox-on.png"] forState:UIControlStateNormal];
+    } else {
+        [btnSendHardCopy setBackgroundImage:[UIImage imageNamed:@"btn-checkbox-off.png"] forState:UIControlStateNormal];
+        
+    }
+}
 
-// ******************************************
+// **********************************************
 
 - (IBAction) btnHomePressed {
     HomeController * controller;
@@ -148,11 +148,11 @@
 
 - (void) willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
 {
-    EbookController * controller;
+    RequestCopyController * controller;
     
     if(UIInterfaceOrientationIsPortrait(toInterfaceOrientation)) 
     {
-        controller = [[EbookController alloc] initWithNibName:@"EbookController-portrait" bundle:nil];
+        controller = [[RequestCopyController alloc] initWithNibName:@"RequestCopyController-portrait" bundle:nil];
         CGAffineTransform transform = controller.view.transform;
         
         if(toInterfaceOrientation == UIInterfaceOrientationPortraitUpsideDown)
@@ -165,7 +165,7 @@
     } 
     else if(UIInterfaceOrientationIsLandscape(toInterfaceOrientation))
     {		
-        controller = [[EbookController alloc] initWithNibName:@"EbookController-landscape" bundle:nil];
+        controller = [[RequestCopyController alloc] initWithNibName:@"RequestCopyController-landscape" bundle:nil];
         CGAffineTransform transform = controller.view.transform;
         
         if(toInterfaceOrientation == UIInterfaceOrientationLandscapeLeft)

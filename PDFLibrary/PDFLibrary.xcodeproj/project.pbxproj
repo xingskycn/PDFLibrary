@@ -21,6 +21,12 @@
 		2731242C13D9FE820056EBA3 /* EbookController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2731242B13D9FE820056EBA3 /* EbookController.m */; };
 		2731242F13D9FF0E0056EBA3 /* EbookController-landscape.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2731242D13D9FF0E0056EBA3 /* EbookController-landscape.xib */; };
 		2731243013D9FF0E0056EBA3 /* EbookController-portrait.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2731242E13D9FF0E0056EBA3 /* EbookController-portrait.xib */; };
+		2731243313DA249B0056EBA3 /* RequestCopyController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2731243213DA249B0056EBA3 /* RequestCopyController.m */; };
+		2731243613DA24B50056EBA3 /* RequestCopyController-landscape.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2731243413DA24B40056EBA3 /* RequestCopyController-landscape.xib */; };
+		2731243713DA24B50056EBA3 /* RequestCopyController-portrait.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2731243513DA24B40056EBA3 /* RequestCopyController-portrait.xib */; };
+		2731243B13DA25120056EBA3 /* img-ebook-medium.png in Resources */ = {isa = PBXBuildFile; fileRef = 2731243813DA25120056EBA3 /* img-ebook-medium.png */; };
+		2731243C13DA25120056EBA3 /* landscape-requestcopy.png in Resources */ = {isa = PBXBuildFile; fileRef = 2731243913DA25120056EBA3 /* landscape-requestcopy.png */; };
+		2731243D13DA25120056EBA3 /* portrait-requestcopy.png in Resources */ = {isa = PBXBuildFile; fileRef = 2731243A13DA25120056EBA3 /* portrait-requestcopy.png */; };
 		27D23ACC13D45F5A000D3FD5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27D23ACB13D45F5A000D3FD5 /* UIKit.framework */; };
 		27D23ACE13D45F5A000D3FD5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27D23ACD13D45F5A000D3FD5 /* Foundation.framework */; };
 		27D23AD013D45F5A000D3FD5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27D23ACF13D45F5A000D3FD5 /* CoreGraphics.framework */; };
@@ -60,6 +66,13 @@
 		2731242B13D9FE820056EBA3 /* EbookController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EbookController.m; path = Controllers/EbookController.m; sourceTree = "<group>"; };
 		2731242D13D9FF0E0056EBA3 /* EbookController-landscape.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = "EbookController-landscape.xib"; path = "XIBs/EbookController-landscape.xib"; sourceTree = "<group>"; };
 		2731242E13D9FF0E0056EBA3 /* EbookController-portrait.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = "EbookController-portrait.xib"; path = "XIBs/EbookController-portrait.xib"; sourceTree = "<group>"; };
+		2731243113DA249B0056EBA3 /* RequestCopyController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RequestCopyController.h; path = Controllers/RequestCopyController.h; sourceTree = "<group>"; };
+		2731243213DA249B0056EBA3 /* RequestCopyController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RequestCopyController.m; path = Controllers/RequestCopyController.m; sourceTree = "<group>"; };
+		2731243413DA24B40056EBA3 /* RequestCopyController-landscape.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = "RequestCopyController-landscape.xib"; path = "XIBs/RequestCopyController-landscape.xib"; sourceTree = "<group>"; };
+		2731243513DA24B40056EBA3 /* RequestCopyController-portrait.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = "RequestCopyController-portrait.xib"; path = "XIBs/RequestCopyController-portrait.xib"; sourceTree = "<group>"; };
+		2731243813DA25120056EBA3 /* img-ebook-medium.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "img-ebook-medium.png"; path = "Resources/Images/img-ebook-medium.png"; sourceTree = "<group>"; };
+		2731243913DA25120056EBA3 /* landscape-requestcopy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "landscape-requestcopy.png"; path = "Resources/Images/landscape-requestcopy.png"; sourceTree = "<group>"; };
+		2731243A13DA25120056EBA3 /* portrait-requestcopy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "portrait-requestcopy.png"; path = "Resources/Images/portrait-requestcopy.png"; sourceTree = "<group>"; };
 		27D23AC713D45F5A000D3FD5 /* PDFLibrary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PDFLibrary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27D23ACB13D45F5A000D3FD5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		27D23ACD13D45F5A000D3FD5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -163,6 +176,8 @@
 		27D23AE613D4602D000D3FD5 /* XIBs */ = {
 			isa = PBXGroup;
 			children = (
+				2731243413DA24B40056EBA3 /* RequestCopyController-landscape.xib */,
+				2731243513DA24B40056EBA3 /* RequestCopyController-portrait.xib */,
 				2731242D13D9FF0E0056EBA3 /* EbookController-landscape.xib */,
 				2731242E13D9FF0E0056EBA3 /* EbookController-portrait.xib */,
 				27F537F313D9C58100A9B2A5 /* ContactController-landscape.xib */,
@@ -177,6 +192,8 @@
 		27D23AEC13D461C6000D3FD5 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				2731243113DA249B0056EBA3 /* RequestCopyController.h */,
+				2731243213DA249B0056EBA3 /* RequestCopyController.m */,
 				2731242A13D9FE820056EBA3 /* EbookController.h */,
 				2731242B13D9FE820056EBA3 /* EbookController.m */,
 				27F537EC13D9C25100A9B2A5 /* ContactController.h */,
@@ -198,6 +215,9 @@
 		27D23AEE13D461E8000D3FD5 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				2731243813DA25120056EBA3 /* img-ebook-medium.png */,
+				2731243913DA25120056EBA3 /* landscape-requestcopy.png */,
+				2731243A13DA25120056EBA3 /* portrait-requestcopy.png */,
 				2731241E13D9FCC50056EBA3 /* btn-my-library.png */,
 				2731241F13D9FCC50056EBA3 /* btn-request-hard-copy.png */,
 				2731242013D9FCC50056EBA3 /* btn-send-by-email.png */,
@@ -298,6 +318,11 @@
 				2731242913D9FCC50056EBA3 /* img-ebook-big.png in Resources */,
 				2731242F13D9FF0E0056EBA3 /* EbookController-landscape.xib in Resources */,
 				2731243013D9FF0E0056EBA3 /* EbookController-portrait.xib in Resources */,
+				2731243613DA24B50056EBA3 /* RequestCopyController-landscape.xib in Resources */,
+				2731243713DA24B50056EBA3 /* RequestCopyController-portrait.xib in Resources */,
+				2731243B13DA25120056EBA3 /* img-ebook-medium.png in Resources */,
+				2731243C13DA25120056EBA3 /* landscape-requestcopy.png in Resources */,
+				2731243D13DA25120056EBA3 /* portrait-requestcopy.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,6 +338,7 @@
 				27D23B0613D46F29000D3FD5 /* HomeController.m in Sources */,
 				27F537EE13D9C25100A9B2A5 /* ContactController.m in Sources */,
 				2731242C13D9FE820056EBA3 /* EbookController.m in Sources */,
+				2731243313DA249B0056EBA3 /* RequestCopyController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

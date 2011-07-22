@@ -1,5 +1,5 @@
 //
-//  EbookController.h
+//  RequestCopyController.h
 //  PDFLibrary
 //
 //  Created by Gonzalo Aizpun on 7/18/11.
@@ -10,12 +10,13 @@
 
 #import "HomeController.h"
 #import "ContactController.h"
-#import "RequestCopyController.h"
 
 
-@interface EbookController : UIViewController<UIGestureRecognizerDelegate> {
+@interface RequestCopyController : UIViewController<UIGestureRecognizerDelegate> {
     IBOutlet UIImageView * imgPopoverCategories;
     IBOutlet UIImageView * imgPopoverLanguages;
+    
+    IBOutlet UIButton * btnSendHardCopy;
 }
 
 - (IBAction) btnHomePressed;
@@ -26,8 +27,10 @@
 - (IBAction) btnSearchPressed;
 - (IBAction) btnCategoryPressed:(id)sender;
 
-// Ebook Actions
-- (IBAction) btnRequestCopyPressed;
+
+// RequestCopy Actions
+- (IBAction) btnSendPressed;
+- (IBAction) btnSendCopyPressed;
 
 
 @end
