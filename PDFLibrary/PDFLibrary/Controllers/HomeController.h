@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 
-@interface HomeController : UIViewController {
+@interface HomeController : UIViewController<UIGestureRecognizerDelegate> {
     IBOutlet UIImageView * imgPopoverCategories;
     IBOutlet UIImageView * imgPopoverLanguages;
 }

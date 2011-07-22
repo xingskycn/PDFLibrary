@@ -74,6 +74,28 @@
     
     imgPopoverLanguages.hidden = YES;
     imgPopoverCategories.hidden = YES;
+    
+    UIGestureRecognizer *recognizer;
+    recognizer = [[UITapGestureRecognizer alloc] initWithTarget:self   action:@selector(doubleTapMethod)];
+    [(UITapGestureRecognizer *)recognizer setNumberOfTapsRequired:2];
+    [self.view addGestureRecognizer:recognizer];
+    recognizer.delegate = self;
+    [recognizer release];
+}
+
+- (void)doubleTapMethod
+{
+    imgPopoverCategories.hidden = YES;
+    imgPopoverLanguages.hidden = YES;       
+}
+
+
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch 
+{
+    imgPopoverCategories.hidden = YES;
+    imgPopoverLanguages.hidden = YES;
+    
+    return YES;
 }
 
 - (void)viewDidUnload
@@ -125,18 +147,6 @@
 }
 
 
-// ******************************************
 
-- (void) touchesEnded: (NSSet *) touches withEvent: (UIEvent *) event 
-{
-    // Process the single tap here
-    //NSLog(@"Scroll view single tapped. touches count : %d", touches.count);
-    //UITouch *touch = [touches anyObject]; 
-    //UIImageView *imgView = (UIImageView*)touch.view;
-    //NSLog(@"tag is %@", imgView.tag);
-    
-    imgPopoverCategories.hidden = YES;
-    imgPopoverLanguages.hidden = YES;
-}
 
 @end
