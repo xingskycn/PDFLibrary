@@ -12,6 +12,15 @@
 		272DD0BF13D9D4F400F8EF89 /* portrait-contact.png in Resources */ = {isa = PBXBuildFile; fileRef = 272DD0BB13D9D4F400F8EF89 /* portrait-contact.png */; };
 		2731241C13D9F2310056EBA3 /* btn-checkbox-off.png in Resources */ = {isa = PBXBuildFile; fileRef = 2731241A13D9F2310056EBA3 /* btn-checkbox-off.png */; };
 		2731241D13D9F2310056EBA3 /* btn-checkbox-on.png in Resources */ = {isa = PBXBuildFile; fileRef = 2731241B13D9F2310056EBA3 /* btn-checkbox-on.png */; };
+		2731242413D9FCC50056EBA3 /* btn-my-library.png in Resources */ = {isa = PBXBuildFile; fileRef = 2731241E13D9FCC50056EBA3 /* btn-my-library.png */; };
+		2731242513D9FCC50056EBA3 /* btn-request-hard-copy.png in Resources */ = {isa = PBXBuildFile; fileRef = 2731241F13D9FCC50056EBA3 /* btn-request-hard-copy.png */; };
+		2731242613D9FCC50056EBA3 /* btn-send-by-email.png in Resources */ = {isa = PBXBuildFile; fileRef = 2731242013D9FCC50056EBA3 /* btn-send-by-email.png */; };
+		2731242713D9FCC50056EBA3 /* btn-subtitle-off.png in Resources */ = {isa = PBXBuildFile; fileRef = 2731242113D9FCC50056EBA3 /* btn-subtitle-off.png */; };
+		2731242813D9FCC50056EBA3 /* btn-subtitle-on.png in Resources */ = {isa = PBXBuildFile; fileRef = 2731242213D9FCC50056EBA3 /* btn-subtitle-on.png */; };
+		2731242913D9FCC50056EBA3 /* img-ebook-big.png in Resources */ = {isa = PBXBuildFile; fileRef = 2731242313D9FCC50056EBA3 /* img-ebook-big.png */; };
+		2731242C13D9FE820056EBA3 /* EbookController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2731242B13D9FE820056EBA3 /* EbookController.m */; };
+		2731242F13D9FF0E0056EBA3 /* EbookController-landscape.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2731242D13D9FF0E0056EBA3 /* EbookController-landscape.xib */; };
+		2731243013D9FF0E0056EBA3 /* EbookController-portrait.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2731242E13D9FF0E0056EBA3 /* EbookController-portrait.xib */; };
 		27D23ACC13D45F5A000D3FD5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27D23ACB13D45F5A000D3FD5 /* UIKit.framework */; };
 		27D23ACE13D45F5A000D3FD5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27D23ACD13D45F5A000D3FD5 /* Foundation.framework */; };
 		27D23AD013D45F5A000D3FD5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27D23ACF13D45F5A000D3FD5 /* CoreGraphics.framework */; };
@@ -41,6 +50,16 @@
 		272DD0BB13D9D4F400F8EF89 /* portrait-contact.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "portrait-contact.png"; path = "Resources/Images/portrait-contact.png"; sourceTree = "<group>"; };
 		2731241A13D9F2310056EBA3 /* btn-checkbox-off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "btn-checkbox-off.png"; path = "Resources/Images/btn-checkbox-off.png"; sourceTree = "<group>"; };
 		2731241B13D9F2310056EBA3 /* btn-checkbox-on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "btn-checkbox-on.png"; path = "Resources/Images/btn-checkbox-on.png"; sourceTree = "<group>"; };
+		2731241E13D9FCC50056EBA3 /* btn-my-library.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "btn-my-library.png"; path = "Resources/Images/btn-my-library.png"; sourceTree = "<group>"; };
+		2731241F13D9FCC50056EBA3 /* btn-request-hard-copy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "btn-request-hard-copy.png"; path = "Resources/Images/btn-request-hard-copy.png"; sourceTree = "<group>"; };
+		2731242013D9FCC50056EBA3 /* btn-send-by-email.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "btn-send-by-email.png"; path = "Resources/Images/btn-send-by-email.png"; sourceTree = "<group>"; };
+		2731242113D9FCC50056EBA3 /* btn-subtitle-off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "btn-subtitle-off.png"; path = "Resources/Images/btn-subtitle-off.png"; sourceTree = "<group>"; };
+		2731242213D9FCC50056EBA3 /* btn-subtitle-on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "btn-subtitle-on.png"; path = "Resources/Images/btn-subtitle-on.png"; sourceTree = "<group>"; };
+		2731242313D9FCC50056EBA3 /* img-ebook-big.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "img-ebook-big.png"; path = "Resources/Images/img-ebook-big.png"; sourceTree = "<group>"; };
+		2731242A13D9FE820056EBA3 /* EbookController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EbookController.h; path = Controllers/EbookController.h; sourceTree = "<group>"; };
+		2731242B13D9FE820056EBA3 /* EbookController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EbookController.m; path = Controllers/EbookController.m; sourceTree = "<group>"; };
+		2731242D13D9FF0E0056EBA3 /* EbookController-landscape.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = "EbookController-landscape.xib"; path = "XIBs/EbookController-landscape.xib"; sourceTree = "<group>"; };
+		2731242E13D9FF0E0056EBA3 /* EbookController-portrait.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = "EbookController-portrait.xib"; path = "XIBs/EbookController-portrait.xib"; sourceTree = "<group>"; };
 		27D23AC713D45F5A000D3FD5 /* PDFLibrary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PDFLibrary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27D23ACB13D45F5A000D3FD5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		27D23ACD13D45F5A000D3FD5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -144,6 +163,8 @@
 		27D23AE613D4602D000D3FD5 /* XIBs */ = {
 			isa = PBXGroup;
 			children = (
+				2731242D13D9FF0E0056EBA3 /* EbookController-landscape.xib */,
+				2731242E13D9FF0E0056EBA3 /* EbookController-portrait.xib */,
 				27F537F313D9C58100A9B2A5 /* ContactController-landscape.xib */,
 				27F537F413D9C58100A9B2A5 /* ContactController-portrait.xib */,
 				27D23B0713D46F34000D3FD5 /* HomeController-landscape.xib */,
@@ -156,6 +177,8 @@
 		27D23AEC13D461C6000D3FD5 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				2731242A13D9FE820056EBA3 /* EbookController.h */,
+				2731242B13D9FE820056EBA3 /* EbookController.m */,
 				27F537EC13D9C25100A9B2A5 /* ContactController.h */,
 				27F537ED13D9C25100A9B2A5 /* ContactController.m */,
 				27D23B0413D46F29000D3FD5 /* HomeController.h */,
@@ -175,6 +198,12 @@
 		27D23AEE13D461E8000D3FD5 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				2731241E13D9FCC50056EBA3 /* btn-my-library.png */,
+				2731241F13D9FCC50056EBA3 /* btn-request-hard-copy.png */,
+				2731242013D9FCC50056EBA3 /* btn-send-by-email.png */,
+				2731242113D9FCC50056EBA3 /* btn-subtitle-off.png */,
+				2731242213D9FCC50056EBA3 /* btn-subtitle-on.png */,
+				2731242313D9FCC50056EBA3 /* img-ebook-big.png */,
 				2731241A13D9F2310056EBA3 /* btn-checkbox-off.png */,
 				2731241B13D9F2310056EBA3 /* btn-checkbox-on.png */,
 				272DD0B913D9D4F400F8EF89 /* btn-send.png */,
@@ -261,6 +290,14 @@
 				272DD0BF13D9D4F400F8EF89 /* portrait-contact.png in Resources */,
 				2731241C13D9F2310056EBA3 /* btn-checkbox-off.png in Resources */,
 				2731241D13D9F2310056EBA3 /* btn-checkbox-on.png in Resources */,
+				2731242413D9FCC50056EBA3 /* btn-my-library.png in Resources */,
+				2731242513D9FCC50056EBA3 /* btn-request-hard-copy.png in Resources */,
+				2731242613D9FCC50056EBA3 /* btn-send-by-email.png in Resources */,
+				2731242713D9FCC50056EBA3 /* btn-subtitle-off.png in Resources */,
+				2731242813D9FCC50056EBA3 /* btn-subtitle-on.png in Resources */,
+				2731242913D9FCC50056EBA3 /* img-ebook-big.png in Resources */,
+				2731242F13D9FF0E0056EBA3 /* EbookController-landscape.xib in Resources */,
+				2731243013D9FF0E0056EBA3 /* EbookController-portrait.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,6 +312,7 @@
 				27D23AF713D462DF000D3FD5 /* main.m in Sources */,
 				27D23B0613D46F29000D3FD5 /* HomeController.m in Sources */,
 				27F537EE13D9C25100A9B2A5 /* ContactController.m in Sources */,
+				2731242C13D9FE820056EBA3 /* EbookController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

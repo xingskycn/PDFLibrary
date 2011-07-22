@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "HomeController.h"
+#import "EbookController.h"
 
 
 @interface ContactController : UIViewController<UIGestureRecognizerDelegate> {

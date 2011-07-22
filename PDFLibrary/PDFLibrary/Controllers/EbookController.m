@@ -1,18 +1,27 @@
 //
-//  HomeController.m
+//  EbookController.m
 //  PDFLibrary
 //
 //  Created by Gonzalo Aizpun on 7/18/11.
 //  Copyright 2011 TheAppMaster. All rights reserved.
 //
 
-#import "HomeController.h"
+#import "EbookController.h"
 
 
-@implementation HomeController
+@implementation EbookController
 
 - (IBAction) btnHomePressed {
-    // We're on HomeController
+    HomeController * controller;
+    
+    if(UIInterfaceOrientationIsLandscape([UIApplication sharedApplication].statusBarOrientation)){
+        controller = [[HomeController alloc] initWithNibName:@"HomeController-landscape" bundle:nil];
+    } else {
+        controller = [[HomeController alloc] initWithNibName:@"HomeController-portrait" bundle:nil];
+    }   
+    
+    [self presentModalViewController:controller animated:YES];
+    [self dismissModalViewControllerAnimated:NO];
 }
 
 - (IBAction) btnCategoriesPressed {
@@ -47,20 +56,6 @@
 - (IBAction) btnCategoryPressed:(id)sender {
    // int index = [(UIButton *)sender tag];
     [[[[UIAlertView alloc] initWithTitle:@"TODO" message:@"Category Tapped. Load CategoryController" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil] autorelease] show];
-}
-
-
-- (IBAction) btnFeaturedPressed {
-    EbookController * controller;
-    
-    if(UIInterfaceOrientationIsLandscape([UIApplication sharedApplication].statusBarOrientation)){
-        controller = [[EbookController alloc] initWithNibName:@"EbookController-landscape" bundle:nil];
-    } else {
-        controller = [[EbookController alloc] initWithNibName:@"EbookController-portrait" bundle:nil];
-    }   
-    
-    [self presentModalViewController:controller animated:YES];
-    [self dismissModalViewControllerAnimated:NO];    
 }
 
 
@@ -136,11 +131,11 @@
 
 - (void) willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
 {
-    HomeController * controller;
+    EbookController * controller;
     
     if(UIInterfaceOrientationIsPortrait(toInterfaceOrientation)) 
     {
-        controller = [[HomeController alloc] initWithNibName:@"HomeController-portrait" bundle:nil];
+        controller = [[EbookController alloc] initWithNibName:@"EbookController-portrait" bundle:nil];
         CGAffineTransform transform = controller.view.transform;
         
         if(toInterfaceOrientation == UIInterfaceOrientationPortraitUpsideDown)
@@ -153,7 +148,7 @@
     } 
     else if(UIInterfaceOrientationIsLandscape(toInterfaceOrientation))
     {		
-        controller = [[HomeController alloc] initWithNibName:@"HomeController-landscape" bundle:nil];
+        controller = [[EbookController alloc] initWithNibName:@"EbookController-landscape" bundle:nil];
         CGAffineTransform transform = controller.view.transform;
         
         if(toInterfaceOrientation == UIInterfaceOrientationLandscapeLeft)

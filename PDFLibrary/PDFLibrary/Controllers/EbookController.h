@@ -1,5 +1,5 @@
 //
-//  HomeController.h
+//  EbookController.h
 //  PDFLibrary
 //
 //  Created by Gonzalo Aizpun on 7/18/11.
@@ -7,11 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+
+#import "HomeController.h"
 #import "ContactController.h"
-#import "EbookController.h"
 
 
-@interface HomeController : UIViewController<UIGestureRecognizerDelegate> {
+@interface EbookController : UIViewController<UIGestureRecognizerDelegate> {
     IBOutlet UIImageView * imgPopoverCategories;
     IBOutlet UIImageView * imgPopoverLanguages;
 }
@@ -23,7 +24,6 @@
 - (IBAction) btnContactPressed;
 - (IBAction) btnSearchPressed;
 - (IBAction) btnCategoryPressed:(id)sender;
-- (IBAction) btnFeaturedPressed;
 
 
 @end
