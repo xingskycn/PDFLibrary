@@ -1,18 +1,45 @@
 //
-//  HomeController.m
+//  ContactController.m
 //  PDFLibrary
 //
 //  Created by Gonzalo Aizpun on 7/18/11.
 //  Copyright 2011 TheAppMaster. All rights reserved.
 //
 
-#import "HomeController.h"
+#import "ContactController.h"
 
 
-@implementation HomeController
+@implementation ContactController
+bool copyPressed = NO;
+
+- (IBAction) btnSendPressed {
+        [[[[UIAlertView alloc] initWithTitle:@"TODO" message:@"Send Tapped. Request WebService" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil] autorelease] show]; 
+}
+
+- (IBAction) btnSendCopyPressed {
+    copyPressed = !copyPressed;
+    if(copyPressed) {
+        [btnSendCopy setBackgroundImage:[UIImage imageNamed:@"btn-checkbox-on.png"] forState:UIControlStateNormal];
+    } else {
+        [btnSendCopy setBackgroundImage:[UIImage imageNamed:@"btn-checkbox-off.png"] forState:UIControlStateNormal];
+        
+    }
+    
+}
+
+// *******************************
 
 - (IBAction) btnHomePressed {
-    // We're on HomeController
+    /*
+    HomeController * controller;
+    if(UIInterfaceOrientationIsLandscape([UIApplication sharedApplication].statusBarOrientation)){
+        controller = [[HomeController alloc] initWithNibName:@"HomeController-landscape" bundle:nil];
+    } else {
+        controller = [[HomeController alloc] initWithNibName:@"HomeController-portrait" bundle:nil];
+    }   
+    */
+    [self dismissModalViewControllerAnimated:YES];
+    //[self presentModalViewController:controller animated:YES];
 }
 
 - (IBAction) btnCategoriesPressed {
@@ -28,15 +55,7 @@
 }
 
 - (IBAction) btnContactPressed {
-    ContactController * controller;
-    
-    if(UIInterfaceOrientationIsLandscape([UIApplication sharedApplication].statusBarOrientation)){
-        controller = [[ContactController alloc] initWithNibName:@"ContactController-landscape" bundle:nil];
-    } else {
-        controller = [[ContactController alloc] initWithNibName:@"ContactController-portrait" bundle:nil];
-    }   
-    
-    [self presentModalViewController:controller animated:YES];
+    // We're on ContactController
 }
 
 - (IBAction) btnSearchPressed {
@@ -121,11 +140,11 @@
 
 - (void) willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
 {
-    HomeController * controller;
-    
+    ContactController * controller;
+    NSLog(@"acaaa");
     if(UIInterfaceOrientationIsPortrait(toInterfaceOrientation)) 
     {
-        controller = [[HomeController alloc] initWithNibName:@"HomeController-portrait" bundle:nil];
+        controller = [[ContactController alloc] initWithNibName:@"ContactController-portrait" bundle:nil];
         CGAffineTransform transform = controller.view.transform;
         
         if(toInterfaceOrientation == UIInterfaceOrientationPortraitUpsideDown)
@@ -138,7 +157,7 @@
     } 
     else if(UIInterfaceOrientationIsLandscape(toInterfaceOrientation))
     {		
-        controller = [[HomeController alloc] initWithNibName:@"HomeController-landscape" bundle:nil];
+        controller = [[ContactController alloc] initWithNibName:@"ContactController-landscape" bundle:nil];
         CGAffineTransform transform = controller.view.transform;
         
         if(toInterfaceOrientation == UIInterfaceOrientationLandscapeLeft)

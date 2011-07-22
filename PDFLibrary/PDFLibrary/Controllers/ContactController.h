@@ -1,5 +1,5 @@
 //
-//  HomeController.h
+//  ContactController.h
 //  PDFLibrary
 //
 //  Created by Gonzalo Aizpun on 7/18/11.
@@ -7,12 +7,19 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "ContactController.h"
+#import "HomeController.h"
 
 
-@interface HomeController : UIViewController<UIGestureRecognizerDelegate> {
+@interface ContactController : UIViewController<UIGestureRecognizerDelegate> {
     IBOutlet UIImageView * imgPopoverCategories;
     IBOutlet UIImageView * imgPopoverLanguages;
+    
+    IBOutlet UITextView * txtMessage;
+    IBOutlet UITextField * txtName;
+    IBOutlet UITextField * txtCompany;
+    IBOutlet UITextField * txtEmail;
+    IBOutlet UITextField * txtPhone;
+    IBOutlet UIButton * btnSendCopy;
 }
 
 - (IBAction) btnHomePressed;
@@ -23,5 +30,8 @@
 - (IBAction) btnSearchPressed;
 - (IBAction) btnCategoryPressed:(id)sender;
 
+// ContactActions
+- (IBAction) btnSendPressed;
+- (IBAction) btnSendCopyPressed;
 
 @end
