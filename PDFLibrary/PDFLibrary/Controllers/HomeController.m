@@ -37,6 +37,7 @@
     }   
     
     [self presentModalViewController:controller animated:YES];
+    [self dismissModalViewControllerAnimated:NO];
 }
 
 - (IBAction) btnSearchPressed {

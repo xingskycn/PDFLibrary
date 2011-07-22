@@ -30,16 +30,16 @@ bool copyPressed = NO;
 // *******************************
 
 - (IBAction) btnHomePressed {
-    /*
+    
     HomeController * controller;
     if(UIInterfaceOrientationIsLandscape([UIApplication sharedApplication].statusBarOrientation)){
         controller = [[HomeController alloc] initWithNibName:@"HomeController-landscape" bundle:nil];
     } else {
         controller = [[HomeController alloc] initWithNibName:@"HomeController-portrait" bundle:nil];
     }   
-    */
-    [self dismissModalViewControllerAnimated:YES];
-    //[self presentModalViewController:controller animated:YES];
+    
+    [self presentModalViewController:controller animated:YES];
+    [self dismissModalViewControllerAnimated:NO];
 }
 
 - (IBAction) btnCategoriesPressed {
@@ -141,7 +141,7 @@ bool copyPressed = NO;
 - (void) willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
 {
     ContactController * controller;
-    NSLog(@"acaaa");
+
     if(UIInterfaceOrientationIsPortrait(toInterfaceOrientation)) 
     {
         controller = [[ContactController alloc] initWithNibName:@"ContactController-portrait" bundle:nil];
