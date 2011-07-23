@@ -12,8 +12,8 @@
 
 
 @interface ContactController : UIViewController<UIGestureRecognizerDelegate> {
-    IBOutlet UIImageView * imgPopoverCategories;
-    IBOutlet UIImageView * imgPopoverLanguages;
+    IBOutlet UIButton * btnPopoverCategories;
+    IBOutlet UIButton * btnPopoverLanguages;
     
     IBOutlet UITextView * txtMessage;
     IBOutlet UITextField * txtName;
@@ -30,6 +30,8 @@
 - (IBAction) btnContactPressed;
 - (IBAction) btnSearchPressed;
 - (IBAction) btnCategoryPressed:(id)sender;
+- (IBAction) btnPopoverLanguagesPressed;
+- (IBAction) btnPopoverCategoriesPressed;
 
 // ContactActions
 - (IBAction) btnSendPressed;

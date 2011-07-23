@@ -11,6 +11,44 @@
 
 @implementation FiltersController
 
+
+
+- (IBAction) btnFilterByCategoryPressed:(id)sender {
+    
+    int tag = [sender tag];
+    
+    for (int i=1; i<=7; i++){
+        UIButton * button = (UIButton*)[self.view viewWithTag:i];
+        NSString * imgName = [NSString stringWithFormat:@"btn-category%u-off.png", (i-1)];
+        if(i==tag) {
+            imgName = [NSString stringWithFormat:@"btn-category%u-on.png", (i-1)];
+        }
+        [button setBackgroundImage:[UIImage imageNamed:imgName] forState:UIControlStateNormal];    
+    }
+    
+}
+
+- (IBAction) btnFilterBySortingPressed:(id)sender {
+    
+    int tag = [sender tag];
+    UIButton * btnLastUpdate = (UIButton*)[self.view viewWithTag:8];
+    UIButton * btnAlphabetical = (UIButton*)[self.view viewWithTag:9];
+    
+    if(tag==8) {
+        [btnLastUpdate setBackgroundImage:[UIImage imageNamed:@"btn-sort1-on.png"] 
+                                 forState:UIControlStateNormal];
+        [btnAlphabetical setBackgroundImage:[UIImage imageNamed:@"btn-sort2-off.png"] 
+                                   forState:UIControlStateNormal];
+    } else {
+        [btnLastUpdate setBackgroundImage:[UIImage imageNamed:@"btn-sort1-off.png"] 
+                                 forState:UIControlStateNormal];
+        [btnAlphabetical setBackgroundImage:[UIImage imageNamed:@"btn-sort2-on.png"] 
+                                   forState:UIControlStateNormal];
+    }
+}
+
+// ***************************************************
+
 - (IBAction) btnHomePressed {
     HomeController * controller;
     
@@ -25,11 +63,11 @@
 }
 
 - (IBAction) btnCategoriesPressed {
-    imgPopoverCategories.hidden = NO; 
+    btnPopoverCategories.hidden = NO; 
 }
 
 - (IBAction) btnLanguagesPressed {
-    imgPopoverLanguages.hidden = NO; 
+    btnPopoverLanguages.hidden = NO; 
 }
 
 - (IBAction) btnMyLibraryPressed {
@@ -72,6 +110,23 @@
     [self dismissModalViewControllerAnimated:NO];    
 }
 
+- (IBAction) btnPopoverLanguagesPressed {
+    
+    FiltersController * controller;
+    
+    if(UIInterfaceOrientationIsLandscape([UIApplication sharedApplication].statusBarOrientation)){
+        controller = [[FiltersController alloc] initWithNibName:@"FiltersController-landscape" bundle:nil];
+    } else {
+        controller = [[FiltersController alloc] initWithNibName:@"FiltersController-portrait" bundle:nil];
+    }   
+    
+    [self presentModalViewController:controller animated:YES];
+    [self dismissModalViewControllerAnimated:NO];    
+}
+
+- (IBAction) btnPopoverCategoriesPressed {
+    
+}
 
 // ********************************
 
@@ -104,8 +159,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    imgPopoverLanguages.hidden = YES;
-    imgPopoverCategories.hidden = YES;
+    btnPopoverLanguages.hidden = YES;
+    btnPopoverCategories.hidden = YES;
     
     UIGestureRecognizer *recognizer;
     recognizer = [[UITapGestureRecognizer alloc] initWithTarget:self   action:@selector(doubleTapMethod)];
@@ -117,15 +172,15 @@
 
 - (void)doubleTapMethod
 {
-    imgPopoverCategories.hidden = YES;
-    imgPopoverLanguages.hidden = YES;       
+    btnPopoverCategories.hidden = YES;
+    btnPopoverLanguages.hidden = YES;       
 }
 
 
 - (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch 
 {
-    imgPopoverCategories.hidden = YES;
-    imgPopoverLanguages.hidden = YES;
+    btnPopoverCategories.hidden = YES;
+    btnPopoverLanguages.hidden = YES;
     
     return YES;
 }

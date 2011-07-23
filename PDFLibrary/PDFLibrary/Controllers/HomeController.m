@@ -16,11 +16,11 @@
 }
 
 - (IBAction) btnCategoriesPressed {
-    imgPopoverCategories.hidden = NO; 
+    btnPopoverCategories.hidden = NO; 
 }
 
 - (IBAction) btnLanguagesPressed {
-    imgPopoverLanguages.hidden = NO; 
+    btnPopoverLanguages.hidden = NO; 
 }
 
 - (IBAction) btnMyLibraryPressed {
@@ -63,6 +63,23 @@
     [self dismissModalViewControllerAnimated:NO];    
 }
 
+- (IBAction) btnPopoverLanguagesPressed {
+        
+    FiltersController * controller;
+    
+    if(UIInterfaceOrientationIsLandscape([UIApplication sharedApplication].statusBarOrientation)){
+        controller = [[FiltersController alloc] initWithNibName:@"FiltersController-landscape" bundle:nil];
+    } else {
+        controller = [[FiltersController alloc] initWithNibName:@"FiltersController-portrait" bundle:nil];
+    }   
+    
+    [self presentModalViewController:controller animated:YES];
+    [self dismissModalViewControllerAnimated:NO];    
+}
+
+- (IBAction) btnPopoverCategoriesPressed {
+    
+}
 
 // ********************************
 
@@ -95,28 +112,29 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    imgPopoverLanguages.hidden = YES;
-    imgPopoverCategories.hidden = YES;
+    btnPopoverLanguages.hidden = YES;
+    btnPopoverCategories.hidden = YES;
     
     UIGestureRecognizer *recognizer;
-    recognizer = [[UITapGestureRecognizer alloc] initWithTarget:self   action:@selector(doubleTapMethod)];
+    recognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(doubleTapMethod)];
     [(UITapGestureRecognizer *)recognizer setNumberOfTapsRequired:2];
     [self.view addGestureRecognizer:recognizer];
     recognizer.delegate = self;
     [recognizer release];
+    
 }
 
 - (void)doubleTapMethod
 {
-    imgPopoverCategories.hidden = YES;
-    imgPopoverLanguages.hidden = YES;       
+    btnPopoverCategories.hidden = YES;
+    btnPopoverLanguages.hidden = YES;       
 }
 
 
 - (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch 
 {
-    imgPopoverCategories.hidden = YES;
-    imgPopoverLanguages.hidden = YES;
+    btnPopoverCategories.hidden = YES;
+    btnPopoverLanguages.hidden = YES;
     
     return YES;
 }

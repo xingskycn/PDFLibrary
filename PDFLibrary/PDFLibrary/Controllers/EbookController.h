@@ -14,8 +14,8 @@
 
 
 @interface EbookController : UIViewController<UIGestureRecognizerDelegate> {
-    IBOutlet UIImageView * imgPopoverCategories;
-    IBOutlet UIImageView * imgPopoverLanguages;
+    IBOutlet UIButton * btnPopoverCategories;
+    IBOutlet UIButton * btnPopoverLanguages;
 }
 
 - (IBAction) btnHomePressed;
@@ -25,6 +25,8 @@
 - (IBAction) btnContactPressed;
 - (IBAction) btnSearchPressed;
 - (IBAction) btnCategoryPressed:(id)sender;
+- (IBAction) btnPopoverLanguagesPressed;
+- (IBAction) btnPopoverCategoriesPressed;
 
 // Ebook Actions
 - (IBAction) btnRequestCopyPressed;

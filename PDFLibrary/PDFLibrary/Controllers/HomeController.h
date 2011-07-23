@@ -9,11 +9,12 @@
 #import <UIKit/UIKit.h>
 #import "ContactController.h"
 #import "EbookController.h"
+#import "FiltersController.h"
 
 
 @interface HomeController : UIViewController<UIGestureRecognizerDelegate> {
-    IBOutlet UIImageView * imgPopoverCategories;
-    IBOutlet UIImageView * imgPopoverLanguages;
+    IBOutlet UIButton * btnPopoverCategories;
+    IBOutlet UIButton * btnPopoverLanguages;
 }
 
 - (IBAction) btnHomePressed;
@@ -24,6 +25,8 @@
 - (IBAction) btnSearchPressed;
 - (IBAction) btnCategoryPressed:(id)sender;
 - (IBAction) btnFeaturedPressed;
+- (IBAction) btnPopoverLanguagesPressed;
+- (IBAction) btnPopoverCategoriesPressed;
 
 
 @end

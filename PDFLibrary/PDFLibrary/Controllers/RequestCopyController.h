@@ -13,8 +13,8 @@
 
 
 @interface RequestCopyController : UIViewController<UIGestureRecognizerDelegate> {
-    IBOutlet UIImageView * imgPopoverCategories;
-    IBOutlet UIImageView * imgPopoverLanguages;
+    IBOutlet UIButton * btnPopoverCategories;
+    IBOutlet UIButton * btnPopoverLanguages;
     
     IBOutlet UIButton * btnSendHardCopy;
 }
@@ -26,6 +26,8 @@
 - (IBAction) btnContactPressed;
 - (IBAction) btnSearchPressed;
 - (IBAction) btnCategoryPressed:(id)sender;
+- (IBAction) btnPopoverLanguagesPressed;
+- (IBAction) btnPopoverCategoriesPressed;
 
 
 // RequestCopy Actions

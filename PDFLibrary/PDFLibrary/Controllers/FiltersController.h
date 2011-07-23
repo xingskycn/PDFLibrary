@@ -13,8 +13,19 @@
 
 
 @interface FiltersController : UIViewController<UIGestureRecognizerDelegate> {
-    IBOutlet UIImageView * imgPopoverCategories;
-    IBOutlet UIImageView * imgPopoverLanguages;
+    IBOutlet UIButton * btnPopoverCategories;
+    IBOutlet UIButton * btnPopoverLanguages;
+    
+    IBOutlet UIButton * btnCategory0;
+    IBOutlet UIButton * btnCategory1;
+    IBOutlet UIButton * btnCategory2;
+    IBOutlet UIButton * btnCategory3;
+    IBOutlet UIButton * btnCategory4;
+    IBOutlet UIButton * btnCategory5;
+    IBOutlet UIButton * btnCategory6;
+    
+    IBOutlet UIButton * btnSort1;
+    IBOutlet UIButton * btnSort2;
 }
 
 - (IBAction) btnHomePressed;
@@ -25,6 +36,13 @@
 - (IBAction) btnSearchPressed;
 - (IBAction) btnCategoryPressed:(id)sender;
 - (IBAction) btnFeaturedPressed;
+- (IBAction) btnPopoverLanguagesPressed;
+- (IBAction) btnPopoverCategoriesPressed;
+
+// FiltersController Actions
+- (IBAction) btnFilterByCategoryPressed:(id)sender;
+- (IBAction) btnFilterBySortingPressed:(id)sender;
+
 
 
 @end
