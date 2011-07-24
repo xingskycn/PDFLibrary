@@ -7,7 +7,8 @@
 //
 
 #import "EbookController.h"
-
+#import "MFDocumentManager.h"
+#import "ReaderViewController.h"
 
 @implementation EbookController
 
@@ -208,6 +209,30 @@
 }
 
 
+// ***************************************************
+
+-(IBAction)actionOpenPlainDocument:(id)sender  {
+    
+    NSString *documentName = @"Wedge_Brochure";
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+
+    NSString *thumbnailsPath = [[paths objectAtIndex:0] stringByAppendingPathComponent:[NSString stringWithFormat:@"%@",documentName]];
+    
+    NSURL *documentUrl = [NSURL fileURLWithPath:[[NSBundle mainBundle]pathForResource:documentName ofType:@"pdf"]];
+    
+    MFDocumentManager *documentManager = [[MFDocumentManager alloc]initWithFileUrl:documentUrl];
+    
+    ReaderViewController *pdfViewController = [[ReaderViewController alloc]initWithDocumentManager:documentManager];
+    
+    documentManager.resourceFolder = thumbnailsPath;
+
+    pdfViewController.documentId = documentName;    
+    pdfViewController.searchBarButtonItem.enabled = FALSE;
+    
+
+    [self presentModalViewController:pdfViewController animated:YES];
+    [pdfViewController release];
+}
 
 
 @end

@@ -13,7 +13,7 @@
 #import "RequestCopyController.h"
 #import "LibraryController.h"
 
-
+@class MFDocumentManager;
 @interface EbookController : UIViewController<UIGestureRecognizerDelegate> {
     IBOutlet UIButton * btnPopoverCategories;
     IBOutlet UIButton * btnPopoverLanguages;
@@ -31,6 +31,6 @@
 
 // Ebook Actions
 - (IBAction) btnRequestCopyPressed;
-
+- (IBAction)actionOpenPlainDocument:(id)sender;
 
 @end

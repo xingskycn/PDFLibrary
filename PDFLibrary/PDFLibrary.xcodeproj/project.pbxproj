@@ -59,6 +59,25 @@
 		2731248113DC84410056EBA3 /* portrait-library.png in Resources */ = {isa = PBXBuildFile; fileRef = 2731247D13DC843E0056EBA3 /* portrait-library.png */; };
 		2731248413DC86120056EBA3 /* LibraryController-landscape.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2731248213DC86110056EBA3 /* LibraryController-landscape.xib */; };
 		2731248513DC86120056EBA3 /* LibraryController-portrait.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2731248313DC86120056EBA3 /* LibraryController-portrait.xib */; };
+		279386ED13DCC0A30006C031 /* FastPdfKit.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 279386EC13DCC0A30006C031 /* FastPdfKit.xcconfig */; };
+		279386EF13DCC1090006C031 /* FPKReaderBundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 279386EE13DCC1090006C031 /* FPKReaderBundle.bundle */; };
+		279386F813DCC18D0006C031 /* Hot_Induction_BendEnglish.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 279386F313DCC18D0006C031 /* Hot_Induction_BendEnglish.pdf */; };
+		279386F913DCC18D0006C031 /* PremiumConnectionsCatalogue_ENG.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 279386F413DCC18D0006C031 /* PremiumConnectionsCatalogue_ENG.pdf */; };
+		279386FA13DCC18D0006C031 /* PremiumConnectionSummaryFeb16.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 279386F513DCC18D0006C031 /* PremiumConnectionSummaryFeb16.pdf */; };
+		279386FB13DCC18D0006C031 /* Wedge_563_brochure_Espanol_100908.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 279386F613DCC18D0006C031 /* Wedge_563_brochure_Espanol_100908.pdf */; };
+		279386FC13DCC18D0006C031 /* Wedge_Brochure.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 279386F713DCC18D0006C031 /* Wedge_Brochure.pdf */; };
+		2799ED2E13DCC27C009341C8 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2799ED2D13DCC27C009341C8 /* MessageUI.framework */; };
+		2799ED3013DCC284009341C8 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2799ED2F13DCC284009341C8 /* SystemConfiguration.framework */; };
+		2799ED3213DCC28D009341C8 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2799ED3113DCC28D009341C8 /* Security.framework */; };
+		2799ED3413DCC2A9009341C8 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2799ED3313DCC2A9009341C8 /* libsqlite3.dylib */; };
+		2799ED3613DCC2AF009341C8 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2799ED3513DCC2AF009341C8 /* CFNetwork.framework */; };
+		2799ED3813DCC2B8009341C8 /* libz.1.2.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2799ED3713DCC2B8009341C8 /* libz.1.2.3.dylib */; };
+		2799ED3A13DCC2C1009341C8 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2799ED3913DCC2C1009341C8 /* AVFoundation.framework */; };
+		2799ED3C13DCC2C5009341C8 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2799ED3B13DCC2C5009341C8 /* MobileCoreServices.framework */; };
+		2799ED3E13DCC2CF009341C8 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2799ED3D13DCC2CF009341C8 /* CoreMedia.framework */; };
+		2799ED4013DCC2D5009341C8 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2799ED3F13DCC2D5009341C8 /* QuartzCore.framework */; };
+		2799ED4213DCC2DF009341C8 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2799ED4113DCC2DF009341C8 /* AudioToolbox.framework */; };
+		2799ED4413DCC2E4009341C8 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2799ED4313DCC2E4009341C8 /* CoreVideo.framework */; };
 		27D23ACC13D45F5A000D3FD5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27D23ACB13D45F5A000D3FD5 /* UIKit.framework */; };
 		27D23ACE13D45F5A000D3FD5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27D23ACD13D45F5A000D3FD5 /* Foundation.framework */; };
 		27D23AD013D45F5A000D3FD5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27D23ACF13D45F5A000D3FD5 /* CoreGraphics.framework */; };
@@ -81,6 +100,58 @@
 		27F537F513D9C58100A9B2A5 /* ContactController-landscape.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27F537F313D9C58100A9B2A5 /* ContactController-landscape.xib */; };
 		27F537F613D9C58100A9B2A5 /* ContactController-portrait.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27F537F413D9C58100A9B2A5 /* ContactController-portrait.xib */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		279386E013DCC09B0006C031 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 279386D213DCC09B0006C031 /* FastPdfKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1D6058910D05DD3D006BFB54;
+			remoteInfo = FPKSimpleApp;
+		};
+		279386E213DCC09B0006C031 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 279386D213DCC09B0006C031 /* FastPdfKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 018848E7131E89570045038F;
+			remoteInfo = FPKKioskApp;
+		};
+		279386E413DCC09B0006C031 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 279386D213DCC09B0006C031 /* FastPdfKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 010D14AD13CAF5CE00FD6F08;
+			remoteInfo = FPKReaderLib;
+		};
+		279386E613DCC09B0006C031 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 279386D213DCC09B0006C031 /* FastPdfKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 010D14AE13CAF5CE00FD6F08;
+			remoteInfo = FPKKioskLib;
+		};
+		279386E813DCC09B0006C031 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 279386D213DCC09B0006C031 /* FastPdfKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 6FB9770913CB6E76007C368C;
+			remoteInfo = FPKKioskBundle;
+		};
+		279386EA13DCC09B0006C031 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 279386D213DCC09B0006C031 /* FastPdfKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 6FB9771B13CB6E8A007C368C;
+			remoteInfo = FPKReaderBundle;
+		};
+		279386F013DCC1260006C031 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 279386D213DCC09B0006C031 /* FastPdfKit.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 01598DA513CAE783007344EE;
+			remoteInfo = FPKReaderLib;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		272DD0B913D9D4F400F8EF89 /* btn-send.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "btn-send.png"; path = "Resources/Images/btn-send.png"; sourceTree = "<group>"; };
@@ -139,6 +210,26 @@
 		2731247D13DC843E0056EBA3 /* portrait-library.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "portrait-library.png"; path = "Resources/Images/portrait-library.png"; sourceTree = "<group>"; };
 		2731248213DC86110056EBA3 /* LibraryController-landscape.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = "LibraryController-landscape.xib"; path = "XIBs/LibraryController-landscape.xib"; sourceTree = "<group>"; };
 		2731248313DC86120056EBA3 /* LibraryController-portrait.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = "LibraryController-portrait.xib"; path = "XIBs/LibraryController-portrait.xib"; sourceTree = "<group>"; };
+		279386D213DCC09B0006C031 /* FastPdfKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = FastPdfKit.xcodeproj; path = ../../FastPdfKit/FastPdfKit.xcodeproj; sourceTree = "<group>"; };
+		279386EC13DCC0A30006C031 /* FastPdfKit.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = FastPdfKit.xcconfig; path = ../../../FastPdfKit/OtherSources/FastPdfKit.xcconfig; sourceTree = "<group>"; };
+		279386EE13DCC1090006C031 /* FPKReaderBundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = FPKReaderBundle.bundle; path = ../../../FastPdfKit/Bundle/FPKReaderBundle.bundle; sourceTree = "<group>"; };
+		279386F313DCC18D0006C031 /* Hot_Induction_BendEnglish.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = Hot_Induction_BendEnglish.pdf; path = "Resources/PDFs Sample/Hot_Induction_BendEnglish.pdf"; sourceTree = "<group>"; };
+		279386F413DCC18D0006C031 /* PremiumConnectionsCatalogue_ENG.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = PremiumConnectionsCatalogue_ENG.pdf; path = "Resources/PDFs Sample/PremiumConnectionsCatalogue_ENG.pdf"; sourceTree = "<group>"; };
+		279386F513DCC18D0006C031 /* PremiumConnectionSummaryFeb16.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = PremiumConnectionSummaryFeb16.pdf; path = "Resources/PDFs Sample/PremiumConnectionSummaryFeb16.pdf"; sourceTree = "<group>"; };
+		279386F613DCC18D0006C031 /* Wedge_563_brochure_Espanol_100908.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = Wedge_563_brochure_Espanol_100908.pdf; path = "Resources/PDFs Sample/Wedge_563_brochure_Espanol_100908.pdf"; sourceTree = "<group>"; };
+		279386F713DCC18D0006C031 /* Wedge_Brochure.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = Wedge_Brochure.pdf; path = "Resources/PDFs Sample/Wedge_Brochure.pdf"; sourceTree = "<group>"; };
+		2799ED2D13DCC27C009341C8 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		2799ED2F13DCC284009341C8 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		2799ED3113DCC28D009341C8 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		2799ED3313DCC2A9009341C8 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		2799ED3513DCC2AF009341C8 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		2799ED3713DCC2B8009341C8 /* libz.1.2.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.3.dylib; path = usr/lib/libz.1.2.3.dylib; sourceTree = SDKROOT; };
+		2799ED3913DCC2C1009341C8 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		2799ED3B13DCC2C5009341C8 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		2799ED3D13DCC2CF009341C8 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		2799ED3F13DCC2D5009341C8 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		2799ED4113DCC2DF009341C8 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		2799ED4313DCC2E4009341C8 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		27D23AC713D45F5A000D3FD5 /* PDFLibrary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PDFLibrary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27D23ACB13D45F5A000D3FD5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		27D23ACD13D45F5A000D3FD5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -172,6 +263,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2799ED4413DCC2E4009341C8 /* CoreVideo.framework in Frameworks */,
+				2799ED4213DCC2DF009341C8 /* AudioToolbox.framework in Frameworks */,
+				2799ED4013DCC2D5009341C8 /* QuartzCore.framework in Frameworks */,
+				2799ED3E13DCC2CF009341C8 /* CoreMedia.framework in Frameworks */,
+				2799ED3C13DCC2C5009341C8 /* MobileCoreServices.framework in Frameworks */,
+				2799ED3A13DCC2C1009341C8 /* AVFoundation.framework in Frameworks */,
+				2799ED3813DCC2B8009341C8 /* libz.1.2.3.dylib in Frameworks */,
+				2799ED3613DCC2AF009341C8 /* CFNetwork.framework in Frameworks */,
+				2799ED3413DCC2A9009341C8 /* libsqlite3.dylib in Frameworks */,
+				2799ED3213DCC28D009341C8 /* Security.framework in Frameworks */,
+				2799ED3013DCC284009341C8 /* SystemConfiguration.framework in Frameworks */,
+				2799ED2E13DCC27C009341C8 /* MessageUI.framework in Frameworks */,
 				27D23ACC13D45F5A000D3FD5 /* UIKit.framework in Frameworks */,
 				27D23ACE13D45F5A000D3FD5 /* Foundation.framework in Frameworks */,
 				27D23AD013D45F5A000D3FD5 /* CoreGraphics.framework in Frameworks */,
@@ -257,12 +360,38 @@
 			name = other;
 			sourceTree = "<group>";
 		};
+		279386D313DCC09B0006C031 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				279386E113DCC09B0006C031 /* FastPdfKit Sample.app */,
+				279386E313DCC09B0006C031 /* FastPdfKit Kiosk.app */,
+				279386E513DCC09B0006C031 /* libFPKReaderLib.a */,
+				279386E713DCC09B0006C031 /* libFPKKioskLib.a */,
+				279386E913DCC09B0006C031 /* FPKKioskBundle.bundle */,
+				279386EB13DCC09B0006C031 /* FPKReaderBundle.bundle */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		279386F213DCC1320006C031 /* PDFs Sample */ = {
+			isa = PBXGroup;
+			children = (
+				279386F313DCC18D0006C031 /* Hot_Induction_BendEnglish.pdf */,
+				279386F413DCC18D0006C031 /* PremiumConnectionsCatalogue_ENG.pdf */,
+				279386F513DCC18D0006C031 /* PremiumConnectionSummaryFeb16.pdf */,
+				279386F613DCC18D0006C031 /* Wedge_563_brochure_Espanol_100908.pdf */,
+				279386F713DCC18D0006C031 /* Wedge_Brochure.pdf */,
+			);
+			name = "PDFs Sample";
+			sourceTree = "<group>";
+		};
 		27D23ABC13D45F59000D3FD5 = {
 			isa = PBXGroup;
 			children = (
 				27D23AD113D45F5A000D3FD5 /* PDFLibrary */,
 				27D23ACA13D45F5A000D3FD5 /* Frameworks */,
 				27D23AC813D45F5A000D3FD5 /* Products */,
+				279386D213DCC09B0006C031 /* FastPdfKit.xcodeproj */,
 			);
 			sourceTree = "<group>";
 		};
@@ -277,6 +406,18 @@
 		27D23ACA13D45F5A000D3FD5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2799ED4313DCC2E4009341C8 /* CoreVideo.framework */,
+				2799ED4113DCC2DF009341C8 /* AudioToolbox.framework */,
+				2799ED3F13DCC2D5009341C8 /* QuartzCore.framework */,
+				2799ED3D13DCC2CF009341C8 /* CoreMedia.framework */,
+				2799ED3B13DCC2C5009341C8 /* MobileCoreServices.framework */,
+				2799ED3913DCC2C1009341C8 /* AVFoundation.framework */,
+				2799ED3713DCC2B8009341C8 /* libz.1.2.3.dylib */,
+				2799ED3513DCC2AF009341C8 /* CFNetwork.framework */,
+				2799ED3313DCC2A9009341C8 /* libsqlite3.dylib */,
+				2799ED3113DCC28D009341C8 /* Security.framework */,
+				2799ED2F13DCC284009341C8 /* SystemConfiguration.framework */,
+				2799ED2D13DCC27C009341C8 /* MessageUI.framework */,
 				27D23ACB13D45F5A000D3FD5 /* UIKit.framework */,
 				27D23ACD13D45F5A000D3FD5 /* Foundation.framework */,
 				27D23ACF13D45F5A000D3FD5 /* CoreGraphics.framework */,
@@ -299,6 +440,8 @@
 		27D23AD213D45F5A000D3FD5 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				279386EE13DCC1090006C031 /* FPKReaderBundle.bundle */,
+				279386EC13DCC0A30006C031 /* FastPdfKit.xcconfig */,
 				27D23AF913D463A2000D3FD5 /* PDFLibrary-Info.plist */,
 				27D23AF413D462DF000D3FD5 /* main.m */,
 				27D23AF613D462DF000D3FD5 /* PDFLibrary-Prefix.pch */,
@@ -357,6 +500,7 @@
 		27D23AED13D461DE000D3FD5 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				279386F213DCC1320006C031 /* PDFs Sample */,
 				27D23AEE13D461E8000D3FD5 /* Images */,
 			);
 			name = Resources;
@@ -387,6 +531,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				279386F113DCC1260006C031 /* PBXTargetDependency */,
 			);
 			name = PDFLibrary;
 			productName = PDFLibrary;
@@ -411,12 +556,63 @@
 			mainGroup = 27D23ABC13D45F59000D3FD5;
 			productRefGroup = 27D23AC813D45F5A000D3FD5 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 279386D313DCC09B0006C031 /* Products */;
+					ProjectRef = 279386D213DCC09B0006C031 /* FastPdfKit.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				27D23AC613D45F59000D3FD5 /* PDFLibrary */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		279386E113DCC09B0006C031 /* FastPdfKit Sample.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = "FastPdfKit Sample.app";
+			remoteRef = 279386E013DCC09B0006C031 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		279386E313DCC09B0006C031 /* FastPdfKit Kiosk.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = "FastPdfKit Kiosk.app";
+			remoteRef = 279386E213DCC09B0006C031 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		279386E513DCC09B0006C031 /* libFPKReaderLib.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libFPKReaderLib.a;
+			remoteRef = 279386E413DCC09B0006C031 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		279386E713DCC09B0006C031 /* libFPKKioskLib.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libFPKKioskLib.a;
+			remoteRef = 279386E613DCC09B0006C031 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		279386E913DCC09B0006C031 /* FPKKioskBundle.bundle */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = FPKKioskBundle.bundle;
+			remoteRef = 279386E813DCC09B0006C031 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		279386EB13DCC09B0006C031 /* FPKReaderBundle.bundle */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = FPKReaderBundle.bundle;
+			remoteRef = 279386EA13DCC09B0006C031 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		27D23AC513D45F59000D3FD5 /* Resources */ = {
@@ -485,6 +681,13 @@
 				2731248113DC84410056EBA3 /* portrait-library.png in Resources */,
 				2731248413DC86120056EBA3 /* LibraryController-landscape.xib in Resources */,
 				2731248513DC86120056EBA3 /* LibraryController-portrait.xib in Resources */,
+				279386ED13DCC0A30006C031 /* FastPdfKit.xcconfig in Resources */,
+				279386EF13DCC1090006C031 /* FPKReaderBundle.bundle in Resources */,
+				279386F813DCC18D0006C031 /* Hot_Induction_BendEnglish.pdf in Resources */,
+				279386F913DCC18D0006C031 /* PremiumConnectionsCatalogue_ENG.pdf in Resources */,
+				279386FA13DCC18D0006C031 /* PremiumConnectionSummaryFeb16.pdf in Resources */,
+				279386FB13DCC18D0006C031 /* Wedge_563_brochure_Espanol_100908.pdf in Resources */,
+				279386FC13DCC18D0006C031 /* Wedge_Brochure.pdf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -508,12 +711,21 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		279386F113DCC1260006C031 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = FPKReaderLib;
+			targetProxy = 279386F013DCC1260006C031 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
 		27D23AE013D45F5A000D3FD5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_UNIVERSAL_IPHONE_OS)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: David RamÃ­rez Chiappe (FLUZN3RQDS)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: David RamÃ­rez Chiappe (FLUZN3RQDS)";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
@@ -522,6 +734,8 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				PROVISIONING_PROFILE = "3EBC9112-16EC-4736-BA84-B556CFD8C5B8";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "3EBC9112-16EC-4736-BA84-B556CFD8C5B8";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 2;
 			};
@@ -531,13 +745,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_UNIVERSAL_IPHONE_OS)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: David RamÃ­rez Chiappe (FLUZN3RQDS)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: David RamÃ­rez Chiappe (FLUZN3RQDS)";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PROVISIONING_PROFILE = "3EBC9112-16EC-4736-BA84-B556CFD8C5B8";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "3EBC9112-16EC-4736-BA84-B556CFD8C5B8";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 2;
 			};
@@ -545,27 +762,37 @@
 		};
 		27D23AE313D45F5A000D3FD5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 279386EC13DCC0A30006C031 /* FastPdfKit.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer: David RamÃ­rez Chiappe (FLUZN3RQDS)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: David RamÃ­rez Chiappe (FLUZN3RQDS)";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PDFLibrary/PDFLibrary-Prefix.pch";
 				INFOPLIST_FILE = "PDFLibrary/PDFLibrary-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "3EBC9112-16EC-4736-BA84-B556CFD8C5B8";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "3EBC9112-16EC-4736-BA84-B556CFD8C5B8";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
 		};
 		27D23AE413D45F5A000D3FD5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 279386EC13DCC0A30006C031 /* FastPdfKit.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer: David RamÃ­rez Chiappe (FLUZN3RQDS)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: David RamÃ­rez Chiappe (FLUZN3RQDS)";
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PDFLibrary/PDFLibrary-Prefix.pch";
 				INFOPLIST_FILE = "PDFLibrary/PDFLibrary-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "3EBC9112-16EC-4736-BA84-B556CFD8C5B8";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "3EBC9112-16EC-4736-BA84-B556CFD8C5B8";
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
 			};
