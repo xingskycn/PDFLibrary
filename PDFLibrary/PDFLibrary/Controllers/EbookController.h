@@ -11,6 +11,7 @@
 #import "HomeController.h"
 #import "ContactController.h"
 #import "RequestCopyController.h"
+#import "LibraryController.h"
 
 
 @interface EbookController : UIViewController<UIGestureRecognizerDelegate> {

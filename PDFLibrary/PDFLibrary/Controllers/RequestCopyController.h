@@ -10,7 +10,7 @@
 
 #import "HomeController.h"
 #import "ContactController.h"
-
+#import "LibraryController.h"
 
 @interface RequestCopyController : UIViewController<UIGestureRecognizerDelegate> {
     IBOutlet UIButton * btnPopoverCategories;

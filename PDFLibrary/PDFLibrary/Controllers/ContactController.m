@@ -51,7 +51,16 @@ bool copyPressed = NO;
 }
 
 - (IBAction) btnMyLibraryPressed {
-    [[[[UIAlertView alloc] initWithTitle:@"TODO" message:@"My Library Tapped. Load MyLibraryController" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil] autorelease] show];   
+    LibraryController * controller;
+    
+    if(UIInterfaceOrientationIsLandscape([UIApplication sharedApplication].statusBarOrientation)){
+        controller = [[LibraryController alloc] initWithNibName:@"LibraryController-landscape" bundle:nil];
+    } else {
+        controller = [[LibraryController alloc] initWithNibName:@"LibraryController-portrait" bundle:nil];
+    }   
+    
+    [self presentModalViewController:controller animated:YES];
+    [self dismissModalViewControllerAnimated:NO];   
 }
 
 - (IBAction) btnContactPressed {

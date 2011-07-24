@@ -10,6 +10,7 @@
 #import "ContactController.h"
 #import "EbookController.h"
 #import "FiltersController.h"
+#import "LibraryController.h"
 
 
 @interface HomeController : UIViewController<UIGestureRecognizerDelegate> {

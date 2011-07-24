@@ -1,32 +1,37 @@
 //
-//  RequestCopyController.m
+//  LibraryController.m
 //  PDFLibrary
 //
 //  Created by Gonzalo Aizpun on 7/18/11.
 //  Copyright 2011 TheAppMaster. All rights reserved.
 //
 
-#import "RequestCopyController.h"
+#import "LibraryController.h"
 
 
-@implementation RequestCopyController
-bool hardCopyPressed = NO;
+@implementation LibraryController
+@synthesize scrollView;
 
-- (IBAction) btnSendPressed {
-    [[[[UIAlertView alloc] initWithTitle:@"TODO" message:@"Send Tapped. Request WebService" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil] autorelease] show]; 
-}
-
-- (IBAction) btnSendCopyPressed {
-    hardCopyPressed = !hardCopyPressed;
-    if(hardCopyPressed) {
-        [btnSendHardCopy setBackgroundImage:[UIImage imageNamed:@"btn-checkbox-on.png"] forState:UIControlStateNormal];
+- (IBAction) btnFilterBySortingPressed:(id)sender {
+    
+    int tag = [sender tag];
+    UIButton * btnLastUpdate = (UIButton*)[self.view viewWithTag:8];
+    UIButton * btnAlphabetical = (UIButton*)[self.view viewWithTag:9];
+    
+    if(tag==8) {
+        [btnLastUpdate setBackgroundImage:[UIImage imageNamed:@"btn-sort1-on.png"] 
+                                 forState:UIControlStateNormal];
+        [btnAlphabetical setBackgroundImage:[UIImage imageNamed:@"btn-sort2-off.png"] 
+                                   forState:UIControlStateNormal];
     } else {
-        [btnSendHardCopy setBackgroundImage:[UIImage imageNamed:@"btn-checkbox-off.png"] forState:UIControlStateNormal];
-        
+        [btnLastUpdate setBackgroundImage:[UIImage imageNamed:@"btn-sort1-off.png"] 
+                                 forState:UIControlStateNormal];
+        [btnAlphabetical setBackgroundImage:[UIImage imageNamed:@"btn-sort2-on.png"] 
+                                   forState:UIControlStateNormal];
     }
 }
 
-// **********************************************
+// ***************************************************
 
 - (IBAction) btnHomePressed {
     HomeController * controller;
@@ -50,16 +55,7 @@ bool hardCopyPressed = NO;
 }
 
 - (IBAction) btnMyLibraryPressed {
-    LibraryController * controller;
-    
-    if(UIInterfaceOrientationIsLandscape([UIApplication sharedApplication].statusBarOrientation)){
-        controller = [[LibraryController alloc] initWithNibName:@"LibraryController-landscape" bundle:nil];
-    } else {
-        controller = [[LibraryController alloc] initWithNibName:@"LibraryController-portrait" bundle:nil];
-    }   
-    
-    [self presentModalViewController:controller animated:YES];
-    [self dismissModalViewControllerAnimated:NO];   
+    // Currently on MyLibrary
 }
 
 - (IBAction) btnContactPressed {
@@ -82,6 +78,20 @@ bool hardCopyPressed = NO;
 - (IBAction) btnCategoryPressed:(id)sender {
    // int index = [(UIButton *)sender tag];
     [[[[UIAlertView alloc] initWithTitle:@"TODO" message:@"Category Tapped. Load CategoryController" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil] autorelease] show];
+}
+
+
+- (IBAction) btnFeaturedPressed {
+    EbookController * controller;
+    
+    if(UIInterfaceOrientationIsLandscape([UIApplication sharedApplication].statusBarOrientation)){
+        controller = [[EbookController alloc] initWithNibName:@"EbookController-landscape" bundle:nil];
+    } else {
+        controller = [[EbookController alloc] initWithNibName:@"EbookController-portrait" bundle:nil];
+    }   
+    
+    [self presentModalViewController:controller animated:YES];
+    [self dismissModalViewControllerAnimated:NO];    
 }
 
 - (IBAction) btnPopoverLanguagesPressed {
@@ -128,6 +138,23 @@ bool hardCopyPressed = NO;
 
 #pragma mark - View lifecycle
 
+- (void) initScrollView {
+    
+    UIImageView * imageView;
+    if(UIInterfaceOrientationIsLandscape([UIApplication sharedApplication].statusBarOrientation)){
+        imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"img-library-landscape.png"]];
+    } else {
+        imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"img-library-portrait.png"]];
+    }
+    
+
+    scrollView.contentSize = CGSizeMake(imageView.frame.size.width, imageView.frame.size.height);
+    scrollView.maximumZoomScale = 4.0;
+    scrollView.minimumZoomScale = 0.75;
+    scrollView.clipsToBounds = YES;
+    [scrollView addSubview:imageView];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -142,6 +169,8 @@ bool hardCopyPressed = NO;
     [self.view addGestureRecognizer:recognizer];
     recognizer.delegate = self;
     [recognizer release];
+    
+    [self initScrollView];
 }
 
 - (void)doubleTapMethod
@@ -174,11 +203,11 @@ bool hardCopyPressed = NO;
 
 - (void) willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
 {
-    RequestCopyController * controller;
+    LibraryController * controller;
     
     if(UIInterfaceOrientationIsPortrait(toInterfaceOrientation)) 
     {
-        controller = [[RequestCopyController alloc] initWithNibName:@"RequestCopyController-portrait" bundle:nil];
+        controller = [[LibraryController alloc] initWithNibName:@"LibraryController-portrait" bundle:nil];
         CGAffineTransform transform = controller.view.transform;
         
         if(toInterfaceOrientation == UIInterfaceOrientationPortraitUpsideDown)
@@ -191,7 +220,7 @@ bool hardCopyPressed = NO;
     } 
     else if(UIInterfaceOrientationIsLandscape(toInterfaceOrientation))
     {		
-        controller = [[RequestCopyController alloc] initWithNibName:@"RequestCopyController-landscape" bundle:nil];
+        controller = [[LibraryController alloc] initWithNibName:@"LibraryController-landscape" bundle:nil];
         CGAffineTransform transform = controller.view.transform;
         
         if(toInterfaceOrientation == UIInterfaceOrientationLandscapeLeft)
