@@ -11,6 +11,7 @@
 #import "EbookController.h"
 #import "HomeController.h"
 #import "LibraryController.h"
+#import "CategoryController.h"
 
 
 @interface FiltersController : UIViewController<UIGestureRecognizerDelegate> {

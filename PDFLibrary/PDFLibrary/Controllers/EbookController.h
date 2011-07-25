@@ -12,6 +12,7 @@
 #import "ContactController.h"
 #import "RequestCopyController.h"
 #import "LibraryController.h"
+#import "CategoryController.h"
 
 @class MFDocumentManager;
 @interface EbookController : UIViewController<UIGestureRecognizerDelegate> {

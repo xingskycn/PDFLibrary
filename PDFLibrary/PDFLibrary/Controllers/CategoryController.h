@@ -1,5 +1,5 @@
 //
-//  RequestCopyController.h
+//  CategoryController.h
 //  PDFLibrary
 //
 //  Created by Gonzalo Aizpun on 7/18/11.
@@ -7,18 +7,23 @@
 //
 
 #import <UIKit/UIKit.h>
-
-#import "HomeController.h"
 #import "ContactController.h"
+#import "EbookController.h"
+#import "HomeController.h"
 #import "LibraryController.h"
-#import "CategoryController.h"
 
-@interface RequestCopyController : UIViewController<UIGestureRecognizerDelegate> {
+
+@interface CategoryController : UIViewController<UIGestureRecognizerDelegate> {
     IBOutlet UIButton * btnPopoverCategories;
     IBOutlet UIButton * btnPopoverLanguages;
     
-    IBOutlet UIButton * btnSendHardCopy;
+    IBOutlet UIButton * btnSort1;
+    IBOutlet UIButton * btnSort2;
+    
+    IBOutlet UIScrollView * scrollView;
 }
+
+@property (nonatomic, retain) UIScrollView *scrollView;
 
 - (IBAction) btnHomePressed;
 - (IBAction) btnCategoriesPressed;
@@ -27,13 +32,13 @@
 - (IBAction) btnContactPressed;
 - (IBAction) btnSearchPressed;
 - (IBAction) btnCategoryPressed:(id)sender;
+- (IBAction) btnFeaturedPressed;
 - (IBAction) btnPopoverLanguagesPressed;
 - (IBAction) btnPopoverCategoriesPressed;
 
+// LibraryController Actions
+- (IBAction) btnFilterBySortingPressed:(id)sender;
 
-// RequestCopy Actions
-- (IBAction) btnSendPressed;
-- (IBAction) btnSendCopyPressed;
 
 
 @end

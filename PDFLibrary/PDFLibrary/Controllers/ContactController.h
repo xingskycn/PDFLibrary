@@ -10,6 +10,7 @@
 #import "HomeController.h"
 #import "EbookController.h"
 #import "LibraryController.h"
+#import "CategoryController.h"
 
 @interface ContactController : UIViewController<UIGestureRecognizerDelegate> {
     IBOutlet UIButton * btnPopoverCategories;

@@ -92,6 +92,16 @@ bool copyPressed = NO;
 
 - (IBAction) btnPopoverCategoriesPressed {
     
+    CategoryController * controller;
+    
+    if(UIInterfaceOrientationIsLandscape([UIApplication sharedApplication].statusBarOrientation)){
+        controller = [[CategoryController alloc] initWithNibName:@"CategoryController-landscape" bundle:nil];
+    } else {
+        controller = [[CategoryController alloc] initWithNibName:@"CategoryController-portrait" bundle:nil];
+    }   
+    
+    [self presentModalViewController:controller animated:YES];
+    [self dismissModalViewControllerAnimated:NO];  
 }
 
 
