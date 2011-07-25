@@ -54,8 +54,16 @@
 }
 
 - (IBAction) btnCategoryPressed:(id)sender {
-   // int index = [(UIButton *)sender tag];
-    [[[[UIAlertView alloc] initWithTitle:@"TODO" message:@"Category Tapped. Load CategoryController" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil] autorelease] show];
+    CategoryController * controller;
+    
+    if(UIInterfaceOrientationIsLandscape([UIApplication sharedApplication].statusBarOrientation)){
+        controller = [[CategoryController alloc] initWithNibName:@"CategoryController-landscape" bundle:nil];
+    } else {
+        controller = [[CategoryController alloc] initWithNibName:@"CategoryController-portrait" bundle:nil];
+    }   
+    
+    [self presentModalViewController:controller animated:YES];
+    [self dismissModalViewControllerAnimated:NO];
 }
 
 
