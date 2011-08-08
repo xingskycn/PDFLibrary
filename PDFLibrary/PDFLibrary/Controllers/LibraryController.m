@@ -10,6 +10,7 @@
 
 
 @implementation LibraryController
+@synthesize portrait, landscape;
 @synthesize scrollView;
 
 - (IBAction) btnFilterBySortingPressed:(id)sender {

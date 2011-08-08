@@ -18,7 +18,13 @@
 @interface EbookController : UIViewController<UIGestureRecognizerDelegate> {
     IBOutlet UIButton * btnPopoverCategories;
     IBOutlet UIButton * btnPopoverLanguages;
+    
+    IBOutlet UIView * landscape;
+    IBOutlet UIView * portrait;
 }
+
+@property (nonatomic,retain) IBOutlet UIView* landscape;
+@property (nonatomic,retain) IBOutlet UIView* portrait;
 
 - (IBAction) btnHomePressed;
 - (IBAction) btnCategoriesPressed;
@@ -33,5 +39,6 @@
 // Ebook Actions
 - (IBAction) btnRequestCopyPressed;
 - (IBAction)actionOpenPlainDocument:(id)sender;
+- (IBAction)back:(id)sender;
 
 @end

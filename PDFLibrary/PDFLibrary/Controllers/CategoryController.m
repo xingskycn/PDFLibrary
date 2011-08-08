@@ -10,6 +10,7 @@
 
 
 @implementation CategoryController
+@synthesize portrait, landscape;
 @synthesize scrollView;
 
 - (IBAction) btnFilterBySortingPressed:(id)sender {

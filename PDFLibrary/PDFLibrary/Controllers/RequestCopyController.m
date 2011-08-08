@@ -10,6 +10,7 @@
 
 
 @implementation RequestCopyController
+@synthesize portrait, landscape;
 bool hardCopyPressed = NO;
 
 - (IBAction) btnSendPressed {

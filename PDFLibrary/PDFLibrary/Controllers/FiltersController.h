@@ -28,7 +28,13 @@
     
     IBOutlet UIButton * btnSort1;
     IBOutlet UIButton * btnSort2;
+    
+    IBOutlet UIView * landscape;
+    IBOutlet UIView * portrait;
 }
+
+@property (nonatomic,retain) IBOutlet UIView* landscape;
+@property (nonatomic,retain) IBOutlet UIView* portrait;
 
 - (IBAction) btnHomePressed;
 - (IBAction) btnCategoriesPressed;

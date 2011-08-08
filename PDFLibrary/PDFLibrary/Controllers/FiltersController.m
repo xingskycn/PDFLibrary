@@ -10,7 +10,7 @@
 
 
 @implementation FiltersController
-
+@synthesize portrait, landscape;
 
 
 - (IBAction) btnFilterByCategoryPressed:(id)sender {

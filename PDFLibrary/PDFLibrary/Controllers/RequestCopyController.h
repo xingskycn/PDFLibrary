@@ -16,9 +16,14 @@
 @interface RequestCopyController : UIViewController<UIGestureRecognizerDelegate> {
     IBOutlet UIButton * btnPopoverCategories;
     IBOutlet UIButton * btnPopoverLanguages;
-    
     IBOutlet UIButton * btnSendHardCopy;
+    
+    IBOutlet UIView * landscape;
+    IBOutlet UIView * portrait;
 }
+
+@property (nonatomic,retain) IBOutlet UIView* landscape;
+@property (nonatomic,retain) IBOutlet UIView* portrait;
 
 - (IBAction) btnHomePressed;
 - (IBAction) btnCategoriesPressed;

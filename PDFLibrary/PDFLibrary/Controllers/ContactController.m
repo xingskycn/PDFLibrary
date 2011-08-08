@@ -10,6 +10,8 @@
 
 
 @implementation ContactController
+@synthesize portrait, landscape;
+
 bool copyPressed = NO;
 
 - (IBAction) btnSendPressed {

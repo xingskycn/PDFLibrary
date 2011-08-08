@@ -21,7 +21,13 @@
     IBOutlet UIButton * btnSort2;
     
     IBOutlet UIScrollView * scrollView;
+    
+    IBOutlet UIView * landscape;
+    IBOutlet UIView * portrait;
 }
+
+@property (nonatomic,retain) IBOutlet UIView* landscape;
+@property (nonatomic,retain) IBOutlet UIView* portrait;
 
 @property (nonatomic, retain) UIScrollView *scrollView;
 

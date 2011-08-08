@@ -22,7 +22,13 @@
     IBOutlet UITextField * txtEmail;
     IBOutlet UITextField * txtPhone;
     IBOutlet UIButton * btnSendCopy;
+    
+    IBOutlet UIView * landscape;
+    IBOutlet UIView * portrait;
 }
+
+@property (nonatomic,retain) IBOutlet UIView* landscape;
+@property (nonatomic,retain) IBOutlet UIView* portrait;
 
 - (IBAction) btnHomePressed;
 - (IBAction) btnCategoriesPressed;

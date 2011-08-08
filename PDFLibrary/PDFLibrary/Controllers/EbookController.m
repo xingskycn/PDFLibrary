@@ -11,6 +11,7 @@
 #import "ReaderViewController.h"
 
 @implementation EbookController
+@synthesize portrait, landscape;
 
 
 - (IBAction) btnRequestCopyPressed {
@@ -245,4 +246,8 @@
 }
 
 
+- (IBAction)back:(id)sender
+{
+    [self.navigationController popViewControllerAnimated:YES];
+}
 @end
