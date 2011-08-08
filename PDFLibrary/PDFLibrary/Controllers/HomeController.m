@@ -10,6 +10,8 @@
 
 
 @implementation HomeController
+@synthesize portrait, landscape;
+
 
 - (IBAction) btnHomePressed {
     // We're on HomeController
@@ -17,10 +19,12 @@
 
 - (IBAction) btnCategoriesPressed {
     btnPopoverCategories.hidden = NO; 
+    btnPopoverCategoriesPortrait.hidden = NO; 
 }
 
 - (IBAction) btnLanguagesPressed {
     btnPopoverLanguages.hidden = NO; 
+    btnPopoverLanguagesPortrait.hidden = NO;
 }
 
 - (IBAction) btnMyLibraryPressed {
@@ -70,14 +74,16 @@
 - (IBAction) btnFeaturedPressed {
     EbookController * controller;
     
-    if(UIInterfaceOrientationIsLandscape([UIApplication sharedApplication].statusBarOrientation)){
-        controller = [[EbookController alloc] initWithNibName:@"EbookController-landscape" bundle:nil];
-    } else {
-        controller = [[EbookController alloc] initWithNibName:@"EbookController-portrait" bundle:nil];
-    }   
+    //if(UIInterfaceOrientationIsLandscape([UIApplication sharedApplication].statusBarOrientation)){
+    //    controller = [[EbookController alloc] initWithNibName:@"EbookController-landscape" bundle:nil];
+    //} else {
+        controller = [[EbookController alloc] initWithNibName:@"EbookController-portrait" bundle:[NSBundle mainBundle]];
+    //}   
     
-    [self presentModalViewController:controller animated:YES];
-    [self dismissModalViewControllerAnimated:NO];    
+    [self.navigationController pushViewController:controller animated:YES];
+    [controller release];
+    //[self presentModalViewController:controller animated:YES];
+    //[self dismissModalViewControllerAnimated:NO];    
 }
 
 - (IBAction) btnPopoverLanguagesPressed {
@@ -110,17 +116,10 @@
 
 // ********************************
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
 - (void)dealloc
 {
+    [portrait release];
+    [landscape release];
     [super dealloc];
 }
 
@@ -136,11 +135,16 @@
 
 - (void)viewDidLoad
 {
+    [self.view addSubview:landscape];
+    landscape.hidden = true;
+    
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
     btnPopoverLanguages.hidden = YES;
     btnPopoverCategories.hidden = YES;
+    btnPopoverLanguagesPortrait.hidden = YES;
+    btnPopoverCategoriesPortrait.hidden = YES;
     
     UIGestureRecognizer *recognizer;
     recognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(doubleTapMethod)];
@@ -154,7 +158,9 @@
 - (void)doubleTapMethod
 {
     btnPopoverCategories.hidden = YES;
-    btnPopoverLanguages.hidden = YES;       
+    btnPopoverLanguages.hidden = YES;  
+    btnPopoverCategoriesPortrait.hidden = YES;
+    btnPopoverLanguagesPortrait.hidden = YES;  
 }
 
 
@@ -162,6 +168,8 @@
 {
     btnPopoverCategories.hidden = YES;
     btnPopoverLanguages.hidden = YES;
+    btnPopoverCategoriesPortrait.hidden = YES;
+    btnPopoverLanguagesPortrait.hidden = YES; 
     
     return YES;
 }
@@ -181,7 +189,12 @@
 
 - (void) willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
 {
-    HomeController * controller;
+    if(UIInterfaceOrientationIsPortrait(toInterfaceOrientation)) 
+        landscape.hidden = true;
+    else
+        landscape.hidden = false;
+
+    /*HomeController * controller;
     
     if(UIInterfaceOrientationIsPortrait(toInterfaceOrientation)) 
     {
@@ -211,7 +224,7 @@
     }
     
     self.view = controller.view;
-    //[controller release];   NUNCAAAAA!!! FUCK! 
+    //[controller release];   NUNCAAAAA!!! FUCK! */
 }
 
 
