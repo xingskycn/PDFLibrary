@@ -8,71 +8,60 @@
 
 #import "PDFLibraryAppDelegate.h"
 #import "HomeController.h"
+#import "StartUpController.h"
 
 @implementation PDFLibraryAppDelegate
 
+@synthesize window;
+@synthesize startUpController;
+@synthesize rootController;
+@synthesize homeViewController;
 
-@synthesize window=_window;
-
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
-{
-    // Override point for customization after application launch.
-    HomeController * controller;
+// Override point for customization after app launch  
+- (void)applicationDidFinishLaunching:(UIApplication *)application {    
     
-    if(UIInterfaceOrientationIsLandscape([UIApplication sharedApplication].statusBarOrientation)){
-        controller = [[HomeController alloc] initWithNibName:@"HomeController-landscape" bundle:nil];
-    } else {
-        controller = [[HomeController alloc] initWithNibName:@"HomeController-portrait" bundle:nil];
-    }
+    //[[[DBManager getInstance] initWithDatabaseFile: @"Unav_v1.0.sql"] connect];
     
+    // Override point for customization after app launch.
+    [self.window addSubview:startUpController.view];
     [self.window makeKeyAndVisible];
-    [self.window addSubview:[controller view]];
-    return YES;
+    
 }
 
-- (void)applicationWillResignActive:(UIApplication *)application
-{
-    /*
-     Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
-     Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
-     */
+- (void)application:(UIApplication *)app didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken { 
 }
 
-- (void)applicationDidEnterBackground:(UIApplication *)application
-{
-    /*
-     Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
-     If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
-     */
+
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
 }
 
-- (void)applicationWillEnterForeground:(UIApplication *)application
-{
-    /*
-     Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
-     */
+- (void)application:(UIApplication *)app didFailToRegisterForRemoteNotificationsWithError:(NSError *)err { 
 }
 
-- (void)applicationDidBecomeActive:(UIApplication *)application
-{
-    /*
-     Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
-     */
+- (void) applicationDidEnterBackground:(UIApplication *)application {
+    exit(EXIT_SUCCESS);
 }
 
-- (void)applicationWillTerminate:(UIApplication *)application
-{
-    /*
-     Called when the application is about to terminate.
-     Save data if appropriate.
-     See also applicationDidEnterBackground:.
-     */
+- (void)applicationWillTerminate:(UIApplication *)application {
+	// Save data if appropriate
+	//[[DBManager getInstance] disconnect];
 }
 
-- (void)dealloc
-{
-    [_window release];
-    [super dealloc];
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
+    
+    return UIInterfaceOrientationIsPortrait(interfaceOrientation);
 }
 
+- (void)dealloc {
+    [rootController release];
+    [homeViewController release];
+	[startUpController release];
+	[window release];
+	[super dealloc];
+}
+
+- (void)showRootController {
+	[startUpController.view removeFromSuperview];
+    [window addSubview:rootController.view];	
+}
 @end

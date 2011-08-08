@@ -7,11 +7,22 @@
 //
 
 #import <UIKit/UIKit.h>
+@class StockControllerViewController;
+@class StartUpController;
+@class HomeController;
 
 @interface PDFLibraryAppDelegate : NSObject <UIApplicationDelegate> {
-
+    UIWindow *window;
+    
+	StartUpController* startUpController;
+    HomeController* homeViewController;
+	UIViewController* rootController;
 }
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
+@property (nonatomic, retain) IBOutlet StartUpController* startUpController;
+@property (nonatomic, retain) IBOutlet HomeController* homeViewController;
+@property (nonatomic, retain) IBOutlet UIViewController* rootController;
 
+- (void)showRootController; 
 @end
