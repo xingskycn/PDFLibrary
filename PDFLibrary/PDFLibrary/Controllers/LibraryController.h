@@ -38,6 +38,7 @@
 @property (nonatomic,retain) IBOutlet UIView* portrait;
 
 @property (nonatomic, retain) UIScrollView *scrollView;
+@property (nonatomic, retain) UIScrollView *scrollViewLandscape;
 
 - (IBAction) btnHomePressed;
 - (IBAction) btnCategoriesPressed;

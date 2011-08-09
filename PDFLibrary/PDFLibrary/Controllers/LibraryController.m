@@ -11,7 +11,7 @@
 
 @implementation LibraryController
 @synthesize portrait, landscape;
-@synthesize scrollView;
+@synthesize scrollView, scrollViewLandscape;
 
 - (IBAction) btnFilterBySortingPressed:(id)sender {
     
@@ -128,19 +128,26 @@
 
 - (void) initScrollView {
     
-    UIImageView * imageView;
-    if(UIInterfaceOrientationIsLandscape([UIApplication sharedApplication].statusBarOrientation)){
-        imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"img-library-landscape.png"]];
-    } else {
-        imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"img-library-portrait.png"]];
-    }
+    UIImageView * imageView = [[UIImageView alloc] initWithImage:
+                               [UIImage imageNamed:@"img-portrait-category.png"]];
     
-
-    scrollView.contentSize = CGSizeMake(imageView.frame.size.width, imageView.frame.size.height);
+    UIImageView * imageViewLandscape = [[UIImageView alloc] initWithImage:
+                                        [UIImage imageNamed:@"img-landscape-category.png"]];
+    
+    scrollView.contentSize = CGSizeMake(imageView.frame.size.width, 
+                                        imageView.frame.size.height);
     scrollView.maximumZoomScale = 4.0;
     scrollView.minimumZoomScale = 0.75;
     scrollView.clipsToBounds = YES;
     [scrollView addSubview:imageView];
+    
+    scrollViewLandscape.contentSize = CGSizeMake(imageViewLandscape.frame.size.width, 
+                                                 imageViewLandscape.frame.size.height);
+    scrollViewLandscape.maximumZoomScale = 4.0;
+    scrollViewLandscape.minimumZoomScale = 0.75;
+    scrollViewLandscape.clipsToBounds = YES;
+    [scrollViewLandscape addSubview:imageViewLandscape];
+    
 }
 
 - (void)viewDidLoad
