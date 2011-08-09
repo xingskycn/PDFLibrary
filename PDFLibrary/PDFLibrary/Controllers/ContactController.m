@@ -41,10 +41,12 @@ bool copyPressed = NO;
 
 - (IBAction) btnCategoriesPressed {
     btnPopoverCategories.hidden = NO; 
+    btnPopoverCategoriesLandscape.hidden = NO;
 }
 
 - (IBAction) btnLanguagesPressed {
     btnPopoverLanguages.hidden = NO; 
+    btnPopoverLanguagesLandscape.hidden = NO;
 }
 
 - (IBAction) btnMyLibraryPressed {
@@ -98,6 +100,8 @@ bool copyPressed = NO;
 
 - (void)dealloc
 {
+    [portrait release];
+    [landscape release];
     [super dealloc];
 }
 
@@ -113,11 +117,16 @@ bool copyPressed = NO;
 
 - (void)viewDidLoad
 {
+    [self.view addSubview:landscape];
+    landscape.hidden = true;
+    
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
     btnPopoverLanguages.hidden = YES;
     btnPopoverCategories.hidden = YES;
+    btnPopoverLanguagesLandscape.hidden = YES;
+    btnPopoverCategoriesLandscape.hidden = YES;
     
     UIGestureRecognizer *recognizer;
     recognizer = [[UITapGestureRecognizer alloc] initWithTarget:self   action:@selector(doubleTapMethod)];
@@ -127,10 +136,13 @@ bool copyPressed = NO;
     [recognizer release];
 }
 
+
 - (void)doubleTapMethod
 {
     btnPopoverCategories.hidden = YES;
-    btnPopoverLanguages.hidden = YES;       
+    btnPopoverLanguages.hidden = YES;      
+    btnPopoverLanguagesLandscape.hidden = YES;
+    btnPopoverCategoriesLandscape.hidden = YES;
 }
 
 
@@ -138,6 +150,8 @@ bool copyPressed = NO;
 {
     btnPopoverCategories.hidden = YES;
     btnPopoverLanguages.hidden = YES;
+    btnPopoverLanguagesLandscape.hidden = YES;
+    btnPopoverCategoriesLandscape.hidden = YES;
     
     return YES;
 }
@@ -158,7 +172,6 @@ bool copyPressed = NO;
 - (void) willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
 {
     landscape.hidden = UIInterfaceOrientationIsPortrait(toInterfaceOrientation);
-    portrait.hidden = !landscape.hidden;
 }
 
 

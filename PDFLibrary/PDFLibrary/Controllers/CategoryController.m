@@ -44,10 +44,12 @@
 
 - (IBAction) btnCategoriesPressed {
     btnPopoverCategories.hidden = NO; 
+    btnPopoverCategoriesLandscape.hidden = NO;
 }
 
 - (IBAction) btnLanguagesPressed {
     btnPopoverLanguages.hidden = NO; 
+    btnPopoverLanguagesLandscape.hidden = NO;
 }
 
 - (IBAction) btnMyLibraryPressed {
@@ -113,6 +115,8 @@
 
 - (void)dealloc
 {
+    [portrait release];
+    [landscape release];
     [super dealloc];
 }
 
@@ -147,11 +151,16 @@
 
 - (void)viewDidLoad
 {
+    [self.view addSubview:landscape];
+    landscape.hidden = true;
+    
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
     btnPopoverLanguages.hidden = YES;
     btnPopoverCategories.hidden = YES;
+    btnPopoverLanguagesLandscape.hidden = YES;
+    btnPopoverCategoriesLandscape.hidden = YES;
     
     UIGestureRecognizer *recognizer;
     recognizer = [[UITapGestureRecognizer alloc] initWithTarget:self   action:@selector(doubleTapMethod)];
@@ -163,10 +172,14 @@
     [self initScrollView];
 }
 
+
+
 - (void)doubleTapMethod
 {
     btnPopoverCategories.hidden = YES;
-    btnPopoverLanguages.hidden = YES;       
+    btnPopoverLanguages.hidden = YES;   
+    btnPopoverLanguagesLandscape.hidden = YES;
+    btnPopoverCategoriesLandscape.hidden = YES;
 }
 
 
@@ -174,6 +187,8 @@
 {
     btnPopoverCategories.hidden = YES;
     btnPopoverLanguages.hidden = YES;
+    btnPopoverLanguagesLandscape.hidden = YES;
+    btnPopoverCategoriesLandscape.hidden = YES;
     
     return YES;
 }
@@ -194,7 +209,6 @@
 - (void) willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
 {
     landscape.hidden = UIInterfaceOrientationIsPortrait(toInterfaceOrientation);
-    portrait.hidden = !landscape.hidden;
 }
 
 

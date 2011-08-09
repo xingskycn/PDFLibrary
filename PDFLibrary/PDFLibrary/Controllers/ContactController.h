@@ -13,9 +13,9 @@
 #import "CategoryController.h"
 
 @interface ContactController : UIViewController<UIGestureRecognizerDelegate> {
+
     IBOutlet UIButton * btnPopoverCategories;
     IBOutlet UIButton * btnPopoverLanguages;
-    
     IBOutlet UITextView * txtMessage;
     IBOutlet UITextField * txtName;
     IBOutlet UITextField * txtCompany;
@@ -25,6 +25,16 @@
     
     IBOutlet UIView * landscape;
     IBOutlet UIView * portrait;
+    
+    IBOutlet UIButton * btnPopoverCategoriesLandscape;
+    IBOutlet UIButton * btnPopoverLanguagesLandscape;
+    IBOutlet UITextView * txtMessageLandscape;
+    IBOutlet UITextField * txtNameLandscape;
+    IBOutlet UITextField * txtCompanyLandscape;
+    IBOutlet UITextField * txtEmailLandscape;
+    IBOutlet UITextField * txtPhoneLandscape;
+    IBOutlet UIButton * btnSendCopyLandscape;
+
 }
 
 @property (nonatomic,retain) IBOutlet UIView* landscape;

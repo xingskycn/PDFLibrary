@@ -101,7 +101,7 @@
 - (void)viewDidLoad
 {
     [self.view addSubview:landscape];
-    landscape.hidden = true;
+    landscape.hidden = YES;
     
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
@@ -117,8 +117,18 @@
     [self.view addGestureRecognizer:recognizer];
     recognizer.delegate = self;
     [recognizer release];
+
     
 }
+
+/*
+- (void)viewWillAppear:(BOOL)animated {
+    
+    if(!UIDeviceOrientationIsPortrait([UIApplication sharedApplication].statusBarOrientation)) {
+       [[UIDevice currentDevice] setOrientation:UIInterfaceOrientationLandscapeRight];
+    } 
+}
+*/
 
 - (void)doubleTapMethod
 {
@@ -154,7 +164,6 @@
 
 - (void) willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration {
     landscape.hidden = UIInterfaceOrientationIsPortrait(toInterfaceOrientation);
-    portrait.hidden = !landscape.hidden;
 }
 
 

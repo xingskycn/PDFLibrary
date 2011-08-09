@@ -31,6 +31,21 @@
     
     IBOutlet UIView * landscape;
     IBOutlet UIView * portrait;
+
+    IBOutlet UIButton * btnPopoverCategoriesLandscape;
+    IBOutlet UIButton * btnPopoverLanguagesLandscape;
+    
+    IBOutlet UIButton * btnCategory0Landscape;
+    IBOutlet UIButton * btnCategory1Landscape;
+    IBOutlet UIButton * btnCategory2Landscape;
+    IBOutlet UIButton * btnCategory3Landscape;
+    IBOutlet UIButton * btnCategory4Landscape;
+    IBOutlet UIButton * btnCategory5Landscape;
+    IBOutlet UIButton * btnCategory6Landscape;
+    
+    IBOutlet UIButton * btnSort1Landscape;
+    IBOutlet UIButton * btnSort2Landscape;
+
 }
 
 @property (nonatomic,retain) IBOutlet UIView* landscape;

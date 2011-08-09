@@ -20,6 +20,10 @@
     
     IBOutlet UIView * landscape;
     IBOutlet UIView * portrait;
+
+    IBOutlet UIButton * btnPopoverCategoriesLandscape;
+    IBOutlet UIButton * btnPopoverLanguagesLandscape;
+    IBOutlet UIButton * btnSendHardCopyLandscape;
 }
 
 @property (nonatomic,retain) IBOutlet UIView* landscape;

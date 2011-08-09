@@ -82,7 +82,7 @@
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-	return UIInterfaceOrientationIsPortrait(interfaceOrientation);
+	return YES;
 }
 
 #pragma mark -
@@ -90,4 +90,6 @@
 - (void)didPresentAlertView:(UIAlertView *)alertView {
 	[self doStartUp];
 }
+
+
 @end
