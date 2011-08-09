@@ -33,15 +33,10 @@ bool copyPressed = NO;
 
 - (IBAction) btnHomePressed {
     
-    HomeController * controller;
-    if(UIInterfaceOrientationIsLandscape([UIApplication sharedApplication].statusBarOrientation)){
-        controller = [[HomeController alloc] initWithNibName:@"HomeController-landscape" bundle:nil];
-    } else {
-        controller = [[HomeController alloc] initWithNibName:@"HomeController-portrait" bundle:nil];
-    }   
+    HomeController * controller = [[HomeController alloc] init];
+    [self.navigationController pushViewController:controller animated:YES];
+    [controller release];
     
-    [self presentModalViewController:controller animated:YES];
-    [self dismissModalViewControllerAnimated:NO];
 }
 
 - (IBAction) btnCategoriesPressed {
@@ -53,16 +48,11 @@ bool copyPressed = NO;
 }
 
 - (IBAction) btnMyLibraryPressed {
-    LibraryController * controller;
     
-    if(UIInterfaceOrientationIsLandscape([UIApplication sharedApplication].statusBarOrientation)){
-        controller = [[LibraryController alloc] initWithNibName:@"LibraryController-landscape" bundle:nil];
-    } else {
-        controller = [[LibraryController alloc] initWithNibName:@"LibraryController-portrait" bundle:nil];
-    }   
+    LibraryController * controller = [[LibraryController alloc] init];
+    [self.navigationController pushViewController:controller animated:YES];
+    [controller release];
     
-    [self presentModalViewController:controller animated:YES];
-    [self dismissModalViewControllerAnimated:NO];   
 }
 
 - (IBAction) btnContactPressed {
@@ -80,30 +70,18 @@ bool copyPressed = NO;
 
 - (IBAction) btnPopoverLanguagesPressed {
     
-    FiltersController * controller;
+    FiltersController * controller = [[FiltersController alloc] init];
+    [self.navigationController pushViewController:controller animated:YES];
+    [controller release];
     
-    if(UIInterfaceOrientationIsLandscape([UIApplication sharedApplication].statusBarOrientation)){
-        controller = [[FiltersController alloc] initWithNibName:@"FiltersController-landscape" bundle:nil];
-    } else {
-        controller = [[FiltersController alloc] initWithNibName:@"FiltersController-portrait" bundle:nil];
-    }   
-    
-    [self presentModalViewController:controller animated:YES];
-    [self dismissModalViewControllerAnimated:NO];    
 }
 
 - (IBAction) btnPopoverCategoriesPressed {
     
-    CategoryController * controller;
+    CategoryController * controller = [[CategoryController alloc] init];
+    [self.navigationController pushViewController:controller animated:YES];
+    [controller release]; 
     
-    if(UIInterfaceOrientationIsLandscape([UIApplication sharedApplication].statusBarOrientation)){
-        controller = [[CategoryController alloc] initWithNibName:@"CategoryController-landscape" bundle:nil];
-    } else {
-        controller = [[CategoryController alloc] initWithNibName:@"CategoryController-portrait" bundle:nil];
-    }   
-    
-    [self presentModalViewController:controller animated:YES];
-    [self dismissModalViewControllerAnimated:NO];  
 }
 
 
@@ -179,37 +157,8 @@ bool copyPressed = NO;
 
 - (void) willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
 {
-    ContactController * controller;
-
-    if(UIInterfaceOrientationIsPortrait(toInterfaceOrientation)) 
-    {
-        controller = [[ContactController alloc] initWithNibName:@"ContactController-portrait" bundle:nil];
-        CGAffineTransform transform = controller.view.transform;
-        
-        if(toInterfaceOrientation == UIInterfaceOrientationPortraitUpsideDown)
-            transform = CGAffineTransformRotate(transform, (-M_PI));
-        
-        if(toInterfaceOrientation == UIInterfaceOrientationPortrait)
-            transform = CGAffineTransformRotate(transform, (2*M_PI));
-
-        controller.view.transform = transform;
-    } 
-    else if(UIInterfaceOrientationIsLandscape(toInterfaceOrientation))
-    {		
-        controller = [[ContactController alloc] initWithNibName:@"ContactController-landscape" bundle:nil];
-        CGAffineTransform transform = controller.view.transform;
-        
-        if(toInterfaceOrientation == UIInterfaceOrientationLandscapeLeft)
-            transform = CGAffineTransformRotate(transform, (-M_PI/2));
-        
-        if(toInterfaceOrientation == UIInterfaceOrientationLandscapeRight)
-            transform = CGAffineTransformRotate(transform, (+M_PI/2));
-     
-        controller.view.transform = transform;
-    }
-    
-    self.view = controller.view;
-    //[controller release];   NUNCAAAAA!!! FUCK! 
+    landscape.hidden = UIInterfaceOrientationIsPortrait(toInterfaceOrientation);
+    portrait.hidden = !landscape.hidden;
 }
 
 
