@@ -61,6 +61,7 @@
 - (IBAction) btnFeaturedPressed;
 - (IBAction) btnPopoverLanguagesPressed;
 - (IBAction) btnPopoverCategoriesPressed;
+- (IBAction) btnBackPressed:(id)sender;
 
 // FiltersController Actions
 - (IBAction) btnFilterByCategoryPressed:(id)sender;

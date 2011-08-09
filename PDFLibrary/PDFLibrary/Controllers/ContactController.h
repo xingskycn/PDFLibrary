@@ -49,6 +49,7 @@
 - (IBAction) btnCategoryPressed:(id)sender;
 - (IBAction) btnPopoverLanguagesPressed;
 - (IBAction) btnPopoverCategoriesPressed;
+- (IBAction) btnBackPressed:(id)sender;
 
 // ContactActions
 - (IBAction) btnSendPressed;

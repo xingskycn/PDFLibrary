@@ -56,6 +56,7 @@
 		2731248113DC84410056EBA3 /* portrait-library.png in Resources */ = {isa = PBXBuildFile; fileRef = 2731247D13DC843E0056EBA3 /* portrait-library.png */; };
 		2731248513DC86120056EBA3 /* LibraryController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2731248313DC86120056EBA3 /* LibraryController.xib */; };
 		275E7C0913EDA2BD00BD771A /* starter.png in Resources */ = {isa = PBXBuildFile; fileRef = 275E7C0813EDA2BD00BD771A /* starter.png */; };
+		275E7C3B13F0FCA100BD771A /* btn-back.png in Resources */ = {isa = PBXBuildFile; fileRef = 275E7C3A13F0FCA100BD771A /* btn-back.png */; };
 		279386ED13DCC0A30006C031 /* FastPdfKit.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 279386EC13DCC0A30006C031 /* FastPdfKit.xcconfig */; };
 		279386EF13DCC1090006C031 /* FPKReaderBundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 279386EE13DCC1090006C031 /* FPKReaderBundle.bundle */; };
 		279386F813DCC18D0006C031 /* Hot_Induction_BendEnglish.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 279386F313DCC18D0006C031 /* Hot_Induction_BendEnglish.pdf */; };
@@ -210,6 +211,7 @@
 		2731247D13DC843E0056EBA3 /* portrait-library.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "portrait-library.png"; path = "Resources/Images/portrait-library.png"; sourceTree = "<group>"; };
 		2731248313DC86120056EBA3 /* LibraryController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LibraryController.xib; path = XIBs/LibraryController.xib; sourceTree = "<group>"; };
 		275E7C0813EDA2BD00BD771A /* starter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = starter.png; path = Resources/Images/starter.png; sourceTree = "<group>"; };
+		275E7C3A13F0FCA100BD771A /* btn-back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "btn-back.png"; path = "Resources/Images/btn-back.png"; sourceTree = "<group>"; };
 		279386D213DCC09B0006C031 /* FastPdfKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = FastPdfKit.xcodeproj; path = ../../FastPdfKit/FastPdfKit.xcodeproj; sourceTree = "<group>"; };
 		279386EC13DCC0A30006C031 /* FastPdfKit.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = FastPdfKit.xcconfig; path = ../../../FastPdfKit/OtherSources/FastPdfKit.xcconfig; sourceTree = "<group>"; };
 		279386EE13DCC1090006C031 /* FPKReaderBundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = FPKReaderBundle.bundle; path = ../../../FastPdfKit/Bundle/FPKReaderBundle.bundle; sourceTree = "<group>"; };
@@ -295,6 +297,7 @@
 		2731246D13DB7B4A0056EBA3 /* buttons */ = {
 			isa = PBXGroup;
 			children = (
+				275E7C3A13F0FCA100BD771A /* btn-back.png */,
 				2731244513DB7B430056EBA3 /* btn-category0-off.png */,
 				2731244613DB7B430056EBA3 /* btn-category0-on.png */,
 				2731244713DB7B430056EBA3 /* btn-category1-off.png */,
@@ -702,6 +705,7 @@
 				27B3188613DCE7C30088B87F /* CategoryController.xib in Resources */,
 				27B3189013ED9FF60088B87F /* StartUpController.xib in Resources */,
 				275E7C0913EDA2BD00BD771A /* starter.png in Resources */,
+				275E7C3B13F0FCA100BD771A /* btn-back.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

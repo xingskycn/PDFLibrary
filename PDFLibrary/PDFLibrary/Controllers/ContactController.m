@@ -86,6 +86,10 @@ bool copyPressed = NO;
     
 }
 
+- (IBAction) btnBackPressed:(id)sender {
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
 
 // ********************************
 

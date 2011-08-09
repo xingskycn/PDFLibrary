@@ -43,6 +43,6 @@
 // Ebook Actions
 - (IBAction) btnRequestCopyPressed;
 - (IBAction)actionOpenPlainDocument:(id)sender;
-- (IBAction)back:(id)sender;
+- (IBAction) btnBackPressed:(id)sender;
 
 @end

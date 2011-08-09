@@ -84,6 +84,11 @@
 
 }
 
+- (IBAction) btnBackPressed:(id)sender {
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+
 // ********************************
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -198,8 +203,4 @@
 }
 
 
-- (IBAction)back:(id)sender
-{
-    [self.navigationController popViewControllerAnimated:YES];
-}
 @end

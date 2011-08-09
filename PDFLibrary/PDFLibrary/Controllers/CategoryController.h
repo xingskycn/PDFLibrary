@@ -50,6 +50,7 @@
 - (IBAction) btnFeaturedPressed;
 - (IBAction) btnPopoverLanguagesPressed;
 - (IBAction) btnPopoverCategoriesPressed;
+- (IBAction) btnBackPressed:(id)sender;
 
 // LibraryController Actions
 - (IBAction) btnFilterBySortingPressed:(id)sender;
