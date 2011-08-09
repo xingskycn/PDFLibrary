@@ -174,6 +174,22 @@ bool copyPressed = NO;
     landscape.hidden = UIInterfaceOrientationIsPortrait(toInterfaceOrientation);
 }
 
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    
+    [txtName resignFirstResponder];
+    [txtNameLandscape resignFirstResponder];
+    [txtCompany resignFirstResponder];
+    [txtCompanyLandscape resignFirstResponder];
+    [txtEmail resignFirstResponder];
+    [txtEmailLandscape resignFirstResponder];
+    [txtMessage resignFirstResponder];
+    [txtMessageLandscape resignFirstResponder];
+    [txtName resignFirstResponder];
+    [txtNameLandscape resignFirstResponder];
+    [txtPhone resignFirstResponder];
+    [txtPhoneLandscape resignFirstResponder];
+    
+}
 
 
 
