@@ -441,7 +441,7 @@
 					<object class="IBUILabel" id="757764584">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{40, 154}, {214, 21}}</string>
+						<string key="NSFrame">{{40, 151}, {214, 21}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="1045768747"/>
@@ -451,14 +451,14 @@
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 						<string key="IBUIText">SHOWING 230 MATCHES FOR:</string>
-						<object class="NSFont" key="IBUIFont" id="593550433">
+						<object class="NSFont" key="IBUIFont" id="843194190">
 							<string key="NSName">Helvetica-Bold</string>
-							<double key="NSSize">11</double>
+							<double key="NSSize">10</double>
 							<int key="NSfFlags">16</int>
 						</object>
-						<object class="NSColor" key="IBUITextColor" id="373725251">
-							<int key="NSColorSpace">3</int>
-							<bytes key="NSWhite">MC4zMzMzMzMzMzMzAA</bytes>
+						<object class="NSColor" key="IBUITextColor">
+							<int key="NSColorSpace">2</int>
+							<bytes key="NSRGB">MC40NjI3NDUxMzAxIDAuNDYyNzQ1MTMwMSAwLjQ2Mjc0NTEzMDEAA</bytes>
 						</object>
 						<nil key="IBUIHighlightedColor"/>
 						<int key="IBUIBaselineAdjustment">1</int>
@@ -467,7 +467,7 @@
 					<object class="IBUILabel" id="1045768747">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{40, 175}, {214, 21}}</string>
+						<string key="NSFrame">{{40, 167}, {214, 21}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="852368369"/>
@@ -477,7 +477,7 @@
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 						<string key="IBUIText">English</string>
-						<object class="NSFont" key="IBUIFont" id="180987036">
+						<object class="NSFont" key="IBUIFont" id="696276771">
 							<string key="NSName">Helvetica-Bold</string>
 							<double key="NSSize">14</double>
 							<int key="NSfFlags">16</int>
@@ -817,7 +817,7 @@
 					<object class="IBUILabel" id="513902858">
 						<reference key="NSNextResponder" ref="1046845116"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{40, 158}, {185, 21}}</string>
+						<string key="NSFrame">{{40, 154}, {185, 21}}</string>
 						<reference key="NSSuperview" ref="1046845116"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="796391759"/>
@@ -827,8 +827,11 @@
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 						<string key="IBUIText">SHOWING 230 MATCHES FOR:</string>
-						<reference key="IBUIFont" ref="593550433"/>
-						<reference key="IBUITextColor" ref="373725251"/>
+						<reference key="IBUIFont" ref="843194190"/>
+						<object class="NSColor" key="IBUITextColor">
+							<int key="NSColorSpace">2</int>
+							<bytes key="NSRGB">MC40NTA5ODA0MjQ5IDAuNDUwOTgwNDI0OSAwLjQ1MDk4MDQyNDkAA</bytes>
+						</object>
 						<nil key="IBUIHighlightedColor"/>
 						<int key="IBUIBaselineAdjustment">1</int>
 						<float key="IBUIMinimumFontSize">10</float>
@@ -836,7 +839,7 @@
 					<object class="IBUILabel" id="796391759">
 						<reference key="NSNextResponder" ref="1046845116"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{40, 179}, {195, 21}}</string>
+						<string key="NSFrame">{{40, 171}, {195, 21}}</string>
 						<reference key="NSSuperview" ref="1046845116"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="992554768"/>
@@ -846,7 +849,7 @@
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 						<string key="IBUIText">English</string>
-						<reference key="IBUIFont" ref="180987036"/>
+						<reference key="IBUIFont" ref="696276771"/>
 						<reference key="IBUITextColor" ref="14053754"/>
 						<nil key="IBUIHighlightedColor"/>
 						<int key="IBUIBaselineAdjustment">1</int>
