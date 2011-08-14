@@ -12,6 +12,26 @@
 @implementation RequestCopyController
 @synthesize portrait, landscape;
 bool hardCopyPressed = NO;
+bool isPortrait = false;
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    UIDeviceOrientation orientation = [UIApplication sharedApplication].statusBarOrientation;
+    
+    /*
+     if (orientation == UIDeviceOrientationUnknown || orientation == UIDeviceOrientationFaceUp 
+     || orientation == UIDeviceOrientationFaceDown)
+     [[UIDevice currentDevice] setOrientation:UIInterfaceOrientationLandscapeLeft];
+     */
+    
+    
+    isPortrait = UIInterfaceOrientationIsPortrait(orientation);
+    
+    if(!isPortrait)
+        self.view = landscape;
+    else
+        self.view = portrait;
+}
 
 - (IBAction) btnSendPressed {
     [[[[UIAlertView alloc] initWithTitle:@"TODO" message:@"Send Tapped. Request WebService" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil] autorelease] show]; 
@@ -21,20 +41,17 @@ bool hardCopyPressed = NO;
     hardCopyPressed = !hardCopyPressed;
     if(hardCopyPressed) {
         [btnSendHardCopy setBackgroundImage:[UIImage imageNamed:@"btn-checkbox-on.png"] forState:UIControlStateNormal];
+        [btnSendHardCopyLandscape setBackgroundImage:[UIImage imageNamed:@"btn-checkbox-on.png"] forState:UIControlStateNormal];        
     } else {
         [btnSendHardCopy setBackgroundImage:[UIImage imageNamed:@"btn-checkbox-off.png"] forState:UIControlStateNormal];
-        
+        [btnSendHardCopyLandscape setBackgroundImage:[UIImage imageNamed:@"btn-checkbox-off.png"] forState:UIControlStateNormal];        
     }
 }
 
 // **********************************************
 
 - (IBAction) btnHomePressed {
-
-    HomeController * controller = [[HomeController alloc] init];
-    [self.navigationController pushViewController:controller animated:YES];
-    [controller release];
-
+    [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
 - (IBAction) btnCategoriesPressed {
@@ -122,10 +139,7 @@ bool hardCopyPressed = NO;
 #pragma mark - View lifecycle
 
 - (void)viewDidLoad
-{
-    [self.view addSubview:landscape];
-    landscape.hidden = true;
-    
+{ 
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
@@ -177,10 +191,167 @@ bool hardCopyPressed = NO;
 
 - (void) willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
 {
-    landscape.hidden = UIInterfaceOrientationIsPortrait(toInterfaceOrientation);
+    isPortrait = UIInterfaceOrientationIsPortrait(toInterfaceOrientation);
+    
+    if(isPortrait)
+    {
+        self.view = portrait;
+        txtName.text = txtNameLandscape.text;
+        txtCompany.text = txtCompanyLandscape.text;
+        txtMail.text = txtMailLandscape.text;
+        txtPhone.text = txtPhoneLandscape.text;
+        txtStreet1.text = txtStreet1Landscape.text;
+        txtStreet2.text = txtStreet2Landscape.text;
+        txtCity.text = txtCityLandscape.text;
+        txtState.text = txtStateLandscape.text;
+        txtZip.text = txtZipLandscape.text;
+        txtCountry.text = txtCountryLandscape.text;
+        txtMessage.text = txtMessageLandscape.text;
+    }
+    else
+    {
+        self.view = landscape;
+        txtNameLandscape.text = txtName.text;
+        txtCompanyLandscape.text = txtCompany.text;
+        txtMailLandscape.text = txtMail.text;
+        txtPhoneLandscape.text = txtPhone.text;  
+        txtStreet1Landscape.text = txtStreet1.text;
+        txtStreet2Landscape.text = txtStreet2.text;
+        txtCityLandscape.text = txtCity.text;
+        txtStateLandscape.text = txtState.text;
+        txtZipLandscape.text = txtZip.text;
+        txtCountryLandscape.text = txtCountry.text;
+        txtMessageLandscape.text = txtMessage.text;        
+    }
+}
+
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    
+    [txtName resignFirstResponder];
+    [txtCompany resignFirstResponder];
+    [txtMail resignFirstResponder];
+    [txtPhone resignFirstResponder];
+    [txtStreet1 resignFirstResponder];
+    [txtStreet2 resignFirstResponder];
+    [txtCity resignFirstResponder];
+    [txtState resignFirstResponder];
+    [txtZip resignFirstResponder];
+    [txtCountry resignFirstResponder];
+    [txtMessage resignFirstResponder];
+    
+    [txtNameLandscape resignFirstResponder];
+    [txtCompanyLandscape resignFirstResponder];
+    [txtMailLandscape resignFirstResponder];
+    [txtPhoneLandscape resignFirstResponder];
+    [txtStreet1Landscape resignFirstResponder];
+    [txtStreet2Landscape resignFirstResponder];
+    [txtStateLandscape resignFirstResponder];
+    [txtCityLandscape resignFirstResponder];
+    [txtZipLandscape resignFirstResponder];
+    [txtCountryLandscape resignFirstResponder];
+    [txtMessageLandscape resignFirstResponder];
+    
+}
+
+- (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text 
+{
+    if([text isEqualToString:@"\n"]) 
+    {
+        [[[[UIAlertView alloc] initWithTitle:@"TODO" message:@"Validate Form and Send" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil] autorelease] show];  
+    
+        [txtName resignFirstResponder];
+        [txtCompany resignFirstResponder];
+        [txtMail resignFirstResponder];
+        [txtPhone resignFirstResponder];
+        [txtStreet1 resignFirstResponder];
+        [txtStreet2 resignFirstResponder];
+        [txtCity resignFirstResponder];
+        [txtState resignFirstResponder];
+        [txtZip resignFirstResponder];
+        [txtCountry resignFirstResponder];
+        [txtMessage resignFirstResponder];
+    
+        [txtNameLandscape resignFirstResponder];
+        [txtCompanyLandscape resignFirstResponder];
+        [txtMailLandscape resignFirstResponder];
+        [txtPhoneLandscape resignFirstResponder];
+        [txtStreet1Landscape resignFirstResponder];
+        [txtStreet2Landscape resignFirstResponder];
+        [txtStateLandscape resignFirstResponder];
+        [txtCityLandscape resignFirstResponder];
+        [txtZipLandscape resignFirstResponder];
+        [txtCountryLandscape resignFirstResponder];
+        [txtMessageLandscape resignFirstResponder];
+        
+        return NO;
+	}
+    return YES;
 }
 
 
 
+- (void) animateTextField: (UITextField*) textField up: (BOOL) up
+{
+    
+    int movementDistance;
+    const float movementDuration = 0.3f;
+    
+    if(isPortrait)
+        movementDistance = textField.frame.origin.y < 265 ? textField.frame.origin.y - 30 : 265;
+    else
+        movementDistance = textField.frame.origin.y < 350 ? textField.frame.origin.y - 30 : 350;
+
+    int movement = (up ? -movementDistance : movementDistance);
+	
+    [UIView beginAnimations: @"anim" context: nil];
+    [UIView setAnimationBeginsFromCurrentState: YES];
+    [UIView setAnimationDuration: movementDuration];
+    self.view.frame = CGRectOffset(self.view.frame, 0, movement);
+    [UIView commitAnimations];
+}
+
+- (void)textFieldDidBeginEditing:(UITextField *)textField
+{
+    [self animateTextField: textField up: YES];
+}
+
+
+- (void)textFieldDidEndEditing:(UITextField *)textField
+{
+    [self animateTextField: textField up: NO];
+}
+
+
+- (void) animateTextView: (UITextView*) textField up: (BOOL) up
+{
+    
+    int movementDistance;
+    const float movementDuration = 0.3f;
+    
+    if(isPortrait)
+        movementDistance = textField.frame.origin.y < 265 ? textField.frame.origin.y - 30 : 265;
+    else
+        movementDistance = textField.frame.origin.y < 350 ? textField.frame.origin.y - 30 : 350;
+    
+    int movement = (up ? -movementDistance : movementDistance);
+	
+    [UIView beginAnimations: @"anim" context: nil];
+    [UIView setAnimationBeginsFromCurrentState: YES];
+    [UIView setAnimationDuration: movementDuration];
+    self.view.frame = CGRectOffset(self.view.frame, 0, movement);
+    [UIView commitAnimations];
+}
+
+- (void)textViewDidBeginEditing:(UITextView *)textView
+{
+    [self animateTextView: textView up: YES];
+}
+
+
+- (void)textViewDidEndEditing:(UITextView *)textView
+{
+    [self animateTextView: textView up: NO];
+}
 
 @end

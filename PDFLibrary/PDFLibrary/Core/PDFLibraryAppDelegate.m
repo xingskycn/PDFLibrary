@@ -23,6 +23,8 @@
     //[[[DBManager getInstance] initWithDatabaseFile: @"Unav_v1.0.sql"] connect];
     
     // Override point for customization after app launch.
+    
+    window.backgroundColor = [UIColor blackColor];
     [self.window addSubview:startUpController.view];
     [self.window makeKeyAndVisible];
     

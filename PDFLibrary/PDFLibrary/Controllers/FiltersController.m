@@ -12,6 +12,23 @@
 @implementation FiltersController
 @synthesize portrait, landscape;
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    UIDeviceOrientation orientation = [UIApplication sharedApplication].statusBarOrientation;
+    
+    /*
+     if (orientation == UIDeviceOrientationUnknown || orientation == UIDeviceOrientationFaceUp 
+     || orientation == UIDeviceOrientationFaceDown)
+     [[UIDevice currentDevice] setOrientation:UIInterfaceOrientationLandscapeLeft];
+     */    
+    
+    BOOL isPortrait = UIInterfaceOrientationIsPortrait(orientation);
+    
+    if(!isPortrait)
+        self.view = landscape;
+    else
+        self.view = portrait;
+}
 
 - (IBAction) btnFilterByCategoryPressed:(id)sender {
     
@@ -51,10 +68,7 @@
 
 - (IBAction) btnHomePressed {
     
-    HomeController * controller = [[HomeController alloc] init];
-    [self.navigationController pushViewController:controller animated:YES];
-    [controller release];
-
+    [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
 - (IBAction) btnCategoriesPressed {
@@ -152,9 +166,6 @@
 
 - (void)viewDidLoad
 {
-    [self.view addSubview:landscape];
-    landscape.hidden = true;
-    
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
@@ -197,15 +208,16 @@
     // e.g. self.myOutlet = nil;
 }
 
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
-    // Return YES for supported orientations
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
 	return YES;
 }
 
 - (void) willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
 {
-    landscape.hidden = UIInterfaceOrientationIsPortrait(toInterfaceOrientation);
+    if(!UIInterfaceOrientationIsPortrait(toInterfaceOrientation))
+        self.view = landscape;
+    else
+        self.view = portrait;
 }
 
 

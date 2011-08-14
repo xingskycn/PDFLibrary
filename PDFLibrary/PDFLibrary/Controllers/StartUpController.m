@@ -10,10 +10,8 @@
 #import "PDFLibraryAppDelegate.h"
 
 @implementation StartUpController
-
-@synthesize devIntroView;
-@synthesize appIntroView;
 @synthesize timer;
+@synthesize portrait, imgLand, imgPor;
 
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
@@ -22,10 +20,20 @@
 }
 
 - (void)viewDidAppear:(BOOL)animated {
+    
+    UIInterfaceOrientation orientation = [UIApplication sharedApplication].statusBarOrientation;
+    imgLand.hidden = UIInterfaceOrientationIsPortrait(orientation);
+    imgPor.hidden = !UIInterfaceOrientationIsPortrait(orientation);
+    
 	NSInvocation *updateDisplayInvocation = [NSInvocation invocationWithMethodSignature:[self methodSignatureForSelector: @selector (changeIntroView)]];
 	[updateDisplayInvocation setSelector: @selector (changeIntroView)];
 	[updateDisplayInvocation setTarget: self];
 	timer = [NSTimer scheduledTimerWithTimeInterval:0.0 invocation:updateDisplayInvocation repeats:NO];	
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -37,34 +45,27 @@
 
 - (void)viewDidUnload {
 	// Release any retained subviews of the main view.
-	devIntroView = nil;
-	appIntroView = nil;
+    imgPor = nil;
+    imgLand = nil;
+    portrait = nil;
 }
 
 
 - (void)dealloc {
-	[devIntroView release];
-	[appIntroView release];
+    [imgLand release];
+    [imgPor release];
+    [portrait release];
     [super dealloc];
 }
 
 - (void)changeIntroView {
-	NSLog(@"Timer called changeView");
-	
-	[UIView beginAnimations:nil context:nil];
-	[UIView setAnimationDuration:0];
-	[self.view setAlpha: 0];
-	[UIView setAnimationDelegate:self];
-	[UIView setAnimationDidStopSelector:@selector(fadedOutDevIntro:finished:context:)];
-	[UIView commitAnimations];
-}
 
-- (void)fadedOutDevIntro:(NSString *)animationID finished:(NSNumber *)finished context:(void *)context {
-	NSLog(@"DevIntro faded out");
-	[appIntroView setAlpha:0];
-	[UIView beginAnimations:nil context:nil];
-	self.view = appIntroView;
-	[UIView setAnimationDuration:3];
+    NSLog(@"DevIntro faded out");
+
+    [portrait setAlpha:0];
+    [UIView beginAnimations:nil context:nil];
+    self.view = portrait;
+	[UIView setAnimationDuration:4];
 	[self.view setAlpha: 1];
 	[UIView setAnimationDelegate:self];
 	[UIView setAnimationDidStopSelector:@selector(fadedInAppIntro:finished:context:)];
@@ -83,6 +84,12 @@
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
 	return YES;
+}
+
+- (void) willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
+{    
+    imgLand.hidden = UIInterfaceOrientationIsPortrait(toInterfaceOrientation);
+    imgPor.hidden = !UIInterfaceOrientationIsPortrait(toInterfaceOrientation);
 }
 
 #pragma mark -

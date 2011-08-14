@@ -100,9 +100,6 @@
 
 - (void)viewDidLoad
 {
-    [self.view addSubview:landscape];
-    landscape.hidden = YES;
-    
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
@@ -121,14 +118,24 @@
     
 }
 
-/*
-- (void)viewWillAppear:(BOOL)animated {
+- (void)viewWillAppear:(BOOL)animated
+{
+    UIDeviceOrientation orientation = [UIApplication sharedApplication].statusBarOrientation;
     
-    if(!UIDeviceOrientationIsPortrait([UIApplication sharedApplication].statusBarOrientation)) {
-       [[UIDevice currentDevice] setOrientation:UIInterfaceOrientationLandscapeRight];
-    } 
+    /*
+     if (orientation == UIDeviceOrientationUnknown || orientation == UIDeviceOrientationFaceUp 
+     || orientation == UIDeviceOrientationFaceDown)
+     [[UIDevice currentDevice] setOrientation:UIInterfaceOrientationLandscapeLeft];
+     */
+    
+    
+    BOOL isPortrait = UIInterfaceOrientationIsPortrait(orientation);
+    
+    if(!isPortrait)
+        self.view = landscape;
+    else
+        self.view = portrait;
 }
-*/
 
 - (void)doubleTapMethod
 {
@@ -162,8 +169,12 @@
 	return YES;
 }
 
-- (void) willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration {
-    landscape.hidden = UIInterfaceOrientationIsPortrait(toInterfaceOrientation);
+- (void) willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
+{    
+    if(!UIInterfaceOrientationIsPortrait(toInterfaceOrientation))
+        self.view = landscape;
+    else
+        self.view = portrait;
 }
 
 
