@@ -173,7 +173,6 @@
 						<string key="NSFrame">{{489, 967}, {72, 37}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 						<int key="IBUIContentHorizontalAlignment">0</int>
@@ -462,7 +461,6 @@
 						<string key="NSFrame">{{562, 711}, {72, 37}}</string>
 						<reference key="NSSuperview" ref="471554974"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 						<int key="IBUIContentHorizontalAlignment">0</int>
@@ -559,7 +557,7 @@
 					<object class="IBUIScrollView" id="75553110">
 						<reference key="NSNextResponder" ref="471554974"/>
 						<int key="NSvFlags">268</int>
-						<string key="NSFrame">{{28, 161}, {966, 530}}</string>
+						<string key="NSFrame">{{20, 161}, {974, 530}}</string>
 						<reference key="NSSuperview" ref="471554974"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="104012311"/>
