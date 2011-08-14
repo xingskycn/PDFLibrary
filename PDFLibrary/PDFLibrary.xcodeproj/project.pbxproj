@@ -413,6 +413,7 @@
 				27D23ACA13D45F5A000D3FD5 /* Frameworks */,
 				27D23AC813D45F5A000D3FD5 /* Products */,
 				279E76A813F83090001EBDC0 /* FastPdfKit.xcodeproj */,
+				27EA041913F83C0E00E6D3DE /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -537,6 +538,14 @@
 				2731247013DB7BA50056EBA3 /* other */,
 			);
 			name = Images;
+			sourceTree = "<group>";
+		};
+		27EA041913F83C0E00E6D3DE /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				9505BB1C13CCB941003163D2 /* FastPdfKit.xcconfig */,
+			);
+			name = "Recovered References";
 			sourceTree = "<group>";
 		};
 		BC85626713F1AC8300D1D42C /* icons */ = {
@@ -793,7 +802,7 @@
 		};
 		27D23AE313D45F5A000D3FD5 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9505BB1C13CCB941003163D2 /* FastPdfKit.xcconfig */;
+			baseConfigurationReference = 279E76C413F830E7001EBDC0 /* FastPdfKit.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer: David RamÃ­rez Chiappe (FLUZN3RQDS)";
@@ -812,7 +821,7 @@
 		};
 		27D23AE413D45F5A000D3FD5 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9505BB1C13CCB941003163D2 /* FastPdfKit.xcconfig */;
+			baseConfigurationReference = 279E76C413F830E7001EBDC0 /* FastPdfKit.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer: David RamÃ­rez Chiappe (FLUZN3RQDS)";
