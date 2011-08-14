@@ -295,7 +295,7 @@
 					<object class="IBUIButton" id="655696635">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{40, 385}, {123, 25}}</string>
+						<string key="NSFrame">{{40, 385}, {121, 25}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="450106841"/>
@@ -451,7 +451,7 @@
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 						<string key="IBUIText">SHOWING 230 MATCHES FOR:</string>
-						<object class="NSFont" key="IBUIFont" id="898889389">
+						<object class="NSFont" key="IBUIFont" id="301921091">
 							<string key="NSName">Helvetica-Bold</string>
 							<double key="NSSize">10</double>
 							<int key="NSfFlags">16</int>
@@ -477,7 +477,7 @@
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 						<string key="IBUIText">English</string>
-						<object class="NSFont" key="IBUIFont" id="840801891">
+						<object class="NSFont" key="IBUIFont" id="70351374">
 							<string key="NSName">Helvetica-Bold</string>
 							<double key="NSSize">14</double>
 							<int key="NSfFlags">16</int>
@@ -827,7 +827,7 @@
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 						<string key="IBUIText">SHOWING 230 MATCHES FOR:</string>
-						<reference key="IBUIFont" ref="898889389"/>
+						<reference key="IBUIFont" ref="301921091"/>
 						<object class="NSColor" key="IBUITextColor">
 							<int key="NSColorSpace">2</int>
 							<bytes key="NSRGB">MC40NTA5ODA0MjQ5IDAuNDUwOTgwNDI0OSAwLjQ1MDk4MDQyNDkAA</bytes>
@@ -849,7 +849,7 @@
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 						<string key="IBUIText">English</string>
-						<reference key="IBUIFont" ref="840801891"/>
+						<reference key="IBUIFont" ref="70351374"/>
 						<reference key="IBUITextColor" ref="14053754"/>
 						<nil key="IBUIHighlightedColor"/>
 						<int key="IBUIBaselineAdjustment">1</int>
@@ -900,7 +900,7 @@
 					<object class="IBUIButton" id="480894652">
 						<reference key="NSNextResponder" ref="1046845116"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{40, 385}, {123, 25}}</string>
+						<string key="NSFrame">{{40, 385}, {121, 25}}</string>
 						<reference key="NSSuperview" ref="1046845116"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="669366878"/>
@@ -2337,7 +2337,7 @@
 				<string>{48, 25}</string>
 				<string>{144, 25}</string>
 				<string>{124, 24}</string>
-				<string>{123, 24}</string>
+				<string>{121, 25}</string>
 				<string>{92, 25}</string>
 				<string>{83, 25}</string>
 				<string>{84, 24}</string>
