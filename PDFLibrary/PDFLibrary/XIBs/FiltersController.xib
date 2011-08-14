@@ -477,9 +477,9 @@
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 						<string key="IBUIText">English</string>
-						<object class="NSFont" key="IBUIFont" id="165449458">
+						<object class="NSFont" key="IBUIFont" id="180987036">
 							<string key="NSName">Helvetica-Bold</string>
-							<double key="NSSize">13</double>
+							<double key="NSSize">14</double>
 							<int key="NSfFlags">16</int>
 						</object>
 						<reference key="IBUITextColor" ref="14053754"/>
@@ -846,7 +846,7 @@
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 						<string key="IBUIText">English</string>
-						<reference key="IBUIFont" ref="165449458"/>
+						<reference key="IBUIFont" ref="180987036"/>
 						<reference key="IBUITextColor" ref="14053754"/>
 						<nil key="IBUIHighlightedColor"/>
 						<int key="IBUIBaselineAdjustment">1</int>
