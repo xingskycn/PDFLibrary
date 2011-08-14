@@ -150,10 +150,10 @@
 - (void) initScrollView {
     
     UIImageView * imageView = [[UIImageView alloc] initWithImage:
-                               [UIImage imageNamed:@"img-library-portrait.png"]];
+                               [UIImage imageNamed:@"img-portrait-category.png"]];
     
     UIImageView * imageViewLandscape = [[UIImageView alloc] initWithImage:
-                                        [UIImage imageNamed:@"img-library-landscape.png"]];
+                                        [UIImage imageNamed:@"img-landscape-category.png"]];
     
     scrollView.contentSize = CGSizeMake(imageView.frame.size.width, 
                                         imageView.frame.size.height);
