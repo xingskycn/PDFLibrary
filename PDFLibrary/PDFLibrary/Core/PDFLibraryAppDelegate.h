@@ -7,6 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "HomeController.h"
+#import "StartUpController.h"
+#import "DBManager.h"
+
 @class StockControllerViewController;
 @class StartUpController;
 @class HomeController;

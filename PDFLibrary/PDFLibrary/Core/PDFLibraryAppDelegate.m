@@ -7,8 +7,6 @@
 //
 
 #import "PDFLibraryAppDelegate.h"
-#import "HomeController.h"
-#import "StartUpController.h"
 
 @implementation PDFLibraryAppDelegate
 
@@ -20,7 +18,7 @@
 // Override point for customization after app launch  
 - (void)applicationDidFinishLaunching:(UIApplication *)application {    
     
-    //[[[DBManager getInstance] initWithDatabaseFile: @"Unav_v1.0.sql"] connect];
+    [[[DBManager getInstance] initWithDatabaseFile: @"Tenaris_v1.0.sql"] connect];
     
     // Override point for customization after app launch.
     
@@ -45,8 +43,9 @@
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {
-	// Save data if appropriate
-	//[[DBManager getInstance] disconnect];
+	
+    // Save data if appropriate
+	[[DBManager getInstance] disconnect];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
