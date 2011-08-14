@@ -257,14 +257,14 @@
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 						<string key="IBUIText">MAY 2011</string>
-						<object class="NSFont" key="IBUIFont" id="792253022">
-							<string key="NSName">Helvetica</string>
-							<double key="NSSize">11</double>
+						<object class="NSFont" key="IBUIFont" id="785966595">
+							<string key="NSName">Helvetica-Bold</string>
+							<double key="NSSize">10</double>
 							<int key="NSfFlags">16</int>
 						</object>
-						<object class="NSColor" key="IBUITextColor" id="143768588">
-							<int key="NSColorSpace">3</int>
-							<bytes key="NSWhite">MC4zMzMzMzMzMzMzAA</bytes>
+						<object class="NSColor" key="IBUITextColor">
+							<int key="NSColorSpace">2</int>
+							<bytes key="NSRGB">MC40OTQxMTc2NzcyIDAuNDk0MTE3Njc3MiAwLjQ5NDExNzY3NzIAA</bytes>
 						</object>
 						<nil key="IBUIHighlightedColor"/>
 						<int key="IBUIBaselineAdjustment">1</int>
@@ -283,12 +283,11 @@
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 						<string key="IBUIText">REQUESTING A HARD COPY FOR:</string>
-						<object class="NSFont" key="IBUIFont" id="669770538">
-							<string key="NSName">Helvetica</string>
-							<double key="NSSize">10</double>
-							<int key="NSfFlags">16</int>
+						<reference key="IBUIFont" ref="785966595"/>
+						<object class="NSColor" key="IBUITextColor">
+							<int key="NSColorSpace">2</int>
+							<bytes key="NSRGB">MC41MjE1Njg2NTYgMC41MjE1Njg2NTYgMC41MjE1Njg2NTYAA</bytes>
 						</object>
-						<reference key="IBUITextColor" ref="143768588"/>
 						<nil key="IBUIHighlightedColor"/>
 						<int key="IBUIBaselineAdjustment">1</int>
 						<float key="IBUIMinimumFontSize">10</float>
@@ -306,8 +305,8 @@
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 						<string key="IBUIText">TenarisHydril - Dopeless® Technology Brochure</string>
-						<object class="NSFont" key="IBUIFont">
-							<string key="NSName">Helvetica</string>
+						<object class="NSFont" key="IBUIFont" id="547325658">
+							<string key="NSName">Helvetica-Bold</string>
 							<double key="NSSize">14</double>
 							<int key="NSfFlags">16</int>
 						</object>
@@ -333,9 +332,9 @@
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 						<string key="IBUIText">Last Update</string>
-						<object class="NSFont" key="IBUIFont">
+						<object class="NSFont" key="IBUIFont" id="372803487">
 							<string key="NSName">Helvetica-Bold</string>
-							<double key="NSSize">11</double>
+							<double key="NSSize">12</double>
 							<int key="NSfFlags">16</int>
 						</object>
 						<reference key="IBUITextColor" ref="668087297"/>
@@ -622,6 +621,25 @@
 							<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						</object>
 					</object>
+					<object class="IBUITextView" id="999121791">
+						<reference key="NSNextResponder" ref="191373211"/>
+						<int key="NSvFlags">292</int>
+						<string key="NSFrame">{{94, 724}, {583, 101}}</string>
+						<reference key="NSSuperview" ref="191373211"/>
+						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView" ref="253656654"/>
+						<reference key="IBUIBackgroundColor" ref="668087297"/>
+						<bool key="IBUIClipsSubviews">YES</bool>
+						<bool key="IBUIMultipleTouchEnabled">YES</bool>
+						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
+						<bool key="IBUIShowsHorizontalScrollIndicator">NO</bool>
+						<string key="IBUIText"/>
+						<object class="IBUITextInputTraits" key="IBUITextInputTraits">
+							<int key="IBUIAutocapitalizationType">2</int>
+							<int key="IBUIReturnKeyType">7</int>
+							<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
+						</object>
+					</object>
 					<object class="IBUIButton" id="973826052">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
@@ -668,25 +686,6 @@
 							<string key="NSResourceName">popover-categories.png</string>
 						</object>
 					</object>
-					<object class="IBUITextView" id="999121791">
-						<reference key="NSNextResponder" ref="191373211"/>
-						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{94, 724}, {583, 101}}</string>
-						<reference key="NSSuperview" ref="191373211"/>
-						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="253656654"/>
-						<reference key="IBUIBackgroundColor" ref="668087297"/>
-						<bool key="IBUIClipsSubviews">YES</bool>
-						<bool key="IBUIMultipleTouchEnabled">YES</bool>
-						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
-						<bool key="IBUIShowsHorizontalScrollIndicator">NO</bool>
-						<string key="IBUIText"/>
-						<object class="IBUITextInputTraits" key="IBUITextInputTraits">
-							<int key="IBUIAutocapitalizationType">2</int>
-							<int key="IBUIReturnKeyType">7</int>
-							<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-						</object>
-					</object>
 				</object>
 				<string key="NSFrame">{{0, 20}, {768, 1004}}</string>
 				<reference key="NSSuperview"/>
@@ -703,7 +702,7 @@
 				<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 			</object>
 			<object class="IBUIView" id="1068191722">
-				<nil key="NSNextResponder"/>
+				<reference key="NSNextResponder"/>
 				<int key="NSvFlags">292</int>
 				<object class="NSMutableArray" key="NSSubviews">
 					<bool key="EncodedWithXMLCoder">YES</bool>
@@ -712,6 +711,7 @@
 						<int key="NSvFlags">274</int>
 						<string key="NSFrameSize">{1024, 748}</string>
 						<reference key="NSSuperview" ref="1068191722"/>
+						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="526146131"/>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
@@ -725,6 +725,7 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{35, 30}, {57, 25}}</string>
 						<reference key="NSSuperview" ref="1068191722"/>
+						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="568398425"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
@@ -744,6 +745,7 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{33, 711}, {56, 37}}</string>
 						<reference key="NSSuperview" ref="1068191722"/>
+						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="824873529"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
@@ -762,6 +764,7 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{126, 712}, {89, 37}}</string>
 						<reference key="NSSuperview" ref="1068191722"/>
+						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="14830763"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
@@ -780,6 +783,7 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{254, 711}, {137, 37}}</string>
 						<reference key="NSSuperview" ref="1068191722"/>
+						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="905770149"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
@@ -798,6 +802,7 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{434, 711}, {85, 37}}</string>
 						<reference key="NSSuperview" ref="1068191722"/>
+						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="539613410"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
@@ -816,6 +821,7 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{562, 711}, {72, 37}}</string>
 						<reference key="NSSuperview" ref="1068191722"/>
+						<reference key="NSWindow"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 						<int key="IBUIContentHorizontalAlignment">0</int>
@@ -833,6 +839,7 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{962, 20}, {32, 37}}</string>
 						<reference key="NSSuperview" ref="1068191722"/>
+						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="2262341"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
@@ -851,6 +858,7 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{279, 648}, {45, 24}}</string>
 						<reference key="NSSuperview" ref="1068191722"/>
+						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="643622723"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
@@ -870,6 +878,7 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{0, 111}, {1024, 583}}</string>
 						<reference key="NSSuperview" ref="1068191722"/>
+						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="1018573148"/>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
@@ -883,6 +892,7 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{40, 433}, {198, 21}}</string>
 						<reference key="NSSuperview" ref="1068191722"/>
+						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="374463526"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
@@ -890,8 +900,11 @@
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 						<string key="IBUIText">MAY 2011</string>
-						<reference key="IBUIFont" ref="792253022"/>
-						<reference key="IBUITextColor" ref="143768588"/>
+						<reference key="IBUIFont" ref="785966595"/>
+						<object class="NSColor" key="IBUITextColor">
+							<int key="NSColorSpace">3</int>
+							<bytes key="NSWhite">MC4zMzMzMzMzMzMzAA</bytes>
+						</object>
 						<nil key="IBUIHighlightedColor"/>
 						<int key="IBUIBaselineAdjustment">1</int>
 						<float key="IBUIMinimumFontSize">10</float>
@@ -901,6 +914,7 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{282, 271}, {15, 14}}</string>
 						<reference key="NSSuperview" ref="1068191722"/>
+						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="797542764"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
@@ -920,6 +934,7 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{33, 163}, {129, 173}}</string>
 						<reference key="NSSuperview" ref="1068191722"/>
+						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="629568279"/>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
@@ -930,6 +945,7 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{40, 344}, {198, 21}}</string>
 						<reference key="NSSuperview" ref="1068191722"/>
+						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="816296534"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
@@ -937,8 +953,11 @@
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 						<string key="IBUIText">REQUESTING A HARD COPY FOR:</string>
-						<reference key="IBUIFont" ref="669770538"/>
-						<reference key="IBUITextColor" ref="143768588"/>
+						<reference key="IBUIFont" ref="785966595"/>
+						<object class="NSColor" key="IBUITextColor">
+							<int key="NSColorSpace">2</int>
+							<bytes key="NSRGB">MC41MjE1Njg2NTYgMC41MjE1Njg2NTYgMC41MjE1Njg2NTYAA</bytes>
+						</object>
 						<nil key="IBUIHighlightedColor"/>
 						<int key="IBUIBaselineAdjustment">1</int>
 						<float key="IBUIMinimumFontSize">10</float>
@@ -948,6 +967,7 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{40, 368}, {198, 42}}</string>
 						<reference key="NSSuperview" ref="1068191722"/>
+						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="226947759"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
@@ -955,11 +975,7 @@
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 						<string key="IBUIText">TenarisHydril - Dopeless® Technology Brochure</string>
-						<object class="NSFont" key="IBUIFont">
-							<string key="NSName">Helvetica</string>
-							<double key="NSSize">13</double>
-							<int key="NSfFlags">16</int>
-						</object>
+						<reference key="IBUIFont" ref="547325658"/>
 						<reference key="IBUITextColor" ref="668087297"/>
 						<nil key="IBUIHighlightedColor"/>
 						<int key="IBUIBaselineAdjustment">1</int>
@@ -971,6 +987,7 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{40, 418}, {198, 21}}</string>
 						<reference key="NSSuperview" ref="1068191722"/>
+						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="478654732"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
@@ -978,55 +995,18 @@
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 						<string key="IBUIText">Last Update</string>
-						<reference key="IBUIFont" ref="792253022"/>
+						<reference key="IBUIFont" ref="372803487"/>
 						<reference key="IBUITextColor" ref="668087297"/>
 						<nil key="IBUIHighlightedColor"/>
 						<int key="IBUIBaselineAdjustment">1</int>
 						<float key="IBUIMinimumFontSize">10</float>
-					</object>
-					<object class="IBUIButton" id="1047192641">
-						<reference key="NSNextResponder" ref="1068191722"/>
-						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{253, 204}, {109, 505}}</string>
-						<reference key="NSSuperview" ref="1068191722"/>
-						<reference key="NSNextKeyView" ref="376573380"/>
-						<bool key="IBUIOpaque">NO</bool>
-						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
-						<int key="IBUIContentHorizontalAlignment">0</int>
-						<int key="IBUIContentVerticalAlignment">0</int>
-						<reference key="IBUIFont" ref="421597787"/>
-						<reference key="IBUIHighlightedTitleColor" ref="14053754"/>
-						<object class="NSColor" key="IBUINormalTitleColor">
-							<int key="NSColorSpace">1</int>
-							<bytes key="NSRGB">MC4xOTYwNzg0MzQ2IDAuMzA5ODAzOTMyOSAwLjUyMTU2ODY1NgA</bytes>
-						</object>
-						<reference key="IBUINormalTitleShadowColor" ref="361160998"/>
-						<reference key="IBUINormalBackgroundImage" ref="293458306"/>
-					</object>
-					<object class="IBUIButton" id="374463526">
-						<reference key="NSNextResponder" ref="1068191722"/>
-						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{89, 462}, {171, 247}}</string>
-						<reference key="NSSuperview" ref="1068191722"/>
-						<reference key="NSNextKeyView" ref="1047192641"/>
-						<bool key="IBUIOpaque">NO</bool>
-						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
-						<int key="IBUIContentHorizontalAlignment">0</int>
-						<int key="IBUIContentVerticalAlignment">0</int>
-						<reference key="IBUIFont" ref="421597787"/>
-						<reference key="IBUIHighlightedTitleColor" ref="14053754"/>
-						<object class="NSColor" key="IBUINormalTitleColor">
-							<int key="NSColorSpace">1</int>
-							<bytes key="NSRGB">MC4xOTYwNzg0MzQ2IDAuMzA5ODAzOTMyOSAwLjUyMTU2ODY1NgA</bytes>
-						</object>
-						<reference key="IBUINormalTitleShadowColor" ref="361160998"/>
-						<reference key="IBUINormalBackgroundImage" ref="770089573"/>
 					</object>
 					<object class="IBUITextField" id="595988046">
 						<reference key="NSNextResponder" ref="1068191722"/>
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{284, 184}, {275, 19}}</string>
 						<reference key="NSSuperview" ref="1068191722"/>
+						<reference key="NSWindow"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
@@ -1049,6 +1029,7 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{585, 184}, {275, 19}}</string>
 						<reference key="NSSuperview" ref="1068191722"/>
+						<reference key="NSWindow"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
@@ -1071,6 +1052,7 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{584, 241}, {275, 19}}</string>
 						<reference key="NSSuperview" ref="1068191722"/>
+						<reference key="NSWindow"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
@@ -1093,6 +1075,7 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{585, 362}, {275, 19}}</string>
 						<reference key="NSSuperview" ref="1068191722"/>
+						<reference key="NSWindow"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
@@ -1115,6 +1098,7 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{585, 419}, {275, 19}}</string>
 						<reference key="NSSuperview" ref="1068191722"/>
+						<reference key="NSWindow"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
@@ -1137,6 +1121,7 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{584, 477}, {275, 19}}</string>
 						<reference key="NSSuperview" ref="1068191722"/>
+						<reference key="NSWindow"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
@@ -1159,6 +1144,7 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{285, 477}, {275, 19}}</string>
 						<reference key="NSSuperview" ref="1068191722"/>
+						<reference key="NSWindow"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
@@ -1181,6 +1167,7 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{285, 419}, {275, 19}}</string>
 						<reference key="NSSuperview" ref="1068191722"/>
+						<reference key="NSWindow"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
@@ -1203,6 +1190,7 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{285, 362}, {275, 19}}</string>
 						<reference key="NSSuperview" ref="1068191722"/>
+						<reference key="NSWindow"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
@@ -1225,6 +1213,7 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{285, 241}, {275, 19}}</string>
 						<reference key="NSSuperview" ref="1068191722"/>
+						<reference key="NSWindow"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
@@ -1247,6 +1236,7 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{282, 534}, {582, 100}}</string>
 						<reference key="NSSuperview" ref="1068191722"/>
+						<reference key="NSWindow"/>
 						<reference key="IBUIBackgroundColor" ref="668087297"/>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<bool key="IBUIMultipleTouchEnabled">YES</bool>
@@ -1259,8 +1249,50 @@
 							<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						</object>
 					</object>
+					<object class="IBUIButton" id="1047192641">
+						<reference key="NSNextResponder" ref="1068191722"/>
+						<int key="NSvFlags">292</int>
+						<string key="NSFrame">{{253, 204}, {109, 505}}</string>
+						<reference key="NSSuperview" ref="1068191722"/>
+						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView" ref="376573380"/>
+						<bool key="IBUIOpaque">NO</bool>
+						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
+						<int key="IBUIContentHorizontalAlignment">0</int>
+						<int key="IBUIContentVerticalAlignment">0</int>
+						<reference key="IBUIFont" ref="421597787"/>
+						<reference key="IBUIHighlightedTitleColor" ref="14053754"/>
+						<object class="NSColor" key="IBUINormalTitleColor">
+							<int key="NSColorSpace">1</int>
+							<bytes key="NSRGB">MC4xOTYwNzg0MzQ2IDAuMzA5ODAzOTMyOSAwLjUyMTU2ODY1NgA</bytes>
+						</object>
+						<reference key="IBUINormalTitleShadowColor" ref="361160998"/>
+						<reference key="IBUINormalBackgroundImage" ref="293458306"/>
+					</object>
+					<object class="IBUIButton" id="374463526">
+						<reference key="NSNextResponder" ref="1068191722"/>
+						<int key="NSvFlags">292</int>
+						<string key="NSFrame">{{89, 462}, {171, 247}}</string>
+						<reference key="NSSuperview" ref="1068191722"/>
+						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView" ref="1047192641"/>
+						<bool key="IBUIOpaque">NO</bool>
+						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
+						<int key="IBUIContentHorizontalAlignment">0</int>
+						<int key="IBUIContentVerticalAlignment">0</int>
+						<reference key="IBUIFont" ref="421597787"/>
+						<reference key="IBUIHighlightedTitleColor" ref="14053754"/>
+						<object class="NSColor" key="IBUINormalTitleColor">
+							<int key="NSColorSpace">1</int>
+							<bytes key="NSRGB">MC4xOTYwNzg0MzQ2IDAuMzA5ODAzOTMyOSAwLjUyMTU2ODY1NgA</bytes>
+						</object>
+						<reference key="IBUINormalTitleShadowColor" ref="361160998"/>
+						<reference key="IBUINormalBackgroundImage" ref="770089573"/>
+					</object>
 				</object>
 				<string key="NSFrameSize">{1024, 748}</string>
+				<reference key="NSSuperview"/>
+				<reference key="NSWindow"/>
 				<reference key="NSNextKeyView" ref="760211036"/>
 				<object class="NSColor" key="IBUIBackgroundColor">
 					<int key="NSColorSpace">3</int>
@@ -2044,8 +2076,6 @@
 						<reference key="object" ref="1068191722"/>
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="1047192641"/>
-							<reference ref="374463526"/>
 							<reference ref="2262341"/>
 							<reference ref="478654732"/>
 							<reference ref="226947759"/>
@@ -2073,6 +2103,8 @@
 							<reference ref="1039393277"/>
 							<reference ref="647773538"/>
 							<reference ref="186232862"/>
+							<reference ref="1047192641"/>
+							<reference ref="374463526"/>
 						</object>
 						<reference key="parent" ref="0"/>
 					</object>
