@@ -2,7 +2,7 @@
 <archive type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="7.10">
 	<data>
 		<int key="IBDocument.SystemTarget">1056</int>
-		<string key="IBDocument.SystemVersion">10K549</string>
+		<string key="IBDocument.SystemVersion">10K540</string>
 		<string key="IBDocument.InterfaceBuilderVersion">1306</string>
 		<string key="IBDocument.AppKitVersion">1038.36</string>
 		<string key="IBDocument.HIToolboxVersion">461.00</string>
@@ -175,6 +175,7 @@
 						<string key="NSFrame">{{489, 967}, {72, 37}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 						<int key="IBUIContentHorizontalAlignment">0</int>
@@ -249,7 +250,7 @@
 						<string key="NSFrame">{{228, 242}, {198, 21}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="833539274"/>
+						<reference key="NSNextKeyView" ref="773951077"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<int key="IBUIContentMode">7</int>
@@ -332,7 +333,11 @@
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 						<string key="IBUIText">Last Update</string>
-						<reference key="IBUIFont" ref="792253022"/>
+						<object class="NSFont" key="IBUIFont">
+							<string key="NSName">Helvetica-Bold</string>
+							<double key="NSSize">11</double>
+							<int key="NSfFlags">16</int>
+						</object>
 						<reference key="IBUITextColor" ref="668087297"/>
 						<nil key="IBUIHighlightedColor"/>
 						<int key="IBUIBaselineAdjustment">1</int>
@@ -344,7 +349,7 @@
 						<string key="NSFrame">{{94, 461}, {15, 14}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="603378033"/>
+						<reference key="NSNextKeyView" ref="362365787"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 						<int key="IBUIContentHorizontalAlignment">0</int>
@@ -381,6 +386,7 @@
 						<string key="NSFrame">{{96, 372}, {275, 23}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView" ref="334991610"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
@@ -406,6 +412,7 @@
 						<string key="NSFrame">{{398, 372}, {275, 23}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView" ref="620637235"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
@@ -429,6 +436,7 @@
 						<string key="NSFrame">{{398, 429}, {275, 23}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView" ref="833539274"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
@@ -452,6 +460,7 @@
 						<string key="NSFrame">{{97, 429}, {275, 23}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView" ref="1004053622"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
@@ -475,6 +484,7 @@
 						<string key="NSFrame">{{97, 551}, {275, 23}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView" ref="789753592"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
@@ -498,6 +508,7 @@
 						<string key="NSFrame">{{396, 551}, {275, 23}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView" ref="840791359"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
@@ -521,6 +532,7 @@
 						<string key="NSFrame">{{396, 608}, {275, 23}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView" ref="747108520"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
@@ -544,6 +556,7 @@
 						<string key="NSFrame">{{396, 665}, {275, 23}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView" ref="603378033"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
@@ -567,6 +580,7 @@
 						<string key="NSFrame">{{97, 665}, {275, 23}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView" ref="568783520"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
@@ -590,6 +604,7 @@
 						<string key="NSFrame">{{95, 608}, {275, 23}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView" ref="513995115"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
@@ -636,7 +651,7 @@
 						<string key="NSFrame">{{63, 719}, {171, 247}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="253656654"/>
+						<reference key="NSNextKeyView" ref="999121791"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 						<int key="IBUIContentHorizontalAlignment">0</int>
@@ -659,6 +674,7 @@
 						<string key="NSFrame">{{94, 724}, {583, 101}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView" ref="253656654"/>
 						<reference key="IBUIBackgroundColor" ref="668087297"/>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<bool key="IBUIMultipleTouchEnabled">YES</bool>
@@ -687,7 +703,7 @@
 				<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 			</object>
 			<object class="IBUIView" id="1068191722">
-				<reference key="NSNextResponder"/>
+				<nil key="NSNextResponder"/>
 				<int key="NSvFlags">292</int>
 				<object class="NSMutableArray" key="NSSubviews">
 					<bool key="EncodedWithXMLCoder">YES</bool>
@@ -696,7 +712,6 @@
 						<int key="NSvFlags">274</int>
 						<string key="NSFrameSize">{1024, 748}</string>
 						<reference key="NSSuperview" ref="1068191722"/>
-						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="526146131"/>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
@@ -710,7 +725,6 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{35, 30}, {57, 25}}</string>
 						<reference key="NSSuperview" ref="1068191722"/>
-						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="568398425"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
@@ -730,7 +744,6 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{33, 711}, {56, 37}}</string>
 						<reference key="NSSuperview" ref="1068191722"/>
-						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="824873529"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
@@ -749,7 +762,6 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{126, 712}, {89, 37}}</string>
 						<reference key="NSSuperview" ref="1068191722"/>
-						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="14830763"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
@@ -768,7 +780,6 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{254, 711}, {137, 37}}</string>
 						<reference key="NSSuperview" ref="1068191722"/>
-						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="905770149"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
@@ -787,7 +798,6 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{434, 711}, {85, 37}}</string>
 						<reference key="NSSuperview" ref="1068191722"/>
-						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="539613410"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
@@ -806,7 +816,6 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{562, 711}, {72, 37}}</string>
 						<reference key="NSSuperview" ref="1068191722"/>
-						<reference key="NSWindow"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 						<int key="IBUIContentHorizontalAlignment">0</int>
@@ -824,7 +833,6 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{962, 20}, {32, 37}}</string>
 						<reference key="NSSuperview" ref="1068191722"/>
-						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="2262341"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
@@ -843,7 +851,6 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{279, 648}, {45, 24}}</string>
 						<reference key="NSSuperview" ref="1068191722"/>
-						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="643622723"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
@@ -863,7 +870,6 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{0, 111}, {1024, 583}}</string>
 						<reference key="NSSuperview" ref="1068191722"/>
-						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="1018573148"/>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
@@ -877,7 +883,6 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{40, 433}, {198, 21}}</string>
 						<reference key="NSSuperview" ref="1068191722"/>
-						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="374463526"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
@@ -896,7 +901,6 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{282, 271}, {15, 14}}</string>
 						<reference key="NSSuperview" ref="1068191722"/>
-						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="797542764"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
@@ -916,7 +920,6 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{33, 163}, {129, 173}}</string>
 						<reference key="NSSuperview" ref="1068191722"/>
-						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="629568279"/>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
@@ -927,7 +930,6 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{40, 344}, {198, 21}}</string>
 						<reference key="NSSuperview" ref="1068191722"/>
-						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="816296534"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
@@ -946,7 +948,6 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{40, 368}, {198, 42}}</string>
 						<reference key="NSSuperview" ref="1068191722"/>
-						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="226947759"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
@@ -970,7 +971,6 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{40, 418}, {198, 21}}</string>
 						<reference key="NSSuperview" ref="1068191722"/>
-						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="478654732"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
@@ -989,7 +989,6 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{253, 204}, {109, 505}}</string>
 						<reference key="NSSuperview" ref="1068191722"/>
-						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="376573380"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
@@ -1009,7 +1008,6 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{89, 462}, {171, 247}}</string>
 						<reference key="NSSuperview" ref="1068191722"/>
-						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="1047192641"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
@@ -1029,7 +1027,6 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{284, 184}, {275, 19}}</string>
 						<reference key="NSSuperview" ref="1068191722"/>
-						<reference key="NSWindow"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
@@ -1052,7 +1049,6 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{585, 184}, {275, 19}}</string>
 						<reference key="NSSuperview" ref="1068191722"/>
-						<reference key="NSWindow"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
@@ -1075,7 +1071,6 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{584, 241}, {275, 19}}</string>
 						<reference key="NSSuperview" ref="1068191722"/>
-						<reference key="NSWindow"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
@@ -1098,7 +1093,6 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{585, 362}, {275, 19}}</string>
 						<reference key="NSSuperview" ref="1068191722"/>
-						<reference key="NSWindow"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
@@ -1121,7 +1115,6 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{585, 419}, {275, 19}}</string>
 						<reference key="NSSuperview" ref="1068191722"/>
-						<reference key="NSWindow"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
@@ -1144,7 +1137,6 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{584, 477}, {275, 19}}</string>
 						<reference key="NSSuperview" ref="1068191722"/>
-						<reference key="NSWindow"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
@@ -1167,7 +1159,6 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{285, 477}, {275, 19}}</string>
 						<reference key="NSSuperview" ref="1068191722"/>
-						<reference key="NSWindow"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
@@ -1190,7 +1181,6 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{285, 419}, {275, 19}}</string>
 						<reference key="NSSuperview" ref="1068191722"/>
-						<reference key="NSWindow"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
@@ -1213,7 +1203,6 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{285, 362}, {275, 19}}</string>
 						<reference key="NSSuperview" ref="1068191722"/>
-						<reference key="NSWindow"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
@@ -1236,7 +1225,6 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{285, 241}, {275, 19}}</string>
 						<reference key="NSSuperview" ref="1068191722"/>
-						<reference key="NSWindow"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
@@ -1259,7 +1247,6 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{282, 534}, {582, 100}}</string>
 						<reference key="NSSuperview" ref="1068191722"/>
-						<reference key="NSWindow"/>
 						<reference key="IBUIBackgroundColor" ref="668087297"/>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<bool key="IBUIMultipleTouchEnabled">YES</bool>
@@ -1274,8 +1261,6 @@
 					</object>
 				</object>
 				<string key="NSFrameSize">{1024, 748}</string>
-				<reference key="NSSuperview"/>
-				<reference key="NSWindow"/>
 				<reference key="NSNextKeyView" ref="760211036"/>
 				<object class="NSColor" key="IBUIBackgroundColor">
 					<int key="NSColorSpace">3</int>
