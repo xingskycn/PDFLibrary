@@ -108,13 +108,13 @@
 		27EA045113F8514D00E6D3DE /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 27EA044713F8514D00E6D3DE /* JSONKit.m */; };
 		27EA045813F8519F00E6D3DE /* DBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 27EA045713F8519F00E6D3DE /* DBManager.m */; };
 		27EA045D13F851AD00E6D3DE /* CommonDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 27EA045A13F851AD00E6D3DE /* CommonDAO.m */; };
-		27EA045E13F851AD00E6D3DE /* ItemDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 27EA045C13F851AD00E6D3DE /* ItemDAO.m */; };
 		27EA046313F851F800E6D3DE /* Tenaris_v1.0.sql in Resources */ = {isa = PBXBuildFile; fileRef = 27EA046213F851F800E6D3DE /* Tenaris_v1.0.sql */; };
 		27EA046E13F87CD200E6D3DE /* Field.m in Sources */ = {isa = PBXBuildFile; fileRef = 27EA046D13F87CD200E6D3DE /* Field.m */; };
 		27EA048313F8803B00E6D3DE /* Form.m in Sources */ = {isa = PBXBuildFile; fileRef = 27EA047C13F8803A00E6D3DE /* Form.m */; };
 		27EA048413F8803B00E6D3DE /* MailType.m in Sources */ = {isa = PBXBuildFile; fileRef = 27EA047E13F8803A00E6D3DE /* MailType.m */; };
 		27EA048513F8803B00E6D3DE /* Message.m in Sources */ = {isa = PBXBuildFile; fileRef = 27EA048013F8803A00E6D3DE /* Message.m */; };
 		27EA048613F8803B00E6D3DE /* Recipient.m in Sources */ = {isa = PBXBuildFile; fileRef = 27EA048213F8803B00E6D3DE /* Recipient.m */; };
+		27EA048913F9E14500E6D3DE /* FieldDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 27EA048813F9E14500E6D3DE /* FieldDAO.m */; };
 		27F537E013D4DAF100A9B2A5 /* landscape-homepage.png in Resources */ = {isa = PBXBuildFile; fileRef = 27F537DF13D4DAF100A9B2A5 /* landscape-homepage.png */; };
 		27F537E313D4DC6000A9B2A5 /* landscape-homepage-featured.png in Resources */ = {isa = PBXBuildFile; fileRef = 27F537E213D4DC6000A9B2A5 /* landscape-homepage-featured.png */; };
 		27F537E613D4DE0500A9B2A5 /* portrait-homepage-featured.png in Resources */ = {isa = PBXBuildFile; fileRef = 27F537E413D4DE0500A9B2A5 /* portrait-homepage-featured.png */; };
@@ -303,8 +303,6 @@
 		27EA045713F8519F00E6D3DE /* DBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DBManager.m; path = Database/Core/DBManager.m; sourceTree = "<group>"; };
 		27EA045913F851AD00E6D3DE /* CommonDAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CommonDAO.h; path = Database/DAOs/CommonDAO.h; sourceTree = "<group>"; };
 		27EA045A13F851AD00E6D3DE /* CommonDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CommonDAO.m; path = Database/DAOs/CommonDAO.m; sourceTree = "<group>"; };
-		27EA045B13F851AD00E6D3DE /* ItemDAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ItemDAO.h; path = Database/DAOs/ItemDAO.h; sourceTree = "<group>"; };
-		27EA045C13F851AD00E6D3DE /* ItemDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ItemDAO.m; path = Database/DAOs/ItemDAO.m; sourceTree = "<group>"; };
 		27EA046213F851F800E6D3DE /* Tenaris_v1.0.sql */ = {isa = PBXFileReference; lastKnownFileType = file; name = Tenaris_v1.0.sql; path = Database/SQLs/Tenaris_v1.0.sql; sourceTree = "<group>"; };
 		27EA046C13F87CD100E6D3DE /* Field.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Field.h; path = Database/Domain/Field.h; sourceTree = "<group>"; };
 		27EA046D13F87CD200E6D3DE /* Field.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Field.m; path = Database/Domain/Field.m; sourceTree = "<group>"; };
@@ -316,6 +314,8 @@
 		27EA048013F8803A00E6D3DE /* Message.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Message.m; path = Database/Domain/Message.m; sourceTree = "<group>"; };
 		27EA048113F8803A00E6D3DE /* Recipient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Recipient.h; path = Database/Domain/Recipient.h; sourceTree = "<group>"; };
 		27EA048213F8803B00E6D3DE /* Recipient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Recipient.m; path = Database/Domain/Recipient.m; sourceTree = "<group>"; };
+		27EA048713F9E14500E6D3DE /* FieldDAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FieldDAO.h; path = Database/DAOs/FieldDAO.h; sourceTree = "<group>"; };
+		27EA048813F9E14500E6D3DE /* FieldDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FieldDAO.m; path = Database/DAOs/FieldDAO.m; sourceTree = "<group>"; };
 		27F537DF13D4DAF100A9B2A5 /* landscape-homepage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "landscape-homepage.png"; path = "Resources/Images/landscape-homepage.png"; sourceTree = "<group>"; };
 		27F537E213D4DC6000A9B2A5 /* landscape-homepage-featured.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "landscape-homepage-featured.png"; path = "Resources/Images/landscape-homepage-featured.png"; sourceTree = "<group>"; };
 		27F537E413D4DE0500A9B2A5 /* portrait-homepage-featured.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "portrait-homepage-featured.png"; path = "Resources/Images/portrait-homepage-featured.png"; sourceTree = "<group>"; };
@@ -704,8 +704,8 @@
 			children = (
 				27EA045913F851AD00E6D3DE /* CommonDAO.h */,
 				27EA045A13F851AD00E6D3DE /* CommonDAO.m */,
-				27EA045B13F851AD00E6D3DE /* ItemDAO.h */,
-				27EA045C13F851AD00E6D3DE /* ItemDAO.m */,
+				27EA048713F9E14500E6D3DE /* FieldDAO.h */,
+				27EA048813F9E14500E6D3DE /* FieldDAO.m */,
 			);
 			name = DAOs;
 			sourceTree = "<group>";
@@ -944,12 +944,12 @@
 				27EA045113F8514D00E6D3DE /* JSONKit.m in Sources */,
 				27EA045813F8519F00E6D3DE /* DBManager.m in Sources */,
 				27EA045D13F851AD00E6D3DE /* CommonDAO.m in Sources */,
-				27EA045E13F851AD00E6D3DE /* ItemDAO.m in Sources */,
 				27EA046E13F87CD200E6D3DE /* Field.m in Sources */,
 				27EA048313F8803B00E6D3DE /* Form.m in Sources */,
 				27EA048413F8803B00E6D3DE /* MailType.m in Sources */,
 				27EA048513F8803B00E6D3DE /* Message.m in Sources */,
 				27EA048613F8803B00E6D3DE /* Recipient.m in Sources */,
+				27EA048913F9E14500E6D3DE /* FieldDAO.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

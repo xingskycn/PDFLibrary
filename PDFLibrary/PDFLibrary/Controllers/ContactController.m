@@ -13,25 +13,63 @@
 @synthesize portrait, landscape;
 
 bool is_portrait = false;
+bool copyPressed = NO;
 
-- (void)viewWillAppear:(BOOL)animated
-{
+- (void)setOrientation {
     UIDeviceOrientation orientation = [UIApplication sharedApplication].statusBarOrientation;
-    /*
-    if (orientation == UIDeviceOrientationUnknown || orientation == UIDeviceOrientationFaceUp 
-        || orientation == UIDeviceOrientationFaceDown)
-        [[UIDevice currentDevice] setOrientation:UIInterfaceOrientationLandscapeLeft];
-    */
     
     is_portrait = UIInterfaceOrientationIsPortrait(orientation);
     
-    if(!is_portrait)
+    if(!is_portrait) {
         self.view = landscape;
-    else
+    } else {
         self.view = portrait;
+    }
 }
 
-bool copyPressed = NO;
+- (void)setFormLabelsFromDatabase {
+
+    NSArray * items = [FieldDAO getFieldsForForm:1];
+
+    for (Field * field in items) {
+        switch (field.id) {
+            case 1:
+                lblTextField1Landscape.text = field.value;
+                lblTextField1Portrait.text = field.value;
+                break;
+            case 2:
+                lblTextField2Landscape.text = field.value;
+                lblTextField2Portrait.text = field.value;
+                break;
+            case 3:
+                lblTextField3Landscape.text = field.value;
+                lblTextField3Portrait.text = field.value;
+                break;
+            case 4:
+                lblTextField4Landscape.text = field.value;
+                lblTextField4Portrait.text = field.value;
+                break;
+            case 5:
+                lblTextFieldSendCopyLandscape.text = field.value;
+                lblTextFieldSendCopyPortrait.text = field.value;
+                break;
+            case 6:
+                lblTextField5Landscape.text = field.value;
+                lblTextField5Portrait.text = field.value;
+                break;                
+            default:
+                break;
+        }
+    }
+    
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [self setOrientation];
+    [self setFormLabelsFromDatabase];
+}
+
+// ******************************
 
 - (IBAction) btnSendPressed {
         [[[[UIAlertView alloc] initWithTitle:@"TODO" message:@"Send Tapped. Request WebService" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil] autorelease] show]; 

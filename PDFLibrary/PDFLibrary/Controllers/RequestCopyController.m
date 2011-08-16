@@ -14,24 +14,89 @@
 bool hardCopyPressed = NO;
 bool isPortrait = false;
 
-- (void)viewWillAppear:(BOOL)animated
-{
+- (void)setOrientation {
     UIDeviceOrientation orientation = [UIApplication sharedApplication].statusBarOrientation;
-    
-    /*
-     if (orientation == UIDeviceOrientationUnknown || orientation == UIDeviceOrientationFaceUp 
-     || orientation == UIDeviceOrientationFaceDown)
-     [[UIDevice currentDevice] setOrientation:UIInterfaceOrientationLandscapeLeft];
-     */
-    
     
     isPortrait = UIInterfaceOrientationIsPortrait(orientation);
     
-    if(!isPortrait)
+    if(!isPortrait) {
         self.view = landscape;
-    else
+    } else {
         self.view = portrait;
+    }
 }
+
+- (void)setFormLabelsFromDatabase {
+    
+    NSArray * items = [FieldDAO getFieldsForForm:2];
+    
+    for (Field * field in items) {
+        switch (field.id) {
+            case 8:
+                lblTextField1Landscape.text = field.value;
+                lblTextField1Portrait.text = field.value;
+                break;
+            case 9:
+                lblTextField2Landscape.text = field.value;
+                lblTextField2Portrait.text = field.value;
+                break;
+            case 10:
+                lblTextField3Landscape.text = field.value;
+                lblTextField3Portrait.text = field.value;
+                break;
+            case 11:
+                lblTextField4Landscape.text = field.value;
+                lblTextField4Portrait.text = field.value;
+                break;
+            case 12:
+                lblTextFieldSendCopyLandscape.text = field.value;
+                lblTextFieldSendCopyPortrait.text = field.value;
+                break;
+            case 13:
+                lblTextFieldMailingAddressLandscape.text = field.value;
+                lblTextFieldMailingAddressPortrait.text = field.value;
+                break;     
+            case 14:
+                lblTextField5Landscape.text = field.value;
+                lblTextField5Portrait.text = field.value;
+                break;
+            case 15:
+                lblTextField6Landscape.text = field.value;
+                lblTextField6Portrait.text = field.value;
+                break;
+            case 16:
+                lblTextField7Landscape.text = field.value;
+                lblTextField7Portrait.text = field.value;
+                break;
+            case 17:
+                lblTextField8Landscape.text = field.value;
+                lblTextField8Portrait.text = field.value;
+                break;
+            case 18:
+                lblTextField9Landscape.text = field.value;
+                lblTextField9Portrait.text = field.value;
+                break;        
+            case 20:
+                lblTextField10Portrait.text = field.value;
+                lblTextField10Landscape.text = field.value;
+                break;
+            case 21:
+                lblTextField11Portrait.text = field.value;
+                lblTextField11Landscape.text = field.value;
+                break;                
+            default:
+                break;
+        }
+    }
+    
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [self setOrientation];
+    [self setFormLabelsFromDatabase];
+}
+
+// *************************************************
 
 - (IBAction) btnSendPressed {
     [[[[UIAlertView alloc] initWithTitle:@"TODO" message:@"Send Tapped. Request WebService" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil] autorelease] show]; 

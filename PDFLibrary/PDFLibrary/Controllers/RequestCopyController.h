@@ -13,6 +13,9 @@
 #import "LibraryController.h"
 #import "CategoryController.h"
 
+#import "FieldDAO.h"
+#import "Field.h"
+
 @interface RequestCopyController : UIViewController<UIGestureRecognizerDelegate> {
     IBOutlet UIButton * btnPopoverCategories;
     IBOutlet UIButton * btnPopoverLanguages;
@@ -49,6 +52,35 @@
     IBOutlet UITextField * txtZipLandscape;
     IBOutlet UITextField * txtCountryLandscape;
     IBOutlet UITextView * txtMessageLandscape;
+    
+    
+    IBOutlet UILabel * lblTextField1Portrait;
+    IBOutlet UILabel * lblTextField2Portrait;
+    IBOutlet UILabel * lblTextField3Portrait;
+    IBOutlet UILabel * lblTextField4Portrait;
+    IBOutlet UILabel * lblTextField5Portrait;
+    IBOutlet UILabel * lblTextField6Portrait;
+    IBOutlet UILabel * lblTextField7Portrait;
+    IBOutlet UILabel * lblTextField8Portrait;
+    IBOutlet UILabel * lblTextField9Portrait;
+    IBOutlet UILabel * lblTextField10Portrait;
+    IBOutlet UILabel * lblTextField11Portrait;    
+    IBOutlet UILabel * lblTextFieldSendCopyPortrait;
+    IBOutlet UILabel * lblTextFieldMailingAddressPortrait;
+    
+    IBOutlet UILabel * lblTextField1Landscape;
+    IBOutlet UILabel * lblTextField2Landscape;
+    IBOutlet UILabel * lblTextField3Landscape;
+    IBOutlet UILabel * lblTextField4Landscape;
+    IBOutlet UILabel * lblTextField5Landscape;
+    IBOutlet UILabel * lblTextField6Landscape;
+    IBOutlet UILabel * lblTextField7Landscape;
+    IBOutlet UILabel * lblTextField8Landscape;
+    IBOutlet UILabel * lblTextField9Landscape;
+    IBOutlet UILabel * lblTextField10Landscape;
+    IBOutlet UILabel * lblTextField11Landscape;    
+    IBOutlet UILabel * lblTextFieldSendCopyLandscape;
+    IBOutlet UILabel * lblTextFieldMailingAddressLandscape;
 }
 
 @property (nonatomic,retain) IBOutlet UIView* landscape;

@@ -12,6 +12,9 @@
 #import "LibraryController.h"
 #import "CategoryController.h"
 
+#import "FieldDAO.h"
+#import "Field.h"
+
 @interface ContactController : UIViewController<UIGestureRecognizerDelegate> {
 
     IBOutlet UIButton * btnPopoverCategories;
@@ -34,6 +37,20 @@
     IBOutlet UITextField * txtEmailLandscape;
     IBOutlet UITextField * txtPhoneLandscape;
     IBOutlet UIButton * btnSendCopyLandscape;
+    
+    IBOutlet UILabel * lblTextField1Portrait;
+    IBOutlet UILabel * lblTextField2Portrait;
+    IBOutlet UILabel * lblTextField3Portrait;
+    IBOutlet UILabel * lblTextField4Portrait;
+    IBOutlet UILabel * lblTextField5Portrait;
+    IBOutlet UILabel * lblTextFieldSendCopyPortrait;
+    
+    IBOutlet UILabel * lblTextField1Landscape;
+    IBOutlet UILabel * lblTextField2Landscape;
+    IBOutlet UILabel * lblTextField3Landscape;
+    IBOutlet UILabel * lblTextField4Landscape;
+    IBOutlet UILabel * lblTextField5Landscape;
+    IBOutlet UILabel * lblTextFieldSendCopyLandscape;
 
 }
 

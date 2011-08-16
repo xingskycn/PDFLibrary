@@ -15,12 +15,9 @@
 @synthesize rootController;
 @synthesize homeViewController;
 
-// Override point for customization after app launch  
 - (void)applicationDidFinishLaunching:(UIApplication *)application {    
     
     [[[DBManager getInstance] initWithDatabaseFile: @"Tenaris_v1.0.sql"] connect];
-    
-    // Override point for customization after app launch.
     
     window.backgroundColor = [UIColor blackColor];
     [self.window addSubview:startUpController.view];
@@ -43,8 +40,6 @@
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {
-	
-    // Save data if appropriate
 	[[DBManager getInstance] disconnect];
 }
 
