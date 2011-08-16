@@ -10,8 +10,8 @@
 
 
 @implementation HomeController
-@synthesize portrait, landscape;
-
+@synthesize portrait, landscape, indicatorController;
+BOOL alreadyCallUpdateService = NO;
 
 - (IBAction) btnHomePressed {
     // We're on HomeController
@@ -88,12 +88,10 @@
     [super dealloc];
 }
 
-- (void)didReceiveMemoryWarning
-{
-    // Releases the view if it doesn't have a superview.
+- (void)didReceiveMemoryWarning {
+    
     [super didReceiveMemoryWarning];
     
-    // Release any cached data, images, etc that aren't in use.
 }
 
 #pragma mark - View lifecycle
@@ -114,27 +112,33 @@
     [self.view addGestureRecognizer:recognizer];
     recognizer.delegate = self;
     [recognizer release];
-
     
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
     UIDeviceOrientation orientation = [UIApplication sharedApplication].statusBarOrientation;
-    
-    /*
-     if (orientation == UIDeviceOrientationUnknown || orientation == UIDeviceOrientationFaceUp 
-     || orientation == UIDeviceOrientationFaceDown)
-     [[UIDevice currentDevice] setOrientation:UIInterfaceOrientationLandscapeLeft];
-     */
-    
-    
+        
     BOOL isPortrait = UIInterfaceOrientationIsPortrait(orientation);
     
-    if(!isPortrait)
-        self.view = landscape;
-    else
+    if(isPortrait) {
         self.view = portrait;
+        self.indicatorController = [[IndicatorController alloc] 
+                                    initWithNibName:@"IndicatorControllerPortrait" bundle:nil];
+    } else {
+        self.view = landscape;
+        self.indicatorController = [[IndicatorController alloc] 
+                                    initWithNibName:@"IndicatorControllerLandscape" bundle:nil];
+    }
+    
+    // Just one call, when app is loaded and not when navigationController is back to this view
+    if(!alreadyCallUpdateService) {
+        ServiceManager * serviceManager = [[ServiceManager alloc] init];
+        [self.view addSubview:self.indicatorController.view];
+        [serviceManager callUpdateData:self];
+        alreadyCallUpdateService = YES;
+    }
+
 }
 
 - (void)doubleTapMethod
@@ -159,24 +163,45 @@
 - (void)viewDidUnload
 {
     [super viewDidUnload];
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
-    // Return YES for supported orientations
-	return YES;
+    // Return YES if indicatorController is not loaded. Otherwise, return NO (modal action)
+	return !(self.indicatorController.view.superview == self.view);
 }
 
 - (void) willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
 {    
-    if(!UIInterfaceOrientationIsPortrait(toInterfaceOrientation))
+        
+    if(!UIInterfaceOrientationIsPortrait(toInterfaceOrientation)) {
         self.view = landscape;
-    else
+        self.indicatorController = [[IndicatorController alloc] 
+                                    initWithNibName:@"IndicatorControllerLandscape" bundle:nil];
+    } else {
         self.view = portrait;
+        self.indicatorController = [[IndicatorController alloc] 
+                                    initWithNibName:@"IndicatorControllerPortrait" bundle:nil];
+    }
 }
 
+
+// ******************************************
+
+- (void)serviceSuccess:(NSDictionary * )data {
+    
+    [self.indicatorController.view removeFromSuperview];
+    [VersionDAO saveNewUpdates:data];
+    
+}
+
+- (void)serviceFailed:(NSString * )errorMsg {
+    
+    [self.indicatorController.view removeFromSuperview];
+    [[[[UIAlertView alloc] initWithTitle:@"" message:errorMsg delegate:self 
+                          cancelButtonTitle:@"Ok" otherButtonTitles:nil] autorelease] show];
+    
+}
 
 
 

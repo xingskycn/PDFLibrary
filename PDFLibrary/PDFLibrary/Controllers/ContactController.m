@@ -10,20 +10,25 @@
 
 
 @implementation ContactController
-@synthesize portrait, landscape;
+@synthesize portrait, landscape, indicatorController;
 
 bool is_portrait = false;
 bool copyPressed = NO;
 
 - (void)setOrientation {
+    
     UIDeviceOrientation orientation = [UIApplication sharedApplication].statusBarOrientation;
     
-    is_portrait = UIInterfaceOrientationIsPortrait(orientation);
+    BOOL isPortrait = UIInterfaceOrientationIsPortrait(orientation);
     
-    if(!is_portrait) {
-        self.view = landscape;
-    } else {
+    if(isPortrait) {
         self.view = portrait;
+        self.indicatorController = [[IndicatorController alloc] 
+                                    initWithNibName:@"IndicatorControllerPortrait" bundle:nil];
+    } else {
+        self.view = landscape;
+        self.indicatorController = [[IndicatorController alloc] 
+                                    initWithNibName:@"IndicatorControllerLandscape" bundle:nil];
     }
 }
 
@@ -69,11 +74,43 @@ bool copyPressed = NO;
     [self setFormLabelsFromDatabase];
 }
 
-// ******************************
+
+// *************************************************
 
 - (IBAction) btnSendPressed {
-        [[[[UIAlertView alloc] initWithTitle:@"TODO" message:@"Send Tapped. Request WebService" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil] autorelease] show]; 
+    
+    NSMutableDictionary * arguments = [[NSMutableDictionary alloc] init];
+    
+    if(is_portrait) {
+        [arguments setValue:txtEmail.text       forKey:@"email"];
+        [arguments setValue:txtCompany.text     forKey:@"company"];
+    } else {
+        [arguments setValue:txtEmailLandscape.text       forKey:@"email"];
+        [arguments setValue:txtCompanyLandscape.text     forKey:@"company"];
+    }
+    
+    [self.view addSubview:indicatorController.view];
+    
+    ServiceManager * serviceManager = [[ServiceManager alloc] init];
+    [serviceManager sendFormContact:self arguments:arguments];
 }
+
+
+- (void)serviceSuccess:(NSDictionary * )data {
+    
+    [self.indicatorController.view removeFromSuperview];
+    
+}
+
+- (void)serviceFailed:(NSString * )errorMsg {
+    
+    [self.indicatorController.view removeFromSuperview];
+    [[[[UIAlertView alloc] initWithTitle:@"" message:errorMsg delegate:self 
+                       cancelButtonTitle:@"Ok" otherButtonTitles:nil] autorelease] show];
+    
+}
+
+// ****************************************
 
 - (IBAction) btnSendCopyPressed {
     copyPressed = !copyPressed;
@@ -222,8 +259,8 @@ bool copyPressed = NO;
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
-    // Return YES for supported orientations
-	return YES;
+    // Return YES if indicatorController is not loaded. Otherwise, return NO (modal action)
+	return !(self.indicatorController.view.superview == self.view);
 }
 
 - (void) willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
@@ -238,6 +275,9 @@ bool copyPressed = NO;
         txtEmail.text = txtEmailLandscape.text;
         txtMessage.text = txtMessageLandscape.text;
         txtPhone.text = txtPhoneLandscape.text;
+        
+        self.indicatorController = [[IndicatorController alloc] 
+                                    initWithNibName:@"IndicatorControllerPortrait" bundle:nil];
     }
     else
     {
@@ -247,6 +287,9 @@ bool copyPressed = NO;
         txtEmailLandscape.text = txtEmail.text;
         txtMessageLandscape.text = txtMessage.text;
         txtPhoneLandscape.text = txtPhone.text;  
+        
+        self.indicatorController = [[IndicatorController alloc] 
+                                    initWithNibName:@"IndicatorControllerLandscape" bundle:nil];
     }
 }
 

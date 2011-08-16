@@ -11,11 +11,14 @@
 #import "EbookController.h"
 #import "LibraryController.h"
 #import "CategoryController.h"
+#import "IndicatorController.h"
+
+#import "ServiceManager.h"
 
 #import "FieldDAO.h"
 #import "Field.h"
 
-@interface ContactController : UIViewController<UIGestureRecognizerDelegate> {
+@interface ContactController : UIViewController<UIGestureRecognizerDelegate, ServiceManagerDelegate> {
 
     IBOutlet UIButton * btnPopoverCategories;
     IBOutlet UIButton * btnPopoverLanguages;
@@ -51,11 +54,14 @@
     IBOutlet UILabel * lblTextField4Landscape;
     IBOutlet UILabel * lblTextField5Landscape;
     IBOutlet UILabel * lblTextFieldSendCopyLandscape;
+    
+    IndicatorController * indicatorController;
 
 }
 
-@property (nonatomic,retain) IBOutlet UIView* landscape;
-@property (nonatomic,retain) IBOutlet UIView* portrait;
+@property (nonatomic, retain) IBOutlet UIView* landscape;
+@property (nonatomic, retain) IBOutlet UIView* portrait;
+@property (nonatomic, retain) IndicatorController * indicatorController;
 
 - (IBAction) btnHomePressed;
 - (IBAction) btnCategoriesPressed;

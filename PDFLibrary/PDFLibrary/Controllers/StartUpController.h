@@ -1,9 +1,9 @@
 //
 //  StartUpController.h
-//  Mundial
+//  PDFLibrary
 //
 //  Created by Tomas on 28/03/10.
-//  Copyright 2010 __MyCompanyName__. All rights reserved.
+//  Copyright 2010 TheAppMaster. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

@@ -7,14 +7,19 @@
 //
 
 #import <UIKit/UIKit.h>
+
 #import "ContactController.h"
 #import "EbookController.h"
 #import "FiltersController.h"
 #import "LibraryController.h"
 #import "CategoryController.h"
+#import "IndicatorController.h"
+
+#import "ServiceManager.h"
+#import "VersionDAO.h"
 
 
-@interface HomeController : UIViewController<UIGestureRecognizerDelegate> {
+@interface HomeController : UIViewController<UIGestureRecognizerDelegate, ServiceManagerDelegate> {
     IBOutlet UIButton * btnPopoverCategories;
     IBOutlet UIButton * btnPopoverLanguages;
     IBOutlet UIButton * btnPopoverCategoriesPortrait;
@@ -22,10 +27,13 @@
     
     IBOutlet UIView * landscape;
     IBOutlet UIView * portrait;
+    
+    IndicatorController * indicatorController;
 }
 
-@property (nonatomic,retain) IBOutlet UIView* landscape;
-@property (nonatomic,retain) IBOutlet UIView* portrait;
+@property (nonatomic, retain) IBOutlet UIView* landscape;
+@property (nonatomic, retain) IBOutlet UIView* portrait;
+@property (nonatomic, retain) IndicatorController * indicatorController;
 
 
 - (IBAction) btnHomePressed;

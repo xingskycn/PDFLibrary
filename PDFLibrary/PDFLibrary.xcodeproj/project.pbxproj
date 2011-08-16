@@ -55,6 +55,12 @@
 		2731248013DC84410056EBA3 /* landscape-library.png in Resources */ = {isa = PBXBuildFile; fileRef = 2731247C13DC843C0056EBA3 /* landscape-library.png */; };
 		2731248113DC84410056EBA3 /* portrait-library.png in Resources */ = {isa = PBXBuildFile; fileRef = 2731247D13DC843E0056EBA3 /* portrait-library.png */; };
 		2731248513DC86120056EBA3 /* LibraryController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2731248313DC86120056EBA3 /* LibraryController.xib */; };
+		2757476313FA12790093E65C /* ServiceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2757476213FA12790093E65C /* ServiceManager.m */; };
+		2757476613FA18E60093E65C /* Version.m in Sources */ = {isa = PBXBuildFile; fileRef = 2757476513FA18E60093E65C /* Version.m */; };
+		2757476913FA19300093E65C /* VersionDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 2757476813FA19300093E65C /* VersionDAO.m */; };
+		2757476C13FA1BA40093E65C /* IndicatorController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2757476B13FA1BA40093E65C /* IndicatorController.m */; };
+		2757477013FA1CBF0093E65C /* IndicatorControllerLandscape.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2757476F13FA1CBF0093E65C /* IndicatorControllerLandscape.xib */; };
+		2757477213FA1D250093E65C /* IndicatorControllerPortrait.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2757477113FA1D250093E65C /* IndicatorControllerPortrait.xib */; };
 		275E7C0913EDA2BD00BD771A /* starter.png in Resources */ = {isa = PBXBuildFile; fileRef = 275E7C0813EDA2BD00BD771A /* starter.png */; };
 		275E7C3B13F0FCA100BD771A /* btn-back.png in Resources */ = {isa = PBXBuildFile; fileRef = 275E7C3A13F0FCA100BD771A /* btn-back.png */; };
 		279386F813DCC18D0006C031 /* Hot_Induction_BendEnglish.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 279386F313DCC18D0006C031 /* Hot_Induction_BendEnglish.pdf */; };
@@ -227,6 +233,16 @@
 		2731247C13DC843C0056EBA3 /* landscape-library.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "landscape-library.png"; path = "Resources/Images/landscape-library.png"; sourceTree = "<group>"; };
 		2731247D13DC843E0056EBA3 /* portrait-library.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "portrait-library.png"; path = "Resources/Images/portrait-library.png"; sourceTree = "<group>"; };
 		2731248313DC86120056EBA3 /* LibraryController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LibraryController.xib; path = XIBs/LibraryController.xib; sourceTree = "<group>"; };
+		2757476113FA12790093E65C /* ServiceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ServiceManager.h; path = Services/Core/ServiceManager.h; sourceTree = "<group>"; };
+		2757476213FA12790093E65C /* ServiceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ServiceManager.m; path = Services/Core/ServiceManager.m; sourceTree = "<group>"; };
+		2757476413FA18E60093E65C /* Version.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Version.h; path = Database/Domain/Version.h; sourceTree = "<group>"; };
+		2757476513FA18E60093E65C /* Version.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Version.m; path = Database/Domain/Version.m; sourceTree = "<group>"; };
+		2757476713FA19300093E65C /* VersionDAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VersionDAO.h; path = Database/DAOs/VersionDAO.h; sourceTree = "<group>"; };
+		2757476813FA19300093E65C /* VersionDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VersionDAO.m; path = Database/DAOs/VersionDAO.m; sourceTree = "<group>"; };
+		2757476A13FA1BA40093E65C /* IndicatorController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IndicatorController.h; path = Controllers/IndicatorController.h; sourceTree = "<group>"; };
+		2757476B13FA1BA40093E65C /* IndicatorController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IndicatorController.m; path = Controllers/IndicatorController.m; sourceTree = "<group>"; };
+		2757476F13FA1CBF0093E65C /* IndicatorControllerLandscape.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = IndicatorControllerLandscape.xib; path = XIBs/IndicatorControllerLandscape.xib; sourceTree = "<group>"; };
+		2757477113FA1D250093E65C /* IndicatorControllerPortrait.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = IndicatorControllerPortrait.xib; path = XIBs/IndicatorControllerPortrait.xib; sourceTree = "<group>"; };
 		275E7C0813EDA2BD00BD771A /* starter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = starter.png; path = Resources/Images/starter.png; sourceTree = "<group>"; };
 		275E7C3A13F0FCA100BD771A /* btn-back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "btn-back.png"; path = "Resources/Images/btn-back.png"; sourceTree = "<group>"; };
 		279386F313DCC18D0006C031 /* Hot_Induction_BendEnglish.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = Hot_Induction_BendEnglish.pdf; path = "Resources/PDFs Sample/Hot_Induction_BendEnglish.pdf"; sourceTree = "<group>"; };
@@ -444,6 +460,15 @@
 			name = other;
 			sourceTree = "<group>";
 		};
+		2757476013FA124D0093E65C /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				2757476113FA12790093E65C /* ServiceManager.h */,
+				2757476213FA12790093E65C /* ServiceManager.m */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
 		279386F213DCC1320006C031 /* PDFs Sample */ = {
 			isa = PBXGroup;
 			children = (
@@ -558,6 +583,8 @@
 				27F537F413D9C58100A9B2A5 /* ContactController.xib */,
 				27D23B0213D46EBC000D3FD5 /* HomeController.xib */,
 				27D23AE713D460FF000D3FD5 /* MainWindow.xib */,
+				2757476F13FA1CBF0093E65C /* IndicatorControllerLandscape.xib */,
+				2757477113FA1D250093E65C /* IndicatorControllerPortrait.xib */,
 			);
 			name = XIBs;
 			sourceTree = "<group>";
@@ -565,6 +592,8 @@
 		27D23AEC13D461C6000D3FD5 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				2757476A13FA1BA40093E65C /* IndicatorController.h */,
+				2757476B13FA1BA40093E65C /* IndicatorController.m */,
 				27B3189113EDA0200088B87F /* StartUpController.h */,
 				27B3189213EDA0200088B87F /* StartUpController.m */,
 				27B3188013DCE4B40088B87F /* CategoryController.h */,
@@ -628,18 +657,19 @@
 		27EA042C13F8512700E6D3DE /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				27EA042D13F8513700E6D3DE /* libraries */,
+				2757476013FA124D0093E65C /* Core */,
+				27EA042D13F8513700E6D3DE /* Libraries */,
 			);
 			name = Services;
 			sourceTree = "<group>";
 		};
-		27EA042D13F8513700E6D3DE /* libraries */ = {
+		27EA042D13F8513700E6D3DE /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
 				27EA042E13F8514D00E6D3DE /* asi-http-request */,
 				27EA044513F8514D00E6D3DE /* JSONKit */,
 			);
-			name = libraries;
+			name = Libraries;
 			sourceTree = "<group>";
 		};
 		27EA042E13F8514D00E6D3DE /* asi-http-request */ = {
@@ -695,6 +725,8 @@
 				27EA048213F8803B00E6D3DE /* Recipient.m */,
 				27EA046C13F87CD100E6D3DE /* Field.h */,
 				27EA046D13F87CD200E6D3DE /* Field.m */,
+				2757476413FA18E60093E65C /* Version.h */,
+				2757476513FA18E60093E65C /* Version.m */,
 			);
 			name = Domain;
 			sourceTree = "<group>";
@@ -706,6 +738,8 @@
 				27EA045A13F851AD00E6D3DE /* CommonDAO.m */,
 				27EA048713F9E14500E6D3DE /* FieldDAO.h */,
 				27EA048813F9E14500E6D3DE /* FieldDAO.m */,
+				2757476713FA19300093E65C /* VersionDAO.h */,
+				2757476813FA19300093E65C /* VersionDAO.m */,
 			);
 			name = DAOs;
 			sourceTree = "<group>";
@@ -912,6 +946,8 @@
 				279E76C313F830D4001EBDC0 /* FPKReaderBundle.bundle in Resources */,
 				279E76C513F830E7001EBDC0 /* FastPdfKit.xcconfig in Resources */,
 				27EA046313F851F800E6D3DE /* Tenaris_v1.0.sql in Resources */,
+				2757477013FA1CBF0093E65C /* IndicatorControllerLandscape.xib in Resources */,
+				2757477213FA1D250093E65C /* IndicatorControllerPortrait.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -950,6 +986,10 @@
 				27EA048513F8803B00E6D3DE /* Message.m in Sources */,
 				27EA048613F8803B00E6D3DE /* Recipient.m in Sources */,
 				27EA048913F9E14500E6D3DE /* FieldDAO.m in Sources */,
+				2757476313FA12790093E65C /* ServiceManager.m in Sources */,
+				2757476613FA18E60093E65C /* Version.m in Sources */,
+				2757476913FA19300093E65C /* VersionDAO.m in Sources */,
+				2757476C13FA1BA40093E65C /* IndicatorController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

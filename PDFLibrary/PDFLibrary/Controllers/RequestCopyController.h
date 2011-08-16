@@ -12,11 +12,14 @@
 #import "ContactController.h"
 #import "LibraryController.h"
 #import "CategoryController.h"
+#import "IndicatorController.h"
+
+#import "ServiceManager.h"
 
 #import "FieldDAO.h"
 #import "Field.h"
 
-@interface RequestCopyController : UIViewController<UIGestureRecognizerDelegate> {
+@interface RequestCopyController : UIViewController<UIGestureRecognizerDelegate, ServiceManagerDelegate> {
     IBOutlet UIButton * btnPopoverCategories;
     IBOutlet UIButton * btnPopoverLanguages;
     IBOutlet UIButton * btnSendHardCopy;
@@ -81,10 +84,13 @@
     IBOutlet UILabel * lblTextField11Landscape;    
     IBOutlet UILabel * lblTextFieldSendCopyLandscape;
     IBOutlet UILabel * lblTextFieldMailingAddressLandscape;
+    
+    IndicatorController * indicatorController;
 }
 
-@property (nonatomic,retain) IBOutlet UIView* landscape;
-@property (nonatomic,retain) IBOutlet UIView* portrait;
+@property (nonatomic, retain) IBOutlet UIView* landscape;
+@property (nonatomic, retain) IBOutlet UIView* portrait;
+@property (nonatomic, retain) IndicatorController * indicatorController;
 
 
 - (IBAction) btnHomePressed;
