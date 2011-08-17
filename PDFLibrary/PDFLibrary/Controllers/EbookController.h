@@ -16,7 +16,8 @@
 #import <MessageUI/MessageUI.h>
 
 @class MFDocumentManager;
-@interface EbookController : UIViewController<UIGestureRecognizerDelegate> {
+@interface EbookController : UIViewController<UIGestureRecognizerDelegate, 
+                                              MFMailComposeViewControllerDelegate> {
     IBOutlet UIButton * btnPopoverCategories;
     IBOutlet UIButton * btnPopoverLanguages;
     
