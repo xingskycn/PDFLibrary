@@ -114,7 +114,7 @@
  
     self.delegate = _delegate;
     
-    NSString * serviceURL = @"????.ashx";
+    NSString * serviceURL = @"contactus.ashx";
     NSString * errorMessage = @"Sorry, we can't send this form.";
     
     [arguments setValue:[self getUsername] forKey:@"User"];
@@ -130,7 +130,7 @@
     
     self.delegate = _delegate;
     
-    NSString * serviceURL = @"????.ashx";
+    NSString * serviceURL = @"requesthardcopy.ashx";
     NSString * errorMessage = @"Sorry, we can't request for hard copy form.";
     
     [arguments setValue:[self getUsername] forKey:@"User"];

@@ -23,6 +23,7 @@
     IBOutlet UIButton * btnPopoverCategories;
     IBOutlet UIButton * btnPopoverLanguages;
     IBOutlet UIButton * btnSendHardCopy;
+    IBOutlet UIButton * btnSend;
     
     IBOutlet UIView * landscape;
     IBOutlet UIView * portrait;
@@ -30,6 +31,7 @@
     IBOutlet UIButton * btnPopoverCategoriesLandscape;
     IBOutlet UIButton * btnPopoverLanguagesLandscape;
     IBOutlet UIButton * btnSendHardCopyLandscape;
+    IBOutlet UIButton * btnSendLandscape;
     
     IBOutlet UITextField * txtName;
     IBOutlet UITextField * txtCompany;

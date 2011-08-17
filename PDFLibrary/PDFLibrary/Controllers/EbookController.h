@@ -13,6 +13,7 @@
 #import "RequestCopyController.h"
 #import "LibraryController.h"
 #import "CategoryController.h"
+#import <MessageUI/MessageUI.h>
 
 @class MFDocumentManager;
 @interface EbookController : UIViewController<UIGestureRecognizerDelegate> {
@@ -24,11 +25,13 @@
 
     IBOutlet UIButton * btnPopoverCategoriesLandscape;
     IBOutlet UIButton * btnPopoverLanguagesLandscape;
+    MFMailComposeViewController* mailController;
 
 }
 
 @property (nonatomic,retain) IBOutlet UIView* landscape;
 @property (nonatomic,retain) IBOutlet UIView* portrait;
+@property (nonatomic,retain) MFMailComposeViewController* mailController;
 
 - (IBAction) btnHomePressed;
 - (IBAction) btnCategoriesPressed;
@@ -42,7 +45,8 @@
 
 // Ebook Actions
 - (IBAction) btnRequestCopyPressed;
-- (IBAction)actionOpenPlainDocument:(id)sender;
+- (IBAction) actionOpenPlainDocument:(id)sender;
 - (IBAction) btnBackPressed:(id)sender;
+- (IBAction) btnSendByMail:(id)sender;
 
 @end

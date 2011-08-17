@@ -19,7 +19,7 @@ bool isPortrait = false;
     
     UIDeviceOrientation orientation = [UIApplication sharedApplication].statusBarOrientation;
     
-    BOOL isPortrait = UIInterfaceOrientationIsPortrait(orientation);
+    isPortrait = UIInterfaceOrientationIsPortrait(orientation);
     
     if(isPortrait) {
         self.view = portrait;
@@ -89,7 +89,11 @@ bool isPortrait = false;
             case 21:
                 lblTextField11Portrait.text = field.value;
                 lblTextField11Landscape.text = field.value;
-                break;                
+                break;  
+            case 22:
+                [btnSendLandscape setTitle:field.value forState:UIControlStateNormal];
+                [btnSend setTitle:field.value forState:UIControlStateNormal];
+                break;                 
             default:
                 break;
         }
@@ -106,14 +110,38 @@ bool isPortrait = false;
 
 - (IBAction) btnSendPressed {
     
+    [self touchesBegan:nil withEvent:nil];
+    
     NSMutableDictionary * arguments = [[NSMutableDictionary alloc] init];
 
     if(isPortrait) {
-        [arguments setValue:txtCity.text        forKey:@"city"];
-        [arguments setValue:txtCompany.text     forKey:@"company"];
+        [arguments setValue:txtName.text        forKey:@"Name"];
+        [arguments setValue:txtCompany.text     forKey:@"Company"];
+        [arguments setValue:txtMail.text        forKey:@"Email"];
+        [arguments setValue:txtPhone.text       forKey:@"Phone"];
+        [arguments setValue:txtStreet1.text     forKey:@"Street"];
+        [arguments setValue:txtStreet2.text     forKey:@"Street2"];
+        [arguments setValue:txtCity.text        forKey:@"City"];
+        [arguments setValue:txtState.text       forKey:@"State"];
+        [arguments setValue:txtZip.text         forKey:@"Zip"];
+        [arguments setValue:txtCountry.text     forKey:@"Country"];
+        [arguments setValue:@"Hollow Rods"      forKey:@"PDFName"];
+        [arguments setValue:txtMessage.text     forKey:@"Message"];
+        [arguments setValue:@"Default"          forKey:@"Section"];
     } else {
-        [arguments setValue:txtCityLandscape.text        forKey:@"city"];
-        [arguments setValue:txtCompanyLandscape.text     forKey:@"company"];
+        [arguments setValue:txtNameLandscape.text       forKey:@"Name"];
+        [arguments setValue:txtCompanyLandscape.text    forKey:@"Company"];
+        [arguments setValue:txtMailLandscape.text       forKey:@"Email"];
+        [arguments setValue:txtPhoneLandscape.text      forKey:@"Phone"];
+        [arguments setValue:txtStreet1Landscape.text    forKey:@"Street"];
+        [arguments setValue:txtStreet2Landscape.text    forKey:@"Street2"];
+        [arguments setValue:txtCityLandscape.text       forKey:@"City"];
+        [arguments setValue:txtStateLandscape.text      forKey:@"State"];
+        [arguments setValue:txtZipLandscape.text        forKey:@"Zip"];
+        [arguments setValue:txtCountryLandscape.text    forKey:@"Country"];
+        [arguments setValue:@"Hollow Rods"              forKey:@"PDFName"];        
+        [arguments setValue:txtMessageLandscape.text    forKey:@"Message"];
+        [arguments setValue:@"Default"                  forKey:@"Section"];
     }
     
     [self.view addSubview:indicatorController.view];
@@ -367,8 +395,6 @@ bool isPortrait = false;
 {
     if([text isEqualToString:@"\n"]) 
     {
-        [[[[UIAlertView alloc] initWithTitle:@"TODO" message:@"Validate Form and Send" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil] autorelease] show];  
-    
         [txtName resignFirstResponder];
         [txtCompany resignFirstResponder];
         [txtMail resignFirstResponder];
@@ -392,6 +418,8 @@ bool isPortrait = false;
         [txtZipLandscape resignFirstResponder];
         [txtCountryLandscape resignFirstResponder];
         [txtMessageLandscape resignFirstResponder];
+        
+        [self btnSendPressed];
         
         return NO;
 	}

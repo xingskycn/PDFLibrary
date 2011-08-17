@@ -28,6 +28,7 @@
     IBOutlet UITextField * txtEmail;
     IBOutlet UITextField * txtPhone;
     IBOutlet UIButton * btnSendCopy;
+    IBOutlet UIButton * btnSend;
     
     IBOutlet UIView * landscape;
     IBOutlet UIView * portrait;
@@ -40,6 +41,7 @@
     IBOutlet UITextField * txtEmailLandscape;
     IBOutlet UITextField * txtPhoneLandscape;
     IBOutlet UIButton * btnSendCopyLandscape;
+    IBOutlet UIButton * btnSendLandscape;
     
     IBOutlet UILabel * lblTextField1Portrait;
     IBOutlet UILabel * lblTextField2Portrait;

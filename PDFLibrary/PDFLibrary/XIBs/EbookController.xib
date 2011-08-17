@@ -2,7 +2,7 @@
 <archive type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="7.10">
 	<data>
 		<int key="IBDocument.SystemTarget">1056</int>
-		<string key="IBDocument.SystemVersion">10K540</string>
+		<string key="IBDocument.SystemVersion">10K549</string>
 		<string key="IBDocument.InterfaceBuilderVersion">1306</string>
 		<string key="IBDocument.AppKitVersion">1038.36</string>
 		<string key="IBDocument.HIToolboxVersion">461.00</string>
@@ -77,9 +77,9 @@
 							<double key="NSSize">12</double>
 							<int key="NSfFlags">16</int>
 						</object>
-						<object class="NSColor" key="IBUITextColor" id="999554175">
-							<int key="NSColorSpace">3</int>
-							<bytes key="NSWhite">MC4zMzMzMzMzMzMzAA</bytes>
+						<object class="NSColor" key="IBUITextColor" id="773329662">
+							<int key="NSColorSpace">2</int>
+							<bytes key="NSRGB">MC41MzcyNTQ5Mjk1IDAuNTM3MjU0OTI5NSAwLjUzNzI1NDkyOTUAA</bytes>
 						</object>
 						<nil key="IBUIHighlightedColor"/>
 						<int key="IBUIBaselineAdjustment">1</int>
@@ -98,6 +98,11 @@
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 						<string key="IBUIText">PCPRod® - Hollow Rods for Progressive Cavity Pumping</string>
+						<object class="NSFont" key="IBUIFont" id="58752921">
+							<string key="NSName">Helvetica-Bold</string>
+							<double key="NSSize">17</double>
+							<int key="NSfFlags">16</int>
+						</object>
 						<object class="NSColor" key="IBUITextColor" id="348944130">
 							<int key="NSColorSpace">1</int>
 							<bytes key="NSRGB">MSAxIDEAA</bytes>
@@ -143,8 +148,8 @@
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 						<string key="IBUIText">MAY 2011</string>
-						<reference key="IBUIFont" ref="1040829128"/>
-						<reference key="IBUITextColor" ref="999554175"/>
+						<reference key="IBUIFont" ref="942716689"/>
+						<reference key="IBUITextColor" ref="773329662"/>
 						<nil key="IBUIHighlightedColor"/>
 						<int key="IBUIBaselineAdjustment">1</int>
 						<float key="IBUIMinimumFontSize">10</float>
@@ -152,7 +157,7 @@
 					<object class="IBUITextView" id="865960995">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{387, 492}, {375, 167}}</string>
+						<string key="NSFrame">{{385, 470}, {375, 208}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="331718644"/>
@@ -176,7 +181,11 @@ LiBUaGUgbmV3IFByZW1pdW0gQ29ubmVjdGlvbiBSb2Qgb2ZmZXJzIDEwMCUgY29ubmVjdGlvbiBlZmZp
 Y2llbmN5IGFuZCBvcGVucyB1cCBhIG5ldyBmdXR1cmUgZm9yIG9pbCBwdW1waW5nIG9wZXJhdGlvbnMu
 A</string>
 						<reference key="IBUITextColor" ref="348944130"/>
-						<reference key="IBUIFont" ref="1040829128"/>
+						<object class="NSFont" key="IBUIFont" id="116538671">
+							<string key="NSName">Helvetica</string>
+							<double key="NSSize">13</double>
+							<int key="NSfFlags">16</int>
+						</object>
 						<object class="IBUITextInputTraits" key="IBUITextInputTraits">
 							<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						</object>
@@ -894,7 +903,10 @@ A</string>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 						<string key="IBUIText">BROCHURES FOR SUCKER RODS</string>
 						<reference key="IBUIFont" ref="1040829128"/>
-						<reference key="IBUITextColor" ref="999554175"/>
+						<object class="NSColor" key="IBUITextColor">
+							<int key="NSColorSpace">2</int>
+							<bytes key="NSRGB">MC41MzcyNTQ5Mjk1IDAuNTM3MjU0OTI5NSAwLjUzNzI1NDkyOTUAA</bytes>
+						</object>
 						<nil key="IBUIHighlightedColor"/>
 						<int key="IBUIBaselineAdjustment">1</int>
 						<float key="IBUIMinimumFontSize">10</float>
@@ -912,6 +924,7 @@ A</string>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 						<string key="IBUIText">PCPRod® - Hollow Rods for Progressive Cavity Pumping</string>
+						<reference key="IBUIFont" ref="58752921"/>
 						<reference key="IBUITextColor" ref="348944130"/>
 						<nil key="IBUIHighlightedColor"/>
 						<int key="IBUIBaselineAdjustment">1</int>
@@ -950,8 +963,11 @@ A</string>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 						<string key="IBUIText">MAY 2011</string>
-						<reference key="IBUIFont" ref="1040829128"/>
-						<reference key="IBUITextColor" ref="999554175"/>
+						<reference key="IBUIFont" ref="942716689"/>
+						<object class="NSColor" key="IBUITextColor">
+							<int key="NSColorSpace">2</int>
+							<bytes key="NSRGB">MC40NjI3NDUxMzAxIDAuNDYyNzQ1MTMwMSAwLjQ2Mjc0NTEzMDEAA</bytes>
+						</object>
 						<nil key="IBUIHighlightedColor"/>
 						<int key="IBUIBaselineAdjustment">1</int>
 						<float key="IBUIMinimumFontSize">10</float>
@@ -959,7 +975,7 @@ A</string>
 					<object class="IBUITextView" id="624239386">
 						<reference key="NSNextResponder" ref="298818615"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{515, 437}, {381, 167}}</string>
+						<string key="NSFrame">{{515, 410}, {381, 195}}</string>
 						<reference key="NSSuperview" ref="298818615"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="889912951"/>
@@ -983,7 +999,7 @@ LiBUaGUgbmV3IFByZW1pdW0gQ29ubmVjdGlvbiBSb2Qgb2ZmZXJzIDEwMCUgY29ubmVjdGlvbiBlZmZp
 Y2llbmN5IGFuZCBvcGVucyB1cCBhIG5ldyBmdXR1cmUgZm9yIG9pbCBwdW1waW5nIG9wZXJhdGlvbnMu
 A</string>
 						<reference key="IBUITextColor" ref="348944130"/>
-						<reference key="IBUIFont" ref="1040829128"/>
+						<reference key="IBUIFont" ref="116538671"/>
 						<object class="IBUITextInputTraits" key="IBUITextInputTraits">
 							<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						</object>
@@ -1612,6 +1628,33 @@ A</string>
 					</object>
 					<int key="connectionID">137</int>
 				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchEventConnection" key="connection">
+						<string key="label">btnSendByMail:</string>
+						<reference key="source" ref="854218437"/>
+						<reference key="destination" ref="372490531"/>
+						<int key="IBEventType">7</int>
+					</object>
+					<int key="connectionID">138</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchEventConnection" key="connection">
+						<string key="label">btnSendByMail:</string>
+						<reference key="source" ref="136085066"/>
+						<reference key="destination" ref="372490531"/>
+						<int key="IBEventType">7</int>
+					</object>
+					<int key="connectionID">139</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchEventConnection" key="connection">
+						<string key="label">btnMyLibraryPressed</string>
+						<reference key="source" ref="693163003"/>
+						<reference key="destination" ref="372490531"/>
+						<int key="IBEventType">7</int>
+					</object>
+					<int key="connectionID">140</int>
+				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
 				<object class="NSArray" key="orderedObjects">
@@ -1637,7 +1680,6 @@ A</string>
 							<reference ref="354375153"/>
 							<reference ref="533248625"/>
 							<reference ref="472414763"/>
-							<reference ref="865960995"/>
 							<reference ref="660767733"/>
 							<reference ref="944813936"/>
 							<reference ref="660877977"/>
@@ -1659,6 +1701,7 @@ A</string>
 							<reference ref="207333022"/>
 							<reference ref="247286120"/>
 							<reference ref="128257407"/>
+							<reference ref="865960995"/>
 						</object>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -1858,7 +1901,6 @@ A</string>
 							<reference ref="372991533"/>
 							<reference ref="708959149"/>
 							<reference ref="534969183"/>
-							<reference ref="624239386"/>
 							<reference ref="260345672"/>
 							<reference ref="77935608"/>
 							<reference ref="145174925"/>
@@ -1870,6 +1912,7 @@ A</string>
 							<reference ref="137535070"/>
 							<reference ref="889912951"/>
 							<reference ref="277510812"/>
+							<reference ref="624239386"/>
 						</object>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -2196,7 +2239,7 @@ A</string>
 				<reference key="dict.values" ref="0"/>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">137</int>
+			<int key="maxID">140</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -2220,9 +2263,11 @@ A</string>
 							<string>btnPopoverLanguagesPressed</string>
 							<string>btnRequestCopyPressed</string>
 							<string>btnSearchPressed</string>
+							<string>btnSendByMail:</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>id</string>
 							<string>id</string>
 							<string>id</string>
 							<string>id</string>
@@ -2253,6 +2298,7 @@ A</string>
 							<string>btnPopoverLanguagesPressed</string>
 							<string>btnRequestCopyPressed</string>
 							<string>btnSearchPressed</string>
+							<string>btnSendByMail:</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
@@ -2302,6 +2348,10 @@ A</string>
 							</object>
 							<object class="IBActionInfo">
 								<string key="name">btnSearchPressed</string>
+								<string key="candidateClassName">id</string>
+							</object>
+							<object class="IBActionInfo">
+								<string key="name">btnSendByMail:</string>
 								<string key="candidateClassName">id</string>
 							</object>
 						</object>

@@ -11,7 +11,7 @@
 #import "ReaderViewController.h"
 
 @implementation EbookController
-@synthesize portrait, landscape;
+@synthesize portrait, landscape, mailController;
 
 - (void)viewWillAppear:(BOOL)animated
 {
@@ -117,6 +117,7 @@
 
 - (void)dealloc
 {
+    [mailController release];
     [portrait release];
     [landscape release];
     [super dealloc];
@@ -217,5 +218,34 @@
     [pdfViewController release];
 }
 
+- (IBAction) btnSendByMail:(id)sender
+{
+    if(![MFMailComposeViewController canSendMail])
+    {
+        UIAlertView* loadingAlert = [[UIAlertView alloc] initWithTitle:nil message:@"There is no configured mail account." delegate:self 
+                                                     cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [loadingAlert show];
+		[loadingAlert release];  
+        return;
+    }
+    
+	self.mailController = [[MFMailComposeViewController alloc] init];
+	self.mailController.mailComposeDelegate = self;
+	self.mailController.navigationBar.barStyle = UIBarStyleBlack;
+	[self.mailController setSubject:@"Tenaris Library"];
+    
+    NSString *documentName = @"Wedge_Brochure";
+    NSString *pdfPath = [[NSBundle mainBundle] pathForResource:documentName ofType:@"pdf"];
+    NSData *pdfData = [NSData dataWithContentsOfFile:pdfPath];
+    [self.mailController addAttachmentData:pdfData mimeType:@"application/pdf" fileName:documentName];
+	
+	[self presentModalViewController:self.mailController animated:YES];
+	
+}
+
+
+-(void)mailComposeController:(MFMailComposeViewController*)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError*)error {
+	[self dismissModalViewControllerAnimated:TRUE];
+}
 
 @end

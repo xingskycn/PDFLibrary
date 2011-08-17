@@ -19,9 +19,9 @@ bool copyPressed = NO;
     
     UIDeviceOrientation orientation = [UIApplication sharedApplication].statusBarOrientation;
     
-    BOOL isPortrait = UIInterfaceOrientationIsPortrait(orientation);
+    is_portrait = UIInterfaceOrientationIsPortrait(orientation);
     
-    if(isPortrait) {
+    if(is_portrait) {
         self.view = portrait;
         self.indicatorController = [[IndicatorController alloc] 
                                     initWithNibName:@"IndicatorControllerPortrait" bundle:nil];
@@ -61,7 +61,11 @@ bool copyPressed = NO;
             case 6:
                 lblTextField5Landscape.text = field.value;
                 lblTextField5Portrait.text = field.value;
-                break;                
+                break; 
+            case 7:
+                [btnSendLandscape setTitle:field.value forState:UIControlStateNormal];
+                [btnSend setTitle:field.value forState:UIControlStateNormal];
+                break;               
             default:
                 break;
         }
@@ -79,14 +83,24 @@ bool copyPressed = NO;
 
 - (IBAction) btnSendPressed {
     
+    [self touchesBegan:nil withEvent:nil];
+    
     NSMutableDictionary * arguments = [[NSMutableDictionary alloc] init];
     
     if(is_portrait) {
-        [arguments setValue:txtEmail.text       forKey:@"email"];
-        [arguments setValue:txtCompany.text     forKey:@"company"];
+        [arguments setValue:txtName.text        forKey:@"Name"];
+        [arguments setValue:txtCompany.text     forKey:@"Company"];
+        [arguments setValue:txtEmail.text       forKey:@"Email"];
+        [arguments setValue:txtPhone.text       forKey:@"Phone"];
+        [arguments setValue:txtMessage.text     forKey:@"Message"];
+        [arguments setValue:@"Default"          forKey:@"Section"];
     } else {
-        [arguments setValue:txtEmailLandscape.text       forKey:@"email"];
-        [arguments setValue:txtCompanyLandscape.text     forKey:@"company"];
+        [arguments setValue:txtNameLandscape.text       forKey:@"Name"];
+        [arguments setValue:txtCompanyLandscape.text    forKey:@"Company"];
+        [arguments setValue:txtEmailLandscape.text      forKey:@"Email"];
+        [arguments setValue:txtPhoneLandscape.text      forKey:@"Phone"];
+        [arguments setValue:txtMessageLandscape.text    forKey:@"Message"];
+        [arguments setValue:@"Default"                  forKey:@"Section"];
     }
     
     [self.view addSubview:indicatorController.view];
@@ -312,8 +326,6 @@ bool copyPressed = NO;
 {
     if([text isEqualToString:@"\n"]) 
     {
-        [[[[UIAlertView alloc] initWithTitle:@"TODO" message:@"Validate Form and Send" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil] autorelease] show];  
-    
         [txtName resignFirstResponder];
         [txtNameLandscape resignFirstResponder];
         [txtCompany resignFirstResponder];
@@ -326,6 +338,9 @@ bool copyPressed = NO;
         [txtNameLandscape resignFirstResponder];
         [txtPhone resignFirstResponder];
         [txtPhoneLandscape resignFirstResponder];
+        
+        [self btnSendPressed];
+        
         return NO;
 	}
     return YES;
