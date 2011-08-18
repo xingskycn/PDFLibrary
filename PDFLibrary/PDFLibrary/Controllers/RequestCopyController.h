@@ -17,7 +17,11 @@
 #import "ServiceManager.h"
 
 #import "FieldDAO.h"
+#import "MessageDAO.h"
+
 #import "Field.h"
+#import "Message.h"
+
 
 @interface RequestCopyController : UIViewController<UIGestureRecognizerDelegate, ServiceManagerDelegate> {
     IBOutlet UIButton * btnPopoverCategories;
@@ -43,7 +47,7 @@
     IBOutlet UITextField * txtState;
     IBOutlet UITextField * txtZip;
     IBOutlet UITextField * txtCountry;
-    IBOutlet UITextView * txtMessage;
+    IBOutlet UITextView  * txtMessage;
     
     
     IBOutlet UITextField * txtNameLandscape;
@@ -56,7 +60,7 @@
     IBOutlet UITextField * txtStateLandscape;
     IBOutlet UITextField * txtZipLandscape;
     IBOutlet UITextField * txtCountryLandscape;
-    IBOutlet UITextView * txtMessageLandscape;
+    IBOutlet UITextView  * txtMessageLandscape;
     
     
     IBOutlet UILabel * lblTextField1Portrait;
@@ -72,6 +76,7 @@
     IBOutlet UILabel * lblTextField11Portrait;    
     IBOutlet UILabel * lblTextFieldSendCopyPortrait;
     IBOutlet UILabel * lblTextFieldMailingAddressPortrait;
+    IBOutlet UILabel * lblMessageResultPortrait;
     
     IBOutlet UILabel * lblTextField1Landscape;
     IBOutlet UILabel * lblTextField2Landscape;
@@ -86,8 +91,13 @@
     IBOutlet UILabel * lblTextField11Landscape;    
     IBOutlet UILabel * lblTextFieldSendCopyLandscape;
     IBOutlet UILabel * lblTextFieldMailingAddressLandscape;
+    IBOutlet UILabel * lblMessageResultLandscape;
     
     IndicatorController * indicatorController;
+    
+    NSString * messageSuccess;
+    NSString * messageFailure;    
+    NSString * messageIncomplete;
 }
 
 @property (nonatomic, retain) IBOutlet UIView* landscape;

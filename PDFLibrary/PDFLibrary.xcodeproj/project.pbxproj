@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		271BF50313FC88F100ACBD28 /* MessageDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 271BF50213FC88F100ACBD28 /* MessageDAO.m */; };
+		271BF50613FC92EF00ACBD28 /* txtField-incomplete-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 271BF50413FC92EF00ACBD28 /* txtField-incomplete-bg.png */; };
+		271BF50713FC92EF00ACBD28 /* txtView-incomplete-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 271BF50513FC92EF00ACBD28 /* txtView-incomplete-bg.png */; };
 		272DD0BD13D9D4F400F8EF89 /* btn-send.png in Resources */ = {isa = PBXBuildFile; fileRef = 272DD0B913D9D4F400F8EF89 /* btn-send.png */; };
 		272DD0BE13D9D4F400F8EF89 /* landscape-contact.png in Resources */ = {isa = PBXBuildFile; fileRef = 272DD0BA13D9D4F400F8EF89 /* landscape-contact.png */; };
 		272DD0BF13D9D4F400F8EF89 /* portrait-contact.png in Resources */ = {isa = PBXBuildFile; fileRef = 272DD0BB13D9D4F400F8EF89 /* portrait-contact.png */; };
@@ -181,6 +184,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		271BF50113FC88F100ACBD28 /* MessageDAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MessageDAO.h; path = Database/DAOs/MessageDAO.h; sourceTree = "<group>"; };
+		271BF50213FC88F100ACBD28 /* MessageDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MessageDAO.m; path = Database/DAOs/MessageDAO.m; sourceTree = "<group>"; };
+		271BF50413FC92EF00ACBD28 /* txtField-incomplete-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "txtField-incomplete-bg.png"; path = "Resources/Images/txtField-incomplete-bg.png"; sourceTree = "<group>"; };
+		271BF50513FC92EF00ACBD28 /* txtView-incomplete-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "txtView-incomplete-bg.png"; path = "Resources/Images/txtView-incomplete-bg.png"; sourceTree = "<group>"; };
 		272DD0B913D9D4F400F8EF89 /* btn-send.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "btn-send.png"; path = "Resources/Images/btn-send.png"; sourceTree = "<group>"; };
 		272DD0BA13D9D4F400F8EF89 /* landscape-contact.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "landscape-contact.png"; path = "Resources/Images/landscape-contact.png"; sourceTree = "<group>"; };
 		272DD0BB13D9D4F400F8EF89 /* portrait-contact.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "portrait-contact.png"; path = "Resources/Images/portrait-contact.png"; sourceTree = "<group>"; };
@@ -442,6 +449,8 @@
 		2731247013DB7BA50056EBA3 /* other */ = {
 			isa = PBXGroup;
 			children = (
+				271BF50413FC92EF00ACBD28 /* txtField-incomplete-bg.png */,
+				271BF50513FC92EF00ACBD28 /* txtView-incomplete-bg.png */,
 				BC94328313F5C2730062C8CF /* LoaderLandscape.png */,
 				BC94328413F5C2730062C8CF /* LoaderPortrait.png */,
 				BC85626A13F1AD9C00D1D42C /* tenaris-header.png */,
@@ -740,6 +749,8 @@
 				27EA048813F9E14500E6D3DE /* FieldDAO.m */,
 				2757476713FA19300093E65C /* VersionDAO.h */,
 				2757476813FA19300093E65C /* VersionDAO.m */,
+				271BF50113FC88F100ACBD28 /* MessageDAO.h */,
+				271BF50213FC88F100ACBD28 /* MessageDAO.m */,
 			);
 			name = DAOs;
 			sourceTree = "<group>";
@@ -948,6 +959,8 @@
 				27EA046313F851F800E6D3DE /* Tenaris_v1.0.sql in Resources */,
 				2757477013FA1CBF0093E65C /* IndicatorControllerLandscape.xib in Resources */,
 				2757477213FA1D250093E65C /* IndicatorControllerPortrait.xib in Resources */,
+				271BF50613FC92EF00ACBD28 /* txtField-incomplete-bg.png in Resources */,
+				271BF50713FC92EF00ACBD28 /* txtView-incomplete-bg.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -990,6 +1003,7 @@
 				2757476613FA18E60093E65C /* Version.m in Sources */,
 				2757476913FA19300093E65C /* VersionDAO.m in Sources */,
 				2757476C13FA1BA40093E65C /* IndicatorController.m in Sources */,
+				271BF50313FC88F100ACBD28 /* MessageDAO.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

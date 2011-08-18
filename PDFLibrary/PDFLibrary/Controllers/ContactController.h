@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+
 #import "HomeController.h"
 #import "EbookController.h"
 #import "LibraryController.h"
@@ -49,6 +50,7 @@
     IBOutlet UILabel * lblTextField4Portrait;
     IBOutlet UILabel * lblTextField5Portrait;
     IBOutlet UILabel * lblTextFieldSendCopyPortrait;
+    IBOutlet UILabel * lblMessageResultPortrait;
     
     IBOutlet UILabel * lblTextField1Landscape;
     IBOutlet UILabel * lblTextField2Landscape;
@@ -56,9 +58,13 @@
     IBOutlet UILabel * lblTextField4Landscape;
     IBOutlet UILabel * lblTextField5Landscape;
     IBOutlet UILabel * lblTextFieldSendCopyLandscape;
+    IBOutlet UILabel * lblMessageResultLandscape;
     
     IndicatorController * indicatorController;
-
+    
+    NSString * messageSuccess;
+    NSString * messageFailure;
+    NSString * messageIncomplete;
 }
 
 @property (nonatomic, retain) IBOutlet UIView* landscape;

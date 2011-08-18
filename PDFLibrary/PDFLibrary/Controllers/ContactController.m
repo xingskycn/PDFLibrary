@@ -32,6 +32,40 @@ bool copyPressed = NO;
     }
 }
 
+- (void)cleanFormResult {
+    
+    lblMessageResultLandscape.text = @"";
+    lblMessageResultPortrait.text  = @"";
+    
+    for(UIView * view in self.view.subviews){
+        if([view isKindOfClass:[UIImageView class]] && view.tag > 100) {
+            ((UIImageView*)view).hidden=YES;
+        }
+    }
+}
+
+- (void)setMessagesFromDatabase {
+    
+    NSArray * items = [MessageDAO getMessagesForForm:1];
+    for (Message * message in items) {
+        
+        switch (message.id) {
+                
+            case 1:
+                messageSuccess    = message.name;
+                break;
+            case 2:
+                messageIncomplete = message.name;
+                break;
+            case 3:
+                messageFailure    = message.name;
+                break;
+        }
+        
+    }
+    
+}
+
 - (void)setFormLabelsFromDatabase {
 
     NSArray * items = [FieldDAO getFieldsForForm:1];
@@ -76,12 +110,60 @@ bool copyPressed = NO;
 - (void)viewWillAppear:(BOOL)animated {
     [self setOrientation];
     [self setFormLabelsFromDatabase];
+    [self setMessagesFromDatabase];
+    [self cleanFormResult];
 }
 
 
 // *************************************************
 
+- (BOOL)fieldsCompleted {
+
+    if (is_portrait) {
+        return ([txtName.text    length] && [txtCompany.text length] && 
+                [txtEmail.text   length] && [txtPhone.text   length] && 
+                [txtMessage.text length]); 
+    } 
+    
+    return ([txtNameLandscape.text  length] && [txtCompanyLandscape.text length] &&
+            [txtEmailLandscape.text length] && [txtPhoneLandscape.text length] && 
+            [txtMessageLandscape.text length]);
+
+}
+
+
+- (void)showIncompleteFields {
+    
+    [self cleanFormResult];
+    
+    for(UIView * view in self.view.subviews){
+        
+        if([view isKindOfClass:[UIImageView class]] && view.tag > 100) {
+            
+            UITextField * field = (UITextField *) [self.view viewWithTag:(view.tag - 100)];
+            if (![field.text length]) {
+                ((UIImageView*)view).hidden = NO;
+            }
+            
+        }
+    }
+    
+}
+
+- (void)showIncompleteMessage {
+    
+    lblMessageResultPortrait.text  = messageIncomplete;
+    lblMessageResultLandscape.text = messageIncomplete;
+    
+}
+
 - (IBAction) btnSendPressed {
+    
+    if (![self fieldsCompleted]) {
+        [self showIncompleteFields];
+        [self showIncompleteMessage];
+        return;
+    }
     
     [self touchesBegan:nil withEvent:nil];
     
@@ -104,6 +186,7 @@ bool copyPressed = NO;
     }
     
     [self.view addSubview:indicatorController.view];
+    [self cleanFormResult];
     
     ServiceManager * serviceManager = [[ServiceManager alloc] init];
     [serviceManager sendFormContact:self arguments:arguments];
@@ -113,14 +196,15 @@ bool copyPressed = NO;
 - (void)serviceSuccess:(NSDictionary * )data {
     
     [self.indicatorController.view removeFromSuperview];
-    
+    lblMessageResultPortrait.text  = messageSuccess;
+    lblMessageResultLandscape.text = messageSuccess;    
 }
 
 - (void)serviceFailed:(NSString * )errorMsg {
     
     [self.indicatorController.view removeFromSuperview];
-    [[[[UIAlertView alloc] initWithTitle:@"" message:errorMsg delegate:self 
-                       cancelButtonTitle:@"Ok" otherButtonTitles:nil] autorelease] show];
+    lblMessageResultPortrait.text  = messageFailure;
+    lblMessageResultLandscape.text = messageFailure;
     
 }
 
@@ -400,6 +484,12 @@ bool copyPressed = NO;
 - (void)textViewDidEndEditing:(UITextView *)textView
 {
     [self animateTextView: textView up: NO];
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    return YES;
 }
 
 @end
