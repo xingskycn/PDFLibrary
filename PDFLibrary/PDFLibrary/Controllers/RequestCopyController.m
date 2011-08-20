@@ -450,6 +450,9 @@ bool isPortrait = false;
         self.indicatorController = [[IndicatorController alloc] 
                                     initWithNibName:@"IndicatorControllerLandscape" bundle:nil];
     }
+    
+    [self showIncompleteFields];
+    [self showIncompleteMessage];
 }
 
 

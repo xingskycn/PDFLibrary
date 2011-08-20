@@ -376,6 +376,7 @@ bool copyPressed = NO;
         
         self.indicatorController = [[IndicatorController alloc] 
                                     initWithNibName:@"IndicatorControllerPortrait" bundle:nil];
+        
     }
     else
     {
@@ -389,6 +390,10 @@ bool copyPressed = NO;
         self.indicatorController = [[IndicatorController alloc] 
                                     initWithNibName:@"IndicatorControllerLandscape" bundle:nil];
     }
+    
+    [self showIncompleteFields];
+    [self showIncompleteMessage];
+    
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
