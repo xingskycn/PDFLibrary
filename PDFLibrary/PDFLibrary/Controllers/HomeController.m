@@ -124,6 +124,8 @@ BOOL alreadyCallUpdateService = NO;
 
 - (void)viewWillAppear:(BOOL)animated
 {
+    [self loadCategories];
+    
     UIDeviceOrientation orientation = [UIApplication sharedApplication].statusBarOrientation;
         
     BOOL isPortrait = UIInterfaceOrientationIsPortrait(orientation);

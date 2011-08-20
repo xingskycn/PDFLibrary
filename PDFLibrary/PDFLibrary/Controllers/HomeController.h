@@ -53,5 +53,6 @@
 - (IBAction) btnPopoverLanguagesPressed;
 - (IBAction) btnPopoverCategoriesPressed;
 
+- (void)loadCategories;
 
 @end
