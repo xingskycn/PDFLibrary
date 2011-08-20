@@ -12,24 +12,22 @@
 @implementation CategoryController
 @synthesize portrait, landscape;
 @synthesize scrollView, scrollViewLandscape;
+@synthesize category;
 
 - (void)viewWillAppear:(BOOL)animated
 {
     UIDeviceOrientation orientation = [UIApplication sharedApplication].statusBarOrientation;
     
-    /*
-     if (orientation == UIDeviceOrientationUnknown || orientation == UIDeviceOrientationFaceUp 
-     || orientation == UIDeviceOrientationFaceDown)
-     [[UIDevice currentDevice] setOrientation:UIInterfaceOrientationLandscapeLeft];
-     */
-    
-    
     BOOL isPortrait = UIInterfaceOrientationIsPortrait(orientation);
     
-    if(!isPortrait)
+    if(!isPortrait) {
         self.view = landscape;
-    else
+    } else {
         self.view = portrait;
+    }
+    
+     lblTitlePortrait.text = self.category.name;
+    lblTitleLandscape.text = self.category.name;    
 }
 
 - (IBAction) btnFilterBySortingPressed:(id)sender {

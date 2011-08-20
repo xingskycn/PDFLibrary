@@ -174,7 +174,6 @@
 						<string key="NSFrame">{{489, 967}, {72, 37}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 						<int key="IBUIContentHorizontalAlignment">0</int>
@@ -486,7 +485,6 @@
 						<string key="NSFrame">{{562, 711}, {72, 37}}</string>
 						<reference key="NSSuperview" ref="44657345"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 						<int key="IBUIContentHorizontalAlignment">0</int>
@@ -968,6 +966,22 @@
 					</object>
 					<int key="connectionID">127</int>
 				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">lblTitleLandscape</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="808214472"/>
+					</object>
+					<int key="connectionID">128</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">lblTitlePortrait</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="611652679"/>
+					</object>
+					<int key="connectionID">129</int>
+				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
 				<object class="NSArray" key="orderedObjects">
@@ -1283,7 +1297,7 @@
 				<reference key="dict.values" ref="0"/>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">127</int>
+			<int key="maxID">129</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -1406,6 +1420,8 @@
 							<string>btnSort2</string>
 							<string>btnSort2Landscape</string>
 							<string>landscape</string>
+							<string>lblTitleLandscape</string>
+							<string>lblTitlePortrait</string>
 							<string>portrait</string>
 							<string>scrollView</string>
 							<string>scrollViewLandscape</string>
@@ -1421,6 +1437,8 @@
 							<string>UIButton</string>
 							<string>UIButton</string>
 							<string>UIView</string>
+							<string>UILabel</string>
+							<string>UILabel</string>
 							<string>UIView</string>
 							<string>UIScrollView</string>
 							<string>UIScrollView</string>
@@ -1439,6 +1457,8 @@
 							<string>btnSort2</string>
 							<string>btnSort2Landscape</string>
 							<string>landscape</string>
+							<string>lblTitleLandscape</string>
+							<string>lblTitlePortrait</string>
 							<string>portrait</string>
 							<string>scrollView</string>
 							<string>scrollViewLandscape</string>
@@ -1480,6 +1500,14 @@
 							<object class="IBToOneOutletInfo">
 								<string key="name">landscape</string>
 								<string key="candidateClassName">UIView</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">lblTitleLandscape</string>
+								<string key="candidateClassName">UILabel</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">lblTitlePortrait</string>
+								<string key="candidateClassName">UILabel</string>
 							</object>
 							<object class="IBToOneOutletInfo">
 								<string key="name">portrait</string>

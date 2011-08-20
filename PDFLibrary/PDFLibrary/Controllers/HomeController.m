@@ -50,7 +50,13 @@ BOOL alreadyCallUpdateService = NO;
 
 - (IBAction) btnCategoryPressed:(id)sender {
 
+    int intTag     = ([sender tag] - 1000);
+    NSString * tag = [NSString stringWithFormat:@"%u", intTag]; // 1x, .., 6x, ex: 23    
+    int categoryId = [[tag substringToIndex:1] intValue];       // 1, 6, ex: 2
+
+    Category * cat = [CategoryDAO getCategoryById:categoryId];
     CategoryController * controller = [[CategoryController alloc] init];
+    controller.category = cat;
     [self.navigationController pushViewController:controller animated:YES];
     [controller release];
 }
