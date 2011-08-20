@@ -8,7 +8,6 @@
 
 #import "HomeController.h"
 #import "CategoryDAO.h"
-#import "NSDataBase64.h"
 #import "ServiceImage.h"
 
 @implementation HomeController
@@ -167,21 +166,31 @@ BOOL alreadyCallUpdateService = NO;
     [super viewDidUnload];
 }
 
--(void) loadCategories
-{
-    Category* cat = [CategoryDAO getCategoryById:1];
-    lblCatOneTitlePortrait.text = cat.name;
-    lblCatOneDescriptionPortrait.text = cat.description;
-	
-	NSFileManager * fileManager = [[NSFileManager alloc]init];
-	NSArray * paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-	NSString * documentsDirectory = [paths objectAtIndex:0];
-	NSString * imgSavedPath = [documentsDirectory stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.png", cat.code]];
+-(void) loadCategories {
     
-    if([fileManager fileExistsAtPath: imgSavedPath])
-        [imgCatOnePortrait setImage:[UIImage imageWithContentsOfFile:imgSavedPath]];
-    else
-        [imgCatOnePortrait setImage:[UIImage imageNamed:[NSString stringWithFormat:@"%@.png", cat.code]]];
+    for(int i=1; i<=6; i++) {
+        Category * cat = [CategoryDAO getCategoryById:i];        
+        int baseTag = (i * 10) + 1000; // 1010, 1020, 1030, 1040, 1050, 1060
+        
+        // Title (landscape & portrait)
+        [(UIButton *)[self.view viewWithTag:baseTag + 1] setTitle:cat.name forState:UIControlStateNormal];
+        [(UIButton *)[self.view viewWithTag:baseTag + 4] setTitle:cat.name forState:UIControlStateNormal];
+        
+        // Description (landscape & portrait)
+        [(UIButton *)[self.view viewWithTag:baseTag + 2] setTitle:cat.description forState:UIControlStateNormal];
+        [(UIButton *)[self.view viewWithTag:baseTag + 5] setTitle:cat.description forState:UIControlStateNormal];
+        
+        // Image (lanfscape & portrait)
+        UIImage * imgCategory = [FileSystem getImageFromFileSystem:
+                                 [NSString stringWithFormat:@"%@.png", cat.code]];
+        
+        [(UIButton *)[self.view viewWithTag:baseTag + 0] 
+                      setImage:imgCategory forState:UIControlStateNormal];
+        
+        [(UIButton *)[self.view viewWithTag:baseTag + 3] 
+         setImage:imgCategory forState:UIControlStateNormal];        
+    }
+
 }
 
 

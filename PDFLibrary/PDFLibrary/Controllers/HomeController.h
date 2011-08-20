@@ -18,6 +18,8 @@
 #import "ServiceManager.h"
 #import "VersionDAO.h"
 
+#import "FileSystem.h"
+
 
 @interface HomeController : UIViewController<UIGestureRecognizerDelegate, ServiceManagerDelegate> {
     IBOutlet UIButton * btnPopoverCategories;
