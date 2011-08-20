@@ -7,7 +7,9 @@
 //
 
 #import "HomeController.h"
-
+#import "CategoryDAO.h"
+#import "NSDataBase64.h"
+#import "ServiceImage.h"
 
 @implementation HomeController
 @synthesize portrait, landscape, indicatorController;
@@ -165,6 +167,24 @@ BOOL alreadyCallUpdateService = NO;
     [super viewDidUnload];
 }
 
+-(void) loadCategories
+{
+    Category* cat = [CategoryDAO getCategoryById:1];
+    lblCatOneTitlePortrait.text = cat.name;
+    lblCatOneDescriptionPortrait.text = cat.description;
+	
+	NSFileManager * fileManager = [[NSFileManager alloc]init];
+	NSArray * paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+	NSString * documentsDirectory = [paths objectAtIndex:0];
+	NSString * imgSavedPath = [documentsDirectory stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.png", cat.code]];
+    
+    if([fileManager fileExistsAtPath: imgSavedPath])
+        [imgCatOnePortrait setImage:[UIImage imageWithContentsOfFile:imgSavedPath]];
+    else
+        [imgCatOnePortrait setImage:[UIImage imageNamed:[NSString stringWithFormat:@"%@.png", cat.code]]];
+}
+
+
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     // Return YES if indicatorController is not loaded. Otherwise, return NO (modal action)
@@ -188,21 +208,18 @@ BOOL alreadyCallUpdateService = NO;
 
 // ******************************************
 
-- (void)serviceSuccess:(NSDictionary * )data {
-    
-    [self.indicatorController.view removeFromSuperview];
+- (void)serviceSuccess:(NSDictionary * )data 
+{
     [VersionDAO saveNewUpdates:data];
-    
-}
-
-- (void)serviceFailed:(NSString * )errorMsg {
+    [ServiceImage downloadNewImages];
+    [self loadCategories];
     
     [self.indicatorController.view removeFromSuperview];
-    [[[[UIAlertView alloc] initWithTitle:@"" message:errorMsg delegate:self 
-                          cancelButtonTitle:@"Ok" otherButtonTitles:nil] autorelease] show];
-    
 }
 
-
+- (void)serviceFailed:(NSString * )errorMsg 
+{
+    [self.indicatorController.view removeFromSuperview];
+}
 
 @end

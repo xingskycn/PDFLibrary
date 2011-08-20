@@ -72,7 +72,7 @@
         
         // SUCCESS CASE
         // --------------------------------
-        NSDictionary * data = [jsonString objectFromJSONStringWithParseOptions:JKParseOptionNone 
+        NSDictionary * data = [jsonString objectFromJSONStringWithParseOptions:JKParseOptionLooseUnicode 
                                           error:&error];
         
         [self.delegate serviceSuccess:data];

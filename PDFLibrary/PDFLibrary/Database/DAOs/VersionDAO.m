@@ -50,7 +50,7 @@
     
     for (NSString * query in results) {
     
-        const char * sql = (const char*)[query UTF8String];
+        const char * sql = (const char*)[query cStringUsingEncoding:NSUTF8StringEncoding];
         sqlite3_stmt * compiled;
         
         if(sqlite3_prepare_v2([self database], sql, -1, &compiled, NULL) == SQLITE_OK) {

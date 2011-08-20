@@ -66,6 +66,17 @@
 		2757477213FA1D250093E65C /* IndicatorControllerPortrait.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2757477113FA1D250093E65C /* IndicatorControllerPortrait.xib */; };
 		275E7C0913EDA2BD00BD771A /* starter.png in Resources */ = {isa = PBXBuildFile; fileRef = 275E7C0813EDA2BD00BD771A /* starter.png */; };
 		275E7C3B13F0FCA100BD771A /* btn-back.png in Resources */ = {isa = PBXBuildFile; fileRef = 275E7C3A13F0FCA100BD771A /* btn-back.png */; };
+		2776ED6E140012AC0017EF4D /* CategoryDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 2776ED6B140012AC0017EF4D /* CategoryDAO.m */; };
+		2776ED6F140012AC0017EF4D /* UpdatedImageDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 2776ED6D140012AC0017EF4D /* UpdatedImageDAO.m */; };
+		2776ED74140012DA0017EF4D /* Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 2776ED71140012DA0017EF4D /* Category.m */; };
+		2776ED75140012DA0017EF4D /* UpdatedImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 2776ED73140012DA0017EF4D /* UpdatedImage.m */; };
+		2776ED78140012FC0017EF4D /* ServiceImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 2776ED77140012FC0017EF4D /* ServiceImage.m */; };
+		2776ED801400134A0017EF4D /* CAT1.png in Resources */ = {isa = PBXBuildFile; fileRef = 2776ED7A1400134A0017EF4D /* CAT1.png */; };
+		2776ED811400134A0017EF4D /* CAT2.png in Resources */ = {isa = PBXBuildFile; fileRef = 2776ED7B1400134A0017EF4D /* CAT2.png */; };
+		2776ED821400134A0017EF4D /* CAT3.png in Resources */ = {isa = PBXBuildFile; fileRef = 2776ED7C1400134A0017EF4D /* CAT3.png */; };
+		2776ED831400134A0017EF4D /* CAT4.png in Resources */ = {isa = PBXBuildFile; fileRef = 2776ED7D1400134A0017EF4D /* CAT4.png */; };
+		2776ED841400134A0017EF4D /* CAT5.png in Resources */ = {isa = PBXBuildFile; fileRef = 2776ED7E1400134A0017EF4D /* CAT5.png */; };
+		2776ED851400134A0017EF4D /* CAT6.png in Resources */ = {isa = PBXBuildFile; fileRef = 2776ED7F1400134A0017EF4D /* CAT6.png */; };
 		279386F813DCC18D0006C031 /* Hot_Induction_BendEnglish.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 279386F313DCC18D0006C031 /* Hot_Induction_BendEnglish.pdf */; };
 		279386F913DCC18D0006C031 /* PremiumConnectionsCatalogue_ENG.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 279386F413DCC18D0006C031 /* PremiumConnectionsCatalogue_ENG.pdf */; };
 		279386FA13DCC18D0006C031 /* PremiumConnectionSummaryFeb16.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 279386F513DCC18D0006C031 /* PremiumConnectionSummaryFeb16.pdf */; };
@@ -252,6 +263,22 @@
 		2757477113FA1D250093E65C /* IndicatorControllerPortrait.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = IndicatorControllerPortrait.xib; path = XIBs/IndicatorControllerPortrait.xib; sourceTree = "<group>"; };
 		275E7C0813EDA2BD00BD771A /* starter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = starter.png; path = Resources/Images/starter.png; sourceTree = "<group>"; };
 		275E7C3A13F0FCA100BD771A /* btn-back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "btn-back.png"; path = "Resources/Images/btn-back.png"; sourceTree = "<group>"; };
+		2776ED6A140012AC0017EF4D /* CategoryDAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CategoryDAO.h; path = Database/DAOs/CategoryDAO.h; sourceTree = "<group>"; };
+		2776ED6B140012AC0017EF4D /* CategoryDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CategoryDAO.m; path = Database/DAOs/CategoryDAO.m; sourceTree = "<group>"; };
+		2776ED6C140012AC0017EF4D /* UpdatedImageDAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UpdatedImageDAO.h; path = Database/DAOs/UpdatedImageDAO.h; sourceTree = "<group>"; };
+		2776ED6D140012AC0017EF4D /* UpdatedImageDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UpdatedImageDAO.m; path = Database/DAOs/UpdatedImageDAO.m; sourceTree = "<group>"; };
+		2776ED70140012DA0017EF4D /* Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Category.h; path = Database/Domain/Category.h; sourceTree = "<group>"; };
+		2776ED71140012DA0017EF4D /* Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Category.m; path = Database/Domain/Category.m; sourceTree = "<group>"; };
+		2776ED72140012DA0017EF4D /* UpdatedImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UpdatedImage.h; path = Database/Domain/UpdatedImage.h; sourceTree = "<group>"; };
+		2776ED73140012DA0017EF4D /* UpdatedImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UpdatedImage.m; path = Database/Domain/UpdatedImage.m; sourceTree = "<group>"; };
+		2776ED76140012FC0017EF4D /* ServiceImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ServiceImage.h; path = Services/Core/ServiceImage.h; sourceTree = "<group>"; };
+		2776ED77140012FC0017EF4D /* ServiceImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ServiceImage.m; path = Services/Core/ServiceImage.m; sourceTree = "<group>"; };
+		2776ED7A1400134A0017EF4D /* CAT1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = CAT1.png; path = Resources/Images/categories/CAT1.png; sourceTree = "<group>"; };
+		2776ED7B1400134A0017EF4D /* CAT2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = CAT2.png; path = Resources/Images/categories/CAT2.png; sourceTree = "<group>"; };
+		2776ED7C1400134A0017EF4D /* CAT3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = CAT3.png; path = Resources/Images/categories/CAT3.png; sourceTree = "<group>"; };
+		2776ED7D1400134A0017EF4D /* CAT4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = CAT4.png; path = Resources/Images/categories/CAT4.png; sourceTree = "<group>"; };
+		2776ED7E1400134A0017EF4D /* CAT5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = CAT5.png; path = Resources/Images/categories/CAT5.png; sourceTree = "<group>"; };
+		2776ED7F1400134A0017EF4D /* CAT6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = CAT6.png; path = Resources/Images/categories/CAT6.png; sourceTree = "<group>"; };
 		279386F313DCC18D0006C031 /* Hot_Induction_BendEnglish.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = Hot_Induction_BendEnglish.pdf; path = "Resources/PDFs Sample/Hot_Induction_BendEnglish.pdf"; sourceTree = "<group>"; };
 		279386F413DCC18D0006C031 /* PremiumConnectionsCatalogue_ENG.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = PremiumConnectionsCatalogue_ENG.pdf; path = "Resources/PDFs Sample/PremiumConnectionsCatalogue_ENG.pdf"; sourceTree = "<group>"; };
 		279386F513DCC18D0006C031 /* PremiumConnectionSummaryFeb16.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = PremiumConnectionSummaryFeb16.pdf; path = "Resources/PDFs Sample/PremiumConnectionSummaryFeb16.pdf"; sourceTree = "<group>"; };
@@ -472,10 +499,25 @@
 		2757476013FA124D0093E65C /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				2776ED76140012FC0017EF4D /* ServiceImage.h */,
+				2776ED77140012FC0017EF4D /* ServiceImage.m */,
 				2757476113FA12790093E65C /* ServiceManager.h */,
 				2757476213FA12790093E65C /* ServiceManager.m */,
 			);
 			name = Core;
+			sourceTree = "<group>";
+		};
+		2776ED791400133B0017EF4D /* categories */ = {
+			isa = PBXGroup;
+			children = (
+				2776ED7A1400134A0017EF4D /* CAT1.png */,
+				2776ED7B1400134A0017EF4D /* CAT2.png */,
+				2776ED7C1400134A0017EF4D /* CAT3.png */,
+				2776ED7D1400134A0017EF4D /* CAT4.png */,
+				2776ED7E1400134A0017EF4D /* CAT5.png */,
+				2776ED7F1400134A0017EF4D /* CAT6.png */,
+			);
+			name = categories;
 			sourceTree = "<group>";
 		};
 		279386F213DCC1320006C031 /* PDFs Sample */ = {
@@ -635,6 +677,7 @@
 		27D23AEE13D461E8000D3FD5 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				2776ED791400133B0017EF4D /* categories */,
 				BC85626713F1AC8300D1D42C /* icons */,
 				2731246D13DB7B4A0056EBA3 /* buttons */,
 				2731246E13DB7B7B0056EBA3 /* bg-landscape */,
@@ -724,6 +767,10 @@
 		27EA045213F8517100E6D3DE /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				2776ED70140012DA0017EF4D /* Category.h */,
+				2776ED71140012DA0017EF4D /* Category.m */,
+				2776ED72140012DA0017EF4D /* UpdatedImage.h */,
+				2776ED73140012DA0017EF4D /* UpdatedImage.m */,
 				27EA047B13F8803A00E6D3DE /* Form.h */,
 				27EA047C13F8803A00E6D3DE /* Form.m */,
 				27EA047D13F8803A00E6D3DE /* MailType.h */,
@@ -743,6 +790,10 @@
 		27EA045313F8517400E6D3DE /* DAOs */ = {
 			isa = PBXGroup;
 			children = (
+				2776ED6A140012AC0017EF4D /* CategoryDAO.h */,
+				2776ED6B140012AC0017EF4D /* CategoryDAO.m */,
+				2776ED6C140012AC0017EF4D /* UpdatedImageDAO.h */,
+				2776ED6D140012AC0017EF4D /* UpdatedImageDAO.m */,
 				27EA045913F851AD00E6D3DE /* CommonDAO.h */,
 				27EA045A13F851AD00E6D3DE /* CommonDAO.m */,
 				27EA048713F9E14500E6D3DE /* FieldDAO.h */,
@@ -961,6 +1012,12 @@
 				2757477213FA1D250093E65C /* IndicatorControllerPortrait.xib in Resources */,
 				271BF50613FC92EF00ACBD28 /* txtField-incomplete-bg.png in Resources */,
 				271BF50713FC92EF00ACBD28 /* txtView-incomplete-bg.png in Resources */,
+				2776ED801400134A0017EF4D /* CAT1.png in Resources */,
+				2776ED811400134A0017EF4D /* CAT2.png in Resources */,
+				2776ED821400134A0017EF4D /* CAT3.png in Resources */,
+				2776ED831400134A0017EF4D /* CAT4.png in Resources */,
+				2776ED841400134A0017EF4D /* CAT5.png in Resources */,
+				2776ED851400134A0017EF4D /* CAT6.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1004,6 +1061,11 @@
 				2757476913FA19300093E65C /* VersionDAO.m in Sources */,
 				2757476C13FA1BA40093E65C /* IndicatorController.m in Sources */,
 				271BF50313FC88F100ACBD28 /* MessageDAO.m in Sources */,
+				2776ED6E140012AC0017EF4D /* CategoryDAO.m in Sources */,
+				2776ED6F140012AC0017EF4D /* UpdatedImageDAO.m in Sources */,
+				2776ED74140012DA0017EF4D /* Category.m in Sources */,
+				2776ED75140012DA0017EF4D /* UpdatedImage.m in Sources */,
+				2776ED78140012FC0017EF4D /* ServiceImage.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -52,13 +52,13 @@ bool copyPressed = NO;
         switch (message.id) {
                 
             case 1:
-                messageSuccess    = message.name;
+                messageSuccess    = message.value;
                 break;
             case 2:
-                messageIncomplete = message.name;
+                messageIncomplete = message.value;
                 break;
             case 3:
-                messageFailure    = message.name;
+                messageFailure    = message.value;
                 break;
         }
         
@@ -159,13 +159,13 @@ bool copyPressed = NO;
 
 - (IBAction) btnSendPressed {
     
+    [self touchesBegan:nil withEvent:nil];
+    
     if (![self fieldsCompleted]) {
         [self showIncompleteFields];
         [self showIncompleteMessage];
         return;
     }
-    
-    [self touchesBegan:nil withEvent:nil];
     
     NSMutableDictionary * arguments = [[NSMutableDictionary alloc] init];
     

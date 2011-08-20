@@ -29,6 +29,10 @@
     IBOutlet UIView * portrait;
     
     IndicatorController * indicatorController;
+    
+    IBOutlet UIImageView * imgCatOnePortrait;
+    IBOutlet UILabel * lblCatOneTitlePortrait;
+    IBOutlet UILabel * lblCatOneDescriptionPortrait;
 }
 
 @property (nonatomic, retain) IBOutlet UIView* landscape;
