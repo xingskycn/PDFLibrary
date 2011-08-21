@@ -16,7 +16,10 @@
 #import "IndicatorController.h"
 
 #import "ServiceManager.h"
+#import "ServiceImage.h"
+
 #import "VersionDAO.h"
+#import "CategoryDAO.h"
 
 #import "FileSystem.h"
 

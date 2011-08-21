@@ -7,8 +7,6 @@
 //
 
 #import "HomeController.h"
-#import "CategoryDAO.h"
-#import "ServiceImage.h"
 
 @implementation HomeController
 @synthesize portrait, landscape, indicatorController;
