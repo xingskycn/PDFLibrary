@@ -94,6 +94,18 @@
 		2776EDAC140051740017EF4D /* CategoryFooterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2776EDAB140051740017EF4D /* CategoryFooterCell.xib */; };
 		2776EDB01401867E0017EF4D /* CategoryLastCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2776EDAF1401867E0017EF4D /* CategoryLastCell.xib */; };
 		2776EDB2140187600017EF4D /* table-category-cell-last.png in Resources */ = {isa = PBXBuildFile; fileRef = 2776EDB11401875F0017EF4D /* table-category-cell-last.png */; };
+		2776EDB514018C1B0017EF4D /* LanguageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2776EDB414018C180017EF4D /* LanguageCell.m */; };
+		2776EDB814018C490017EF4D /* LanguageHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2776EDB714018C490017EF4D /* LanguageHeaderCell.m */; };
+		2776EDBB14018C6C0017EF4D /* LanguageFooterCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2776EDBA14018C6B0017EF4D /* LanguageFooterCell.m */; };
+		2776EDBD14018CA30017EF4D /* LanguageLastCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2776EDBC14018CA20017EF4D /* LanguageLastCell.xib */; };
+		2776EDBF14018CC40017EF4D /* LanguageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2776EDBE14018CC30017EF4D /* LanguageCell.xib */; };
+		2776EDC114018CDF0017EF4D /* LanguageHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2776EDC014018CDF0017EF4D /* LanguageHeaderCell.xib */; };
+		2776EDC314018CF60017EF4D /* LanguageFooterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2776EDC214018CF60017EF4D /* LanguageFooterCell.xib */; };
+		2776EDC514018E960017EF4D /* table-languages-cell-last.png in Resources */ = {isa = PBXBuildFile; fileRef = 2776EDC414018E960017EF4D /* table-languages-cell-last.png */; };
+		2776EDC814018F150017EF4D /* MenuLanguageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2776EDC714018F130017EF4D /* MenuLanguageController.m */; };
+		2776EDCA14018F310017EF4D /* MenuLanguageController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2776EDC914018F310017EF4D /* MenuLanguageController.xib */; };
+		2776EDCD140198B20017EF4D /* Language.m in Sources */ = {isa = PBXBuildFile; fileRef = 2776EDCC140198B20017EF4D /* Language.m */; };
+		2776EDD0140199860017EF4D /* LanguageDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 2776EDCF140199850017EF4D /* LanguageDAO.m */; };
 		279386F813DCC18D0006C031 /* Hot_Induction_BendEnglish.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 279386F313DCC18D0006C031 /* Hot_Induction_BendEnglish.pdf */; };
 		279386F913DCC18D0006C031 /* PremiumConnectionsCatalogue_ENG.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 279386F413DCC18D0006C031 /* PremiumConnectionsCatalogue_ENG.pdf */; };
 		279386FA13DCC18D0006C031 /* PremiumConnectionSummaryFeb16.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 279386F513DCC18D0006C031 /* PremiumConnectionSummaryFeb16.pdf */; };
@@ -318,6 +330,24 @@
 		2776EDAB140051740017EF4D /* CategoryFooterCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CategoryFooterCell.xib; path = "XIBs/table-cells/CategoryFooterCell.xib"; sourceTree = "<group>"; };
 		2776EDAF1401867E0017EF4D /* CategoryLastCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CategoryLastCell.xib; path = "XIBs/table-cells/CategoryLastCell.xib"; sourceTree = "<group>"; };
 		2776EDB11401875F0017EF4D /* table-category-cell-last.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "table-category-cell-last.png"; path = "Resources/Images/table-componentes/table-category-cell-last.png"; sourceTree = "<group>"; };
+		2776EDB314018C150017EF4D /* LanguageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LanguageCell.h; path = "Controllers/table-cells/LanguageCell.h"; sourceTree = "<group>"; };
+		2776EDB414018C180017EF4D /* LanguageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LanguageCell.m; path = "Controllers/table-cells/LanguageCell.m"; sourceTree = "<group>"; };
+		2776EDB614018C480017EF4D /* LanguageHeaderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LanguageHeaderCell.h; path = "Controllers/table-cells/LanguageHeaderCell.h"; sourceTree = "<group>"; };
+		2776EDB714018C490017EF4D /* LanguageHeaderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LanguageHeaderCell.m; path = "Controllers/table-cells/LanguageHeaderCell.m"; sourceTree = "<group>"; };
+		2776EDB914018C6B0017EF4D /* LanguageFooterCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LanguageFooterCell.h; path = "Controllers/table-cells/LanguageFooterCell.h"; sourceTree = "<group>"; };
+		2776EDBA14018C6B0017EF4D /* LanguageFooterCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LanguageFooterCell.m; path = "Controllers/table-cells/LanguageFooterCell.m"; sourceTree = "<group>"; };
+		2776EDBC14018CA20017EF4D /* LanguageLastCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LanguageLastCell.xib; path = "XIBs/table-cells/LanguageLastCell.xib"; sourceTree = "<group>"; };
+		2776EDBE14018CC30017EF4D /* LanguageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LanguageCell.xib; path = "XIBs/table-cells/LanguageCell.xib"; sourceTree = "<group>"; };
+		2776EDC014018CDF0017EF4D /* LanguageHeaderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LanguageHeaderCell.xib; path = "XIBs/table-cells/LanguageHeaderCell.xib"; sourceTree = "<group>"; };
+		2776EDC214018CF60017EF4D /* LanguageFooterCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LanguageFooterCell.xib; path = "XIBs/table-cells/LanguageFooterCell.xib"; sourceTree = "<group>"; };
+		2776EDC414018E960017EF4D /* table-languages-cell-last.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "table-languages-cell-last.png"; path = "Resources/Images/table-componentes/table-languages-cell-last.png"; sourceTree = "<group>"; };
+		2776EDC614018F120017EF4D /* MenuLanguageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MenuLanguageController.h; path = Controllers/MenuLanguageController.h; sourceTree = "<group>"; };
+		2776EDC714018F130017EF4D /* MenuLanguageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MenuLanguageController.m; path = Controllers/MenuLanguageController.m; sourceTree = "<group>"; };
+		2776EDC914018F310017EF4D /* MenuLanguageController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MenuLanguageController.xib; path = XIBs/MenuLanguageController.xib; sourceTree = "<group>"; };
+		2776EDCB140198B20017EF4D /* Language.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Language.h; path = Database/Domain/Language.h; sourceTree = "<group>"; };
+		2776EDCC140198B20017EF4D /* Language.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Language.m; path = Database/Domain/Language.m; sourceTree = "<group>"; };
+		2776EDCE140199850017EF4D /* LanguageDAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LanguageDAO.h; path = Database/DAOs/LanguageDAO.h; sourceTree = "<group>"; };
+		2776EDCF140199850017EF4D /* LanguageDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LanguageDAO.m; path = Database/DAOs/LanguageDAO.m; sourceTree = "<group>"; };
 		279386F313DCC18D0006C031 /* Hot_Induction_BendEnglish.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = Hot_Induction_BendEnglish.pdf; path = "Resources/PDFs Sample/Hot_Induction_BendEnglish.pdf"; sourceTree = "<group>"; };
 		279386F413DCC18D0006C031 /* PremiumConnectionsCatalogue_ENG.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = PremiumConnectionsCatalogue_ENG.pdf; path = "Resources/PDFs Sample/PremiumConnectionsCatalogue_ENG.pdf"; sourceTree = "<group>"; };
 		279386F513DCC18D0006C031 /* PremiumConnectionSummaryFeb16.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = PremiumConnectionSummaryFeb16.pdf; path = "Resources/PDFs Sample/PremiumConnectionSummaryFeb16.pdf"; sourceTree = "<group>"; };
@@ -571,6 +601,7 @@
 		2776ED8F14004EFB0017EF4D /* table-components */ = {
 			isa = PBXGroup;
 			children = (
+				2776EDC414018E960017EF4D /* table-languages-cell-last.png */,
 				2776EDB11401875F0017EF4D /* table-category-cell-last.png */,
 				2776ED9014004F220017EF4D /* table-category-footer.png */,
 				2776ED9114004F220017EF4D /* table-category-cell.png */,
@@ -591,6 +622,12 @@
 				2776EDA1140050740017EF4D /* CategoryHeaderCell.m */,
 				2776EDA31400508F0017EF4D /* CategoryFooterCell.h */,
 				2776EDA41400508F0017EF4D /* CategoryFooterCell.m */,
+				2776EDB314018C150017EF4D /* LanguageCell.h */,
+				2776EDB414018C180017EF4D /* LanguageCell.m */,
+				2776EDB614018C480017EF4D /* LanguageHeaderCell.h */,
+				2776EDB714018C490017EF4D /* LanguageHeaderCell.m */,
+				2776EDB914018C6B0017EF4D /* LanguageFooterCell.h */,
+				2776EDBA14018C6B0017EF4D /* LanguageFooterCell.m */,
 			);
 			name = "table-cells";
 			sourceTree = "<group>";
@@ -602,6 +639,10 @@
 				2776EDA7140051310017EF4D /* CategoryCell.xib */,
 				2776EDA9140051470017EF4D /* CategoryHeaderCell.xib */,
 				2776EDAB140051740017EF4D /* CategoryFooterCell.xib */,
+				2776EDBC14018CA20017EF4D /* LanguageLastCell.xib */,
+				2776EDBE14018CC30017EF4D /* LanguageCell.xib */,
+				2776EDC014018CDF0017EF4D /* LanguageHeaderCell.xib */,
+				2776EDC214018CF60017EF4D /* LanguageFooterCell.xib */,
 			);
 			name = "table-cells";
 			sourceTree = "<group>";
@@ -724,6 +765,7 @@
 				2757476F13FA1CBF0093E65C /* IndicatorControllerLandscape.xib */,
 				2757477113FA1D250093E65C /* IndicatorControllerPortrait.xib */,
 				2776ED8A140049310017EF4D /* MenuCategoriesController.xib */,
+				2776EDC914018F310017EF4D /* MenuLanguageController.xib */,
 			);
 			name = XIBs;
 			sourceTree = "<group>";
@@ -752,6 +794,8 @@
 				27D23B0513D46F29000D3FD5 /* HomeController.m */,
 				2776ED8C14004A190017EF4D /* MenuCategoriesController.h */,
 				2776ED8D14004A190017EF4D /* MenuCategoriesController.m */,
+				2776EDC614018F120017EF4D /* MenuLanguageController.h */,
+				2776EDC714018F130017EF4D /* MenuLanguageController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -876,6 +920,8 @@
 				27EA046D13F87CD200E6D3DE /* Field.m */,
 				2757476413FA18E60093E65C /* Version.h */,
 				2757476513FA18E60093E65C /* Version.m */,
+				2776EDCB140198B20017EF4D /* Language.h */,
+				2776EDCC140198B20017EF4D /* Language.m */,
 			);
 			name = Domain;
 			sourceTree = "<group>";
@@ -895,6 +941,8 @@
 				2757476813FA19300093E65C /* VersionDAO.m */,
 				271BF50113FC88F100ACBD28 /* MessageDAO.h */,
 				271BF50213FC88F100ACBD28 /* MessageDAO.m */,
+				2776EDCE140199850017EF4D /* LanguageDAO.h */,
+				2776EDCF140199850017EF4D /* LanguageDAO.m */,
 			);
 			name = DAOs;
 			sourceTree = "<group>";
@@ -1123,6 +1171,12 @@
 				2776EDAC140051740017EF4D /* CategoryFooterCell.xib in Resources */,
 				2776EDB01401867E0017EF4D /* CategoryLastCell.xib in Resources */,
 				2776EDB2140187600017EF4D /* table-category-cell-last.png in Resources */,
+				2776EDBD14018CA30017EF4D /* LanguageLastCell.xib in Resources */,
+				2776EDBF14018CC40017EF4D /* LanguageCell.xib in Resources */,
+				2776EDC114018CDF0017EF4D /* LanguageHeaderCell.xib in Resources */,
+				2776EDC314018CF60017EF4D /* LanguageFooterCell.xib in Resources */,
+				2776EDC514018E960017EF4D /* table-languages-cell-last.png in Resources */,
+				2776EDCA14018F310017EF4D /* MenuLanguageController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1176,6 +1230,12 @@
 				2776ED9F140050570017EF4D /* CategoryCell.m in Sources */,
 				2776EDA2140050740017EF4D /* CategoryHeaderCell.m in Sources */,
 				2776EDA51400508F0017EF4D /* CategoryFooterCell.m in Sources */,
+				2776EDB514018C1B0017EF4D /* LanguageCell.m in Sources */,
+				2776EDB814018C490017EF4D /* LanguageHeaderCell.m in Sources */,
+				2776EDBB14018C6C0017EF4D /* LanguageFooterCell.m in Sources */,
+				2776EDC814018F150017EF4D /* MenuLanguageController.m in Sources */,
+				2776EDCD140198B20017EF4D /* Language.m in Sources */,
+				2776EDD0140199860017EF4D /* LanguageDAO.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
