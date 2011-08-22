@@ -24,9 +24,9 @@
 #define kFadeInTimer 0.3
 
 @implementation TenarisViewController
-@synthesize portrait, landscape, indicatorController;
+@synthesize portrait, landscape, searchOverlayController, indicatorController;
 @synthesize menuCategoryControllerLandscape, menuCategoryControllerPortrait, 
-            menuLanguageControllerPortrait, menuLanguageControllerLandscape;
+            menuLanguageControllerPortrait,  menuLanguageControllerLandscape;
 
 - (BOOL)isPortrait {
     UIDeviceOrientation orientation = [UIApplication sharedApplication].statusBarOrientation;
@@ -122,7 +122,13 @@
 }
 
 - (IBAction) btnSearchPressed {
-    [[[[UIAlertView alloc] initWithTitle:@"TODO" message:@"Search Tapped. Load SearchController" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil] autorelease] show];    
+    
+    if(!searchOverlayController) {
+        searchOverlayController = [[SearchOverlayController alloc] initWithDelegate:self];
+    }
+    
+    [self.view addSubview:searchOverlayController.view];
+    [searchOverlayController resize:[self isPortrait]];    
 }
 
 - (void)fadeInEffect:(UIView *)view {
@@ -196,6 +202,12 @@
     
 }
 
+
+- (void)doSearch:(NSString *)phrase {
+    
+    [searchOverlayController.view removeFromSuperview];
+    
+}
 
 // ********************************
 

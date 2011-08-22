@@ -11,10 +11,12 @@
 #import "MenuCategoriesController.h"
 #import "MenuLanguageController.h"
 #import "IndicatorController.h"
+#import "SearchOverlayController.h"
 
 
 @interface TenarisViewController : UIViewController<MenuCategoriesControllerDelegate, 
-                                                    MenuLanguageControllerDelegate> {
+                                                    MenuLanguageControllerDelegate,
+                                                    SearchOverlayControllerDelegate> {
     
     MenuCategoriesController * menuCategoryControllerLandscape;
     MenuLanguageController   * menuLanguageControllerLandscape;
@@ -22,15 +24,19 @@
     MenuLanguageController   * menuLanguageControllerPortrait;      
     
     IndicatorController * indicatorController;
+    SearchOverlayController * searchOverlayController;
     
     IBOutlet UIView * landscape;
-    IBOutlet UIView * portrait;
+    IBOutlet UIView * portrait;                            
     
 }
 
 @property (nonatomic, retain) IBOutlet UIView * landscape;
 @property (nonatomic, retain) IBOutlet UIView * portrait;
+
 @property (nonatomic, retain) IndicatorController * indicatorController;
+@property (nonatomic, retain) SearchOverlayController * searchOverlayController;
+
 @property (nonatomic, retain) MenuCategoriesController * menuCategoryControllerLandscape;
 @property (nonatomic, retain) MenuCategoriesController * menuCategoryControllerPortrait;
 @property (nonatomic, retain) MenuLanguageController   * menuLanguageControllerLandscape;
