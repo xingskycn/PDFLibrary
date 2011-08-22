@@ -15,11 +15,18 @@
 #import "LanguageDAO.h"
 #import "Language.h"
 
+@protocol MenuLanguageControllerDelegate <NSObject>
+    - (void)menuLanguageTapped:(int)languageId;
+@end
+
 @interface MenuLanguageController : UIViewController<UITableViewDelegate> {
     
     IBOutlet UITableView * languageTableView;
     NSArray * itemList;
+    id delegate;
     
 }
+
+- (id)initWithDelegate:(id)del;
 
 @end

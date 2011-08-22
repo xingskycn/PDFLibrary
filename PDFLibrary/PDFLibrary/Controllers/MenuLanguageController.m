@@ -16,6 +16,15 @@
 #define kTableCellHeight   38
 
 
+- (id)initWithDelegate:(id)del
+{
+	if ((self = [super init])) {
+		delegate = del;
+	}
+	return self;
+}
+
+
 #pragma mark - UITableViewDelegate
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -132,7 +141,8 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    NSLog(@"TAPPED %u", indexPath.row);
+    Language * language = [itemList objectAtIndex:indexPath.row-1];
+    [delegate menuLanguageTapped:language.id];
     
 }
 

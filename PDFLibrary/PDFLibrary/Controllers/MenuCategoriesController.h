@@ -15,12 +15,18 @@
 #import "CategoryDAO.h"
 #import "Category.h"
 
+@protocol MenuCategoriesControllerDelegate <NSObject>
+    - (void)menuCategoryTapped:(int)categoryId;
+@end
+
 @interface MenuCategoriesController : UIViewController<UITableViewDelegate> {
 
     IBOutlet UITableView * categoriesTableView;
     NSArray * itemList;
+    id delegate;
 
 }
 
+- (id)initWithDelegate:(id)del;
 
 @end
