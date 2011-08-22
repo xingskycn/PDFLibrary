@@ -13,6 +13,7 @@
 #import "LibraryController.h"
 #import "CategoryController.h"
 #import "ContactController.h"
+#import "FiltersController.h"
 
 #import "CategoryDAO.h"
 #import "LanguageDAO.h"
@@ -21,7 +22,6 @@
 #import "Language.h"
 
 #define kFadeInTimer 0.3
-
 
 @implementation TenarisViewController
 @synthesize portrait, landscape, indicatorController;
@@ -48,9 +48,12 @@
     CGRect cP = menuCategoryControllerPortrait.view.frame;
     CGRect cL = menuCategoryControllerLandscape.view.frame;    
     
+    float yForLanguageL = 768  - 62 - lL.size.height;
+    float yForLanguageP = 1024 - 62 - lP.size.height;
+    
     menuCategoryControllerLandscape.view.frame = CGRectMake(89,  450, cL.size.width, cL.size.height);
-    menuLanguageControllerLandscape.view.frame = CGRectMake(270, 181, lL.size.width, lL.size.height);    
-    menuLanguageControllerPortrait.view.frame  = CGRectMake(230, 436, lP.size.width, lP.size.height);    
+    menuLanguageControllerLandscape.view.frame = CGRectMake(270,yForLanguageL, lL.size.width, lL.size.height);    
+    menuLanguageControllerPortrait.view.frame  = CGRectMake(230,yForLanguageP, lP.size.width, lP.size.height);    
     menuCategoryControllerPortrait.view.frame  = CGRectMake(63,  705, cP.size.width, cP.size.height); 
     
 }
@@ -68,10 +71,22 @@
     [self relocateMenuViews];
     
     // Add all views
+    [menuCategoryControllerPortrait.view removeFromSuperview];
+    [menuLanguageControllerLandscape.view removeFromSuperview];
+    [menuLanguageControllerPortrait.view removeFromSuperview];
+    [menuCategoryControllerPortrait.view removeFromSuperview];    
+    
+    
     [self.landscape addSubview:menuCategoryControllerLandscape.view];
     [self.landscape addSubview:menuLanguageControllerLandscape.view];
     [self.portrait  addSubview:menuLanguageControllerPortrait.view];
     [self.portrait  addSubview:menuCategoryControllerPortrait.view];
+    
+    [self.landscape bringSubviewToFront:menuCategoryControllerLandscape.view];
+    [self.landscape bringSubviewToFront:menuLanguageControllerLandscape.view];
+    [self.portrait  bringSubviewToFront:menuLanguageControllerPortrait.view];
+    [self.portrait  bringSubviewToFront:menuCategoryControllerPortrait.view];
+
     
     [self hideMenu];
     
@@ -127,7 +142,7 @@
 
 - (IBAction) btnLanguagesPressed { 
     
-    [self hideMenu];
+    [self setMenuControllers];
     
     if ([self isPortrait]) {
         
@@ -136,11 +151,12 @@
         
         [self fadeInEffect:menuLanguageControllerLandscape.view];       
     }
+    
 }
 
 - (IBAction) btnCategoriesPressed {
-    
-    [self hideMenu];
+
+    [self setMenuControllers];
     
     if ([self isPortrait]) {
         
@@ -149,7 +165,7 @@
         
         [self fadeInEffect:menuCategoryControllerLandscape.view];
     }
-    
+
 }
 
 - (IBAction) btnBackPressed:(id)sender {
@@ -214,7 +230,6 @@
 
 
 - (void)hideMenu {
-
     
     menuCategoryControllerLandscape.view.hidden = YES;
     menuCategoryControllerPortrait.view.hidden = YES;
@@ -229,13 +244,13 @@
 
     UIGestureRecognizer *recognizer;
     
-    recognizer = [[UITapGestureRecognizer alloc] initWithTarget:self.portrait action:@selector(hideMenu)];
+    recognizer = [[UITapGestureRecognizer alloc] initWithTarget:sender action:@selector(hideMenu)];
     [(UITapGestureRecognizer *)recognizer setNumberOfTapsRequired:2];
     [self.portrait addGestureRecognizer:recognizer];
     recognizer.delegate = sender;
     [recognizer release];
     
-    recognizer = [[UITapGestureRecognizer alloc] initWithTarget:self.landscape action:@selector(hideMenu)];
+    recognizer = [[UITapGestureRecognizer alloc] initWithTarget:sender action:@selector(hideMenu)];
     [(UITapGestureRecognizer *)recognizer setNumberOfTapsRequired:2];
     [self.landscape addGestureRecognizer:recognizer];
     recognizer.delegate = sender;
