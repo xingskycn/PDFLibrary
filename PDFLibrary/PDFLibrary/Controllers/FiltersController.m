@@ -11,23 +11,24 @@
 
 @implementation FiltersController
 @synthesize portrait, landscape;
+@synthesize language;
 
 - (void)viewWillAppear:(BOOL)animated
 {
     UIDeviceOrientation orientation = [UIApplication sharedApplication].statusBarOrientation;
     
-    /*
-     if (orientation == UIDeviceOrientationUnknown || orientation == UIDeviceOrientationFaceUp 
-     || orientation == UIDeviceOrientationFaceDown)
-     [[UIDevice currentDevice] setOrientation:UIInterfaceOrientationLandscapeLeft];
-     */    
-    
     BOOL isPortrait = UIInterfaceOrientationIsPortrait(orientation);
     
-    if(!isPortrait)
+    if(!isPortrait) {
         self.view = landscape;
-    else
+    } else {
         self.view = portrait;
+    }
+    
+    lblTitlePortrait.text    = self.language.name;
+    lblTitleLandscape.text   = self.language.name;    
+    lblMatchesPortrait.text  = self.language.name;
+    lblMatchesLandscape.text = self.language.name;        
 }
 
 - (IBAction) btnFilterByCategoryPressed:(id)sender {

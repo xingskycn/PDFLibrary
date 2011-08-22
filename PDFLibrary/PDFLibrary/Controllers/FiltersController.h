@@ -13,8 +13,11 @@
 #import "LibraryController.h"
 #import "CategoryController.h"
 
+#import "Language.h"
+
 
 @interface FiltersController : UIViewController<UIGestureRecognizerDelegate> {
+    
     IBOutlet UIButton * btnPopoverCategories;
     IBOutlet UIButton * btnPopoverLanguages;
     
@@ -28,6 +31,9 @@
     
     IBOutlet UIButton * btnSort1;
     IBOutlet UIButton * btnSort2;
+    
+    IBOutlet UILabel  * lblTitlePortrait;
+    IBOutlet UILabel  * lblMatchesPortrait;    
     
     IBOutlet UIView * landscape;
     IBOutlet UIView * portrait;
@@ -45,11 +51,17 @@
     
     IBOutlet UIButton * btnSort1Landscape;
     IBOutlet UIButton * btnSort2Landscape;
+    
+    IBOutlet UILabel  * lblTitleLandscape;
+    IBOutlet UILabel  * lblMatchesLandscape;
+    
+    Language * language;
 
 }
 
-@property (nonatomic,retain) IBOutlet UIView* landscape;
-@property (nonatomic,retain) IBOutlet UIView* portrait;
+@property (nonatomic,retain) IBOutlet UIView * landscape;
+@property (nonatomic,retain) IBOutlet UIView * portrait;
+@property (nonatomic, retain) Language * language;
 
 - (IBAction) btnHomePressed;
 - (IBAction) btnCategoriesPressed;

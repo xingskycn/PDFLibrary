@@ -150,7 +150,6 @@
 						<string key="NSFrame">{{489, 967}, {72, 37}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 						<int key="IBUIContentHorizontalAlignment">0</int>
@@ -430,9 +429,9 @@
 							<double key="NSSize">23</double>
 							<int key="NSfFlags">16</int>
 						</object>
-						<object class="NSColor" key="IBUITextColor" id="938959959">
-							<int key="NSColorSpace">1</int>
-							<bytes key="NSRGB">MSAxIDEAA</bytes>
+						<object class="NSColor" key="IBUITextColor">
+							<int key="NSColorSpace">2</int>
+							<bytes key="NSRGB">MC44OTQxMTc3MTMgMC44ODYyNzQ1NzYyIDAuODg2Mjc0NTc2MgA</bytes>
 						</object>
 						<nil key="IBUIHighlightedColor"/>
 						<int key="IBUIBaselineAdjustment">1</int>
@@ -697,7 +696,6 @@
 						<string key="NSFrame">{{562, 711}, {72, 37}}</string>
 						<reference key="NSSuperview" ref="1046845116"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 						<int key="IBUIContentHorizontalAlignment">0</int>
@@ -809,7 +807,10 @@
 							<double key="NSSize">21</double>
 							<int key="NSfFlags">16</int>
 						</object>
-						<reference key="IBUITextColor" ref="938959959"/>
+						<object class="NSColor" key="IBUITextColor">
+							<int key="NSColorSpace">2</int>
+							<bytes key="NSRGB">MC44OTQxMTc3MTMgMC44ODYyNzQ1NzYyIDAuODg2Mjc0NTc2MgA</bytes>
+						</object>
 						<nil key="IBUIHighlightedColor"/>
 						<int key="IBUIBaselineAdjustment">1</int>
 						<float key="IBUIMinimumFontSize">10</float>
@@ -1531,6 +1532,38 @@
 					</object>
 					<int key="connectionID">139</int>
 				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">lblTitlePortrait</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="95928426"/>
+					</object>
+					<int key="connectionID">140</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">lblTitleLandscape</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="572216881"/>
+					</object>
+					<int key="connectionID">141</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">lblMatchesLandscape</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="796391759"/>
+					</object>
+					<int key="connectionID">142</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">lblMatchesPortrait</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="1045768747"/>
+					</object>
+					<int key="connectionID">143</int>
+				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
 				<object class="NSArray" key="orderedObjects">
@@ -1987,7 +2020,7 @@
 				<reference key="dict.values" ref="0"/>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">139</int>
+			<int key="maxID">143</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -2131,6 +2164,10 @@
 							<string>btnSort2</string>
 							<string>btnSort2Landscape</string>
 							<string>landscape</string>
+							<string>lblMatchesLandscape</string>
+							<string>lblMatchesPortrait</string>
+							<string>lblTitleLandscape</string>
+							<string>lblTitlePortrait</string>
 							<string>portrait</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
@@ -2158,6 +2195,10 @@
 							<string>UIButton</string>
 							<string>UIButton</string>
 							<string>UIView</string>
+							<string>UILabel</string>
+							<string>UILabel</string>
+							<string>UILabel</string>
+							<string>UILabel</string>
 							<string>UIView</string>
 						</object>
 					</object>
@@ -2188,6 +2229,10 @@
 							<string>btnSort2</string>
 							<string>btnSort2Landscape</string>
 							<string>landscape</string>
+							<string>lblMatchesLandscape</string>
+							<string>lblMatchesPortrait</string>
+							<string>lblTitleLandscape</string>
+							<string>lblTitlePortrait</string>
 							<string>portrait</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
@@ -2283,6 +2328,22 @@
 							<object class="IBToOneOutletInfo">
 								<string key="name">landscape</string>
 								<string key="candidateClassName">UIView</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">lblMatchesLandscape</string>
+								<string key="candidateClassName">UILabel</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">lblMatchesPortrait</string>
+								<string key="candidateClassName">UILabel</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">lblTitleLandscape</string>
+								<string key="candidateClassName">UILabel</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">lblTitlePortrait</string>
+								<string key="candidateClassName">UILabel</string>
 							</object>
 							<object class="IBToOneOutletInfo">
 								<string key="name">portrait</string>
