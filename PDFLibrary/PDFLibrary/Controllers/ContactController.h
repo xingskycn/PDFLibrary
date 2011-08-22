@@ -8,21 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-#import "HomeController.h"
-#import "EbookController.h"
-#import "LibraryController.h"
-#import "CategoryController.h"
-#import "IndicatorController.h"
-
+#import "TenarisViewController.h"
 #import "ServiceManager.h"
 
-#import "FieldDAO.h"
-#import "Field.h"
-
-@interface ContactController : UIViewController<UIGestureRecognizerDelegate, ServiceManagerDelegate> {
-
-    IBOutlet UIButton * btnPopoverCategories;
-    IBOutlet UIButton * btnPopoverLanguages;
+@interface ContactController : TenarisViewController<ServiceManagerDelegate, UIGestureRecognizerDelegate> {
+    
     IBOutlet UITextView * txtMessage;
     IBOutlet UITextField * txtName;
     IBOutlet UITextField * txtCompany;
@@ -30,19 +20,6 @@
     IBOutlet UITextField * txtPhone;
     IBOutlet UIButton * btnSendCopy;
     IBOutlet UIButton * btnSend;
-    
-    IBOutlet UIView * landscape;
-    IBOutlet UIView * portrait;
-    
-    IBOutlet UIButton * btnPopoverCategoriesLandscape;
-    IBOutlet UIButton * btnPopoverLanguagesLandscape;
-    IBOutlet UITextView * txtMessageLandscape;
-    IBOutlet UITextField * txtNameLandscape;
-    IBOutlet UITextField * txtCompanyLandscape;
-    IBOutlet UITextField * txtEmailLandscape;
-    IBOutlet UITextField * txtPhoneLandscape;
-    IBOutlet UIButton * btnSendCopyLandscape;
-    IBOutlet UIButton * btnSendLandscape;
     
     IBOutlet UILabel * lblTextField1Portrait;
     IBOutlet UILabel * lblTextField2Portrait;
@@ -52,6 +29,15 @@
     IBOutlet UILabel * lblTextFieldSendCopyPortrait;
     IBOutlet UILabel * lblMessageResultPortrait;
     
+        
+    IBOutlet UITextView * txtMessageLandscape;
+    IBOutlet UITextField * txtNameLandscape;
+    IBOutlet UITextField * txtCompanyLandscape;
+    IBOutlet UITextField * txtEmailLandscape;
+    IBOutlet UITextField * txtPhoneLandscape;
+    IBOutlet UIButton * btnSendCopyLandscape;
+    IBOutlet UIButton * btnSendLandscape;
+    
     IBOutlet UILabel * lblTextField1Landscape;
     IBOutlet UILabel * lblTextField2Landscape;
     IBOutlet UILabel * lblTextField3Landscape;
@@ -60,27 +46,11 @@
     IBOutlet UILabel * lblTextFieldSendCopyLandscape;
     IBOutlet UILabel * lblMessageResultLandscape;
     
-    IndicatorController * indicatorController;
-    
     NSString * messageSuccess;
     NSString * messageFailure;
     NSString * messageIncomplete;
 }
 
-@property (nonatomic, retain) IBOutlet UIView* landscape;
-@property (nonatomic, retain) IBOutlet UIView* portrait;
-@property (nonatomic, retain) IndicatorController * indicatorController;
-
-- (IBAction) btnHomePressed;
-- (IBAction) btnCategoriesPressed;
-- (IBAction) btnLanguagesPressed;
-- (IBAction) btnMyLibraryPressed;
-- (IBAction) btnContactPressed;
-- (IBAction) btnSearchPressed;
-- (IBAction) btnCategoryPressed:(id)sender;
-- (IBAction) btnPopoverLanguagesPressed;
-- (IBAction) btnPopoverCategoriesPressed;
-- (IBAction) btnBackPressed:(id)sender;
 
 // ContactActions
 - (IBAction) btnSendPressed;

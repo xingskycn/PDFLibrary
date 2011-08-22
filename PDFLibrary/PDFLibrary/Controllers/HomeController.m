@@ -7,44 +7,17 @@
 //
 
 #import "HomeController.h"
+#import "CategoryController.h"
+#import "EbookController.h"
+
+#import "VersionDAO.h"
+#import "CategoryDAO.h"
+
+#import "FileSystem.h"
 
 @implementation HomeController
-@synthesize portrait, landscape, indicatorController;
 BOOL alreadyCallUpdateService = NO;
 
-- (IBAction) btnHomePressed {
-    // We're on HomeController
-}
-
-- (IBAction) btnCategoriesPressed {
-    btnPopoverCategories.hidden = NO; 
-    btnPopoverCategoriesPortrait.hidden = NO; 
-}
-
-- (IBAction) btnLanguagesPressed {
-    btnPopoverLanguages.hidden = NO; 
-    btnPopoverLanguagesPortrait.hidden = NO;
-}
-
-- (IBAction) btnMyLibraryPressed {
-
-    LibraryController * controller = [[LibraryController alloc] init];
-    [self.navigationController pushViewController:controller animated:YES];
-    [controller release];
-    
-}
-
-- (IBAction) btnContactPressed {
-    
-    ContactController * controller = [[ContactController alloc] init];
-    [self.navigationController pushViewController:controller animated:YES];
-    [controller release];
-    
-}
-
-- (IBAction) btnSearchPressed {
-    [[[[UIAlertView alloc] initWithTitle:@"TODO" message:@"Search Tapped. Load SearchController" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil] autorelease] show];    
-}
 
 - (IBAction) btnCategoryPressed:(id)sender {
 
@@ -68,57 +41,9 @@ BOOL alreadyCallUpdateService = NO;
     
 }
 
-- (IBAction) btnPopoverLanguagesPressed {
-        
-    FiltersController * controller = [[FiltersController alloc] init];
-    [self.navigationController pushViewController:controller animated:YES];
-    [controller release];
-    
-}
-
-- (IBAction) btnPopoverCategoriesPressed {
-    
-    CategoryController * controller = [[CategoryController alloc] init];
-    [self.navigationController pushViewController:controller animated:YES];
-    [controller release]; 
-
-}
 
 // ********************************
 
-- (void)dealloc
-{
-    [portrait release];
-    [landscape release];
-    [super dealloc];
-}
-
-- (void)didReceiveMemoryWarning {
-    
-    [super didReceiveMemoryWarning];
-    
-}
-
-#pragma mark - View lifecycle
-
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
-    
-    btnPopoverLanguages.hidden = YES;
-    btnPopoverCategories.hidden = YES;
-    btnPopoverLanguagesPortrait.hidden = YES;
-    btnPopoverCategoriesPortrait.hidden = YES;
-    
-    UIGestureRecognizer *recognizer;
-    recognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(doubleTapMethod)];
-    [(UITapGestureRecognizer *)recognizer setNumberOfTapsRequired:2];
-    [self.view addGestureRecognizer:recognizer];
-    recognizer.delegate = self;
-    [recognizer release];
-    
-}
 
 - (void)viewWillAppear:(BOOL)animated
 {
@@ -145,36 +70,24 @@ BOOL alreadyCallUpdateService = NO;
         [serviceManager callUpdateData:self];
         alreadyCallUpdateService = YES;
     }
+    
+    [self setMenuControllers];    
+    [self setGestureRecognizer:self];    
 
-}
-
-- (void)doubleTapMethod
-{
-    btnPopoverCategories.hidden = YES;
-    btnPopoverLanguages.hidden = YES;  
-    btnPopoverCategoriesPortrait.hidden = YES;
-    btnPopoverLanguagesPortrait.hidden = YES;  
 }
 
 
 - (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch 
 {
-    btnPopoverCategories.hidden = YES;
-    btnPopoverLanguages.hidden = YES;
-    btnPopoverCategoriesPortrait.hidden = YES;
-    btnPopoverLanguagesPortrait.hidden = YES; 
-    
+    [self hideMenu];    
     return YES;
 }
 
-- (void)viewDidUnload
-{
-    [super viewDidUnload];
-}
 
 -(void) loadCategories {
     
     for(int i=1; i<=6; i++) {
+        
         Category * cat = [CategoryDAO getCategoryById:i];        
         int baseTag = (i * 10) + 1000; // 1010, 1020, 1030, 1040, 1050, 1060
         
@@ -200,11 +113,6 @@ BOOL alreadyCallUpdateService = NO;
 }
 
 
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
-    // Return YES if indicatorController is not loaded. Otherwise, return NO (modal action)
-	return !(self.indicatorController.view.superview == self.view);
-}
 
 - (void) willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
 {    

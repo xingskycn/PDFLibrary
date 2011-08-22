@@ -7,29 +7,27 @@
 //
 
 #import "EbookController.h"
+#import "RequestCopyController.h"
+
 #import "MFDocumentManager.h"
 #import "ReaderViewController.h"
 
 @implementation EbookController
-@synthesize portrait, landscape, mailController;
 
 - (void)viewWillAppear:(BOOL)animated
 {
     UIDeviceOrientation orientation = [UIApplication sharedApplication].statusBarOrientation;
     
-    /*
-     if (orientation == UIDeviceOrientationUnknown || orientation == UIDeviceOrientationFaceUp 
-     || orientation == UIDeviceOrientationFaceDown)
-     [[UIDevice currentDevice] setOrientation:UIInterfaceOrientationLandscapeLeft];
-     */
-    
-    
     BOOL isPortrait = UIInterfaceOrientationIsPortrait(orientation);
     
-    if(!isPortrait)
+    if(!isPortrait) {
         self.view = landscape;
-    else
+    } else {
         self.view = portrait;
+    }
+    
+    [self setMenuControllers];    
+    [self setGestureRecognizer:self];    
 }
 
 - (IBAction) btnRequestCopyPressed {
@@ -40,95 +38,39 @@
     
 }
 
+- (IBAction) btnSendByMail:(id)sender
+{
+    if(![MFMailComposeViewController canSendMail])
+    {
+        UIAlertView* loadingAlert = [[UIAlertView alloc] initWithTitle:nil message:@"There is no configured mail account." delegate:self 
+                                                     cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [loadingAlert show];
+		[loadingAlert release];  
+        return;
+    }
+    
+	mailController = [[MFMailComposeViewController alloc] init];
+	mailController.mailComposeDelegate = self;
+	mailController.navigationBar.barStyle = UIBarStyleBlack;
+	[mailController setSubject:@"Tenaris Library"];
+    
+    NSString *documentName = @"Wedge_Brochure";
+    NSString *pdfPath = [[NSBundle mainBundle] pathForResource:documentName ofType:@"pdf"];
+    NSData *pdfData = [NSData dataWithContentsOfFile:pdfPath];
+    [mailController addAttachmentData:pdfData mimeType:@"application/pdf" fileName:documentName];
+	
+	[self presentModalViewController:mailController animated:YES];
+	
+}
+
 
 // ******************************************
 
-- (IBAction) btnHomePressed {
-    
-    [self.navigationController popToRootViewControllerAnimated:YES];    
-}
-
-- (IBAction) btnCategoriesPressed {
-    btnPopoverCategories.hidden = NO; 
-    btnPopoverCategoriesLandscape.hidden = NO;
-}
-
-- (IBAction) btnLanguagesPressed {
-    btnPopoverLanguages.hidden = NO; 
-    btnPopoverLanguagesLandscape.hidden = NO;
-}
-
-- (IBAction) btnMyLibraryPressed {
-    
-    LibraryController * controller = [[LibraryController alloc] init];
-    [self.navigationController pushViewController:controller animated:YES];
-    [controller release];
-    
-}
-
-- (IBAction) btnContactPressed {
-    
-    ContactController * controller = [[ContactController alloc] init];
-    [self.navigationController pushViewController:controller animated:YES];
-    [controller release];
-    
-}
-
-- (IBAction) btnSearchPressed {
-    [[[[UIAlertView alloc] initWithTitle:@"TODO" message:@"Search Tapped. Load SearchController" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil] autorelease] show];    
-}
-
-- (IBAction) btnCategoryPressed:(id)sender {
-   // int index = [(UIButton *)sender tag];
-    [[[[UIAlertView alloc] initWithTitle:@"TODO" message:@"Category Tapped. Load CategoryController" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil] autorelease] show];
-}
-
-- (IBAction) btnPopoverLanguagesPressed {
-    
-    FiltersController * controller = [[FiltersController alloc] init];
-    [self.navigationController pushViewController:controller animated:YES];
-    [controller release];
-    
-}
-
-- (IBAction) btnPopoverCategoriesPressed {
-    
-    CategoryController * controller = [[CategoryController alloc] init];
-    [self.navigationController pushViewController:controller animated:YES];
-    [controller release];
-
-}
-
-- (IBAction) btnBackPressed:(id)sender {
-    [self.navigationController popViewControllerAnimated:YES];
-}
-
-
-// ********************************
-
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
 
 - (void)dealloc
 {
     [mailController release];
-    [portrait release];
-    [landscape release];
     [super dealloc];
-}
-
-- (void)didReceiveMemoryWarning
-{
-    // Releases the view if it doesn't have a superview.
-    [super didReceiveMemoryWarning];
-    
-    // Release any cached data, images, etc that aren't in use.
 }
 
 #pragma mark - View lifecycle
@@ -136,60 +78,23 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
-    
-    btnPopoverLanguages.hidden = YES;
-    btnPopoverCategories.hidden = YES;
-    btnPopoverLanguagesLandscape.hidden = YES;
-    btnPopoverCategoriesLandscape.hidden = YES;
-    
-    UIGestureRecognizer *recognizer;
-    recognizer = [[UITapGestureRecognizer alloc] initWithTarget:self   action:@selector(doubleTapMethod)];
-    [(UITapGestureRecognizer *)recognizer setNumberOfTapsRequired:2];
-    [self.view addGestureRecognizer:recognizer];
-    recognizer.delegate = self;
-    [recognizer release];
-}
-
-
-- (void)doubleTapMethod
-{
-    btnPopoverCategories.hidden = YES;
-    btnPopoverLanguages.hidden = YES;       
-    btnPopoverLanguagesLandscape.hidden = YES;
-    btnPopoverCategoriesLandscape.hidden = YES;
 }
 
 
 - (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch 
 {
-    btnPopoverCategories.hidden = YES;
-    btnPopoverLanguages.hidden = YES;
-    btnPopoverLanguagesLandscape.hidden = YES;
-    btnPopoverCategoriesLandscape.hidden = YES;
-    
+    [self hideMenu];    
     return YES;
 }
 
-- (void)viewDidUnload
-{
-    [super viewDidUnload];
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
-}
-
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
-    // Return YES for supported orientations
-	return YES;
-}
 
 - (void) willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
 {
-    if(!UIInterfaceOrientationIsPortrait(toInterfaceOrientation))
+    if(!UIInterfaceOrientationIsPortrait(toInterfaceOrientation)) {
         self.view = landscape;
-    else
+    } else {
         self.view = portrait;
+    }
 }
 
 
@@ -216,31 +121,6 @@
 
     [self presentModalViewController:pdfViewController animated:YES];
     [pdfViewController release];
-}
-
-- (IBAction) btnSendByMail:(id)sender
-{
-    if(![MFMailComposeViewController canSendMail])
-    {
-        UIAlertView* loadingAlert = [[UIAlertView alloc] initWithTitle:nil message:@"There is no configured mail account." delegate:self 
-                                                     cancelButtonTitle:@"OK" otherButtonTitles:nil];
-        [loadingAlert show];
-		[loadingAlert release];  
-        return;
-    }
-    
-	self.mailController = [[MFMailComposeViewController alloc] init];
-	self.mailController.mailComposeDelegate = self;
-	self.mailController.navigationBar.barStyle = UIBarStyleBlack;
-	[self.mailController setSubject:@"Tenaris Library"];
-    
-    NSString *documentName = @"Wedge_Brochure";
-    NSString *pdfPath = [[NSBundle mainBundle] pathForResource:documentName ofType:@"pdf"];
-    NSData *pdfData = [NSData dataWithContentsOfFile:pdfPath];
-    [self.mailController addAttachmentData:pdfData mimeType:@"application/pdf" fileName:documentName];
-	
-	[self presentModalViewController:self.mailController animated:YES];
-	
 }
 
 

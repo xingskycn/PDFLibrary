@@ -2,7 +2,7 @@
 <archive type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="7.10">
 	<data>
 		<int key="IBDocument.SystemTarget">1056</int>
-		<string key="IBDocument.SystemVersion">10K549</string>
+		<string key="IBDocument.SystemVersion">10K540</string>
 		<string key="IBDocument.InterfaceBuilderVersion">1306</string>
 		<string key="IBDocument.AppKitVersion">1038.36</string>
 		<string key="IBDocument.HIToolboxVersion">461.00</string>
@@ -66,7 +66,7 @@
 						<string key="NSFrame">{{180, 432}, {431, 39}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="694591634"/>
+						<reference key="NSNextKeyView"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<int key="IBUIContentMode">7</int>
@@ -119,29 +119,6 @@
 						<object class="NSCustomResource" key="IBUINormalImage" id="315636480">
 							<string key="NSClassName">NSImage</string>
 							<string key="NSResourceName">btn-back.png</string>
-						</object>
-					</object>
-					<object class="IBUIButton" id="694591634">
-						<reference key="NSNextResponder" ref="191373211"/>
-						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{63, 719}, {171, 247}}</string>
-						<reference key="NSSuperview" ref="191373211"/>
-						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="19467061"/>
-						<bool key="IBUIOpaque">NO</bool>
-						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
-						<int key="IBUIContentHorizontalAlignment">0</int>
-						<int key="IBUIContentVerticalAlignment">0</int>
-						<reference key="IBUIFont" ref="421597787"/>
-						<reference key="IBUIHighlightedTitleColor" ref="14053754"/>
-						<object class="NSColor" key="IBUINormalTitleColor">
-							<int key="NSColorSpace">1</int>
-							<bytes key="NSRGB">MC4xOTYwNzg0MzQ2IDAuMzA5ODAzOTMyOSAwLjUyMTU2ODY1NgA</bytes>
-						</object>
-						<reference key="IBUINormalTitleShadowColor" ref="361160998"/>
-						<object class="NSCustomResource" key="IBUINormalBackgroundImage" id="82307084">
-							<string key="NSClassName">NSImage</string>
-							<string key="NSResourceName">popover-categories.png</string>
 						</object>
 					</object>
 					<object class="IBUIButton" id="50600185">
@@ -336,29 +313,6 @@
 						<object class="NSCustomResource" key="IBUIImage">
 							<string key="NSClassName">NSImage</string>
 							<string key="NSResourceName">portrait-contact.png</string>
-						</object>
-					</object>
-					<object class="IBUIButton" id="19467061">
-						<reference key="NSNextResponder" ref="191373211"/>
-						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{227, 461}, {109, 505}}</string>
-						<reference key="NSSuperview" ref="191373211"/>
-						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="50600185"/>
-						<bool key="IBUIOpaque">NO</bool>
-						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
-						<int key="IBUIContentHorizontalAlignment">0</int>
-						<int key="IBUIContentVerticalAlignment">0</int>
-						<reference key="IBUIFont" ref="421597787"/>
-						<reference key="IBUIHighlightedTitleColor" ref="14053754"/>
-						<object class="NSColor" key="IBUINormalTitleColor">
-							<int key="NSColorSpace">1</int>
-							<bytes key="NSRGB">MC4xOTYwNzg0MzQ2IDAuMzA5ODAzOTMyOSAwLjUyMTU2ODY1NgA</bytes>
-						</object>
-						<reference key="IBUINormalTitleShadowColor" ref="361160998"/>
-						<object class="NSCustomResource" key="IBUINormalBackgroundImage" id="424277746">
-							<string key="NSClassName">NSImage</string>
-							<string key="NSResourceName">popover-languages.png</string>
 						</object>
 					</object>
 					<object class="IBUIButton" id="36177377">
@@ -939,6 +893,7 @@
 						<string key="NSFrame">{{562, 711}, {72, 37}}</string>
 						<reference key="NSSuperview" ref="771565461"/>
 						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 						<int key="IBUIContentHorizontalAlignment">0</int>
@@ -1082,7 +1037,7 @@
 						<string key="NSFrame">{{221, 324}, {580, 99}}</string>
 						<reference key="NSSuperview" ref="771565461"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="906319515"/>
+						<reference key="NSNextKeyView" ref="413004227"/>
 						<reference key="IBUIBackgroundColor" ref="918209674"/>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<bool key="IBUIMultipleTouchEnabled">YES</bool>
@@ -1103,7 +1058,7 @@
 						<string key="NSFrame">{{221, 440}, {55, 24}}</string>
 						<reference key="NSSuperview" ref="771565461"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="358543247"/>
+						<reference key="NSNextKeyView" ref="452718681"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 						<int key="IBUIContentHorizontalAlignment">0</int>
@@ -1137,33 +1092,13 @@
 						<reference key="IBUINormalTitleShadowColor" ref="361160998"/>
 						<reference key="IBUINormalBackgroundImage" ref="232081548"/>
 					</object>
-					<object class="IBUIButton" id="906319515">
-						<reference key="NSNextResponder" ref="771565461"/>
-						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{89, 462}, {171, 247}}</string>
-						<reference key="NSSuperview" ref="771565461"/>
-						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="413004227"/>
-						<bool key="IBUIOpaque">NO</bool>
-						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
-						<int key="IBUIContentHorizontalAlignment">0</int>
-						<int key="IBUIContentVerticalAlignment">0</int>
-						<reference key="IBUIFont" ref="421597787"/>
-						<reference key="IBUIHighlightedTitleColor" ref="14053754"/>
-						<object class="NSColor" key="IBUINormalTitleColor">
-							<int key="NSColorSpace">1</int>
-							<bytes key="NSRGB">MC4xOTYwNzg0MzQ2IDAuMzA5ODAzOTMyOSAwLjUyMTU2ODY1NgA</bytes>
-						</object>
-						<reference key="IBUINormalTitleShadowColor" ref="361160998"/>
-						<reference key="IBUINormalBackgroundImage" ref="82307084"/>
-					</object>
 					<object class="IBUILabel" id="452718681">
 						<reference key="NSNextResponder" ref="771565461"/>
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{323, 436}, {415, 42}}</string>
 						<reference key="NSSuperview" ref="771565461"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="924915663"/>
+						<reference key="NSNextKeyView"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<int key="IBUIContentMode">7</int>
@@ -1240,26 +1175,6 @@
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 						<reference key="IBUIImage" ref="762355032"/>
-					</object>
-					<object class="IBUIButton" id="358543247">
-						<reference key="NSNextResponder" ref="771565461"/>
-						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{254, 204}, {109, 505}}</string>
-						<reference key="NSSuperview" ref="771565461"/>
-						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="452718681"/>
-						<bool key="IBUIOpaque">NO</bool>
-						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
-						<int key="IBUIContentHorizontalAlignment">0</int>
-						<int key="IBUIContentVerticalAlignment">0</int>
-						<reference key="IBUIFont" ref="421597787"/>
-						<reference key="IBUIHighlightedTitleColor" ref="14053754"/>
-						<object class="NSColor" key="IBUINormalTitleColor">
-							<int key="NSColorSpace">1</int>
-							<bytes key="NSRGB">MC4xOTYwNzg0MzQ2IDAuMzA5ODAzOTMyOSAwLjUyMTU2ODY1NgA</bytes>
-						</object>
-						<reference key="IBUINormalTitleShadowColor" ref="361160998"/>
-						<reference key="IBUINormalBackgroundImage" ref="424277746"/>
 					</object>
 				</object>
 				<string key="NSFrameSize">{1024, 748}</string>
@@ -1399,40 +1314,6 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">btnPopoverLanguages</string>
-						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="19467061"/>
-					</object>
-					<int key="connectionID">73</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchEventConnection" key="connection">
-						<string key="label">btnPopoverLanguagesPressed</string>
-						<reference key="source" ref="19467061"/>
-						<reference key="destination" ref="372490531"/>
-						<int key="IBEventType">7</int>
-					</object>
-					<int key="connectionID">74</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">btnPopoverCategories</string>
-						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="694591634"/>
-					</object>
-					<int key="connectionID">76</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchEventConnection" key="connection">
-						<string key="label">btnPopoverCategoriesPressed</string>
-						<reference key="source" ref="694591634"/>
-						<reference key="destination" ref="372490531"/>
-						<int key="IBEventType">7</int>
-					</object>
-					<int key="connectionID">77</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">portrait</string>
 						<reference key="source" ref="372490531"/>
 						<reference key="destination" ref="191373211"/>
@@ -1454,22 +1335,6 @@
 						<reference key="destination" ref="191373211"/>
 					</object>
 					<int key="connectionID">99</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">btnPopoverCategoriesLandscape</string>
-						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="906319515"/>
-					</object>
-					<int key="connectionID">100</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">btnPopoverLanguagesLandscape</string>
-						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="358543247"/>
-					</object>
-					<int key="connectionID">101</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
@@ -1537,24 +1402,6 @@
 						<int key="IBEventType">7</int>
 					</object>
 					<int key="connectionID">114</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchEventConnection" key="connection">
-						<string key="label">btnPopoverLanguagesPressed</string>
-						<reference key="source" ref="358543247"/>
-						<reference key="destination" ref="372490531"/>
-						<int key="IBEventType">7</int>
-					</object>
-					<int key="connectionID">115</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchEventConnection" key="connection">
-						<string key="label">btnPopoverCategoriesPressed</string>
-						<reference key="source" ref="906319515"/>
-						<reference key="destination" ref="372490531"/>
-						<int key="IBEventType">7</int>
-					</object>
-					<int key="connectionID">116</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
@@ -1862,8 +1709,6 @@
 							<reference ref="761902100"/>
 							<reference ref="326047676"/>
 							<reference ref="36177377"/>
-							<reference ref="19467061"/>
-							<reference ref="694591634"/>
 							<reference ref="833236298"/>
 							<reference ref="811194324"/>
 							<reference ref="215637620"/>
@@ -1970,16 +1815,6 @@
 						<reference key="parent" ref="191373211"/>
 					</object>
 					<object class="IBObjectRecord">
-						<int key="objectID">72</int>
-						<reference key="object" ref="19467061"/>
-						<reference key="parent" ref="191373211"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">75</int>
-						<reference key="object" ref="694591634"/>
-						<reference key="parent" ref="191373211"/>
-					</object>
-					<object class="IBObjectRecord">
 						<int key="objectID">78</int>
 						<reference key="object" ref="771565461"/>
 						<object class="NSMutableArray" key="children">
@@ -2004,13 +1839,11 @@
 							<reference ref="704226299"/>
 							<reference ref="418649355"/>
 							<reference ref="260062412"/>
-							<reference ref="906319515"/>
 							<reference ref="452718681"/>
 							<reference ref="124426099"/>
 							<reference ref="793806481"/>
 							<reference ref="374017656"/>
 							<reference ref="1015087015"/>
-							<reference ref="358543247"/>
 							<reference ref="373226950"/>
 							<reference ref="807553706"/>
 							<reference ref="249586528"/>
@@ -2025,11 +1858,6 @@
 					<object class="IBObjectRecord">
 						<int key="objectID">81</int>
 						<reference key="object" ref="868843579"/>
-						<reference key="parent" ref="771565461"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">82</int>
-						<reference key="object" ref="906319515"/>
 						<reference key="parent" ref="771565461"/>
 					</object>
 					<object class="IBObjectRecord">
@@ -2203,11 +2031,6 @@
 						<reference key="parent" ref="771565461"/>
 					</object>
 					<object class="IBObjectRecord">
-						<int key="objectID">79</int>
-						<reference key="object" ref="358543247"/>
-						<reference key="parent" ref="771565461"/>
-					</object>
-					<object class="IBObjectRecord">
 						<int key="objectID">195</int>
 						<reference key="object" ref="135564571"/>
 						<reference key="parent" ref="191373211"/>
@@ -2281,15 +2104,11 @@
 					<string>60.IBPluginDependency</string>
 					<string>61.IBPluginDependency</string>
 					<string>7.IBPluginDependency</string>
-					<string>72.IBPluginDependency</string>
-					<string>75.IBPluginDependency</string>
 					<string>78.IBEditorWindowLastContentRect</string>
 					<string>78.IBPluginDependency</string>
-					<string>79.IBPluginDependency</string>
 					<string>8.IBPluginDependency</string>
 					<string>80.IBPluginDependency</string>
 					<string>81.IBPluginDependency</string>
-					<string>82.IBPluginDependency</string>
 					<string>83.IBPluginDependency</string>
 					<string>84.IBPluginDependency</string>
 					<string>85.IBPluginDependency</string>
@@ -2350,11 +2169,7 @@
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>{{353, 156}, {1024, 768}}</string>
-					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
@@ -2387,7 +2202,7 @@
 				<reference key="dict.values" ref="0"/>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">199</int>
+			<int key="maxID">226</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -2400,11 +2215,8 @@
 						<object class="NSArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>btnBackPressed:</string>
-							<string>btnCategoriesPressed</string>
-							<string>btnCategoryPressed:</string>
 							<string>btnContactPressed</string>
 							<string>btnHomePressed</string>
-							<string>btnLanguagesPressed</string>
 							<string>btnMyLibraryPressed</string>
 							<string>btnPopoverCategoriesPressed</string>
 							<string>btnPopoverLanguagesPressed</string>
@@ -2414,9 +2226,6 @@
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<string>id</string>
-							<string>id</string>
-							<string>id</string>
 							<string>id</string>
 							<string>id</string>
 							<string>id</string>
@@ -2433,11 +2242,8 @@
 						<object class="NSArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>btnBackPressed:</string>
-							<string>btnCategoriesPressed</string>
-							<string>btnCategoryPressed:</string>
 							<string>btnContactPressed</string>
 							<string>btnHomePressed</string>
-							<string>btnLanguagesPressed</string>
 							<string>btnMyLibraryPressed</string>
 							<string>btnPopoverCategoriesPressed</string>
 							<string>btnPopoverLanguagesPressed</string>
@@ -2452,23 +2258,11 @@
 								<string key="candidateClassName">id</string>
 							</object>
 							<object class="IBActionInfo">
-								<string key="name">btnCategoriesPressed</string>
-								<string key="candidateClassName">id</string>
-							</object>
-							<object class="IBActionInfo">
-								<string key="name">btnCategoryPressed:</string>
-								<string key="candidateClassName">id</string>
-							</object>
-							<object class="IBActionInfo">
 								<string key="name">btnContactPressed</string>
 								<string key="candidateClassName">id</string>
 							</object>
 							<object class="IBActionInfo">
 								<string key="name">btnHomePressed</string>
-								<string key="candidateClassName">id</string>
-							</object>
-							<object class="IBActionInfo">
-								<string key="name">btnLanguagesPressed</string>
 								<string key="candidateClassName">id</string>
 							</object>
 							<object class="IBActionInfo">
@@ -2501,10 +2295,6 @@
 						<bool key="EncodedWithXMLCoder">YES</bool>
 						<object class="NSArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<string>btnPopoverCategories</string>
-							<string>btnPopoverCategoriesLandscape</string>
-							<string>btnPopoverLanguages</string>
-							<string>btnPopoverLanguagesLandscape</string>
 							<string>btnSend</string>
 							<string>btnSendCopy</string>
 							<string>btnSendCopyLandscape</string>
@@ -2538,10 +2328,6 @@
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<string>UIButton</string>
-							<string>UIButton</string>
-							<string>UIButton</string>
-							<string>UIButton</string>
 							<string>UIButton</string>
 							<string>UIButton</string>
 							<string>UIButton</string>
@@ -2578,10 +2364,6 @@
 						<bool key="EncodedWithXMLCoder">YES</bool>
 						<object class="NSArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<string>btnPopoverCategories</string>
-							<string>btnPopoverCategoriesLandscape</string>
-							<string>btnPopoverLanguages</string>
-							<string>btnPopoverLanguagesLandscape</string>
 							<string>btnSend</string>
 							<string>btnSendCopy</string>
 							<string>btnSendCopyLandscape</string>
@@ -2615,22 +2397,6 @@
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<object class="IBToOneOutletInfo">
-								<string key="name">btnPopoverCategories</string>
-								<string key="candidateClassName">UIButton</string>
-							</object>
-							<object class="IBToOneOutletInfo">
-								<string key="name">btnPopoverCategoriesLandscape</string>
-								<string key="candidateClassName">UIButton</string>
-							</object>
-							<object class="IBToOneOutletInfo">
-								<string key="name">btnPopoverLanguages</string>
-								<string key="candidateClassName">UIButton</string>
-							</object>
-							<object class="IBToOneOutletInfo">
-								<string key="name">btnPopoverLanguagesLandscape</string>
-								<string key="candidateClassName">UIButton</string>
-							</object>
 							<object class="IBToOneOutletInfo">
 								<string key="name">btnSend</string>
 								<string key="candidateClassName">UIButton</string>
@@ -2777,8 +2543,6 @@
 				<string>btn-send.png</string>
 				<string>landscape-bg.png</string>
 				<string>landscape-contact.png</string>
-				<string>popover-categories.png</string>
-				<string>popover-languages.png</string>
 				<string>portrait-bg.png</string>
 				<string>portrait-contact.png</string>
 				<string>txtField-incomplete-bg.png</string>
@@ -2791,8 +2555,6 @@
 				<string>{45, 24}</string>
 				<string>{1024, 748}</string>
 				<string>{1024, 356}</string>
-				<string>{171, 245}</string>
-				<string>{109, 505}</string>
 				<string>{768, 1004}</string>
 				<string>{768, 356}</string>
 				<string>{286, 27}</string>

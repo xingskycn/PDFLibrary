@@ -7,19 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "ContactController.h"
-#import "EbookController.h"
-#import "HomeController.h"
-#import "LibraryController.h"
-#import "CategoryController.h"
+
+#import "TenarisViewController.h"
 
 #import "Language.h"
 
 
-@interface FiltersController : UIViewController<UIGestureRecognizerDelegate> {
-    
-    IBOutlet UIButton * btnPopoverCategories;
-    IBOutlet UIButton * btnPopoverLanguages;
+@interface FiltersController : TenarisViewController<UIGestureRecognizerDelegate> {
     
     IBOutlet UIButton * btnCategory0;
     IBOutlet UIButton * btnCategory1;
@@ -34,12 +28,8 @@
     
     IBOutlet UILabel  * lblTitlePortrait;
     IBOutlet UILabel  * lblMatchesPortrait;    
-    
-    IBOutlet UIView * landscape;
-    IBOutlet UIView * portrait;
 
-    IBOutlet UIButton * btnPopoverCategoriesLandscape;
-    IBOutlet UIButton * btnPopoverLanguagesLandscape;
+    // ***************************************
     
     IBOutlet UIButton * btnCategory0Landscape;
     IBOutlet UIButton * btnCategory1Landscape;
@@ -59,21 +49,7 @@
 
 }
 
-@property (nonatomic,retain) IBOutlet UIView * landscape;
-@property (nonatomic,retain) IBOutlet UIView * portrait;
 @property (nonatomic, retain) Language * language;
-
-- (IBAction) btnHomePressed;
-- (IBAction) btnCategoriesPressed;
-- (IBAction) btnLanguagesPressed;
-- (IBAction) btnMyLibraryPressed;
-- (IBAction) btnContactPressed;
-- (IBAction) btnSearchPressed;
-- (IBAction) btnCategoryPressed:(id)sender;
-- (IBAction) btnFeaturedPressed;
-- (IBAction) btnPopoverLanguagesPressed;
-- (IBAction) btnPopoverCategoriesPressed;
-- (IBAction) btnBackPressed:(id)sender;
 
 // FiltersController Actions
 - (IBAction) btnFilterByCategoryPressed:(id)sender;
