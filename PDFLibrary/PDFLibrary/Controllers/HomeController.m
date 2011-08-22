@@ -136,6 +136,7 @@ BOOL alreadyCallUpdateService = NO;
     [VersionDAO saveNewUpdates:data];
     [ServiceImage downloadNewImages];
     [self loadCategories];
+    [self setMenuControllers];
     
     [self.indicatorController.view removeFromSuperview];
 }
