@@ -23,7 +23,6 @@
 	return self;
 }
 
-
 - (void)resize:(BOOL)isPortrait {
     
     int viewW  = isPortrait ? 768  : 1024;
@@ -35,6 +34,7 @@
     txtSearch.frame     = CGRectMake(center + 30, 30, 285, 31);
     
     txtSearch.text = @"";
+    [txtSearch becomeFirstResponder];    
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField

@@ -110,6 +110,10 @@
 		2776EDD614030C820017EF4D /* img-txtfield-search.png in Resources */ = {isa = PBXBuildFile; fileRef = 2776EDD514030C810017EF4D /* img-txtfield-search.png */; };
 		2776EDD8140314750017EF4D /* SearchOverlayController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2776EDD71403144A0017EF4D /* SearchOverlayController.xib */; };
 		2776EDDB1403152E0017EF4D /* SearchOverlayController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2776EDDA140315270017EF4D /* SearchOverlayController.m */; };
+		2776EDDE14031C6E0017EF4D /* SearchResultsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2776EDDD14031C6A0017EF4D /* SearchResultsController.m */; };
+		2776EDE014031C8E0017EF4D /* SearchResultsController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2776EDDF14031C8D0017EF4D /* SearchResultsController.xib */; };
+		2776EDE214031EF90017EF4D /* landscape-search.png in Resources */ = {isa = PBXBuildFile; fileRef = 2776EDE114031EF90017EF4D /* landscape-search.png */; };
+		2776EDE414031F060017EF4D /* portrait-search.png in Resources */ = {isa = PBXBuildFile; fileRef = 2776EDE314031F060017EF4D /* portrait-search.png */; };
 		279386F813DCC18D0006C031 /* Hot_Induction_BendEnglish.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 279386F313DCC18D0006C031 /* Hot_Induction_BendEnglish.pdf */; };
 		279386F913DCC18D0006C031 /* PremiumConnectionsCatalogue_ENG.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 279386F413DCC18D0006C031 /* PremiumConnectionsCatalogue_ENG.pdf */; };
 		279386FA13DCC18D0006C031 /* PremiumConnectionSummaryFeb16.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 279386F513DCC18D0006C031 /* PremiumConnectionSummaryFeb16.pdf */; };
@@ -358,6 +362,11 @@
 		2776EDD71403144A0017EF4D /* SearchOverlayController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchOverlayController.xib; sourceTree = "<group>"; };
 		2776EDD9140315230017EF4D /* SearchOverlayController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SearchOverlayController.h; path = Controllers/SearchOverlayController.h; sourceTree = "<group>"; };
 		2776EDDA140315270017EF4D /* SearchOverlayController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SearchOverlayController.m; path = Controllers/SearchOverlayController.m; sourceTree = "<group>"; };
+		2776EDDC14031C670017EF4D /* SearchResultsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SearchResultsController.h; path = Controllers/SearchResultsController.h; sourceTree = "<group>"; };
+		2776EDDD14031C6A0017EF4D /* SearchResultsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SearchResultsController.m; path = Controllers/SearchResultsController.m; sourceTree = "<group>"; };
+		2776EDDF14031C8D0017EF4D /* SearchResultsController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SearchResultsController.xib; path = XIBs/SearchResultsController.xib; sourceTree = "<group>"; };
+		2776EDE114031EF90017EF4D /* landscape-search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "landscape-search.png"; path = "Resources/Images/landscape-search.png"; sourceTree = "<group>"; };
+		2776EDE314031F060017EF4D /* portrait-search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "portrait-search.png"; path = "Resources/Images/portrait-search.png"; sourceTree = "<group>"; };
 		279386F313DCC18D0006C031 /* Hot_Induction_BendEnglish.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = Hot_Induction_BendEnglish.pdf; path = "Resources/PDFs Sample/Hot_Induction_BendEnglish.pdf"; sourceTree = "<group>"; };
 		279386F413DCC18D0006C031 /* PremiumConnectionsCatalogue_ENG.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = PremiumConnectionsCatalogue_ENG.pdf; path = "Resources/PDFs Sample/PremiumConnectionsCatalogue_ENG.pdf"; sourceTree = "<group>"; };
 		279386F513DCC18D0006C031 /* PremiumConnectionSummaryFeb16.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = PremiumConnectionSummaryFeb16.pdf; path = "Resources/PDFs Sample/PremiumConnectionSummaryFeb16.pdf"; sourceTree = "<group>"; };
@@ -525,6 +534,7 @@
 		2731246E13DB7B7B0056EBA3 /* bg-landscape */ = {
 			isa = PBXGroup;
 			children = (
+				2776EDE114031EF90017EF4D /* landscape-search.png */,
 				27B3187A13DCE48E0088B87F /* landscape-category.png */,
 				2731247C13DC843C0056EBA3 /* landscape-library.png */,
 				2731245713DB7B450056EBA3 /* landscape-filters.png */,
@@ -540,6 +550,7 @@
 		2731246F13DB7B910056EBA3 /* bg-portrait */ = {
 			isa = PBXGroup;
 			children = (
+				2776EDE314031F060017EF4D /* portrait-search.png */,
 				27B3187B13DCE48E0088B87F /* portrait-category.png */,
 				2731247D13DC843E0056EBA3 /* portrait-library.png */,
 				2731245813DB7B450056EBA3 /* portrait-filters.png */,
@@ -778,6 +789,7 @@
 				2776ED8A140049310017EF4D /* MenuCategoriesController.xib */,
 				2776EDC914018F310017EF4D /* MenuLanguageController.xib */,
 				2776EDD71403144A0017EF4D /* SearchOverlayController.xib */,
+				2776EDDF14031C8D0017EF4D /* SearchResultsController.xib */,
 			);
 			name = XIBs;
 			sourceTree = "<group>";
@@ -812,6 +824,8 @@
 				2776EDD31401D5B60017EF4D /* TenarisViewController.m */,
 				2776EDD9140315230017EF4D /* SearchOverlayController.h */,
 				2776EDDA140315270017EF4D /* SearchOverlayController.m */,
+				2776EDDC14031C670017EF4D /* SearchResultsController.h */,
+				2776EDDD14031C6A0017EF4D /* SearchResultsController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -1195,6 +1209,9 @@
 				2776EDCA14018F310017EF4D /* MenuLanguageController.xib in Resources */,
 				2776EDD614030C820017EF4D /* img-txtfield-search.png in Resources */,
 				2776EDD8140314750017EF4D /* SearchOverlayController.xib in Resources */,
+				2776EDE014031C8E0017EF4D /* SearchResultsController.xib in Resources */,
+				2776EDE214031EF90017EF4D /* landscape-search.png in Resources */,
+				2776EDE414031F060017EF4D /* portrait-search.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1256,6 +1273,7 @@
 				2776EDD0140199860017EF4D /* LanguageDAO.m in Sources */,
 				2776EDD41401D5BC0017EF4D /* TenarisViewController.m in Sources */,
 				2776EDDB1403152E0017EF4D /* SearchOverlayController.m in Sources */,
+				2776EDDE14031C6E0017EF4D /* SearchResultsController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -14,6 +14,7 @@
 #import "CategoryController.h"
 #import "ContactController.h"
 #import "FiltersController.h"
+#import "SearchResultsController.h"
 
 #import "CategoryDAO.h"
 #import "LanguageDAO.h"
@@ -123,12 +124,9 @@
 
 - (IBAction) btnSearchPressed {
     
-    if(!searchOverlayController) {
-        searchOverlayController = [[SearchOverlayController alloc] initWithDelegate:self];
-    }
-    
+    searchOverlayController = [[SearchOverlayController alloc] initWithDelegate:self];
     [self.view addSubview:searchOverlayController.view];
-    [searchOverlayController resize:[self isPortrait]];    
+    [searchOverlayController resize:[self isPortrait]];  
 }
 
 - (void)fadeInEffect:(UIView *)view {
@@ -207,6 +205,16 @@
     
     [searchOverlayController.view removeFromSuperview];
     
+    if(![phrase length]) {
+        return ;
+    }
+    
+    NSLog(@"buscaron %@", phrase);
+    SearchResultsController * controller = [[SearchResultsController alloc] init];
+    controller.phrase = phrase;
+    [self.navigationController pushViewController:controller animated:YES];
+    [controller release];
+
 }
 
 // ********************************
