@@ -40,12 +40,14 @@
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
     [textField resignFirstResponder];
+    [delegate doSearch:txtSearch.text];
     return YES;
 }
 
 - (void)keyboardWillHide {
-    [delegate doSearch:txtSearch.text];
+    [self.view removeFromSuperview];
 }
+
 
 - (void)dealloc
 {

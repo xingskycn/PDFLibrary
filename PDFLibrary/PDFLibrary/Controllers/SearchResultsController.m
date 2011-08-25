@@ -7,7 +7,7 @@
 //
 
 #import "SearchResultsController.h"
-
+#import "EbookController.h"
 
 @implementation SearchResultsController
 @synthesize scrollView, scrollViewLandscape, phrase;
@@ -39,6 +39,21 @@
     [self setGestureRecognizer:self];   
     [self updateLabels];
 
+}
+
+- (IBAction) btnFilterByCategoryPressed:(id)sender {
+    
+    int tag = [sender tag];
+    
+    for (int i=1; i<=7; i++){
+        UIButton * button = (UIButton*)[self.view viewWithTag:i];
+        NSString * imgName = [NSString stringWithFormat:@"btn-category%u-off.png", (i-1)];
+        if(i==tag) {
+            imgName = [NSString stringWithFormat:@"btn-category%u-on.png", (i-1)];
+        }
+        [button setBackgroundImage:[UIImage imageNamed:imgName] forState:UIControlStateNormal];    
+    }
+    
 }
 
 - (IBAction) btnFilterBySortingPressed:(id)sender {
@@ -115,6 +130,12 @@
 }
 
 
-
+- (IBAction) btnFeaturedPressed {
+    
+    EbookController * controller = [[EbookController alloc] init];    
+    [self.navigationController pushViewController:controller animated:YES];
+    [controller release];
+    
+}
 
 @end

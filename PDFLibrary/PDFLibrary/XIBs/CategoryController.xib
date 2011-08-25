@@ -204,6 +204,10 @@
 							<bytes key="NSRGB">MC4xOTYwNzg0MzQ2IDAuMzA5ODAzOTMyOSAwLjUyMTU2ODY1NgA</bytes>
 						</object>
 						<reference key="IBUINormalTitleShadowColor" ref="361160998"/>
+						<object class="NSCustomResource" key="IBUINormalImage" id="649980163">
+							<string key="NSClassName">NSImage</string>
+							<string key="NSResourceName">btn-search.png</string>
+						</object>
 					</object>
 					<object class="IBUIImageView" id="777273501">
 						<reference key="NSNextResponder" ref="191373211"/>
@@ -225,7 +229,6 @@
 						<string key="NSFrame">{{703, 100}, {39, 25}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<int key="IBUITag">9</int>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
@@ -273,7 +276,6 @@
 						<string key="NSFrame">{{69, 164}, {630, 780}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView"/>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<bool key="IBUIMultipleTouchEnabled">YES</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
@@ -472,6 +474,7 @@
 							<bytes key="NSRGB">MC4xOTYwNzg0MzQ2IDAuMzA5ODAzOTMyOSAwLjUyMTU2ODY1NgA</bytes>
 						</object>
 						<reference key="IBUINormalTitleShadowColor" ref="361160998"/>
+						<reference key="IBUINormalImage" ref="649980163"/>
 					</object>
 					<object class="IBUIImageView" id="245581398">
 						<reference key="NSNextResponder" ref="44657345"/>
@@ -541,7 +544,6 @@
 						<string key="NSFrame">{{28, 161}, {966, 530}}</string>
 						<reference key="NSSuperview" ref="44657345"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView"/>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<bool key="IBUIMultipleTouchEnabled">YES</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
@@ -1337,6 +1339,7 @@
 			<object class="NSArray" key="dict.sortedKeys">
 				<bool key="EncodedWithXMLCoder">YES</bool>
 				<string>btn-back.png</string>
+				<string>btn-search.png</string>
 				<string>btn-sort1-off.png</string>
 				<string>btn-sort1-on.png</string>
 				<string>btn-sort2-off.png</string>
@@ -1349,6 +1352,7 @@
 			<object class="NSMutableArray" key="dict.values">
 				<bool key="EncodedWithXMLCoder">YES</bool>
 				<string>{57, 25}</string>
+				<string>{15, 15}</string>
 				<string>{84, 24}</string>
 				<string>{84, 24}</string>
 				<string>{39, 24}</string>

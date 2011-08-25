@@ -142,6 +142,7 @@
 		27B3188613DCE7C30088B87F /* CategoryController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27B3188413DCE7C30088B87F /* CategoryController.xib */; };
 		27B3189013ED9FF60088B87F /* StartUpController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27B3188F13ED9FF60088B87F /* StartUpController.xib */; };
 		27B3189313EDA0210088B87F /* StartUpController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27B3189213EDA0200088B87F /* StartUpController.m */; };
+		27B655B21405C7BC0033F94C /* btn-search.png in Resources */ = {isa = PBXBuildFile; fileRef = 27B655B11405C7BC0033F94C /* btn-search.png */; };
 		27D23ACC13D45F5A000D3FD5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27D23ACB13D45F5A000D3FD5 /* UIKit.framework */; };
 		27D23ACE13D45F5A000D3FD5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27D23ACD13D45F5A000D3FD5 /* Foundation.framework */; };
 		27D23AD013D45F5A000D3FD5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27D23ACF13D45F5A000D3FD5 /* CoreGraphics.framework */; };
@@ -397,6 +398,7 @@
 		27B3188F13ED9FF60088B87F /* StartUpController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = StartUpController.xib; path = XIBs/StartUpController.xib; sourceTree = "<group>"; };
 		27B3189113EDA0200088B87F /* StartUpController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StartUpController.h; path = Controllers/StartUpController.h; sourceTree = "<group>"; };
 		27B3189213EDA0200088B87F /* StartUpController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StartUpController.m; path = Controllers/StartUpController.m; sourceTree = "<group>"; };
+		27B655B11405C7BC0033F94C /* btn-search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "btn-search.png"; path = "Resources/Images/btn-search.png"; sourceTree = "<group>"; };
 		27D23AC713D45F5A000D3FD5 /* PDFLibrary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PDFLibrary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27D23ACB13D45F5A000D3FD5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		27D23ACD13D45F5A000D3FD5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -500,6 +502,7 @@
 		2731246D13DB7B4A0056EBA3 /* buttons */ = {
 			isa = PBXGroup;
 			children = (
+				27B655B11405C7BC0033F94C /* btn-search.png */,
 				275E7C3A13F0FCA100BD771A /* btn-back.png */,
 				2731244513DB7B430056EBA3 /* btn-category0-off.png */,
 				2731244613DB7B430056EBA3 /* btn-category0-on.png */,
@@ -1212,6 +1215,7 @@
 				2776EDE014031C8E0017EF4D /* SearchResultsController.xib in Resources */,
 				2776EDE214031EF90017EF4D /* landscape-search.png in Resources */,
 				2776EDE414031F060017EF4D /* portrait-search.png in Resources */,
+				27B655B21405C7BC0033F94C /* btn-search.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1295,8 +1299,8 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
-				PROVISIONING_PROFILE = "EDD18D90-E2FF-4290-96DB-B87847B20F9B";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "EDD18D90-E2FF-4290-96DB-B87847B20F9B";
+				PROVISIONING_PROFILE = "3EBC9112-16EC-4736-BA84-B556CFD8C5B8";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "3EBC9112-16EC-4736-BA84-B556CFD8C5B8";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 2;
 			};
@@ -1315,8 +1319,8 @@
 				INFOPLIST_FILE = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
-				PROVISIONING_PROFILE = "EDD18D90-E2FF-4290-96DB-B87847B20F9B";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "EDD18D90-E2FF-4290-96DB-B87847B20F9B";
+				PROVISIONING_PROFILE = "3EBC9112-16EC-4736-BA84-B556CFD8C5B8";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "3EBC9112-16EC-4736-BA84-B556CFD8C5B8";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 2;
 			};

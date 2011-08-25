@@ -2,7 +2,7 @@
 <archive type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="7.10">
 	<data>
 		<int key="IBDocument.SystemTarget">1056</int>
-		<string key="IBDocument.SystemVersion">10K540</string>
+		<string key="IBDocument.SystemVersion">10K549</string>
 		<string key="IBDocument.InterfaceBuilderVersion">1306</string>
 		<string key="IBDocument.AppKitVersion">1038.36</string>
 		<string key="IBDocument.HIToolboxVersion">461.00</string>
@@ -150,7 +150,6 @@
 						<string key="NSFrame">{{489, 967}, {72, 37}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 						<int key="IBUIContentHorizontalAlignment">0</int>
@@ -165,7 +164,7 @@
 					</object>
 					<object class="IBUIButton" id="732773203">
 						<reference key="NSNextResponder" ref="191373211"/>
-						<int key="NSvFlags">292</int>
+						<int key="NSvFlags">-2147483356</int>
 						<string key="NSFrame">{{710, 26}, {33, 31}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
@@ -512,8 +511,8 @@
 					</object>
 					<object class="IBUIButton" id="158560873">
 						<reference key="NSNextResponder" ref="191373211"/>
-						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{30, 30}, {57, 25}}</string>
+						<int key="NSvFlags">-2147483356</int>
+						<string key="NSFrame">{{31, 29}, {57, 25}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="732773203"/>
@@ -651,7 +650,6 @@
 						<string key="NSFrame">{{562, 711}, {72, 37}}</string>
 						<reference key="NSSuperview" ref="1046845116"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 						<int key="IBUIContentHorizontalAlignment">0</int>
@@ -666,7 +664,7 @@
 					</object>
 					<object class="IBUIButton" id="61409229">
 						<reference key="NSNextResponder" ref="1046845116"/>
-						<int key="NSvFlags">292</int>
+						<int key="NSvFlags">-2147483356</int>
 						<string key="NSFrame">{{962, 20}, {32, 37}}</string>
 						<reference key="NSSuperview" ref="1046845116"/>
 						<reference key="NSWindow"/>
@@ -984,7 +982,7 @@
 					</object>
 					<object class="IBUIButton" id="517353880">
 						<reference key="NSNextResponder" ref="1046845116"/>
-						<int key="NSvFlags">292</int>
+						<int key="NSvFlags">-2147483356</int>
 						<string key="NSFrame">{{35, 30}, {57, 25}}</string>
 						<reference key="NSSuperview" ref="1046845116"/>
 						<reference key="NSWindow"/>
@@ -1427,7 +1425,6 @@
 						<reference key="object" ref="191373211"/>
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="509550259"/>
 							<reference ref="50600185"/>
 							<reference ref="22313572"/>
 							<reference ref="98602939"/>
@@ -1449,6 +1446,7 @@
 							<reference ref="1045768747"/>
 							<reference ref="978978217"/>
 							<reference ref="158560873"/>
+							<reference ref="509550259"/>
 						</object>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -1845,14 +1843,42 @@
 					<string key="className">SearchResultsController</string>
 					<string key="superclassName">TenarisViewController</string>
 					<object class="NSMutableDictionary" key="actions">
-						<string key="NS.key.0">btnFilterBySortingPressed:</string>
-						<string key="NS.object.0">id</string>
+						<bool key="EncodedWithXMLCoder">YES</bool>
+						<object class="NSArray" key="dict.sortedKeys">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>btnFeaturedPressed</string>
+							<string>btnFilterByCategoryPressed:</string>
+							<string>btnFilterBySortingPressed:</string>
+						</object>
+						<object class="NSMutableArray" key="dict.values">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>id</string>
+							<string>id</string>
+							<string>id</string>
+						</object>
 					</object>
 					<object class="NSMutableDictionary" key="actionInfosByName">
-						<string key="NS.key.0">btnFilterBySortingPressed:</string>
-						<object class="IBActionInfo" key="NS.object.0">
-							<string key="name">btnFilterBySortingPressed:</string>
-							<string key="candidateClassName">id</string>
+						<bool key="EncodedWithXMLCoder">YES</bool>
+						<object class="NSArray" key="dict.sortedKeys">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>btnFeaturedPressed</string>
+							<string>btnFilterByCategoryPressed:</string>
+							<string>btnFilterBySortingPressed:</string>
+						</object>
+						<object class="NSMutableArray" key="dict.values">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<object class="IBActionInfo">
+								<string key="name">btnFeaturedPressed</string>
+								<string key="candidateClassName">id</string>
+							</object>
+							<object class="IBActionInfo">
+								<string key="name">btnFilterByCategoryPressed:</string>
+								<string key="candidateClassName">id</string>
+							</object>
+							<object class="IBActionInfo">
+								<string key="name">btnFilterBySortingPressed:</string>
+								<string key="candidateClassName">id</string>
+							</object>
 						</object>
 					</object>
 					<object class="NSMutableDictionary" key="outlets">
@@ -1863,6 +1889,10 @@
 							<string>btnSort1Landscape</string>
 							<string>btnSort2</string>
 							<string>btnSort2Landscape</string>
+							<string>lblMatchesLandscape</string>
+							<string>lblMatchesPortrait</string>
+							<string>lblTitleLandscape</string>
+							<string>lblTitlePortrait</string>
 							<string>scrollView</string>
 							<string>scrollViewLandscape</string>
 						</object>
@@ -1872,6 +1902,10 @@
 							<string>UIButton</string>
 							<string>UIButton</string>
 							<string>UIButton</string>
+							<string>UILabel</string>
+							<string>UILabel</string>
+							<string>UILabel</string>
+							<string>UILabel</string>
 							<string>UIScrollView</string>
 							<string>UIScrollView</string>
 						</object>
@@ -1884,6 +1918,10 @@
 							<string>btnSort1Landscape</string>
 							<string>btnSort2</string>
 							<string>btnSort2Landscape</string>
+							<string>lblMatchesLandscape</string>
+							<string>lblMatchesPortrait</string>
+							<string>lblTitleLandscape</string>
+							<string>lblTitlePortrait</string>
 							<string>scrollView</string>
 							<string>scrollViewLandscape</string>
 						</object>
@@ -1904,6 +1942,22 @@
 							<object class="IBToOneOutletInfo">
 								<string key="name">btnSort2Landscape</string>
 								<string key="candidateClassName">UIButton</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">lblMatchesLandscape</string>
+								<string key="candidateClassName">UILabel</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">lblMatchesPortrait</string>
+								<string key="candidateClassName">UILabel</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">lblTitleLandscape</string>
+								<string key="candidateClassName">UILabel</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">lblTitlePortrait</string>
+								<string key="candidateClassName">UILabel</string>
 							</object>
 							<object class="IBToOneOutletInfo">
 								<string key="name">scrollView</string>
