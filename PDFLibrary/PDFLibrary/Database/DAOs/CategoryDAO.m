@@ -7,7 +7,7 @@
 //
 
 #import "CategoryDAO.h"
-
+#import "DocumentDAO.h"
 
 @implementation CategoryDAO
 
@@ -61,5 +61,32 @@
     }
     sqlite3_finalize(compiledStatement);
     return list;
+}
+
+
++ (NSArray*)getDocumentsByCategoryId:(NSInteger)idCategory
+{
+    NSMutableArray * list = [[NSMutableArray alloc] init];
+    sqlite3_stmt * compiledStatement;
+    const char * sqlStatement = "SELECT * FROM Document_Category WHERE idCategory = ?";
+    
+    if (sqlite3_prepare_v2([self database], sqlStatement, -1, &compiledStatement, NULL) != SQLITE_OK) {
+        return list;
+    }
+    
+    sqlite3_bind_int(compiledStatement, 1, idCategory);
+    
+    while(sqlite3_step(compiledStatement) == SQLITE_ROW) {
+        int idDocument = (NSInteger)sqlite3_column_int(compiledStatement, 1);
+        
+        Document * item = [DocumentDAO getDocumentById:idDocument];
+        [list addObject:item];
+        [item release];
+    }
+    
+    sqlite3_finalize(compiledStatement);
+    
+    return list;
+
 }
 @end

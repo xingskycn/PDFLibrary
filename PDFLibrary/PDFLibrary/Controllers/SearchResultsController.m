@@ -75,6 +75,14 @@
     }
 }
 
+- (IBAction) btnFeaturedPressed {
+    
+    EbookController * controller = [[EbookController alloc] init];    
+    [self.navigationController pushViewController:controller animated:YES];
+    [controller release];
+    
+}
+
 // ***************************************************
 
 #pragma mark - View lifecycle
@@ -127,15 +135,6 @@
     } else {
         self.view = portrait;
     }
-}
-
-
-- (IBAction) btnFeaturedPressed {
-    
-    EbookController * controller = [[EbookController alloc] init];    
-    [self.navigationController pushViewController:controller animated:YES];
-    [controller release];
-    
 }
 
 @end

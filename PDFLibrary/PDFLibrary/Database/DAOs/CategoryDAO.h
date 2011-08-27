@@ -17,4 +17,5 @@
 
 + (NSArray*)getCategories;
 + (Category*)getCategoryById:(NSInteger)id;
++ (NSArray*)getDocumentsByCategoryId:(NSInteger)id;
 @end

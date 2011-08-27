@@ -7,7 +7,7 @@
 //
 
 #import "FiltersController.h"
-
+#import "EbookController.h"
 
 @implementation FiltersController
 @synthesize language;
@@ -66,6 +66,13 @@
     }
 }
 
+- (IBAction) btnFeaturedPressed {
+    
+    EbookController * controller = [[EbookController alloc] init];    
+    [self.navigationController pushViewController:controller animated:YES];
+    [controller release];
+    
+}
 // ***************************************************
 
 

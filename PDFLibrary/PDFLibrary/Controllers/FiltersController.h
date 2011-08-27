@@ -54,7 +54,7 @@
 // FiltersController Actions
 - (IBAction) btnFilterByCategoryPressed:(id)sender;
 - (IBAction) btnFilterBySortingPressed:(id)sender;
-
+- (IBAction) btnFeaturedPressed;
 
 
 @end

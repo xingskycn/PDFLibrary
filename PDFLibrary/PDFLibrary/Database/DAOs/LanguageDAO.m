@@ -61,4 +61,29 @@
     return list;
 }
 
++ (NSArray *)getLanguageByIdDocument:(NSInteger)idDocument
+{
+    NSMutableArray * list = [[NSMutableArray alloc] init];
+    sqlite3_stmt * compiledStatement;
+    const char * sqlStatement = "SELECT * FROM Document_Language WHERE idDocument = ?";
+    
+    if (sqlite3_prepare_v2([self database], sqlStatement, -1, &compiledStatement, NULL) != SQLITE_OK) {
+        return list;
+    }
+    
+    sqlite3_bind_int(compiledStatement, 1, idDocument);
+    
+    while(sqlite3_step(compiledStatement) == SQLITE_ROW) {
+        int idLanguage = (NSInteger)sqlite3_column_int(compiledStatement, 2);
+        
+        Language * item = [self getLanguageById:idLanguage];
+        [list addObject:item];
+        [item release];
+    }
+    
+    sqlite3_finalize(compiledStatement);
+    
+    return list;
+}
+
 @end
