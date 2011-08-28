@@ -42,15 +42,14 @@
     
     
     NSMutableArray * list = [[NSMutableArray alloc] init];
-    sqlite3_stmt * compiledStatement;
     NSString * sql = @"SELECT d.* FROM Document d";
     
     // Joins
     if(categoryId) {
-        [sql stringByAppendingString:@" INNER JOIN Document_Category dc ON dc.IdDocument = d.id "];
+        sql = [NSString stringWithFormat:@"%@ INNER JOIN Document_Category dc ON dc.IdDocument = d.id ", sql];
     }
     if (languageId) {
-        [sql stringByAppendingString:@" INNER JOIN Document_Language dl ON dl.IdDocument = d.id "];
+        sql = [NSString stringWithFormat:@"%@ INNER JOIN Document_Language dl ON dl.IdDocument = d.id ", sql];
     }
     
     // Filters
@@ -59,42 +58,42 @@
     int indexKeyword    = 0;    
     
     if (categoryId) {
-        [sql stringByAppendingString:@" WHERE dc.IdCategory = ? "];
+        sql = [NSString stringWithFormat:@"%@ WHERE dc.IdCategory = ? ", sql];
         indexCategoryId = 1;
     }
     if (languageId) {
         if (categoryId) {
-            [sql stringByAppendingString:@" AND dl.IdLanguage = ? "];
+            sql = [NSString stringWithFormat:@"%@ AND dl.IdLanguage = ? ", sql];
             indexLanguageId = 2;
         } else {
-            [sql stringByAppendingString:@" WHERE dl.IdLanguage = ? "];
+            sql = [NSString stringWithFormat:@"%@ WHERE dl.IdLanguage = ? ", sql];
             indexLanguageId = 1;
         }
     }
     if (keyword) {
         if(categoryId || languageId) {
-            [sql stringByAppendingString:@" AND d.keyword LIKE \"%?%\" "];
+            sql = [NSString stringWithFormat:@"%@ AND d.keyword LIKE \"%%?%%\" ", sql];
             if (categoryId && languageId) {
                 indexKeyword = 3;
             } else {
                 indexKeyword = 2;
             }
         } else {
-            [sql stringByAppendingString:@" WHERE d.keyword LIKE \"%?%\" "];
+            sql = [NSString stringWithFormat:@"%@ WHERE d.keyword LIKE \"%%?%%\" ", sql];
             indexKeyword = 1;
         }
     }
     
     // Sorting
     if(sortId == kSortLastUpdate) {
-        [sql stringByAppendingString:@" ORDER BY d.UpdateDate DESC "];
+        sql = [NSString stringWithFormat:@"%@ ORDER BY d.UpdateDate DESC ", sql];
         
     } else if (sortId == kSortAlphabetical) {
-        [sql stringByAppendingString:@" ORDER BY d.title ASC "];
+        sql = [NSString stringWithFormat:@"%@ ORDER BY d.title ASC ", sql];
         
     }
 
-    
+    NSLog(@"SQL: %@", sql);
 
     const char * sqlStatement = [sql UTF8String];
     sqlite3_stmt * compiled;
@@ -115,12 +114,15 @@
         
         while(sqlite3_step(compiled) == SQLITE_ROW)
         {
-            Document * item = [self castFromStatement:compiledStatement];
+            Document * item = [self castFromStatement:compiled];
             [list addObject:item];
             [item release];
         }
         sqlite3_finalize(compiled);
     }
+    
+    
+    NSLog(@"***** Documents Found: %u", [list count]);
     
     return list;
     

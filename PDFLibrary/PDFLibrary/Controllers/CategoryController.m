@@ -7,6 +7,7 @@
 //
 
 #import "CategoryController.h"
+#import "DocumentDAO.h"
 
 
 @implementation CategoryController
@@ -30,6 +31,9 @@
     lblTitleLandscape.text = self.category.name;  
     [self setMenuControllers];    
     [self setGestureRecognizer:self];    
+    
+    currentList = [DocumentDAO getDocumentsByCategory:category.id 
+                               language:0 keyword:nil myLibrary:NO sort:lastSort];
 }
 
 - (IBAction) btnFilterBySortingPressed:(id)sender {
@@ -49,6 +53,11 @@
         [btnAlphabetical setBackgroundImage:[UIImage imageNamed:@"btn-sort2-on.png"] 
                                    forState:UIControlStateNormal];
     }
+    
+    lastSort  = (tag == 8 ? kSortLastUpdate : kSortAlphabetical);
+    currentList = [DocumentDAO getDocumentsByCategory:category.id 
+                                             language:0 keyword:nil myLibrary:NO sort:lastSort];
+    
 }
 
 // ***************************************************
@@ -82,6 +91,7 @@
 {
     [super viewDidLoad];    
     [self initScrollView];
+    lastSort = kSortLastUpdate;
 }
 
 - (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch 

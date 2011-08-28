@@ -33,6 +33,8 @@
     // ******************************************* 
     
     Category * category;
+    NSArray  * currentList;
+    int lastSort;
 }
 
 @property (nonatomic, retain) UIScrollView * scrollView;

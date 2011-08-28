@@ -2,7 +2,7 @@
 <archive type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="7.10">
 	<data>
 		<int key="IBDocument.SystemTarget">1056</int>
-		<string key="IBDocument.SystemVersion">10K549</string>
+		<string key="IBDocument.SystemVersion">10K540</string>
 		<string key="IBDocument.InterfaceBuilderVersion">1306</string>
 		<string key="IBDocument.AppKitVersion">1038.36</string>
 		<string key="IBDocument.HIToolboxVersion">461.00</string>
@@ -150,6 +150,7 @@
 						<string key="NSFrame">{{489, 967}, {72, 37}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 						<int key="IBUIContentHorizontalAlignment">0</int>
@@ -214,7 +215,7 @@
 							<bytes key="NSRGB">MC4xOTYwNzg0MzQ2IDAuMzA5ODAzOTMyOSAwLjUyMTU2ODY1NgA</bytes>
 						</object>
 						<reference key="IBUINormalTitleShadowColor" ref="361160998"/>
-						<object class="NSCustomResource" key="IBUINormalBackgroundImage">
+						<object class="NSCustomResource" key="IBUINormalBackgroundImage" id="404697674">
 							<string key="NSClassName">NSImage</string>
 							<string key="NSResourceName">btn-sort2-off.png</string>
 						</object>
@@ -238,7 +239,7 @@
 							<bytes key="NSRGB">MC4xOTYwNzg0MzQ2IDAuMzA5ODAzOTMyOSAwLjUyMTU2ODY1NgA</bytes>
 						</object>
 						<reference key="IBUINormalTitleShadowColor" ref="361160998"/>
-						<object class="NSCustomResource" key="IBUINormalBackgroundImage">
+						<object class="NSCustomResource" key="IBUINormalBackgroundImage" id="685715369">
 							<string key="NSClassName">NSImage</string>
 							<string key="NSResourceName">btn-sort1-on.png</string>
 						</object>
@@ -334,9 +335,9 @@
 							<bytes key="NSRGB">MC4xOTYwNzg0MzQ2IDAuMzA5ODAzOTMyOSAwLjUyMTU2ODY1NgA</bytes>
 						</object>
 						<reference key="IBUINormalTitleShadowColor" ref="361160998"/>
-						<object class="NSCustomResource" key="IBUINormalBackgroundImage" id="666334034">
+						<object class="NSCustomResource" key="IBUINormalBackgroundImage" id="154875217">
 							<string key="NSClassName">NSImage</string>
-							<string key="NSResourceName">btn-category3-on.png</string>
+							<string key="NSResourceName">btn-category3-off.png</string>
 						</object>
 					</object>
 					<object class="IBUIButton" id="645888896">
@@ -406,9 +407,9 @@
 							<bytes key="NSRGB">MC4xOTYwNzg0MzQ2IDAuMzA5ODAzOTMyOSAwLjUyMTU2ODY1NgA</bytes>
 						</object>
 						<reference key="IBUINormalTitleShadowColor" ref="361160998"/>
-						<object class="NSCustomResource" key="IBUINormalBackgroundImage" id="145081216">
+						<object class="NSCustomResource" key="IBUINormalBackgroundImage" id="77698943">
 							<string key="NSClassName">NSImage</string>
-							<string key="NSResourceName">btn-category0-off.png</string>
+							<string key="NSResourceName">btn-category0-on.png</string>
 						</object>
 					</object>
 					<object class="IBUILabel" id="95928426">
@@ -650,6 +651,7 @@
 						<string key="NSFrame">{{562, 711}, {72, 37}}</string>
 						<reference key="NSSuperview" ref="1046845116"/>
 						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 						<int key="IBUIContentHorizontalAlignment">0</int>
@@ -714,10 +716,7 @@
 							<bytes key="NSRGB">MC4xOTYwNzg0MzQ2IDAuMzA5ODAzOTMyOSAwLjUyMTU2ODY1NgA</bytes>
 						</object>
 						<reference key="IBUINormalTitleShadowColor" ref="361160998"/>
-						<object class="NSCustomResource" key="IBUINormalBackgroundImage">
-							<string key="NSClassName">NSImage</string>
-							<string key="NSResourceName">btn-sort2-on.png</string>
-						</object>
+						<reference key="IBUINormalBackgroundImage" ref="404697674"/>
 					</object>
 					<object class="IBUIButton" id="346943862">
 						<reference key="NSNextResponder" ref="1046845116"/>
@@ -738,10 +737,7 @@
 							<bytes key="NSRGB">MC4xOTYwNzg0MzQ2IDAuMzA5ODAzOTMyOSAwLjUyMTU2ODY1NgA</bytes>
 						</object>
 						<reference key="IBUINormalTitleShadowColor" ref="361160998"/>
-						<object class="NSCustomResource" key="IBUINormalBackgroundImage">
-							<string key="NSClassName">NSImage</string>
-							<string key="NSResourceName">btn-sort1-off.png</string>
-						</object>
+						<reference key="IBUINormalBackgroundImage" ref="685715369"/>
 					</object>
 					<object class="IBUILabel" id="572216881">
 						<reference key="NSNextResponder" ref="1046845116"/>
@@ -892,7 +888,7 @@
 							<bytes key="NSRGB">MC4xOTYwNzg0MzQ2IDAuMzA5ODAzOTMyOSAwLjUyMTU2ODY1NgA</bytes>
 						</object>
 						<reference key="IBUINormalTitleShadowColor" ref="361160998"/>
-						<reference key="IBUINormalBackgroundImage" ref="666334034"/>
+						<reference key="IBUINormalBackgroundImage" ref="154875217"/>
 					</object>
 					<object class="IBUIButton" id="862388305">
 						<reference key="NSNextResponder" ref="1046845116"/>
@@ -978,7 +974,7 @@
 							<bytes key="NSRGB">MC4xOTYwNzg0MzQ2IDAuMzA5ODAzOTMyOSAwLjUyMTU2ODY1NgA</bytes>
 						</object>
 						<reference key="IBUINormalTitleShadowColor" ref="361160998"/>
-						<reference key="IBUINormalBackgroundImage" ref="145081216"/>
+						<reference key="IBUINormalBackgroundImage" ref="77698943"/>
 					</object>
 					<object class="IBUIButton" id="517353880">
 						<reference key="NSNextResponder" ref="1046845116"/>
@@ -1410,6 +1406,22 @@
 					</object>
 					<int key="connectionID">143</int>
 				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">lblResultsPortrait</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="757764584"/>
+					</object>
+					<int key="connectionID">144</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">lblResultsLandscape</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="513902858"/>
+					</object>
+					<int key="connectionID">145</int>
+				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
 				<object class="NSArray" key="orderedObjects">
@@ -1834,7 +1846,7 @@
 				<reference key="dict.values" ref="0"/>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">143</int>
+			<int key="maxID">145</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -1891,6 +1903,8 @@
 							<string>btnSort2Landscape</string>
 							<string>lblMatchesLandscape</string>
 							<string>lblMatchesPortrait</string>
+							<string>lblResultsLandscape</string>
+							<string>lblResultsPortrait</string>
 							<string>lblTitleLandscape</string>
 							<string>lblTitlePortrait</string>
 							<string>scrollView</string>
@@ -1902,6 +1916,8 @@
 							<string>UIButton</string>
 							<string>UIButton</string>
 							<string>UIButton</string>
+							<string>UILabel</string>
+							<string>UILabel</string>
 							<string>UILabel</string>
 							<string>UILabel</string>
 							<string>UILabel</string>
@@ -1920,6 +1936,8 @@
 							<string>btnSort2Landscape</string>
 							<string>lblMatchesLandscape</string>
 							<string>lblMatchesPortrait</string>
+							<string>lblResultsLandscape</string>
+							<string>lblResultsPortrait</string>
 							<string>lblTitleLandscape</string>
 							<string>lblTitlePortrait</string>
 							<string>scrollView</string>
@@ -1949,6 +1967,14 @@
 							</object>
 							<object class="IBToOneOutletInfo">
 								<string key="name">lblMatchesPortrait</string>
+								<string key="candidateClassName">UILabel</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">lblResultsLandscape</string>
+								<string key="candidateClassName">UILabel</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">lblResultsPortrait</string>
 								<string key="candidateClassName">UILabel</string>
 							</object>
 							<object class="IBToOneOutletInfo">
@@ -2096,17 +2122,15 @@
 			<object class="NSArray" key="dict.sortedKeys">
 				<bool key="EncodedWithXMLCoder">YES</bool>
 				<string>btn-back.png</string>
-				<string>btn-category0-off.png</string>
+				<string>btn-category0-on.png</string>
 				<string>btn-category1-off.png</string>
 				<string>btn-category2-off.png</string>
-				<string>btn-category3-on.png</string>
+				<string>btn-category3-off.png</string>
 				<string>btn-category4-off.png</string>
 				<string>btn-category5-off.png</string>
 				<string>btn-category6-off.png</string>
-				<string>btn-sort1-off.png</string>
 				<string>btn-sort1-on.png</string>
 				<string>btn-sort2-off.png</string>
-				<string>btn-sort2-on.png</string>
 				<string>img-listing-filtered-landscape.png</string>
 				<string>img-listing-filtered-portrait.png</string>
 				<string>landscape-bg.png</string>
@@ -2117,16 +2141,14 @@
 			<object class="NSMutableArray" key="dict.values">
 				<bool key="EncodedWithXMLCoder">YES</bool>
 				<string>{57, 25}</string>
-				<string>{104, 25}</string>
+				<string>{104, 24}</string>
 				<string>{48, 25}</string>
 				<string>{144, 25}</string>
-				<string>{124, 24}</string>
+				<string>{124, 25}</string>
 				<string>{121, 25}</string>
 				<string>{92, 25}</string>
 				<string>{83, 25}</string>
 				<string>{84, 24}</string>
-				<string>{84, 24}</string>
-				<string>{39, 24}</string>
 				<string>{39, 24}</string>
 				<string>{440, 515}</string>
 				<string>{432, 742}</string>

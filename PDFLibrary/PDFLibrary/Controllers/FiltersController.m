@@ -8,6 +8,8 @@
 
 #import "FiltersController.h"
 #import "EbookController.h"
+#import "DocumentDAO.h"
+#import "CategoryDAO.h"
 
 @implementation FiltersController
 @synthesize language;
@@ -30,6 +32,13 @@
     
     [self setMenuControllers];    
     [self setGestureRecognizer:self];    
+    
+    currentList = [DocumentDAO getDocumentsByCategory:category.id
+                                             language:language.id keyword:nil myLibrary:NO sort:lastSort];
+    
+    NSString * strResult = [NSString stringWithFormat:@"SHOWING %u MATCHES FOR:", [currentList count]];
+    lblResultsPortrait.text  = strResult;
+    lblResultsLandscape.text = strResult;    
 }
 
 - (IBAction) btnFilterByCategoryPressed:(id)sender {
@@ -44,6 +53,16 @@
         }
         [button setBackgroundImage:[UIImage imageNamed:imgName] forState:UIControlStateNormal];    
     }
+    
+    int categoryId = tag - 1;
+    category = [CategoryDAO getCategoryById:categoryId];
+    
+    currentList = [DocumentDAO getDocumentsByCategory:category.id
+                                             language:language.id keyword:nil myLibrary:NO sort:lastSort];
+    
+    NSString * strResult = [NSString stringWithFormat:@"SHOWING %u MATCHES FOR:", [currentList count]];
+    lblResultsPortrait.text  = strResult;
+    lblResultsLandscape.text = strResult;    
     
 }
 
@@ -64,6 +83,14 @@
         [btnAlphabetical setBackgroundImage:[UIImage imageNamed:@"btn-sort2-on.png"] 
                                    forState:UIControlStateNormal];
     }
+    
+    lastSort  = (tag == 8 ? kSortLastUpdate : kSortAlphabetical);
+    currentList = [DocumentDAO getDocumentsByCategory:category.id
+                                             language:language.id keyword:nil myLibrary:NO sort:lastSort];
+    
+    NSString * strResult = [NSString stringWithFormat:@"SHOWING %u MATCHES FOR:", [currentList count]];
+    lblResultsPortrait.text  = strResult;
+    lblResultsLandscape.text = strResult;    
 }
 
 - (IBAction) btnFeaturedPressed {
@@ -81,6 +108,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    lastSort = kSortLastUpdate;
 }
 
 

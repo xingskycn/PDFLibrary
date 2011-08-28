@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 #import "TenarisViewController.h"
+#import "Category.h"
 
 
 @interface SearchResultsController : TenarisViewController<UIGestureRecognizerDelegate> {
@@ -18,6 +19,7 @@
     
     IBOutlet UILabel  * lblTitlePortrait;
     IBOutlet UILabel  * lblMatchesPortrait; 
+    IBOutlet UILabel  * lblResultsPortrait;
     
     IBOutlet UIScrollView * scrollView;
     
@@ -30,8 +32,12 @@
     
     IBOutlet UILabel  * lblTitleLandscape;
     IBOutlet UILabel  * lblMatchesLandscape; 
+    IBOutlet UILabel  * lblResultsLandscape;
     
     NSString * phrase;
+    NSArray  * currentList;
+    Category * category;
+    int lastSort;
 }
 
 @property (nonatomic, retain) UIScrollView *scrollView;

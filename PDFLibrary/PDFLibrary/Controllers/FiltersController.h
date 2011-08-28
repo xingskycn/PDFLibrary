@@ -11,6 +11,7 @@
 #import "TenarisViewController.h"
 
 #import "Language.h"
+#import "Category.h"
 
 
 @interface FiltersController : TenarisViewController<UIGestureRecognizerDelegate> {
@@ -28,7 +29,8 @@
     
     IBOutlet UILabel  * lblTitlePortrait;
     IBOutlet UILabel  * lblMatchesPortrait;    
-
+    IBOutlet UILabel  * lblResultsPortrait;
+    
     // ***************************************
     
     IBOutlet UIButton * btnCategory0Landscape;
@@ -44,8 +46,14 @@
     
     IBOutlet UILabel  * lblTitleLandscape;
     IBOutlet UILabel  * lblMatchesLandscape;
+    IBOutlet UILabel  * lblResultsLandscape;
     
     Language * language;
+    Category * category;
+    
+    NSArray * currentList;
+    
+    int lastSort;
 
 }
 

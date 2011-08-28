@@ -22,6 +22,9 @@
     IBOutlet UIButton * btnSort2Landscape;
     
     IBOutlet UIScrollView * scrollViewLandscape;
+    
+    NSArray * currentList;
+    int lastSort;
 }
 
 @property (nonatomic, retain) UIScrollView *scrollView;
