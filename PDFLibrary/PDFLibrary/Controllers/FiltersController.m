@@ -14,6 +14,22 @@
 @implementation FiltersController
 @synthesize language;
 
+- (void)doDocumentsSearch {
+    
+    [self.view addSubview:indicatorController.view];
+    
+    currentList = [DocumentDAO getDocumentsByCategory:category.id
+                                             language:language.id keyword:nil myLibrary:NO sort:lastSort];
+    
+    NSString * strResult = [NSString stringWithFormat:@"SHOWING %u MATCHES FOR:", [currentList count]];
+    lblResultsPortrait.text  = strResult;
+    lblResultsLandscape.text = strResult;    
+    
+    [[NSRunLoop currentRunLoop] runUntilDate:[NSDate dateWithTimeIntervalSinceNow:1]];
+    
+    [indicatorController.view removeFromSuperview];
+}
+
 - (void)viewWillAppear:(BOOL)animated
 {
     UIDeviceOrientation orientation = [UIApplication sharedApplication].statusBarOrientation;
@@ -21,8 +37,12 @@
     
     if(!isPortrait) {
         self.view = landscape;
+        self.indicatorController = [[IndicatorController alloc] 
+                                    initWithNibName:@"IndicatorControllerLandscape" bundle:nil];
     } else {
         self.view = portrait;
+        self.indicatorController = [[IndicatorController alloc] 
+                                    initWithNibName:@"IndicatorControllerPortrait" bundle:nil];
     }
     
     lblTitlePortrait.text    = self.language.name;
@@ -33,12 +53,7 @@
     [self setMenuControllers];    
     [self setGestureRecognizer:self];    
     
-    currentList = [DocumentDAO getDocumentsByCategory:category.id
-                                             language:language.id keyword:nil myLibrary:NO sort:lastSort];
-    
-    NSString * strResult = [NSString stringWithFormat:@"SHOWING %u MATCHES FOR:", [currentList count]];
-    lblResultsPortrait.text  = strResult;
-    lblResultsLandscape.text = strResult;    
+    [self doDocumentsSearch];
 }
 
 - (IBAction) btnFilterByCategoryPressed:(id)sender {
@@ -57,13 +72,7 @@
     int categoryId = tag - 1;
     category = [CategoryDAO getCategoryById:categoryId];
     
-    currentList = [DocumentDAO getDocumentsByCategory:category.id
-                                             language:language.id keyword:nil myLibrary:NO sort:lastSort];
-    
-    NSString * strResult = [NSString stringWithFormat:@"SHOWING %u MATCHES FOR:", [currentList count]];
-    lblResultsPortrait.text  = strResult;
-    lblResultsLandscape.text = strResult;    
-    
+    [self doDocumentsSearch];    
 }
 
 - (IBAction) btnFilterBySortingPressed:(id)sender {
@@ -85,12 +94,7 @@
     }
     
     lastSort  = (tag == 8 ? kSortLastUpdate : kSortAlphabetical);
-    currentList = [DocumentDAO getDocumentsByCategory:category.id
-                                             language:language.id keyword:nil myLibrary:NO sort:lastSort];
-    
-    NSString * strResult = [NSString stringWithFormat:@"SHOWING %u MATCHES FOR:", [currentList count]];
-    lblResultsPortrait.text  = strResult;
-    lblResultsLandscape.text = strResult;    
+    [self doDocumentsSearch];
 }
 
 - (IBAction) btnFeaturedPressed {
@@ -123,8 +127,12 @@
 {
     if(!UIInterfaceOrientationIsPortrait(toInterfaceOrientation)) {
         self.view = landscape;
+        self.indicatorController = [[IndicatorController alloc] 
+                                    initWithNibName:@"IndicatorControllerLandscape" bundle:nil];        
     } else {
         self.view = portrait;
+        self.indicatorController = [[IndicatorController alloc] 
+                                    initWithNibName:@"IndicatorControllerPortrait" bundle:nil];        
     }
 }
 

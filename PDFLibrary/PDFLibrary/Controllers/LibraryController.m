@@ -13,6 +13,19 @@
 @implementation LibraryController
 @synthesize scrollView, scrollViewLandscape;
 
+- (void)doDocumentsSearch {
+    
+    [self.view addSubview:indicatorController.view];
+    
+    currentList = [DocumentDAO getDocumentsByCategory:0
+                                             language:0 keyword:nil myLibrary:YES sort:lastSort];
+    
+    
+    [[NSRunLoop currentRunLoop] runUntilDate:[NSDate dateWithTimeIntervalSinceNow:1]];
+    
+    [indicatorController.view removeFromSuperview];
+}
+
 - (void)viewWillAppear:(BOOL)animated
 {
     UIDeviceOrientation orientation = [UIApplication sharedApplication].statusBarOrientation;
@@ -20,15 +33,18 @@
     
     if(!isPortrait) {
         self.view = landscape;
+        self.indicatorController = [[IndicatorController alloc] 
+                                    initWithNibName:@"IndicatorControllerLandscape" bundle:nil];        
     } else {
         self.view = portrait;
+        self.indicatorController = [[IndicatorController alloc] 
+                                    initWithNibName:@"IndicatorControllerPortrait" bundle:nil];        
     }
     
     [self setMenuControllers];    
     [self setGestureRecognizer:self];    
     
-    currentList = [DocumentDAO getDocumentsByCategory:0
-                                             language:0 keyword:nil myLibrary:YES sort:lastSort];
+    [self doDocumentsSearch];
 }
 
 - (IBAction) btnFilterBySortingPressed:(id)sender {
@@ -50,8 +66,7 @@
     }
     
     lastSort  = (tag == 8 ? kSortLastUpdate : kSortAlphabetical);
-    currentList = [DocumentDAO getDocumentsByCategory:0
-                                             language:0 keyword:nil myLibrary:YES sort:lastSort];
+    [self doDocumentsSearch];
 }
 
 // ***************************************************
@@ -104,8 +119,12 @@
 {
     if(!UIInterfaceOrientationIsPortrait(toInterfaceOrientation)) {
         self.view = landscape;
+        self.indicatorController = [[IndicatorController alloc] 
+                                    initWithNibName:@"IndicatorControllerLandscape" bundle:nil];        
     } else {
         self.view = portrait;
+        self.indicatorController = [[IndicatorController alloc] 
+                                    initWithNibName:@"IndicatorControllerPortrait" bundle:nil];        
     }
 }
 

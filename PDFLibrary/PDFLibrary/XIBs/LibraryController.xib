@@ -242,7 +242,7 @@
 							<bytes key="NSRGB">MC4xOTYwNzg0MzQ2IDAuMzA5ODAzOTMyOSAwLjUyMTU2ODY1NgA</bytes>
 						</object>
 						<reference key="IBUINormalTitleShadowColor" ref="361160998"/>
-						<object class="NSCustomResource" key="IBUINormalBackgroundImage" id="9419918">
+						<object class="NSCustomResource" key="IBUINormalBackgroundImage" id="798626042">
 							<string key="NSClassName">NSImage</string>
 							<string key="NSResourceName">btn-sort2-off.png</string>
 						</object>
@@ -266,7 +266,7 @@
 							<bytes key="NSRGB">MC4xOTYwNzg0MzQ2IDAuMzA5ODAzOTMyOSAwLjUyMTU2ODY1NgA</bytes>
 						</object>
 						<reference key="IBUINormalTitleShadowColor" ref="361160998"/>
-						<object class="NSCustomResource" key="IBUINormalBackgroundImage" id="893482017">
+						<object class="NSCustomResource" key="IBUINormalBackgroundImage" id="835784457">
 							<string key="NSClassName">NSImage</string>
 							<string key="NSResourceName">btn-sort1-on.png</string>
 						</object>
@@ -486,7 +486,7 @@
 							<bytes key="NSRGB">MC4xOTYwNzg0MzQ2IDAuMzA5ODAzOTMyOSAwLjUyMTU2ODY1NgA</bytes>
 						</object>
 						<reference key="IBUINormalTitleShadowColor" ref="361160998"/>
-						<reference key="IBUINormalBackgroundImage" ref="9419918"/>
+						<reference key="IBUINormalBackgroundImage" ref="798626042"/>
 					</object>
 					<object class="IBUIButton" id="788481706">
 						<reference key="NSNextResponder" ref="471554974"/>
@@ -507,7 +507,7 @@
 							<bytes key="NSRGB">MC4xOTYwNzg0MzQ2IDAuMzA5ODAzOTMyOSAwLjUyMTU2ODY1NgA</bytes>
 						</object>
 						<reference key="IBUINormalTitleShadowColor" ref="361160998"/>
-						<reference key="IBUINormalBackgroundImage" ref="893482017"/>
+						<reference key="IBUINormalBackgroundImage" ref="835784457"/>
 					</object>
 					<object class="IBUIScrollView" id="75553110">
 						<reference key="NSNextResponder" ref="471554974"/>
@@ -751,6 +751,24 @@
 						<int key="IBEventType">7</int>
 					</object>
 					<int key="connectionID">122</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchEventConnection" key="connection">
+						<string key="label">btnFilterBySortingPressed:</string>
+						<reference key="source" ref="788481706"/>
+						<reference key="destination" ref="372490531"/>
+						<int key="IBEventType">7</int>
+					</object>
+					<int key="connectionID">123</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchEventConnection" key="connection">
+						<string key="label">btnFilterBySortingPressed:</string>
+						<reference key="source" ref="170236015"/>
+						<reference key="destination" ref="372490531"/>
+						<int key="IBEventType">7</int>
+					</object>
+					<int key="connectionID">124</int>
 				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -1016,7 +1034,7 @@
 				<reference key="dict.values" ref="0"/>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">122</int>
+			<int key="maxID">124</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
