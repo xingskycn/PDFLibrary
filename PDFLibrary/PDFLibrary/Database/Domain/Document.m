@@ -12,6 +12,7 @@
 @implementation Document
 @synthesize id, idType, title, description, keyword, mainScreenFeatured;
 @synthesize categoryFeatured, version, date, updateDate, code;
+@synthesize languages, categories;
 
 - (void)dealloc {
     [self.title release];
@@ -21,6 +22,8 @@
     [self.date release];
     [self.updateDate release]; 
     [self.code release];    
+    [self.languages release]; 
+    [self.categories release];    
     [super dealloc];
 }
 @end

@@ -22,7 +22,8 @@
     NSString * date;
     NSString * updateDate;
     NSString * code;
-    
+    NSArray  * languages;
+    NSArray  * categories;    
 }
 
 @property (nonatomic) NSInteger id;
@@ -36,5 +37,7 @@
 @property (nonatomic,retain) NSString * date;
 @property (nonatomic,retain) NSString * updateDate;
 @property (nonatomic,retain) NSString * code;
+@property (nonatomic,retain) NSArray  * languages;
+@property (nonatomic,retain) NSArray  * categories;
 
 @end

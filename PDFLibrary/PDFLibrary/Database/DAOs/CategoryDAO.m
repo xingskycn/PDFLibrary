@@ -63,7 +63,32 @@
     return list;
 }
 
+// Method used by DocumentoDAO in order to get All Categories for a DocumentId
++ (NSArray*)getCategoriesForDocument:(NSInteger)idDocument {
+    
+	NSMutableArray * list = [[NSMutableArray alloc] init];
+    sqlite3_stmt * compiledStatement;
+    const char * sqlStatement = "SELECT IdCategory FROM Document_Category WHERE IdDocument = ?";
+    
+    if (sqlite3_prepare_v2([self database], sqlStatement, -1, &compiledStatement, NULL) != SQLITE_OK) {
+        return list;
+    }
+    
+    sqlite3_bind_int(compiledStatement, 0, idDocument);
+    
+    while(sqlite3_step(compiledStatement) == SQLITE_ROW) {
+        int idCategory  = (NSInteger)sqlite3_column_int(compiledStatement, 0);
+        Category * item = [self getCategoryById:idCategory];
+        [list addObject:item];
+        [item release];
+    }
+    sqlite3_finalize(compiledStatement);
+    return list;    
+    
+}
 
+
+// We should not use this method. Use Core Method in DocumentDAO
 + (NSArray*)getDocumentsByCategoryId:(NSInteger)idCategory
 {
     NSMutableArray * list = [[NSMutableArray alloc] init];

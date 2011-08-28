@@ -61,29 +61,31 @@
     return list;
 }
 
-+ (NSArray *)getLanguageByIdDocument:(NSInteger)idDocument
-{
-    NSMutableArray * list = [[NSMutableArray alloc] init];
+// Method used by DocumentoDAO in order to get All Languages for a DocumentId
++ (NSArray*)getLanguagesForDocument:(NSInteger)idDocument {
+    
+	NSMutableArray * list = [[NSMutableArray alloc] init];
     sqlite3_stmt * compiledStatement;
-    const char * sqlStatement = "SELECT * FROM Document_Language WHERE idDocument = ?";
+    const char * sqlStatement = "SELECT IdLanguage FROM Document_Language WHERE IdDocument = ?";
     
     if (sqlite3_prepare_v2([self database], sqlStatement, -1, &compiledStatement, NULL) != SQLITE_OK) {
         return list;
     }
     
-    sqlite3_bind_int(compiledStatement, 1, idDocument);
+    sqlite3_bind_int(compiledStatement, 0, idDocument);
     
     while(sqlite3_step(compiledStatement) == SQLITE_ROW) {
-        int idLanguage = (NSInteger)sqlite3_column_int(compiledStatement, 2);
         
+        int idLanguage  = (NSInteger)sqlite3_column_int(compiledStatement, 0);
         Language * item = [self getLanguageById:idLanguage];
         [list addObject:item];
         [item release];
     }
     
     sqlite3_finalize(compiledStatement);
+    return list;    
     
-    return list;
 }
+
 
 @end

@@ -6,6 +6,13 @@
 //  Copyright 2011 TheAppMaster. All rights reserved.
 //
 
+typedef enum {
+    kSortBestMatch,
+    kSortAlphabetical,
+    kSortLastUpdate
+} SortType;
+
+
 #import <Foundation/Foundation.h>
 #import "CommonDAO.h"
 #import "Document.h"
@@ -15,5 +22,14 @@
 }
 
 + (NSArray  *)getDocuments;
+
++ (NSArray  *)getDocumentsByCategory:(NSInteger)categoryId 
+                            language:(NSInteger)languageId 
+                            keyword:(NSString *)keyword
+                            myLibrary:(BOOL)myLibrary
+                            sort:(int)sortId;
+
 + (Document *)getDocumentById:(NSInteger)id;
+
+
 @end

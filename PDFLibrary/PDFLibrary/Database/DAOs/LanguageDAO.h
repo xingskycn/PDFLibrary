@@ -16,6 +16,6 @@
 
 + (NSArray  *)getLanguages;
 + (Language *)getLanguageById:(NSInteger)id;
-+ (NSArray *)getLanguageByIdDocument:(NSInteger)idDocument;
++ (NSArray *)getLanguagesForDocument:(NSInteger)idDocument;
 
 @end
