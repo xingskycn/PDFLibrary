@@ -53,34 +53,21 @@
     }
     
     // Filters
-    int indexCategoryId = 0;
-    int indexLanguageId = 0;
-    int indexKeyword    = 0;    
-    
     if (categoryId) {
-        sql = [NSString stringWithFormat:@"%@ WHERE dc.IdCategory = ? ", sql];
-        indexCategoryId = 1;
+        sql = [NSString stringWithFormat:@"%@ WHERE dc.IdCategory = %u ", sql, categoryId];
     }
     if (languageId) {
         if (categoryId) {
-            sql = [NSString stringWithFormat:@"%@ AND dl.IdLanguage = ? ", sql];
-            indexLanguageId = 2;
+            sql = [NSString stringWithFormat:@"%@ AND dl.IdLanguage = %u ", sql, languageId];
         } else {
-            sql = [NSString stringWithFormat:@"%@ WHERE dl.IdLanguage = ? ", sql];
-            indexLanguageId = 1;
+            sql = [NSString stringWithFormat:@"%@ WHERE dl.IdLanguage = %u ", sql, languageId];
         }
     }
     if (keyword) {
         if(categoryId || languageId) {
-            sql = [NSString stringWithFormat:@"%@ AND d.keyword LIKE \"%%?%%\" ", sql];
-            if (categoryId && languageId) {
-                indexKeyword = 3;
-            } else {
-                indexKeyword = 2;
-            }
+            sql = [NSString stringWithFormat:@"%@ AND d.keyword LIKE \"%%%@%%\" ", sql, keyword];
         } else {
-            sql = [NSString stringWithFormat:@"%@ WHERE d.keyword LIKE \"%%?%%\" ", sql];
-            indexKeyword = 1;
+            sql = [NSString stringWithFormat:@"%@ WHERE d.keyword LIKE '%%%@%%' ", sql, keyword];
         }
     }
     
@@ -101,17 +88,7 @@
     int prepare = sqlite3_prepare_v2(db, sqlStatement, -1, &compiled, NULL);
     if(prepare == SQLITE_OK)
     {
-        // Add Arguments
-        if (indexCategoryId) {
-            sqlite3_bind_int(compiled, indexCategoryId, categoryId);
-        }
-        if (indexLanguageId) {
-            sqlite3_bind_int(compiled, indexLanguageId, languageId);
-        }
-        if (indexKeyword) {
-            sqlite3_bind_text(compiled, indexKeyword, [keyword UTF8String], [keyword length], SQLITE_STATIC);
-        }
-        
+
         while(sqlite3_step(compiled) == SQLITE_ROW)
         {
             Document * item = [self castFromStatement:compiled];
