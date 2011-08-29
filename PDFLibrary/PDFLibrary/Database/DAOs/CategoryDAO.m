@@ -74,7 +74,7 @@
         return list;
     }
     
-    sqlite3_bind_int(compiledStatement, 0, idDocument);
+    sqlite3_bind_int(compiledStatement, 1, idDocument);
     
     while(sqlite3_step(compiledStatement) == SQLITE_ROW) {
         int idCategory  = (NSInteger)sqlite3_column_int(compiledStatement, 0);

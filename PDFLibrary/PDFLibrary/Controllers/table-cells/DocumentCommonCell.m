@@ -7,11 +7,13 @@
 //
 
 #import "DocumentCommonCell.h"
+#import "Language.h"
 
 
 @implementation DocumentCommonCell
 @synthesize btnTitle, btnFeatured, btnThumbail, btnDescription, btnLastUpdateTitle, 
-            btnLastUpdateValue, btnSubtitlesAvailablesTitle, document, delegate;
+            btnLastUpdateValue, btnSubtitlesAvailablesTitle, btnMyLibrary,
+            document, delegate;
 
 
 - (NSString *)formatDate:(NSString *)documentDate {
@@ -35,7 +37,53 @@
     return @"";
 }
 
+- (void)hideSubtitles {
+    for (int i=10; i <= 25; i++) {
+        UIButton * btn = (UIButton *)[self viewWithTag:i];
+        if (btn) {
+            btn.hidden = YES;
+        }
+    }
+}
+
+- (void)showSubtitles {
+    
+    int qty = [document.languages count];
+    
+    if(!qty) {
+        return;
+    }
+    
+    // Max items on screen
+    if (qty > 15) {
+        qty = 15;
+    }
+    
+    // Visible
+    for(int i = 0; i < qty; i++) {
+        
+        Language * language = (Language *)[document.languages objectAtIndex:i];
+        
+        UIButton * btn = (UIButton *)[self viewWithTag:(i + 10)];
+        btn.hidden = NO;
+        [btn setTitle:language.code forState:UIControlStateNormal];
+    }
+    
+}
+
+- (void)updateFieldsForLibrary {
+    
+    [self updateFields];
+    [self hideSubtitles];
+    
+    self.btnMyLibrary.hidden = NO;
+    self.btnSubtitlesAvailablesTitle.hidden = YES;
+}
+
 - (void)updateFields {
+    
+    [self hideSubtitles];
+    [self showSubtitles];
     
     [self.btnTitle       setTitle:self.document.title forState:UIControlStateNormal];
     [self.btnDescription setTitle:[self.document.description uppercaseString] forState:UIControlStateNormal];
@@ -46,13 +94,18 @@
     } else {
         self.btnFeatured.hidden = YES;
     }
-    
+
+    self.btnMyLibrary.hidden = YES;
 }
 
 
 - (IBAction)btnDocumentPressed {
     
     [delegate goToDocument:self.document];
+}
+
+- (IBAction)btnRemoveMyLibraryPressed {
+    // delegate
 }
 
 // ************************************************************

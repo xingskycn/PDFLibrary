@@ -63,7 +63,7 @@
 
 // Method used by DocumentoDAO in order to get All Languages for a DocumentId
 + (NSArray*)getLanguagesForDocument:(NSInteger)idDocument {
-    
+
 	NSMutableArray * list = [[NSMutableArray alloc] init];
     sqlite3_stmt * compiledStatement;
     const char * sqlStatement = "SELECT IdLanguage FROM Document_Language WHERE IdDocument = ?";
@@ -72,11 +72,12 @@
         return list;
     }
     
-    sqlite3_bind_int(compiledStatement, 0, idDocument);
+    sqlite3_bind_int(compiledStatement, 1, idDocument);
     
     while(sqlite3_step(compiledStatement) == SQLITE_ROW) {
-        
+
         int idLanguage  = (NSInteger)sqlite3_column_int(compiledStatement, 0);
+        
         Language * item = [self getLanguageById:idLanguage];
         [list addObject:item];
         [item release];

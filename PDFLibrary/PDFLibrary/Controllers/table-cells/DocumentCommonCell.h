@@ -11,8 +11,8 @@
 
 #define kDocumentHeightCellSmallBook  70
 #define kDocumentHeightCellSmallVideo 70
-#define kDocumentHeightCellBigBook    175
-#define kDocumentHeightCellBigVideo   165
+#define kDocumentHeightCellBigBook    185
+#define kDocumentHeightCellBigVideo   175
 
 @protocol DocumentCommonCellDelegate<NSObject>
     - (void)goToDocument:(Document *)document;
@@ -27,6 +27,7 @@
     IBOutlet UIButton * btnSubtitlesAvailablesTitle;
     IBOutlet UIButton * btnThumbail;
     IBOutlet UIButton * btnFeatured;
+    IBOutlet UIButton * btnMyLibrary;
     
     Document * document;
     
@@ -41,10 +42,14 @@
 @property (nonatomic, retain) UIButton * btnSubtitlesAvailablesTitle;
 @property (nonatomic, retain) UIButton * btnThumbail;
 @property (nonatomic, retain) UIButton * btnFeatured;
+@property (nonatomic, retain) UIButton * btnMyLibrary;
+
 @property (nonatomic, retain) Document * document;
 @property (nonatomic, retain) id delegate;
 
 - (IBAction)btnDocumentPressed;
+- (IBAction)btnRemoveMyLibraryPressed;
 - (void)updateFields;
+- (void)updateFieldsForLibrary;
 
 @end

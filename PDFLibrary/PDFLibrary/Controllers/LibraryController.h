@@ -9,25 +9,30 @@
 #import <UIKit/UIKit.h>
 
 #import "TenarisViewController.h"
+#import "DocumentCommonCell.h"
 
 
-@interface LibraryController : TenarisViewController<UIGestureRecognizerDelegate> {
+@interface LibraryController : TenarisViewController<UIGestureRecognizerDelegate, UITableViewDelegate,
+                                                     DocumentCommonCellDelegate> {
     
     IBOutlet UIButton * btnSort1;
     IBOutlet UIButton * btnSort2;
     
-    IBOutlet UIScrollView * scrollView;
+    IBOutlet UITableView * tablePortrait;
+    
+    // ******************************************
     
     IBOutlet UIButton * btnSort1Landscape;
     IBOutlet UIButton * btnSort2Landscape;
     
     IBOutlet UIScrollView * scrollViewLandscape;
+
+    // ******************************************
     
     NSArray * currentList;
     int lastSort;
 }
 
-@property (nonatomic, retain) UIScrollView *scrollView;
 @property (nonatomic, retain) UIScrollView *scrollViewLandscape;
 
 // LibraryController Actions
