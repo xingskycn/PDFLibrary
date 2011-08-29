@@ -9,10 +9,12 @@
 #import <UIKit/UIKit.h>
 
 #import "TenarisViewController.h"
+#import "DocumentCommonCell.h"
 #import "Category.h"
 
 
-@interface SearchResultsController : TenarisViewController<UIGestureRecognizerDelegate> {
+@interface SearchResultsController : TenarisViewController<UIGestureRecognizerDelegate, UITableViewDelegate,
+                                                            DocumentCommonCellDelegate> {
     
     IBOutlet UIButton * btnSort1;
     IBOutlet UIButton * btnSort2;
@@ -21,18 +23,20 @@
     IBOutlet UILabel  * lblMatchesPortrait; 
     IBOutlet UILabel  * lblResultsPortrait;
     
-    IBOutlet UIScrollView * scrollView;
+    IBOutlet UITableView * tablePortrait;
     
     // *************************************
     
     IBOutlet UIButton * btnSort1Landscape;
     IBOutlet UIButton * btnSort2Landscape;
     
-    IBOutlet UIScrollView * scrollViewLandscape;
-    
     IBOutlet UILabel  * lblTitleLandscape;
     IBOutlet UILabel  * lblMatchesLandscape; 
     IBOutlet UILabel  * lblResultsLandscape;
+    
+    IBOutlet UITableView * tableLandscape;
+    
+    // *************************************
     
     NSString * phrase;
     NSArray  * currentList;
@@ -40,8 +44,6 @@
     int lastSort;
 }
 
-@property (nonatomic, retain) UIScrollView *scrollView;
-@property (nonatomic, retain) UIScrollView *scrollViewLandscape;
 @property (nonatomic, retain) NSString * phrase;
 
 // LibraryController Actions

@@ -11,9 +11,84 @@
 #import "DocumentDAO.h"
 
 @implementation SearchResultsController
-@synthesize scrollView, scrollViewLandscape, phrase;
+@synthesize phrase;
+
+#pragma mark - UITableViewDelegate
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    
+    return 1;    
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    
+    return [currentList count];
+    
+}
+
+
+- (UITableViewCell *)createDocumentCell:(UITableView *)tableView document:(Document *)document{
+    
+    NSString * identifier = document.isEbook ? @"ListingSmallBookCell" : @"ListingSmallVideoCell";
+    
+    DocumentCommonCell * cell = (DocumentCommonCell *)
+    [tableView dequeueReusableCellWithIdentifier:identifier];
+    if(cell == nil){
+        NSArray* nib = [[NSBundle mainBundle] loadNibNamed:identifier owner:self options:nil];
+        for(id oneObject in nib) {
+            if([oneObject isKindOfClass:[DocumentCommonCell class]]) {
+                cell = (DocumentCommonCell *)oneObject;
+            }
+        }	
+    }
+    
+    cell.delegate = self;
+    cell.document = document;
+    [cell updateFields];
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    
+    return cell;        
+    
+}
+
+
+- (UITableViewCell *)tableView:(UITableView *)tableView 
+         cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    Document * document = (Document *)[currentList objectAtIndex:indexPath.row];
+    return [self createDocumentCell:tableView document:document];
+}
+
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    Document * document = (Document *)[currentList objectAtIndex:indexPath.row];
+    float height = document.isEbook ? kDocumentHeightCellSmallBook : kDocumentHeightCellSmallVideo;
+    
+    return height;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    // Nothing to do > see: (void)goToDocument:(Document *)document
+}
+
+- (void)goToDocument:(Document *)document {
+    
+    EbookController * controller = [[EbookController alloc] init];    
+    [self.navigationController pushViewController:controller animated:YES];
+    [controller release];
+    
+}
+
+
+// ****************************************************
 
 - (void)doDocumentsSearch {
+    
+    currentList = nil;
+    [tableLandscape reloadData];
+    [tablePortrait  reloadData];
     
     [self.view addSubview:indicatorController.view];
     
@@ -27,6 +102,8 @@
     [[NSRunLoop currentRunLoop] runUntilDate:[NSDate dateWithTimeIntervalSinceNow:1]];
     
     [indicatorController.view removeFromSuperview];
+    [tablePortrait  reloadData];
+    [tableLandscape reloadData];
 }
 
 - (void) updateLabels {
@@ -116,34 +193,9 @@
 
 #pragma mark - View lifecycle
 
-- (void) initScrollView {
-    
-    UIImageView * imageView = [[UIImageView alloc] initWithImage:
-                               [UIImage imageNamed:@"img-library-portrait.png"]];
-    
-    UIImageView * imageViewLandscape = [[UIImageView alloc] initWithImage:
-                                        [UIImage imageNamed:@"img-library-landscape.png"]];
-    
-    scrollView.contentSize = CGSizeMake(imageView.frame.size.width, 
-                                        imageView.frame.size.height);
-    scrollView.maximumZoomScale = 4.0;
-    scrollView.minimumZoomScale = 0.75;
-    scrollView.clipsToBounds = YES;
-    [scrollView addSubview:imageView];
-    
-    scrollViewLandscape.contentSize = CGSizeMake(imageViewLandscape.frame.size.width, 
-                                                 imageViewLandscape.frame.size.height);
-    scrollViewLandscape.maximumZoomScale = 4.0;
-    scrollViewLandscape.minimumZoomScale = 0.75;
-    scrollViewLandscape.clipsToBounds = YES;
-    [scrollViewLandscape addSubview:imageViewLandscape];
-    
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];    
-    [self initScrollView];
     lastSort = kSortLastUpdate;
 }
 
