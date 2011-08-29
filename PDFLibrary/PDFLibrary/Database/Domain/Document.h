@@ -18,6 +18,7 @@
     NSString * keyword;
     BOOL mainScreenFeatured;
     BOOL categoryFeatured;
+    BOOL isEbook;
     NSString * version;
     NSString * date;
     NSString * updateDate;
@@ -33,6 +34,7 @@
 @property (nonatomic,retain) NSString * keyword;
 @property (nonatomic) BOOL mainScreenFeatured;
 @property (nonatomic) BOOL categoryFeatured;
+@property (nonatomic) BOOL isEbook;
 @property (nonatomic,retain) NSString * version;
 @property (nonatomic,retain) NSString * date;
 @property (nonatomic,retain) NSString * updateDate;

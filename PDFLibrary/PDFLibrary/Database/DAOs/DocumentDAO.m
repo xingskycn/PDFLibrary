@@ -29,6 +29,7 @@
 	item.code = [NSString stringWithUTF8String:(char *)sqlite3_column_text(statement, 10)];
     item.languages = [LanguageDAO getLanguagesForDocument:item.id];
     item.categories = [CategoryDAO getCategoriesForDocument:item.id];
+    item.isEbook = (item.idType == 1);
 	return item;
 }
 

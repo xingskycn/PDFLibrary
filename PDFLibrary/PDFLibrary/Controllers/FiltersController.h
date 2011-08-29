@@ -13,8 +13,11 @@
 #import "Language.h"
 #import "Category.h"
 
+#import "DocumentCommonCell.h"
 
-@interface FiltersController : TenarisViewController<UIGestureRecognizerDelegate> {
+
+@interface FiltersController : TenarisViewController<UIGestureRecognizerDelegate, UITableViewDelegate,
+                                                     DocumentCommonCellDelegate> {
     
     IBOutlet UIButton * btnCategory0;
     IBOutlet UIButton * btnCategory1;
@@ -30,6 +33,8 @@
     IBOutlet UILabel  * lblTitlePortrait;
     IBOutlet UILabel  * lblMatchesPortrait;    
     IBOutlet UILabel  * lblResultsPortrait;
+    
+    IBOutlet UITableView * tablePortrait;
     
     // ***************************************
     
@@ -47,6 +52,10 @@
     IBOutlet UILabel  * lblTitleLandscape;
     IBOutlet UILabel  * lblMatchesLandscape;
     IBOutlet UILabel  * lblResultsLandscape;
+    
+    IBOutlet UITableView * tableLandscape;
+    
+    // ***************************************
     
     Language * language;
     Category * category;

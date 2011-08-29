@@ -14,9 +14,85 @@
 @implementation FiltersController
 @synthesize language;
 
+
+#pragma mark - UITableViewDelegate
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    
+    return 1;    
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    
+    return [currentList count];
+    
+}
+
+
+- (UITableViewCell *)createDocumentCell:(UITableView *)tableView document:(Document *)document{
+    
+    NSString * identifier = document.isEbook ? @"ListingSmallBookCell" : @"ListingSmallVideoCell";
+    
+    DocumentCommonCell * cell = (DocumentCommonCell *)
+    [tableView dequeueReusableCellWithIdentifier:identifier];
+    if(cell == nil){
+        NSArray* nib = [[NSBundle mainBundle] loadNibNamed:identifier owner:self options:nil];
+        for(id oneObject in nib) {
+            if([oneObject isKindOfClass:[DocumentCommonCell class]]) {
+                cell = (DocumentCommonCell *)oneObject;
+            }
+        }	
+    }
+    
+    cell.delegate = self;
+    cell.document = document;
+    [cell updateFields];
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    
+    return cell;        
+    
+}
+
+
+- (UITableViewCell *)tableView:(UITableView *)tableView 
+         cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    Document * document = (Document *)[currentList objectAtIndex:indexPath.row];
+    return [self createDocumentCell:tableView document:document];
+}
+
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    Document * document = (Document *)[currentList objectAtIndex:indexPath.row];
+    float height = document.isEbook ? kDocumentHeightCellSmallBook : kDocumentHeightCellSmallVideo;
+    
+    return height;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    // Nothing to do > see: (void)goToDocument:(Document *)document
+}
+
+- (void)goToDocument:(Document *)document {
+    
+    EbookController * controller = [[EbookController alloc] init];    
+    [self.navigationController pushViewController:controller animated:YES];
+    [controller release];
+    
+}
+
+
+// ****************************************************
+
 - (void)doDocumentsSearch {
     
     [self.view addSubview:indicatorController.view];
+    
+    currentList = nil;
+    [tablePortrait reloadData];
+    [tableLandscape reloadData];
     
     currentList = [DocumentDAO getDocumentsByCategory:category.id
                                              language:language.id keyword:nil myLibrary:NO sort:lastSort];
@@ -25,8 +101,11 @@
     lblResultsPortrait.text  = strResult;
     lblResultsLandscape.text = strResult;    
     
+
     [[NSRunLoop currentRunLoop] runUntilDate:[NSDate dateWithTimeIntervalSinceNow:1]];
     
+    [tablePortrait reloadData];
+    [tableLandscape reloadData];    
     [indicatorController.view removeFromSuperview];
 }
 
