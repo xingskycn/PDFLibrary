@@ -9,17 +9,19 @@
 #import <UIKit/UIKit.h>
 
 #import "TenarisViewController.h"
+#import "DocumentCommonCell.h"
 
 #import "Category.h"
 
-@interface CategoryController : TenarisViewController<UIGestureRecognizerDelegate> {
+@interface CategoryController : TenarisViewController<UIGestureRecognizerDelegate, UITableViewDelegate,
+                                                      DocumentCommonCellDelegate> {
 
     IBOutlet UIButton * btnSort1;
     IBOutlet UIButton * btnSort2;
     
     IBOutlet UILabel  * lblTitlePortrait;
     
-    IBOutlet UIScrollView * scrollView;
+    IBOutlet UITableView * tablePortrait;
     
     // *******************************************    
     
@@ -37,9 +39,8 @@
     int lastSort;
 }
 
-@property (nonatomic, retain) UIScrollView * scrollView;
-@property (nonatomic, retain) UIScrollView * scrollViewLandscape;
 
+@property (nonatomic, retain) UIScrollView * scrollViewLandscape;
 @property (nonatomic, retain) Category * category;
 
 // LibraryController Actions
