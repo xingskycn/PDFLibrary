@@ -17,5 +17,6 @@
 + (BOOL)existsFileOnMyDocuments:(NSString * )filename;
 + (UIImage *)getImageFromFileSystem:(NSString *)filename;
 + (UIImage *)getImageFromFileSystem:(NSString *)filename defaultImage:(NSString *)noImageFilename;
++ (NSString *)formatDate:(NSString *)documentDate;
 
 @end

@@ -160,6 +160,7 @@
 						<string key="NSFrame">{{385, 470}, {375, 208}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView" ref="50600185"/>
 						<object class="NSColor" key="IBUIBackgroundColor">
 							<int key="NSColorSpace">3</int>
 							<bytes key="NSWhite">MC4zMzMzMzMzMzMzIDAAA</bytes>
@@ -594,6 +595,7 @@ A</string>
 						<string key="NSFrame">{{489, 967}, {72, 37}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 						<int key="IBUIContentHorizontalAlignment">0</int>
@@ -809,6 +811,7 @@ A</string>
 						<string key="NSFrame">{{562, 711}, {72, 37}}</string>
 						<reference key="NSSuperview" ref="298818615"/>
 						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 						<int key="IBUIContentHorizontalAlignment">0</int>
@@ -1259,6 +1262,7 @@ A</string>
 						<string key="NSFrame">{{520, 378}, {97, 24}}</string>
 						<reference key="NSSuperview" ref="298818615"/>
 						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView" ref="624239386"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 						<int key="IBUIContentHorizontalAlignment">0</int>
@@ -1503,11 +1507,99 @@ A</string>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">btnUpdateLibrary</string>
+						<string key="label">btnUpdateLibraryLandscape</string>
 						<reference key="source" ref="372490531"/>
 						<reference key="destination" ref="510613110"/>
 					</object>
-					<int key="connectionID">144</int>
+					<int key="connectionID">145</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">lblLastUpdateLandscape</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="260345672"/>
+					</object>
+					<int key="connectionID">146</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">lblTitleLandscape</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="145174925"/>
+					</object>
+					<int key="connectionID">147</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">lblUpperTitleLandscape</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="103411723"/>
+					</object>
+					<int key="connectionID">148</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">btnUpdateLibraryPortrait</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="693163003"/>
+					</object>
+					<int key="connectionID">149</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">lblLastUpdatePortrait</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="354375153"/>
+					</object>
+					<int key="connectionID">150</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">lblTitlePortrait</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="533248625"/>
+					</object>
+					<int key="connectionID">151</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">lblUpperTitlePortrait</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="472414763"/>
+					</object>
+					<int key="connectionID">152</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">lblDescriptionLandscape</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="624239386"/>
+					</object>
+					<int key="connectionID">153</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">lblDescriptionPortrait</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="865960995"/>
+					</object>
+					<int key="connectionID">154</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">btnThumbailPortrait</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="207333022"/>
+					</object>
+					<int key="connectionID">155</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">btnThumbailLandscape</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="959625968"/>
+					</object>
+					<int key="connectionID">156</int>
 				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -2061,7 +2153,7 @@ A</string>
 				<reference key="dict.values" ref="0"/>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">144</int>
+			<int key="maxID">156</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -2116,14 +2208,105 @@ A</string>
 						</object>
 					</object>
 					<object class="NSMutableDictionary" key="outlets">
-						<string key="NS.key.0">btnUpdateLibrary</string>
-						<string key="NS.object.0">UIButton</string>
+						<bool key="EncodedWithXMLCoder">YES</bool>
+						<object class="NSArray" key="dict.sortedKeys">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>btnThumbailLandscape</string>
+							<string>btnThumbailPortrait</string>
+							<string>btnUpdateLibraryLandscape</string>
+							<string>btnUpdateLibraryPortrait</string>
+							<string>lblDescriptionLandscape</string>
+							<string>lblDescriptionPortrait</string>
+							<string>lblLastUpdateLandscape</string>
+							<string>lblLastUpdatePortrait</string>
+							<string>lblTitleLandscape</string>
+							<string>lblTitlePortrait</string>
+							<string>lblUpperTitleLandscape</string>
+							<string>lblUpperTitlePortrait</string>
+						</object>
+						<object class="NSMutableArray" key="dict.values">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>UIButton</string>
+							<string>UIButton</string>
+							<string>UIButton</string>
+							<string>UIButton</string>
+							<string>UITextView</string>
+							<string>UITextView</string>
+							<string>UILabel</string>
+							<string>UILabel</string>
+							<string>UILabel</string>
+							<string>UILabel</string>
+							<string>UILabel</string>
+							<string>UILabel</string>
+						</object>
 					</object>
 					<object class="NSMutableDictionary" key="toOneOutletInfosByName">
-						<string key="NS.key.0">btnUpdateLibrary</string>
-						<object class="IBToOneOutletInfo" key="NS.object.0">
-							<string key="name">btnUpdateLibrary</string>
-							<string key="candidateClassName">UIButton</string>
+						<bool key="EncodedWithXMLCoder">YES</bool>
+						<object class="NSArray" key="dict.sortedKeys">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>btnThumbailLandscape</string>
+							<string>btnThumbailPortrait</string>
+							<string>btnUpdateLibraryLandscape</string>
+							<string>btnUpdateLibraryPortrait</string>
+							<string>lblDescriptionLandscape</string>
+							<string>lblDescriptionPortrait</string>
+							<string>lblLastUpdateLandscape</string>
+							<string>lblLastUpdatePortrait</string>
+							<string>lblTitleLandscape</string>
+							<string>lblTitlePortrait</string>
+							<string>lblUpperTitleLandscape</string>
+							<string>lblUpperTitlePortrait</string>
+						</object>
+						<object class="NSMutableArray" key="dict.values">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<object class="IBToOneOutletInfo">
+								<string key="name">btnThumbailLandscape</string>
+								<string key="candidateClassName">UIButton</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">btnThumbailPortrait</string>
+								<string key="candidateClassName">UIButton</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">btnUpdateLibraryLandscape</string>
+								<string key="candidateClassName">UIButton</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">btnUpdateLibraryPortrait</string>
+								<string key="candidateClassName">UIButton</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">lblDescriptionLandscape</string>
+								<string key="candidateClassName">UITextView</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">lblDescriptionPortrait</string>
+								<string key="candidateClassName">UITextView</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">lblLastUpdateLandscape</string>
+								<string key="candidateClassName">UILabel</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">lblLastUpdatePortrait</string>
+								<string key="candidateClassName">UILabel</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">lblTitleLandscape</string>
+								<string key="candidateClassName">UILabel</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">lblTitlePortrait</string>
+								<string key="candidateClassName">UILabel</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">lblUpperTitleLandscape</string>
+								<string key="candidateClassName">UILabel</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">lblUpperTitlePortrait</string>
+								<string key="candidateClassName">UILabel</string>
+							</object>
 						</object>
 					</object>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">

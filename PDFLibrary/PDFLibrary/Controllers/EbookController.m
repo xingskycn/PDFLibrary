@@ -13,9 +13,36 @@
 #import "ReaderViewController.h"
 
 #import "DocumentDAO.h"
+#import "FileSystem.h"
 
 @implementation EbookController
 @synthesize document;
+
+
+- (void)updateViewFromDocument:(Document *)_document {
+    
+    self.document = _document;
+    
+    lblTitlePortrait.text = self.document.title;
+    lblLastUpdatePortrait.text = [FileSystem formatDate:self.document.updateDate];
+    lblUpperTitlePortrait.text = [self.document.description uppercaseString];
+    lblDescriptionPortrait.text = self.document.description;
+
+    
+    lblTitleLandscape.text = self.document.title;
+    lblLastUpdateLandscape.text = [FileSystem formatDate:self.document.updateDate];
+    lblUpperTitleLandscape.text = [self.document.description uppercaseString];
+    lblDescriptionLandscape.text = self.document.description;    
+    
+    NSString * strFilename = [NSString stringWithFormat:@"%@.png", self.document.code];
+    UIImage * imgThumbail = [FileSystem getImageFromFileSystem:strFilename defaultImage:@"img-ebook-big.png"];
+    [btnThumbailLandscape setBackgroundImage:imgThumbail forState:UIControlStateNormal];
+    [btnThumbailPortrait  setBackgroundImage:imgThumbail forState:UIControlStateNormal];
+    
+}
+
+// *********************************************************
+
 
 - (void)viewWillAppear:(BOOL)animated
 {
@@ -110,8 +137,8 @@
     [DocumentDAO updateLibraryStatus:shouldAdd forDocument:self.document.id];
     
     NSString * strFilename = shouldAdd ? @"btn-my-library-off.png" : @"btn-my-library.png";
-    [btnUpdateLibrary setBackgroundImage:[UIImage imageNamed:strFilename] forState:UIControlStateNormal];
-    
+    [btnUpdateLibraryPortrait  setBackgroundImage:[UIImage imageNamed:strFilename] forState:UIControlStateNormal];
+    [btnUpdateLibraryLandscape setBackgroundImage:[UIImage imageNamed:strFilename] forState:UIControlStateNormal];    
     
     // Remove commented line when Domain Document have the new attribute ex. inLibrary
     // self.document.inLibrary = !self.document.inLibrary;

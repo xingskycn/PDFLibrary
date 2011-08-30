@@ -14,18 +14,40 @@
 #import <MessageUI/MessageUI.h>
 
 @class MFDocumentManager;
-@interface EbookController : TenarisViewController<UIGestureRecognizerDelegate, 
-                                              MFMailComposeViewControllerDelegate> {
+@interface EbookController : TenarisViewController<UIGestureRecognizerDelegate,  MFMailComposeViewControllerDelegate> {
 
+    // *******************************************
+    
     MFMailComposeViewController* mailController;
     Document * document;
-    IBOutlet UIButton * btnUpdateLibrary;
-
+    
+    // *******************************************
+                                                  
+    IBOutlet UIButton * btnUpdateLibraryLandscape;
+    IBOutlet UIButton * btnThumbailLandscape;
+    IBOutlet UILabel  * lblTitleLandscape; 
+    IBOutlet UILabel  * lblUpperTitleLandscape;
+    IBOutlet UILabel  * lblLastUpdateLandscape;
+    IBOutlet UITextView  * lblDescriptionLandscape;    
+    
+    // *******************************************
+                                                  
+    IBOutlet UIButton * btnUpdateLibraryPortrait;
+    IBOutlet UIButton * btnThumbailPortrait;
+    IBOutlet UILabel  * lblTitlePortrait; 
+    IBOutlet UILabel  * lblUpperTitlePortrait;
+    IBOutlet UILabel  * lblLastUpdatePortrait;
+    IBOutlet UITextView  * lblDescriptionPortrait;    
+    
+    // *******************************************
+    
 }
 
 @property (nonatomic, retain) Document * document;
 
 // Ebook Actions
+- (void)updateViewFromDocument:(Document *)_document;
+
 - (IBAction) btnRequestCopyPressed;
 - (IBAction) actionOpenPlainDocument:(id)sender;;
 - (IBAction) btnSendByMail:(id)sender;

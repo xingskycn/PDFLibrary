@@ -84,6 +84,7 @@
     
     EbookController * controller = [[EbookController alloc] init];    
     [self.navigationController pushViewController:controller animated:YES];
+    [controller updateViewFromDocument:document];
     [controller release];
     
 }
@@ -188,13 +189,6 @@
     
 }
 
-- (IBAction) btnFeaturedPressed {
-    
-    EbookController * controller = [[EbookController alloc] init];    
-    [self.navigationController pushViewController:controller animated:YES];
-    [controller release];
-    
-}
 
 // ***************************************************
 

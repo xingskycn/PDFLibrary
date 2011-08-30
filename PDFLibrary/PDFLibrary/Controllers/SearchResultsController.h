@@ -49,7 +49,6 @@
 // LibraryController Actions
 - (IBAction) btnFilterByCategoryPressed:(id)sender;
 - (IBAction) btnFilterBySortingPressed:(id)sender;
-- (IBAction) btnFeaturedPressed;
 - (void) updateLabels;
 
 @end
