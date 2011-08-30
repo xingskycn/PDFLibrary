@@ -75,15 +75,6 @@
     // Nothing to do > see: (void)goToDocument:(Document *)document
 }
 
-- (void)goToDocument:(Document *)document {
-    
-    EbookController * controller = [[EbookController alloc] init];    
-    [self.navigationController pushViewController:controller animated:YES];
-    [controller release];
-    
-}
-
-
 // ****************************************************
 
 - (void)doDocumentsSearch {
@@ -103,6 +94,24 @@
     
     [tablePortrait reloadData];
 }
+
+// ********** DocumentCommonCellProtocol **************
+
+- (void)removeFromLibrary:(Document *)document {
+    
+    [DocumentDAO updateLibraryStatus:NO forDocument:document.id];
+    [self doDocumentsSearch];
+}
+
+- (void)goToDocument:(Document *)document {
+    
+    EbookController * controller = [[EbookController alloc] init];    
+    [self.navigationController pushViewController:controller animated:YES];
+    [controller release];
+    
+}
+
+// ***************************************************
 
 - (void)viewWillAppear:(BOOL)animated
 {

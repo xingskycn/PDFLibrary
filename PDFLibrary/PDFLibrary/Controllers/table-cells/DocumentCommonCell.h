@@ -16,6 +16,7 @@
 
 @protocol DocumentCommonCellDelegate<NSObject>
     - (void)goToDocument:(Document *)document;
+    - (void)removeFromLibrary:(Document *)document;
 @end
 
 @interface DocumentCommonCell : UITableViewCell {

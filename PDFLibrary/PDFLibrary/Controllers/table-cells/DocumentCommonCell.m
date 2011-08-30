@@ -125,7 +125,7 @@
 }
 
 - (IBAction)btnRemoveMyLibraryPressed {
-    // delegate
+    [delegate removeFromLibrary:self.document];
 }
 
 // ************************************************************

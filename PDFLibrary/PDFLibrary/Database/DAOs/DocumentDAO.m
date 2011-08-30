@@ -72,6 +72,14 @@
         }
     }
     
+    if (myLibrary) {
+        if(categoryId || languageId || keyword) {
+            //sql = [NSString stringWithFormat:@"%@ AND d.inLibrary = 1 ", sql];
+        } else {
+            //sql = [NSString stringWithFormat:@"%@ WHERE d.inLibrary = 1 ", sql];
+        }
+    }
+    
     // Sorting
     if(sortId == kSortLastUpdate) {
         sql = [NSString stringWithFormat:@"%@ ORDER BY d.UpdateDate DESC ", sql];
@@ -148,6 +156,28 @@
     }
     sqlite3_finalize(compiledStatement);
     return list;
+}
+
+
++ (void)updateLibraryStatus:(BOOL)inLibrary forDocument:(NSInteger)documentId
+{
+    /*
+    
+    NSString * sql = @"UPDATE Document SET inLibrary = ? WHERE id = ?";
+    const char * sqlstatement = [sql UTF8String];
+    sqlite3_stmt* compiled;
+    sqlite3* db = [DBManager getInstance].database;
+    int prepare = sqlite3_prepare_v2(db, sqlstatement, -1, &compiled, NULL);
+    if(prepare == SQLITE_OK)
+    {
+        sqlite3_bind_int(compiled, 1, inLibrary);
+        sqlite3_bind_int(compiled, 2, documentId);        
+        sqlite3_step(compiled);
+        sqlite3_finalize(compiled);
+    }
+    
+    */
+    
 }
 
 @end

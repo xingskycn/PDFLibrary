@@ -12,7 +12,10 @@
 #import "MFDocumentManager.h"
 #import "ReaderViewController.h"
 
+#import "DocumentDAO.h"
+
 @implementation EbookController
+@synthesize document;
 
 - (void)viewWillAppear:(BOOL)animated
 {
@@ -97,6 +100,23 @@
     }
 }
 
+- (IBAction) btnUpdateLibraryPressed {
+    
+    // BOOL shouldAdd = !self.document.inLibrary;
+
+    // replace this line with the commented line (Domain Document should have the new attribute ex. inLibrary)
+    BOOL shouldAdd = YES; 
+    
+    [DocumentDAO updateLibraryStatus:shouldAdd forDocument:self.document.id];
+    
+    NSString * strFilename = shouldAdd ? @"btn-my-library-off.png" : @"btn-my-library.png";
+    [btnUpdateLibrary setBackgroundImage:[UIImage imageNamed:strFilename] forState:UIControlStateNormal];
+    
+    
+    // Remove commented line when Domain Document have the new attribute ex. inLibrary
+    // self.document.inLibrary = !self.document.inLibrary;
+}
+
 
 // ***************************************************
 
@@ -121,10 +141,13 @@
 
     [self presentModalViewController:pdfViewController animated:YES];
     [pdfViewController release];
+    
 }
 
 
--(void)mailComposeController:(MFMailComposeViewController*)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError*)error {
+-(void)mailComposeController:(MFMailComposeViewController*)controller 
+       didFinishWithResult:(MFMailComposeResult)result error:(NSError*)error {
+    
 	[self dismissModalViewControllerAnimated:TRUE];
 }
 

@@ -77,6 +77,13 @@
     // Nothing to do > see: (void)goToDocument:(Document *)document
 }
 
+
+// ********** DocumentCommonCellProtocol **************
+
+- (void)removeFromLibrary:(Document *)document {
+    // unused here.
+}
+
 - (void)goToDocument:(Document *)document {
     
     EbookController * controller = [[EbookController alloc] init];    
