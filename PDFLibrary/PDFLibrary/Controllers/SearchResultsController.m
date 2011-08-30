@@ -44,6 +44,7 @@
     
     cell.delegate = self;
     cell.document = document;
+    cell.isBiggerCell = NO;
     [cell updateFields];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     

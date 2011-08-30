@@ -16,5 +16,6 @@
 + (NSString *)getFileFromMyDocuments:(NSString *)filename;
 + (BOOL)existsFileOnMyDocuments:(NSString * )filename;
 + (UIImage *)getImageFromFileSystem:(NSString *)filename;
++ (UIImage *)getImageFromFileSystem:(NSString *)filename defaultImage:(NSString *)noImageFilename;
 
 @end

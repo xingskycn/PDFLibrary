@@ -32,6 +32,7 @@
     Document * document;
     
     id delegate;
+    BOOL isBiggerCell;
     
 }
 
@@ -46,6 +47,7 @@
 
 @property (nonatomic, retain) Document * document;
 @property (nonatomic, retain) id delegate;
+@property BOOL isBiggerCell;
 
 - (IBAction)btnDocumentPressed;
 - (IBAction)btnRemoveMyLibraryPressed;

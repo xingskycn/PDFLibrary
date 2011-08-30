@@ -7,13 +7,14 @@
 //
 
 #import "DocumentCommonCell.h"
+#import "FileSystem.h"
 #import "Language.h"
 
 
 @implementation DocumentCommonCell
 @synthesize btnTitle, btnFeatured, btnThumbail, btnDescription, btnLastUpdateTitle, 
             btnLastUpdateValue, btnSubtitlesAvailablesTitle, btnMyLibrary,
-            document, delegate;
+            document, delegate, isBiggerCell;
 
 
 - (NSString *)formatDate:(NSString *)documentDate {
@@ -80,10 +81,27 @@
     self.btnSubtitlesAvailablesTitle.hidden = YES;
 }
 
+- (void)setDocumentImage {
+    
+    NSString * strNoImage;
+    
+    if (self.isBiggerCell) {
+        strNoImage = self.document.isEbook ? @"table-noimage-big-book.png" : @"table-noimage-big-video.png" ;
+    } else {
+        strNoImage = self.document.isEbook ? @"table-noimage-small-book.png" : @"table-noimage-small-video.png" ;
+    }
+    
+    NSString * strImage   = [NSString stringWithFormat:@"%@.png", self.document.code];
+    UIImage * imgDocument = [FileSystem getImageFromFileSystem:strImage defaultImage:strNoImage];
+    
+    [btnThumbail setImage:imgDocument forState:UIControlStateNormal];
+}
+
 - (void)updateFields {
     
     [self hideSubtitles];
     [self showSubtitles];
+    [self setDocumentImage];
     
     [self.btnTitle       setTitle:self.document.title forState:UIControlStateNormal];
     [self.btnDescription setTitle:[self.document.description uppercaseString] forState:UIControlStateNormal];
@@ -96,6 +114,8 @@
     }
 
     self.btnMyLibrary.hidden = YES;
+    
+    
 }
 
 
