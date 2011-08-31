@@ -80,7 +80,7 @@ document, delegate, btnCaseStudy;
     [self setDocumentImage];
     
     [self.btnTitle       setTitle:self.document.title forState:UIControlStateNormal];
-    //[self.btnDescription setTitle:[self.document.description uppercaseString] forState:UIControlStateNormal];
+    [self.btnDescription setTitle:self.document.upperTitle forState:UIControlStateNormal];
     [self.btnLastUpdateValue setTitle:[FileSystem formatDate:self.document.updateDate] 
                              forState:UIControlStateNormal];
     
@@ -90,8 +90,9 @@ document, delegate, btnCaseStudy;
         self.btnFeatured.hidden = YES;
     }
     
-    if(document.isCaseStudy)
+    if(document.isCaseStudy) {
         btnCaseStudy.hidden = NO;
+    }
     
     self.btnMyLibrary.hidden = hideMyLibrary;
 }

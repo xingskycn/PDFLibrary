@@ -13,6 +13,21 @@
 
 @implementation DocumentDAO
 
++ (NSString *)makeUpperTitleForCategory:(Category *)category isEbook:(BOOL)isEbook isCaseStudy:(BOOL)isCaseStudy {
+    
+    NSString * upperTitle = @"";
+    
+    if (isEbook && isCaseStudy) {
+        upperTitle = [NSString stringWithFormat:@"Case Study for %@", category.name];        
+    } else if (isEbook && !isCaseStudy) {
+        upperTitle = [NSString stringWithFormat:@"Brochure for %@", category.name];        
+    } else {
+        upperTitle = [NSString stringWithFormat:@"Video for %@", category.name];
+    }
+    
+    return [upperTitle uppercaseString];
+}
+
 + (Document *)castFromStatement:(sqlite3_stmt *)statement {
 	Document * item = [Document alloc];
 	
@@ -32,6 +47,8 @@
     item.languages = [LanguageDAO getLanguagesForDocument:item.id];
     item.categories = [CategoryDAO getCategoriesForDocument:item.id];
     item.isEbook = (item.idType == 1);
+    item.upperTitle = [self makeUpperTitleForCategory:[item.categories objectAtIndex:0] 
+                            isEbook:item.isEbook isCaseStudy:item.isCaseStudy];
 	return item;
 }
 

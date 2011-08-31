@@ -18,6 +18,11 @@
 @implementation EbookController
 @synthesize document, progressDownload;
 
+- (void)updateMyLibraryImage:(BOOL)currentStatus {
+    NSString * strFilename = currentStatus ? @"btn-my-library-off.png" : @"btn-my-library.png";
+    [btnUpdateLibraryPortrait  setBackgroundImage:[UIImage imageNamed:strFilename] forState:UIControlStateNormal];
+    [btnUpdateLibraryLandscape setBackgroundImage:[UIImage imageNamed:strFilename] forState:UIControlStateNormal];    
+}
 
 - (void)updateViewFromDocument:(Document *)_document {
     
@@ -39,6 +44,7 @@
     [btnThumbailLandscape setBackgroundImage:imgThumbail forState:UIControlStateNormal];
     [btnThumbailPortrait  setBackgroundImage:imgThumbail forState:UIControlStateNormal];
     
+    [self updateMyLibraryImage:self.document.inLibrary];
 }
 
 // *********************************************************
@@ -151,19 +157,15 @@
 
 - (IBAction) btnUpdateLibraryPressed {
     
-    // BOOL shouldAdd = !self.document.inLibrary;
+    BOOL shouldAdd = !self.document.inLibrary;
 
-    // replace this line with the commented line (Domain Document should have the new attribute ex. inLibrary)
-    BOOL shouldAdd = YES; 
-    
     [DocumentDAO updateLibraryStatus:shouldAdd forDocument:self.document.id];
     
     NSString * strFilename = shouldAdd ? @"btn-my-library-off.png" : @"btn-my-library.png";
     [btnUpdateLibraryPortrait  setBackgroundImage:[UIImage imageNamed:strFilename] forState:UIControlStateNormal];
     [btnUpdateLibraryLandscape setBackgroundImage:[UIImage imageNamed:strFilename] forState:UIControlStateNormal];    
     
-    // Remove commented line when Domain Document have the new attribute ex. inLibrary
-    // self.document.inLibrary = !self.document.inLibrary;
+    self.document.inLibrary = !self.document.inLibrary;
 }
 
 

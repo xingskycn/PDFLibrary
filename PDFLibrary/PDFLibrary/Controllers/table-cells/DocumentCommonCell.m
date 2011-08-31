@@ -84,7 +84,7 @@
     [self setDocumentImage];
     
     [self.btnTitle       setTitle:self.document.title forState:UIControlStateNormal];
-    [self.btnDescription setTitle:[self.document.description uppercaseString] forState:UIControlStateNormal];
+    [self.btnDescription setTitle:self.document.upperTitle forState:UIControlStateNormal];
     [self.btnLastUpdateValue setTitle:[FileSystem formatDate:self.document.updateDate] 
                              forState:UIControlStateNormal];
     

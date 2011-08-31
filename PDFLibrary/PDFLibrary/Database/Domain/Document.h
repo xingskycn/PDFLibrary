@@ -13,6 +13,7 @@
     
     NSInteger id;
     NSInteger idType;
+    NSString * upperTitle;
     NSString * title;
     NSString * description;
     NSString * keyword;
@@ -31,6 +32,7 @@
 
 @property (nonatomic) NSInteger id;
 @property (nonatomic) NSInteger idType;
+@property (nonatomic,retain) NSString * upperTitle;
 @property (nonatomic,retain) NSString * title;
 @property (nonatomic,retain) NSString * description;
 @property (nonatomic,retain) NSString * keyword;
