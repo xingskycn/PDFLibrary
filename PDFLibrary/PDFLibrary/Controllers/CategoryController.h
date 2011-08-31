@@ -31,6 +31,8 @@
     IBOutlet UILabel  * lblTitleLandscape;
     
     IBOutlet UIScrollView * scrollViewLandscape;
+    NSMutableArray *viewControllers;
+    int kNumberOfPages;
     
     // ******************************************* 
     

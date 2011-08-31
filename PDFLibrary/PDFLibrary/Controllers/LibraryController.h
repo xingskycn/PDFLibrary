@@ -26,6 +26,8 @@
     IBOutlet UIButton * btnSort2Landscape;
     
     IBOutlet UIScrollView * scrollViewLandscape;
+    NSMutableArray *viewControllers;
+    int kNumberOfPages;
 
     // ******************************************
     

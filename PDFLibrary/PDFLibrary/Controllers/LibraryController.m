@@ -9,7 +9,9 @@
 #import "LibraryController.h"
 #import "EbookController.h"
 #import "DocumentDAO.h"
+#import "ScrollViewController.h"
 
+#define PAGE_WIDTH 950
 
 @implementation LibraryController
 @synthesize scrollViewLandscape;
@@ -76,6 +78,49 @@
 }
 
 // ****************************************************
+- (ScrollViewController*)loadContentViewWithPage:(NSInteger)pageIndex: (NSArray*) docs
+{
+    if (pageIndex < 0 || pageIndex >= kNumberOfPages) 
+        return nil;
+	
+	ScrollViewController *controller = [[ScrollViewController alloc] initWithNibName:@"ScrollViewLandscape" bundle:nil];
+    [controller initWithDocuments:docs:pageIndex:NO];[controller view];
+	CGRect frame = controller.view.frame;
+	frame.origin.x = PAGE_WIDTH * pageIndex;
+	frame.origin.y = 0;
+	controller.view.frame = frame;
+	[scrollViewLandscape addSubview:controller.view];
+    
+	return controller;
+}
+
+- (void) initScrollView: (NSArray*) docs
+{
+    for(UIView* view in [scrollViewLandscape subviews])
+        [view removeFromSuperview];
+    
+    NSMutableArray *controllers = [[NSMutableArray alloc] init];
+    kNumberOfPages = ceil([docs count] / 6.0); 
+    for (unsigned i = 0; i < kNumberOfPages; i++) {
+        ScrollViewController *controller = [self loadContentViewWithPage:i:docs];
+        controller.nav = self.navigationController;
+        controller.delegate = self;
+        [controllers addObject:controller];
+        [controller release];
+    }
+    
+    viewControllers = controllers;
+    [controllers release];
+    
+    // a page is the width of the scroll view
+    int width = (PAGE_WIDTH * kNumberOfPages) - ((([docs count]%6)<=3&&([docs count]%6)!=0)?470:0);
+    scrollViewLandscape.contentSize = CGSizeMake(width, scrollViewLandscape.frame.size.height);
+    scrollViewLandscape.showsHorizontalScrollIndicator = NO;
+    scrollViewLandscape.showsVerticalScrollIndicator = NO;
+    scrollViewLandscape.pagingEnabled = NO;
+    scrollViewLandscape.scrollsToTop = NO;
+    scrollViewLandscape.delegate = self;
+}
 
 - (void)doDocumentsSearch {
     
@@ -87,6 +132,7 @@
     currentList = [DocumentDAO getDocumentsByCategory:0
                                              language:0 keyword:nil myLibrary:YES sort:lastSort];
     
+    [self initScrollView:currentList];
     
     [[NSRunLoop currentRunLoop] runUntilDate:[NSDate dateWithTimeIntervalSinceNow:1]];
     
@@ -138,49 +184,51 @@
 - (IBAction) btnFilterBySortingPressed:(id)sender {
     
     int tag = [sender tag];
-    UIButton * btnLastUpdate = (UIButton*)[self.view viewWithTag:8];
-    UIButton * btnAlphabetical = (UIButton*)[self.view viewWithTag:9];
+    UIButton * btnLastUpdate = (UIButton*)[self.portrait viewWithTag:8];
+    UIButton * btnAlphabetical = (UIButton*)[self.portrait viewWithTag:9];
+    UIButton * btnLastUpdateLandscape = (UIButton*)[self.landscape viewWithTag:8];
+    UIButton * btnAlphabeticalLandscape = (UIButton*)[self.landscape viewWithTag:9];
     
     if(tag==8) {
         [btnLastUpdate setBackgroundImage:[UIImage imageNamed:@"btn-sort1-on.png"] 
                                  forState:UIControlStateNormal];
         [btnAlphabetical setBackgroundImage:[UIImage imageNamed:@"btn-sort2-off.png"] 
                                    forState:UIControlStateNormal];
+        [btnLastUpdateLandscape setBackgroundImage:[UIImage imageNamed:@"btn-sort1-on.png"] 
+                                          forState:UIControlStateNormal];
+        [btnAlphabeticalLandscape setBackgroundImage:[UIImage imageNamed:@"btn-sort2-off.png"] 
+                                            forState:UIControlStateNormal];
     } else {
         [btnLastUpdate setBackgroundImage:[UIImage imageNamed:@"btn-sort1-off.png"] 
                                  forState:UIControlStateNormal];
         [btnAlphabetical setBackgroundImage:[UIImage imageNamed:@"btn-sort2-on.png"] 
                                    forState:UIControlStateNormal];
+        [btnLastUpdateLandscape setBackgroundImage:[UIImage imageNamed:@"btn-sort1-off.png"] 
+                                          forState:UIControlStateNormal];
+        [btnAlphabeticalLandscape setBackgroundImage:[UIImage imageNamed:@"btn-sort2-on.png"] 
+                                            forState:UIControlStateNormal];
     }
     
     lastSort  = (tag == 8 ? kSortLastUpdate : kSortAlphabetical);
     [self doDocumentsSearch];
 }
 
-// ***************************************************
-
-#pragma mark - View lifecycle
-
-- (void) initScrollView {
-    
-    
-    UIImageView * imageViewLandscape = [[UIImageView alloc] initWithImage:
-                                        [UIImage imageNamed:@"img-library-landscape.png"]];
-    
-    
-    scrollViewLandscape.contentSize = CGSizeMake(imageViewLandscape.frame.size.width, 
-                                                 imageViewLandscape.frame.size.height);
-    scrollViewLandscape.maximumZoomScale = 4.0;
-    scrollViewLandscape.minimumZoomScale = 0.75;
-    scrollViewLandscape.clipsToBounds = YES;
-    [scrollViewLandscape addSubview:imageViewLandscape];
+- (void)scrollViewDidScroll:(UIScrollView *)sender {
     
 }
 
+// At the begin of scroll dragging, reset the boolean used when scrolls originate from the UIPageControl
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
+}
+
+// At the end of scroll animation, reset the boolean used when scrolls originate from the UIPageControl
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
+}
+
+
 - (void)viewDidLoad
 {
-    [super viewDidLoad];    
-    [self initScrollView];
+    [super viewDidLoad];  
     lastSort = kSortLastUpdate;
 }
 

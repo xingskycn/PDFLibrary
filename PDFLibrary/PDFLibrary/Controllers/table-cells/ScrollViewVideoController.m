@@ -1,0 +1,118 @@
+//
+//  ScrollViewItemController.m
+//  PDFLibrary
+//
+//  Created by Marcelo German De Luca on 30/08/11.
+//  Copyright 2011 TheAppMaster. All rights reserved.
+//
+
+#import "ScrollViewVideoController.h"
+#import "FileSystem.h"
+#import "Language.h"
+
+
+@implementation ScrollViewVideoController
+@synthesize btnTitle, btnFeatured, btnThumbail, btnDescription, btnLastUpdateTitle, 
+btnLastUpdateValue, btnSubtitlesAvailablesTitle, btnMyLibrary,
+document, delegate;
+
+
+- (id)initWithDocument:(Document*)doc:(BOOL)hideLibrary
+{
+    hideMyLibrary = hideLibrary;
+    document = doc;
+    return self;
+}
+
+- (void)hideSubtitles {
+    for (int i=10; i <= 25; i++) {
+        UIButton * btn = (UIButton *)[self.view viewWithTag:i];
+        if (btn) {
+            btn.hidden = YES;
+        }
+    }
+}
+
+- (void)showSubtitles {
+    
+    int qty = [document.languages count];
+    
+    if(!qty) {
+        return;
+    }
+    
+    // Max items on screen
+    if (qty > 15) {
+        qty = 15;
+    }
+    
+    // Visible
+    for(int i = 0; i < qty; i++) {
+        
+        Language * language = (Language *)[document.languages objectAtIndex:i];
+        
+        UIButton * btn = (UIButton *)[self.view viewWithTag:(i + 10)];
+        btn.hidden = NO;
+        [btn setTitle:language.code forState:UIControlStateNormal];
+    }
+}
+
+- (void)updateFieldsForLibrary {
+    
+    [self updateFields];
+    [self hideSubtitles];
+    
+    self.btnMyLibrary.hidden = NO;
+    self.btnSubtitlesAvailablesTitle.hidden = YES;
+}
+
+- (void)setDocumentImage {
+    
+    NSString * strImage   = [NSString stringWithFormat:@"%@.png", self.document.code];
+    UIImage * imgDocument = [FileSystem getImageFromFileSystem:strImage];
+    
+    [btnThumbail setImage:imgDocument forState:UIControlStateNormal];
+}
+
+- (void)updateFields {
+    
+    [self hideSubtitles];
+    [self showSubtitles];
+    [self setDocumentImage];
+    
+    [self.btnTitle       setTitle:self.document.title forState:UIControlStateNormal];
+    //[self.btnDescription setTitle:[self.document.description uppercaseString] forState:UIControlStateNormal];
+    [self.btnLastUpdateValue setTitle:[FileSystem formatDate:self.document.updateDate] 
+                             forState:UIControlStateNormal];
+    
+    if (document.categoryFeatured || document.mainScreenFeatured) {
+        self.btnFeatured.hidden = NO;
+    } else {
+        self.btnFeatured.hidden = YES;
+    }
+    
+    self.btnMyLibrary.hidden = hideMyLibrary;
+}
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    
+    [self updateFields];
+}
+
+- (IBAction)btnDocumentPressed {
+    [delegate goToDocument:self.document];
+}
+
+- (IBAction)btnRemoveMyLibraryPressed {
+    [delegate removeFromLibrary:self.document];
+}
+
+
+- (void)dealloc
+{
+    [super dealloc];
+}
+
+@end

@@ -2,7 +2,7 @@
 <archive type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="7.10">
 	<data>
 		<int key="IBDocument.SystemTarget">1056</int>
-		<string key="IBDocument.SystemVersion">10K540</string>
+		<string key="IBDocument.SystemVersion">10K549</string>
 		<string key="IBDocument.InterfaceBuilderVersion">1306</string>
 		<string key="IBDocument.AppKitVersion">1038.36</string>
 		<string key="IBDocument.HIToolboxVersion">461.00</string>
@@ -231,7 +231,7 @@
 						<string key="NSFrame">{{703, 100}, {39, 25}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView"/>
+						<reference key="NSNextKeyView" ref="733053412"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<int key="IBUITag">9</int>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
@@ -276,7 +276,7 @@
 					<object class="IBUITableView" id="733053412">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">274</int>
-						<string key="NSFrame">{{71, 166}, {625, 778}}</string>
+						<string key="NSFrame">{{71, 166}, {626, 778}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="50600185"/>
@@ -549,7 +549,7 @@
 					<object class="IBUIScrollView" id="893849440">
 						<reference key="NSNextResponder" ref="44657345"/>
 						<int key="NSvFlags">268</int>
-						<string key="NSFrame">{{37, 151}, {950, 550}}</string>
+						<string key="NSFrame">{{37, 151}, {973, 540}}</string>
 						<reference key="NSSuperview" ref="44657345"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="769532058"/>
