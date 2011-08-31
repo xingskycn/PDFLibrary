@@ -12,7 +12,7 @@
 @implementation Document
 @synthesize id, idType, title, description, keyword, mainScreenFeatured;
 @synthesize categoryFeatured, version, date, updateDate, code;
-@synthesize languages, categories, isEbook;
+@synthesize languages, categories, isEbook, isCaseStudy, inLibrary;
 
 - (void)dealloc {
     [self.title release];

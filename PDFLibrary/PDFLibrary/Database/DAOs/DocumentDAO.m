@@ -27,6 +27,8 @@
 	item.date = [NSString stringWithUTF8String:(char *)sqlite3_column_text(statement, 8)];
 	item.updateDate = [NSString stringWithUTF8String:(char *)sqlite3_column_text(statement, 9)];
 	item.code = [NSString stringWithUTF8String:(char *)sqlite3_column_text(statement, 10)];
+    item.isCaseStudy = (NSInteger)sqlite3_column_int(statement, 11) == 1;
+    item.inLibrary = (NSInteger)sqlite3_column_int(statement, 12) == 1;
     item.languages = [LanguageDAO getLanguagesForDocument:item.id];
     item.categories = [CategoryDAO getCategoriesForDocument:item.id];
     item.isEbook = (item.idType == 1);
@@ -74,9 +76,9 @@
     
     if (myLibrary) {
         if(categoryId || languageId || keyword) {
-            //sql = [NSString stringWithFormat:@"%@ AND d.inLibrary = 1 ", sql];
+            sql = [NSString stringWithFormat:@"%@ AND d.InLibrary = 1 ", sql];
         } else {
-            //sql = [NSString stringWithFormat:@"%@ WHERE d.inLibrary = 1 ", sql];
+            sql = [NSString stringWithFormat:@"%@ WHERE d.InLibrary = 1 ", sql];
         }
     }
     
@@ -161,8 +163,6 @@
 
 + (void)updateLibraryStatus:(BOOL)inLibrary forDocument:(NSInteger)documentId
 {
-    /*
-    
     NSString * sql = @"UPDATE Document SET inLibrary = ? WHERE id = ?";
     const char * sqlstatement = [sql UTF8String];
     sqlite3_stmt* compiled;
@@ -175,9 +175,6 @@
         sqlite3_step(compiled);
         sqlite3_finalize(compiled);
     }
-    
-    */
-    
 }
 
 @end
