@@ -67,6 +67,7 @@ BOOL alreadyCallUpdateService = NO;
     if(!alreadyCallUpdateService) {
         ServiceManager * serviceManager = [[ServiceManager alloc] init];
         [self.view addSubview:self.indicatorController.view];
+        self.indicatorController.lblLibrary.hidden = NO;
         [serviceManager callUpdateData:self];
         alreadyCallUpdateService = YES;
     }

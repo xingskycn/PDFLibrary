@@ -16,7 +16,7 @@
 #import "FileSystem.h"
 
 @implementation EbookController
-@synthesize document;
+@synthesize document, progressDownload;
 
 
 - (void)updateViewFromDocument:(Document *)_document {
@@ -52,12 +52,25 @@
     
     if(!isPortrait) {
         self.view = landscape;
+        self.indicatorController = [[IndicatorController alloc] 
+                                    initWithNibName:@"IndicatorControllerLandscape" bundle:nil];  
     } else {
         self.view = portrait;
+        self.indicatorController = [[IndicatorController alloc] 
+                                    initWithNibName:@"IndicatorControllerPortrait" bundle:nil];   
     }
     
     [self setMenuControllers];    
-    [self setGestureRecognizer:self];    
+    [self setGestureRecognizer:self];   
+    
+    //-----------------------------------------------------------------
+    UIProgressView* aProgressView = [[UIProgressView alloc] initWithFrame:CGRectMake(50, 50, 100, 10)];
+	aProgressView.progressViewStyle = UIActivityIndicatorViewStyleGray;
+	aProgressView.progress= 0.0;
+	aProgressView.hidden = TRUE;
+	[[self view] addSubview:aProgressView];
+	self.progressDownload = aProgressView;
+	[aProgressView release];
 }
 
 - (IBAction) btnRequestCopyPressed {
@@ -93,6 +106,11 @@
 	
 }
 
+-(void)mailComposeController:(MFMailComposeViewController*)controller 
+         didFinishWithResult:(MFMailComposeResult)result error:(NSError*)error {
+    
+	[self dismissModalViewControllerAnimated:TRUE];
+}
 
 // ******************************************
 
@@ -122,8 +140,12 @@
 {
     if(!UIInterfaceOrientationIsPortrait(toInterfaceOrientation)) {
         self.view = landscape;
+        self.indicatorController = [[IndicatorController alloc] 
+                                    initWithNibName:@"IndicatorControllerLandscape" bundle:nil];  
     } else {
         self.view = portrait;
+        self.indicatorController = [[IndicatorController alloc] 
+                                    initWithNibName:@"IndicatorControllerPortrait" bundle:nil];   
     }
 }
 
@@ -147,35 +169,90 @@
 
 // ***************************************************
 
--(IBAction)actionOpenPlainDocument:(id)sender  {
-    
-    NSString *documentName = @"Wedge_Brochure";
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+-(void)downloadPDF:(NSString *)sourceURL andName:(NSString *)name andLanguage:(NSString*) language
+{	
+    NSArray * paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+	NSString* documentsDirectory = [paths objectAtIndex:0];
+    NSError **error;
 
-    NSString *thumbnailsPath = [[paths objectAtIndex:0] stringByAppendingPathComponent:[NSString stringWithFormat:@"%@",documentName]];
+    NSString *pdfPath = [documentsDirectory stringByAppendingPathComponent:[NSString stringWithFormat:@"PDFs/%@/%@.pdf", language, name]];
+    NSString *directory = [documentsDirectory stringByAppendingPathComponent:[NSString stringWithFormat:@"PDFs/%@/", language]];
+	NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@/%@/%@.pdf", sourceURL, language, name]];
     
-    NSURL *documentUrl = [NSURL fileURLWithPath:[[NSBundle mainBundle]pathForResource:documentName ofType:@"pdf"]];
+    NSFileManager *filemanager = [[NSFileManager alloc]init];
+	[filemanager createDirectoryAtPath:directory withIntermediateDirectories:YES attributes:nil error:error];
     
-    MFDocumentManager *documentManager = [[MFDocumentManager alloc]initWithFileUrl:documentUrl];
+    [filemanager release];
     
-    ReaderViewController *pdfViewController = [[ReaderViewController alloc]initWithDocumentManager:documentManager];
     
-    documentManager.resourceFolder = thumbnailsPath;
-
-    pdfViewController.documentId = documentName;    
-    pdfViewController.searchBarButtonItem.enabled = FALSE;
-    
-
-    [self presentModalViewController:pdfViewController animated:YES];
-    [pdfViewController release];
-    
+	ASIHTTPRequest *request = [ASIHTTPRequest requestWithURL:url];
+	[request setDelegate:self];	
+	[request setUseKeychainPersistence:YES];
+	[request setDownloadDestinationPath:pdfPath];
+	[request setDidFinishSelector:@selector(requestFinished:)];
+	[request setDidFailSelector:@selector(requestFailed:)];
+	
+	// Get the progressview from the mainviewcontroller and set it as the progress delegate.
+	[request setDownloadProgressDelegate:self.progressDownload];
+	[request setShouldPresentAuthenticationDialog:YES];
+	[request setDownloadDestinationPath:pdfPath];
+    [request setAllowResumeForFileDownloads:NO]; //set YEs if resume is supported 
+	
+	[request startAsynchronous];
 }
 
-
--(void)mailComposeController:(MFMailComposeViewController*)controller 
-       didFinishWithResult:(MFMailComposeResult)result error:(NSError*)error {
-    
-	[self dismissModalViewControllerAnimated:TRUE];
+-(void)requestFinished:(ASIHTTPRequest *)request{
+	// Hide the progress view.	
+	self.progressDownload.hidden = YES;
+    [self actionOpenPlainDocument:nil];
+    [self.indicatorController.view removeFromSuperview];
 }
 
+-(void)requestFailed:(ASIHTTPRequest *)request
+{	
+    // Hide the progress view.	
+	self.progressDownload.hidden = YES;
+    
+    UIAlertView* loadingAlert = [[UIAlertView alloc] initWithTitle:@"No conection" message:@"Please check your internet connection" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+    [loadingAlert show];
+    [loadingAlert release];
+    [self.indicatorController.view removeFromSuperview];
+}
+
+-(void)requestStarted:(ASIHTTPRequest *)request{
+    [self.view addSubview:indicatorController.view];
+    self.indicatorController.lblDocument.hidden = NO;
+}
+
+-(IBAction)actionOpenPlainDocument:(id)sender  
+{
+    //EL IDIOMA LO TIENE QUE TOMAR DEL BOTON QUE ESTA SELECCIONADO
+    NSString* selectedLang = @"en";
+ 
+    if(document.isEbook)
+    {
+        NSFileManager *fileManager = [[NSFileManager alloc]init];
+        NSArray * paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+        NSString* documentsDirectory = [paths objectAtIndex:0];
+        NSString *pdfPath = [documentsDirectory stringByAppendingPathComponent:[NSString stringWithFormat:@"PDFs/%@/%@.pdf", selectedLang, document.code]];
+	
+        if([fileManager fileExistsAtPath: pdfPath]) 
+        {
+            NSString *thumbnailsPath = [[paths objectAtIndex:0] stringByAppendingPathComponent:[NSString stringWithFormat:@"%@_%@", document.code, selectedLang]];
+     
+            NSURL *documentUrl = [NSURL fileURLWithPath:pdfPath];
+            MFDocumentManager *documentManager = [[MFDocumentManager alloc]initWithFileUrl:documentUrl];
+            ReaderViewController *pdfViewController = [[ReaderViewController alloc]initWithDocumentManager:documentManager];
+     
+            documentManager.resourceFolder = thumbnailsPath;
+            pdfViewController.documentId = [NSString stringWithFormat:@"%@_%@", document.code, selectedLang];    
+            pdfViewController.searchBarButtonItem.enabled = FALSE;
+            
+            [self presentModalViewController:pdfViewController animated:YES];
+            [pdfViewController release];
+        }
+        else
+            [self downloadPDF:@"http://tenarisbackend.theappmaster.com/elements" andName:document.code andLanguage:selectedLang];
+    }
+}
 @end

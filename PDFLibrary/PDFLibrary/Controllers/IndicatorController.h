@@ -12,8 +12,11 @@
 @interface IndicatorController : UIViewController {
 
 	UIActivityIndicatorView * actIndicatorView;
+    UILabel* lblDocument;
+    UILabel* lblLibrary;
 }
 
 @property (nonatomic, retain) IBOutlet UIActivityIndicatorView * actIndicatorView;
-
+@property (nonatomic, retain) IBOutlet UILabel* lblDocument;
+@property (nonatomic, retain) IBOutlet UILabel* lblLibrary;
 @end

@@ -10,7 +10,7 @@
 
 
 @implementation IndicatorController
-@synthesize actIndicatorView;
+@synthesize actIndicatorView, lblDocument, lblLibrary;
 
 - (void)viewDidLoad {
 	[actIndicatorView startAnimating];
@@ -29,6 +29,9 @@
 
 
 - (void)dealloc {
+    [lblLibrary release];
+    [lblDocument release];
+    [actIndicatorView release];
     [super dealloc];
 }
 

@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 #import "TenarisViewController.h"
+#import "ASIHTTPRequest.h"
 #import "Document.h"
 
 #import <MessageUI/MessageUI.h>
@@ -41,9 +42,12 @@
     
     // *******************************************
     
+	UIProgressView *progressDownload;
+    
 }
 
 @property (nonatomic, retain) Document * document;
+@property (nonatomic, retain) IBOutlet UIProgressView *progressDownload;
 
 // Ebook Actions
 - (void)updateViewFromDocument:(Document *)_document;
