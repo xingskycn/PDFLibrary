@@ -30,13 +30,13 @@
     
     lblTitlePortrait.text = self.document.title;
     lblLastUpdatePortrait.text = [FileSystem formatDate:self.document.updateDate];
-    lblUpperTitlePortrait.text = [self.document.description uppercaseString];
+    lblUpperTitlePortrait.text = self.document.upperTitle;
     lblDescriptionPortrait.text = self.document.description;
 
     
     lblTitleLandscape.text = self.document.title;
     lblLastUpdateLandscape.text = [FileSystem formatDate:self.document.updateDate];
-    lblUpperTitleLandscape.text = [self.document.description uppercaseString];
+    lblUpperTitleLandscape.text = self.document.upperTitle;
     lblDescriptionLandscape.text = self.document.description;    
     
     NSString * strFilename = [NSString stringWithFormat:@"%@.png", self.document.code];
