@@ -29,6 +29,7 @@
     IBOutlet UIButton * btnThumbail;
     IBOutlet UIButton * btnFeatured;
     IBOutlet UIButton * btnMyLibrary;
+    IBOutlet UIImageView * imgCaseStudy;
     
     Document * document;
     
@@ -45,6 +46,7 @@
 @property (nonatomic, retain) UIButton * btnThumbail;
 @property (nonatomic, retain) UIButton * btnFeatured;
 @property (nonatomic, retain) UIButton * btnMyLibrary;
+@property (nonatomic, retain) UIImageView * imgCaseStudy;
 
 @property (nonatomic, retain) Document * document;
 @property (nonatomic, retain) id delegate;

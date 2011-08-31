@@ -14,7 +14,7 @@
 @implementation DocumentCommonCell
 @synthesize btnTitle, btnFeatured, btnThumbail, btnDescription, btnLastUpdateTitle, 
             btnLastUpdateValue, btnSubtitlesAvailablesTitle, btnMyLibrary,
-            document, delegate, isBiggerCell;
+            document, delegate, isBiggerCell, imgCaseStudy;
 
 
 
@@ -95,6 +95,7 @@
     }
 
     self.btnMyLibrary.hidden = YES;
+    self.imgCaseStudy.hidden = !self.document.isCaseStudy;
     
     
 }
