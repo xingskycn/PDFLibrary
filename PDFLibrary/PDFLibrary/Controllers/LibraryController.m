@@ -78,6 +78,7 @@
 }
 
 // ****************************************************
+
 - (ScrollViewController*)loadContentViewWithPage:(NSInteger)pageIndex: (NSArray*) docs
 {
     if (pageIndex < 0 || pageIndex >= kNumberOfPages) 

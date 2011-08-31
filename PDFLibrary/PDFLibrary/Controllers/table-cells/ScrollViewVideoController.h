@@ -7,46 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Document.h"
+#import "ScrollViewDocumentCommonController.h"
 
-@protocol DocumentCommonCellDelegate<NSObject>
-- (void)goToDocument:(Document *)document;
-- (void)removeFromLibrary:(Document *)document;
-@end
+@interface ScrollViewVideoController : ScrollViewDocumentCommonController {
 
-@interface ScrollViewVideoController : UIViewController {
-    
-    IBOutlet UIButton * btnDescription;
-    IBOutlet UIButton * btnTitle;
-    IBOutlet UIButton * btnLastUpdateTitle;
-    IBOutlet UIButton * btnLastUpdateValue;
-    IBOutlet UIButton * btnSubtitlesAvailablesTitle;
-    IBOutlet UIButton * btnThumbail;
-    IBOutlet UIButton * btnFeatured;
-    IBOutlet UIButton * btnMyLibrary;
-    
-    Document * document;
-    BOOL hideMyLibrary;
-    id delegate;   
 }
-
-@property (nonatomic, retain) UIButton * btnDescription;
-@property (nonatomic, retain) UIButton * btnTitle;
-@property (nonatomic, retain) UIButton * btnLastUpdateTitle;
-@property (nonatomic, retain) UIButton * btnLastUpdateValue;
-@property (nonatomic, retain) UIButton * btnSubtitlesAvailablesTitle;
-@property (nonatomic, retain) UIButton * btnThumbail;
-@property (nonatomic, retain) UIButton * btnFeatured;
-@property (nonatomic, retain) UIButton * btnMyLibrary;
-@property (nonatomic, retain) id delegate;
-
-@property (nonatomic, retain) Document * document;
-
-- (id)initWithDocument:(Document*)doc:(BOOL)hideLibrary;
-- (IBAction)btnDocumentPressed;
-- (IBAction)btnRemoveMyLibraryPressed;
-- (void)updateFields;
-- (void)updateFieldsForLibrary;
-
 
 @end

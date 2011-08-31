@@ -58,6 +58,7 @@
 		2731248013DC84410056EBA3 /* landscape-library.png in Resources */ = {isa = PBXBuildFile; fileRef = 2731247C13DC843C0056EBA3 /* landscape-library.png */; };
 		2731248113DC84410056EBA3 /* portrait-library.png in Resources */ = {isa = PBXBuildFile; fileRef = 2731247D13DC843E0056EBA3 /* portrait-library.png */; };
 		2731248513DC86120056EBA3 /* LibraryController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2731248313DC86120056EBA3 /* LibraryController.xib */; };
+		274A6A89140EEBE900DE39CC /* ScrollViewDocumentCommonController.m in Sources */ = {isa = PBXBuildFile; fileRef = 274A6A88140EEBE900DE39CC /* ScrollViewDocumentCommonController.m */; };
 		2757476313FA12790093E65C /* ServiceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2757476213FA12790093E65C /* ServiceManager.m */; };
 		2757476613FA18E60093E65C /* Version.m in Sources */ = {isa = PBXBuildFile; fileRef = 2757476513FA18E60093E65C /* Version.m */; };
 		2757476913FA19300093E65C /* VersionDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 2757476813FA19300093E65C /* VersionDAO.m */; };
@@ -333,6 +334,8 @@
 		2731247C13DC843C0056EBA3 /* landscape-library.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "landscape-library.png"; path = "Resources/Images/landscape-library.png"; sourceTree = "<group>"; };
 		2731247D13DC843E0056EBA3 /* portrait-library.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "portrait-library.png"; path = "Resources/Images/portrait-library.png"; sourceTree = "<group>"; };
 		2731248313DC86120056EBA3 /* LibraryController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LibraryController.xib; path = XIBs/LibraryController.xib; sourceTree = "<group>"; };
+		274A6A87140EEBE900DE39CC /* ScrollViewDocumentCommonController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ScrollViewDocumentCommonController.h; path = "Controllers/table-cells/ScrollViewDocumentCommonController.h"; sourceTree = "<group>"; };
+		274A6A88140EEBE900DE39CC /* ScrollViewDocumentCommonController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ScrollViewDocumentCommonController.m; path = "Controllers/table-cells/ScrollViewDocumentCommonController.m"; sourceTree = "<group>"; };
 		2757476113FA12790093E65C /* ServiceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ServiceManager.h; path = Services/Core/ServiceManager.h; sourceTree = "<group>"; };
 		2757476213FA12790093E65C /* ServiceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ServiceManager.m; path = Services/Core/ServiceManager.m; sourceTree = "<group>"; };
 		2757476413FA18E60093E65C /* Version.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Version.h; path = Database/Domain/Version.h; sourceTree = "<group>"; };
@@ -763,6 +766,8 @@
 				BC92F981140D69B600EEEF26 /* ScrollViewVideoController.m */,
 				BC92F97D140D696A00EEEF26 /* ScrollViewBookController.h */,
 				BC92F97E140D696B00EEEF26 /* ScrollViewBookController.m */,
+				274A6A87140EEBE900DE39CC /* ScrollViewDocumentCommonController.h */,
+				274A6A88140EEBE900DE39CC /* ScrollViewDocumentCommonController.m */,
 			);
 			name = "table-cells";
 			sourceTree = "<group>";
@@ -1456,6 +1461,7 @@
 				276739B9140B14C400CE05B2 /* DocumentCommonCell.m in Sources */,
 				BC92F97F140D696C00EEEF26 /* ScrollViewBookController.m in Sources */,
 				BC92F982140D69B700EEEF26 /* ScrollViewVideoController.m in Sources */,
+				274A6A89140EEBE900DE39CC /* ScrollViewDocumentCommonController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
