@@ -503,7 +503,7 @@ A</string>
 					<object class="IBUIButton" id="693163003">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{392, 440}, {97, 24}}</string>
+						<string key="NSFrame">{{392, 440}, {88, 25}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="865960995"/>
@@ -1282,7 +1282,7 @@ A</string>
 					<object class="IBUIButton" id="510613110">
 						<reference key="NSNextResponder" ref="298818615"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{520, 378}, {97, 24}}</string>
+						<string key="NSFrame">{{519, 378}, {88, 25}}</string>
 						<reference key="NSSuperview" ref="298818615"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="624239386"/>
@@ -2728,7 +2728,7 @@ A</string>
 			<object class="NSMutableArray" key="dict.values">
 				<bool key="EncodedWithXMLCoder">YES</bool>
 				<string>{57, 25}</string>
-				<string>{97, 24}</string>
+				<string>{88, 25}</string>
 				<string>{148, 24}</string>
 				<string>{15, 15}</string>
 				<string>{118, 24}</string>
