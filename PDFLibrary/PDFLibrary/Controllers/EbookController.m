@@ -13,15 +13,103 @@
 #import "ReaderViewController.h"
 
 #import "DocumentDAO.h"
+#import "LanguageDAO.h"
 #import "FileSystem.h"
 
 @implementation EbookController
-@synthesize document, progressDownload;
+@synthesize document, progressDownload, language;
+
+
+// **************************************************
+
+- (void)hideSubtitles {
+    
+    for (int i=10; i <= 22; i++) {
+        
+        UIButton * btnLandscape = (UIButton *)[self.landscape viewWithTag:(i)];
+        UIButton * btnPortrait  = (UIButton *)[self.portrait viewWithTag:(i + 13)]; 
+        btnLandscape.hidden = YES;
+        btnPortrait.hidden  = YES;
+        
+        [btnLandscape setBackgroundImage:[UIImage imageNamed:@"btn-subtitle-off.png"] 
+                      forState:UIControlStateNormal];
+        [btnPortrait setBackgroundImage:[UIImage imageNamed:@"btn-subtitle-off.png"] 
+                     forState:UIControlStateNormal];
+    }
+}
+
+- (void)showSubtitles {
+    
+    int qty = [document.languages count];
+    
+    if(!qty) {
+        return;
+    }
+    
+    // Max items on screen
+    if (qty > 13) {
+        qty = 13;
+    }
+    
+    // Visible
+    for(int i = 0; i < qty; i++) {
+        
+        Language * currentLanguage = (Language *)[document.languages objectAtIndex:i];
+        
+        UIButton * btnLandscape = (UIButton *)[self.landscape viewWithTag:(i + 10)];
+        UIButton * btnPortrait  = (UIButton *)[self.portrait viewWithTag:(i + 10 + 13)];        
+        btnLandscape.hidden = NO;
+        btnPortrait.hidden = NO;
+        
+        [btnLandscape setTitle:currentLanguage.code forState:UIControlStateNormal];
+        [btnPortrait  setTitle:currentLanguage.code forState:UIControlStateNormal];        
+        
+        if(currentLanguage.id == language.id) {
+            
+            [btnLandscape setBackgroundImage:[UIImage imageNamed:@"btn-subtitle-on.png"] forState:UIControlStateNormal];
+            [btnPortrait setBackgroundImage:[UIImage imageNamed:@"btn-subtitle-on.png"] forState:UIControlStateNormal];
+        }
+    }
+    
+}
+
+- (IBAction) btnSelectLanguagePressed:(id)sender {
+    
+    UIDeviceOrientation orientation = [UIApplication sharedApplication].statusBarOrientation;
+    BOOL isPortrait = UIInterfaceOrientationIsPortrait(orientation);
+    
+    UIButton * btn = (UIButton *)sender;
+    int tag = btn.tag;
+    int index = 0;
+    if (isPortrait) {
+        index = tag - 23;
+    } else {
+        index = tag - 10;
+    }
+    
+    language = [self.document.languages objectAtIndex:index];
+    
+    [self hideSubtitles];
+    [self showSubtitles];
+    [self actionOpenPlainDocument:nil];
+    
+}
+
+// *************************************************************
+
 
 - (void)updateMyLibraryImage:(BOOL)currentStatus {
+    
     NSString * strFilename = currentStatus ? @"btn-my-library-off.png" : @"btn-my-library.png";
     [btnUpdateLibraryPortrait  setBackgroundImage:[UIImage imageNamed:strFilename] forState:UIControlStateNormal];
     [btnUpdateLibraryLandscape setBackgroundImage:[UIImage imageNamed:strFilename] forState:UIControlStateNormal];    
+}
+
+- (void)updateViewFromDocument:(Document *)_document andLanguage:(Language *)newLanguage {
+    
+    language = newLanguage;
+    [self updateViewFromDocument:_document];
+    
 }
 
 - (void)updateViewFromDocument:(Document *)_document {
@@ -45,6 +133,9 @@
     [btnThumbailPortrait  setBackgroundImage:imgThumbail forState:UIControlStateNormal];
     
     [self updateMyLibraryImage:self.document.inLibrary];
+    
+    [self hideSubtitles];
+    [self showSubtitles];
 }
 
 // *********************************************************
@@ -77,6 +168,11 @@
 	[[self view] addSubview:aProgressView];
 	self.progressDownload = aProgressView;
 	[aProgressView release];
+    
+    if(!language) {
+        language = [LanguageDAO getLanguageById:3];
+    }
+    
 }
 
 - (IBAction) btnRequestCopyPressed {
@@ -91,8 +187,11 @@
 {
     if(![MFMailComposeViewController canSendMail])
     {
-        UIAlertView* loadingAlert = [[UIAlertView alloc] initWithTitle:nil message:@"There is no configured mail account." delegate:self 
-                                                     cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        UIAlertView* loadingAlert = [[UIAlertView alloc] initWithTitle:nil 
+                                                         message:@"There is no configured mail account." 
+                                                         delegate:self 
+                                                         cancelButtonTitle:@"OK"
+                                                         otherButtonTitles:nil];
         [loadingAlert show];
 		[loadingAlert release];  
         return;
@@ -171,15 +270,18 @@
 
 // ***************************************************
 
--(void)downloadPDF:(NSString *)sourceURL andName:(NSString *)name andLanguage:(NSString*) language
+-(void)downloadPDF:(NSString *)sourceURL andName:(NSString *)name andLanguage:(NSString*) currentLanguage
 {	
     NSArray * paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
 	NSString* documentsDirectory = [paths objectAtIndex:0];
     NSError **error;
 
-    NSString *pdfPath = [documentsDirectory stringByAppendingPathComponent:[NSString stringWithFormat:@"PDFs/%@/%@.pdf", language, name]];
-    NSString *directory = [documentsDirectory stringByAppendingPathComponent:[NSString stringWithFormat:@"PDFs/%@/", language]];
-	NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@/%@/%@.pdf", sourceURL, language, name]];
+    NSString *pdfPath = [documentsDirectory stringByAppendingPathComponent:
+                         [NSString stringWithFormat:@"PDFs/%@/%@.pdf", currentLanguage, name]];
+    NSString *directory = [documentsDirectory stringByAppendingPathComponent:
+                           [NSString stringWithFormat:@"PDFs/%@/", currentLanguage]];
+	NSURL *url = [NSURL URLWithString:
+                  [NSString stringWithFormat:@"%@/%@/%@.pdf", sourceURL, currentLanguage, name]];
     
     NSFileManager *filemanager = [[NSFileManager alloc]init];
 	[filemanager createDirectoryAtPath:directory withIntermediateDirectories:YES attributes:nil error:error];
@@ -228,23 +330,26 @@
 
 -(IBAction)actionOpenPlainDocument:(id)sender  
 {
-    //EL IDIOMA LO TIENE QUE TOMAR DEL BOTON QUE ESTA SELECCIONADO
-    NSString* selectedLang = @"en";
+    NSString* selectedLang = language.code;
  
     if(document.isEbook)
     {
         NSFileManager *fileManager = [[NSFileManager alloc]init];
         NSArray * paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
         NSString* documentsDirectory = [paths objectAtIndex:0];
-        NSString *pdfPath = [documentsDirectory stringByAppendingPathComponent:[NSString stringWithFormat:@"PDFs/%@/%@.pdf", selectedLang, document.code]];
+        NSString *pdfPath = [documentsDirectory stringByAppendingPathComponent:
+                             [NSString stringWithFormat:@"PDFs/%@/%@.pdf", selectedLang, document.code]];
 	
         if([fileManager fileExistsAtPath: pdfPath]) 
         {
-            NSString *thumbnailsPath = [[paths objectAtIndex:0] stringByAppendingPathComponent:[NSString stringWithFormat:@"%@_%@", document.code, selectedLang]];
+            NSString *thumbnailsPath = [[paths objectAtIndex:0] 
+                                        stringByAppendingPathComponent:
+                                        [NSString stringWithFormat:@"%@_%@", document.code, selectedLang]];
      
             NSURL *documentUrl = [NSURL fileURLWithPath:pdfPath];
             MFDocumentManager *documentManager = [[MFDocumentManager alloc]initWithFileUrl:documentUrl];
-            ReaderViewController *pdfViewController = [[ReaderViewController alloc]initWithDocumentManager:documentManager];
+            ReaderViewController *pdfViewController = [[ReaderViewController alloc] 
+                                                       initWithDocumentManager:documentManager];
      
             documentManager.resourceFolder = thumbnailsPath;
             pdfViewController.documentId = [NSString stringWithFormat:@"%@_%@", document.code, selectedLang];    
@@ -253,8 +358,10 @@
             [self presentModalViewController:pdfViewController animated:YES];
             [pdfViewController release];
         }
-        else
-            [self downloadPDF:@"http://tenarisbackend.theappmaster.com/elements" andName:document.code andLanguage:selectedLang];
+        else {
+            [self downloadPDF:@"http://tenarisbackend.theappmaster.com/elements" 
+                      andName:document.code andLanguage:selectedLang];
+        }
     }
 }
 @end

@@ -86,7 +86,7 @@
     
     EbookController * controller = [[EbookController alloc] init];    
     [self.navigationController pushViewController:controller animated:YES];
-    [controller updateViewFromDocument:document];
+    [controller updateViewFromDocument:document andLanguage:language];
     [controller release];
     
 }

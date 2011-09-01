@@ -11,6 +11,7 @@
 #import "TenarisViewController.h"
 #import "ASIHTTPRequest.h"
 #import "Document.h"
+#import "Language.h"
 
 #import <MessageUI/MessageUI.h>
 
@@ -44,17 +45,21 @@
     
 	UIProgressView *progressDownload;
     
+    Language * language;
 }
 
 @property (nonatomic, retain) Document * document;
+@property (nonatomic, retain) Language * language;
 @property (nonatomic, retain) IBOutlet UIProgressView *progressDownload;
 
 // Ebook Actions
 - (void)updateViewFromDocument:(Document *)_document;
+- (void)updateViewFromDocument:(Document *)_document andLanguage:(Language *)language;
 
 - (IBAction) btnRequestCopyPressed;
-- (IBAction) actionOpenPlainDocument:(id)sender;;
+- (IBAction) actionOpenPlainDocument:(id)sender;
 - (IBAction) btnSendByMail:(id)sender;
 - (IBAction) btnUpdateLibraryPressed;
+- (IBAction) btnSelectLanguagePressed:(id)sender;
 
 @end
