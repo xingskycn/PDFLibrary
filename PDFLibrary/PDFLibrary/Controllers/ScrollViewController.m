@@ -9,7 +9,7 @@
 #import "ScrollViewController.h"
 #import "ScrollViewBookController.h"
 #import "ScrollViewVideoController.h"
-#import "EbookController.h"
+#import "DocumentController.h"
 #import "Document.h"
 
 #define DOCSxPAGE 6
@@ -70,11 +70,11 @@
 
 - (void)goToDocument:(Document *)document {
     
-    EbookController * controller;
+    DocumentController * controller;
     if(document.isEbook) {
-        controller = [[EbookController alloc] init];    
+        controller = [[DocumentController alloc] init];    
     } else {
-        controller = [[EbookController alloc] initWithNibName:@"VideoController" bundle:nil];    
+        controller = [[DocumentController alloc] initWithNibName:@"VideoController" bundle:nil];    
     }
     [self.nav pushViewController:controller animated:YES];
     [controller updateViewFromDocument:document];

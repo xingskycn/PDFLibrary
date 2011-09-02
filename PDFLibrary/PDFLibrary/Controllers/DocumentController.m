@@ -1,12 +1,12 @@
 //
-//  EbookController.m
+//  DocumentController.m
 //  PDFLibrary
 //
 //  Created by Gonzalo Aizpun on 7/18/11.
 //  Copyright 2011 TheAppMaster. All rights reserved.
 //
 
-#import "EbookController.h"
+#import "DocumentController.h"
 #import "RequestCopyController.h"
 
 #import "MFDocumentManager.h"
@@ -16,7 +16,7 @@
 #import "LanguageDAO.h"
 #import "FileSystem.h"
 
-@implementation EbookController
+@implementation DocumentController
 @synthesize document, progressDownload, language;
 
 

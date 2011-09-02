@@ -1,5 +1,5 @@
 //
-//  EbookController.h
+//  DocumentController.h
 //  PDFLibrary
 //
 //  Created by Gonzalo Aizpun on 7/18/11.
@@ -16,7 +16,7 @@
 #import <MessageUI/MessageUI.h>
 
 @class MFDocumentManager;
-@interface EbookController : TenarisViewController<UIGestureRecognizerDelegate,  MFMailComposeViewControllerDelegate> {
+@interface DocumentController : TenarisViewController<UIGestureRecognizerDelegate,  MFMailComposeViewControllerDelegate> {
 
     // *******************************************
     

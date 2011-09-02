@@ -8,7 +8,7 @@
 
 #import "HomeController.h"
 #import "CategoryController.h"
-#import "EbookController.h"
+#import "DocumentController.h"
 
 #import "VersionDAO.h"
 #import "CategoryDAO.h"
@@ -35,11 +35,11 @@ BOOL alreadyCallUpdateService = NO;
 
 - (IBAction) btnFeaturedPressed {
     
-    EbookController * controller;
+    DocumentController * controller;
     if(document.isEbook) {
-        controller = [[EbookController alloc] init];    
+        controller = [[DocumentController alloc] init];    
     } else {
-        controller = [[EbookController alloc] initWithNibName:@"VideoController" bundle:nil];    
+        controller = [[DocumentController alloc] initWithNibName:@"VideoController" bundle:nil];    
     } 
     [self.navigationController pushViewController:controller animated:YES];
     [controller release];

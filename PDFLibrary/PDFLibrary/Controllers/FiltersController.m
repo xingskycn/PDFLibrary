@@ -7,7 +7,7 @@
 //
 
 #import "FiltersController.h"
-#import "EbookController.h"
+#import "DocumentController.h"
 #import "DocumentDAO.h"
 #import "CategoryDAO.h"
 
@@ -84,11 +84,11 @@
 
 - (void)goToDocument:(Document *)document {
     
-    EbookController * controller;
+    DocumentController * controller;
     if(document.isEbook) {
-        controller = [[EbookController alloc] init];    
+        controller = [[DocumentController alloc] init];    
     } else {
-        controller = [[EbookController alloc] initWithNibName:@"VideoController" bundle:nil];    
+        controller = [[DocumentController alloc] initWithNibName:@"VideoController" bundle:nil];    
     }
     [self.navigationController pushViewController:controller animated:YES];
     [controller updateViewFromDocument:document andLanguage:language];

@@ -21,7 +21,7 @@
 		2731242713D9FCC50056EBA3 /* btn-subtitle-off.png in Resources */ = {isa = PBXBuildFile; fileRef = 2731242113D9FCC50056EBA3 /* btn-subtitle-off.png */; };
 		2731242813D9FCC50056EBA3 /* btn-subtitle-on.png in Resources */ = {isa = PBXBuildFile; fileRef = 2731242213D9FCC50056EBA3 /* btn-subtitle-on.png */; };
 		2731242913D9FCC50056EBA3 /* img-ebook-big.png in Resources */ = {isa = PBXBuildFile; fileRef = 2731242313D9FCC50056EBA3 /* img-ebook-big.png */; };
-		2731242C13D9FE820056EBA3 /* EbookController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2731242B13D9FE820056EBA3 /* EbookController.m */; };
+		2731242C13D9FE820056EBA3 /* DocumentController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2731242B13D9FE820056EBA3 /* DocumentController.m */; };
 		2731243013D9FF0E0056EBA3 /* EbookController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2731242E13D9FF0E0056EBA3 /* EbookController.xib */; };
 		2731243313DA249B0056EBA3 /* RequestCopyController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2731243213DA249B0056EBA3 /* RequestCopyController.m */; };
 		2731243713DA24B50056EBA3 /* RequestCopyController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2731243513DA24B40056EBA3 /* RequestCopyController.xib */; };
@@ -295,8 +295,8 @@
 		2731242113D9FCC50056EBA3 /* btn-subtitle-off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "btn-subtitle-off.png"; path = "Resources/Images/btn-subtitle-off.png"; sourceTree = "<group>"; };
 		2731242213D9FCC50056EBA3 /* btn-subtitle-on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "btn-subtitle-on.png"; path = "Resources/Images/btn-subtitle-on.png"; sourceTree = "<group>"; };
 		2731242313D9FCC50056EBA3 /* img-ebook-big.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "img-ebook-big.png"; path = "Resources/Images/img-ebook-big.png"; sourceTree = "<group>"; };
-		2731242A13D9FE820056EBA3 /* EbookController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EbookController.h; path = Controllers/EbookController.h; sourceTree = "<group>"; };
-		2731242B13D9FE820056EBA3 /* EbookController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EbookController.m; path = Controllers/EbookController.m; sourceTree = "<group>"; };
+		2731242A13D9FE820056EBA3 /* DocumentController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DocumentController.h; path = Controllers/DocumentController.h; sourceTree = "<group>"; };
+		2731242B13D9FE820056EBA3 /* DocumentController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DocumentController.m; path = Controllers/DocumentController.m; sourceTree = "<group>"; };
 		2731242E13D9FF0E0056EBA3 /* EbookController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = EbookController.xib; path = XIBs/EbookController.xib; sourceTree = "<group>"; };
 		2731243113DA249B0056EBA3 /* RequestCopyController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RequestCopyController.h; path = Controllers/RequestCopyController.h; sourceTree = "<group>"; };
 		2731243213DA249B0056EBA3 /* RequestCopyController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RequestCopyController.m; path = Controllers/RequestCopyController.m; sourceTree = "<group>"; };
@@ -928,8 +928,8 @@
 				2731243F13DB7B1B0056EBA3 /* FiltersController.m */,
 				2731243113DA249B0056EBA3 /* RequestCopyController.h */,
 				2731243213DA249B0056EBA3 /* RequestCopyController.m */,
-				2731242A13D9FE820056EBA3 /* EbookController.h */,
-				2731242B13D9FE820056EBA3 /* EbookController.m */,
+				2731242A13D9FE820056EBA3 /* DocumentController.h */,
+				2731242B13D9FE820056EBA3 /* DocumentController.m */,
 				27F537EC13D9C25100A9B2A5 /* ContactController.h */,
 				27F537ED13D9C25100A9B2A5 /* ContactController.m */,
 				27D23B0413D46F29000D3FD5 /* HomeController.h */,
@@ -1415,7 +1415,7 @@
 				27D23AF713D462DF000D3FD5 /* main.m in Sources */,
 				27D23B0613D46F29000D3FD5 /* HomeController.m in Sources */,
 				27F537EE13D9C25100A9B2A5 /* ContactController.m in Sources */,
-				2731242C13D9FE820056EBA3 /* EbookController.m in Sources */,
+				2731242C13D9FE820056EBA3 /* DocumentController.m in Sources */,
 				2731243313DA249B0056EBA3 /* RequestCopyController.m in Sources */,
 				2731244013DB7B1B0056EBA3 /* FiltersController.m in Sources */,
 				2731247913DC83B50056EBA3 /* LibraryController.m in Sources */,
