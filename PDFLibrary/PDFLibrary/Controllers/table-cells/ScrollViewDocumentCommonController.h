@@ -21,6 +21,7 @@
     IBOutlet UIButton * btnFeatured;
     IBOutlet UIButton * btnMyLibrary;
     IBOutlet UIButton * btnCaseStudy;
+    IBOutlet UIButton * btnUpperTitle;
     
     Document * document;
     BOOL hideMyLibrary;
@@ -36,6 +37,7 @@
 @property (nonatomic, retain) UIButton * btnFeatured;
 @property (nonatomic, retain) UIButton * btnMyLibrary;
 @property (nonatomic, retain) UIButton * btnCaseStudy;
+@property (nonatomic, retain) UIButton * btnUpperTitle;
 
 @property (nonatomic, retain) Document * document;
 @property (nonatomic, retain) id delegate;

@@ -9,15 +9,19 @@
 #import <UIKit/UIKit.h>
 
 #import "TenarisViewController.h"
+#import "ScrollViewDocumentCommonController.h"
 #import "ServiceManager.h"
 #import "ServiceImage.h"
 #import "Document.h"
 #import "DocumentDAO.h"
+#import "DocumentCommonCell.h"
 
-@interface HomeController : TenarisViewController<UIGestureRecognizerDelegate, ServiceManagerDelegate> {
+
+@interface HomeController : TenarisViewController<UIGestureRecognizerDelegate, ServiceManagerDelegate, DocumentCommonCellDelegate> {
 
     Document * document;
-    
+    IBOutlet UIView * viewForFeaturedPortrait;
+    IBOutlet UIView * viewForFeaturedLandscape;
 }
 
 - (void)loadCategories;

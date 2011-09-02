@@ -61,6 +61,12 @@
 		274A6A89140EEBE900DE39CC /* ScrollViewDocumentCommonController.m in Sources */ = {isa = PBXBuildFile; fileRef = 274A6A88140EEBE900DE39CC /* ScrollViewDocumentCommonController.m */; };
 		274A6A8B14105A8700DE39CC /* VideoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 274A6A8A14105A8700DE39CC /* VideoController.xib */; };
 		274A6A8E14105AF000DE39CC /* img-novideo.png in Resources */ = {isa = PBXBuildFile; fileRef = 274A6A8C14105AF000DE39CC /* img-novideo.png */; };
+		274A6A9314106B4F00DE39CC /* HomeVideoPortrait.xib in Resources */ = {isa = PBXBuildFile; fileRef = 274A6A9214106B4F00DE39CC /* HomeVideoPortrait.xib */; };
+		274A6A9514106DE800DE39CC /* landscape-home-video.png in Resources */ = {isa = PBXBuildFile; fileRef = 274A6A9414106DE700DE39CC /* landscape-home-video.png */; };
+		274A6A9714106E0400DE39CC /* portrait-home-video.png in Resources */ = {isa = PBXBuildFile; fileRef = 274A6A9614106E0400DE39CC /* portrait-home-video.png */; };
+		274A6A991410722800DE39CC /* HomeEbookPortrait.xib in Resources */ = {isa = PBXBuildFile; fileRef = 274A6A981410722800DE39CC /* HomeEbookPortrait.xib */; };
+		274A6A9B1410745900DE39CC /* HomeEbookLandscape.xib in Resources */ = {isa = PBXBuildFile; fileRef = 274A6A9A1410745900DE39CC /* HomeEbookLandscape.xib */; };
+		274A6A9D141075BA00DE39CC /* HomeVideoLandscape.xib in Resources */ = {isa = PBXBuildFile; fileRef = 274A6A9C141075BA00DE39CC /* HomeVideoLandscape.xib */; };
 		2757476313FA12790093E65C /* ServiceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2757476213FA12790093E65C /* ServiceManager.m */; };
 		2757476613FA18E60093E65C /* Version.m in Sources */ = {isa = PBXBuildFile; fileRef = 2757476513FA18E60093E65C /* Version.m */; };
 		2757476913FA19300093E65C /* VersionDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 2757476813FA19300093E65C /* VersionDAO.m */; };
@@ -340,6 +346,12 @@
 		274A6A88140EEBE900DE39CC /* ScrollViewDocumentCommonController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ScrollViewDocumentCommonController.m; path = "Controllers/table-cells/ScrollViewDocumentCommonController.m"; sourceTree = "<group>"; };
 		274A6A8A14105A8700DE39CC /* VideoController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = VideoController.xib; path = XIBs/VideoController.xib; sourceTree = "<group>"; };
 		274A6A8C14105AF000DE39CC /* img-novideo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "img-novideo.png"; path = "Resources/Images/img-novideo.png"; sourceTree = "<group>"; };
+		274A6A9214106B4F00DE39CC /* HomeVideoPortrait.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HomeVideoPortrait.xib; path = XIBs/homepage/HomeVideoPortrait.xib; sourceTree = "<group>"; };
+		274A6A9414106DE700DE39CC /* landscape-home-video.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "landscape-home-video.png"; path = "Resources/Images/landscape-home-video.png"; sourceTree = "<group>"; };
+		274A6A9614106E0400DE39CC /* portrait-home-video.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "portrait-home-video.png"; path = "Resources/Images/portrait-home-video.png"; sourceTree = "<group>"; };
+		274A6A981410722800DE39CC /* HomeEbookPortrait.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HomeEbookPortrait.xib; path = XIBs/homepage/HomeEbookPortrait.xib; sourceTree = "<group>"; };
+		274A6A9A1410745900DE39CC /* HomeEbookLandscape.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HomeEbookLandscape.xib; path = XIBs/homepage/HomeEbookLandscape.xib; sourceTree = "<group>"; };
+		274A6A9C141075BA00DE39CC /* HomeVideoLandscape.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HomeVideoLandscape.xib; path = XIBs/homepage/HomeVideoLandscape.xib; sourceTree = "<group>"; };
 		2757476113FA12790093E65C /* ServiceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ServiceManager.h; path = Services/Core/ServiceManager.h; sourceTree = "<group>"; };
 		2757476213FA12790093E65C /* ServiceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ServiceManager.m; path = Services/Core/ServiceManager.m; sourceTree = "<group>"; };
 		2757476413FA18E60093E65C /* Version.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Version.h; path = Database/Domain/Version.h; sourceTree = "<group>"; };
@@ -639,6 +651,7 @@
 		2731246E13DB7B7B0056EBA3 /* bg-landscape */ = {
 			isa = PBXGroup;
 			children = (
+				274A6A9414106DE700DE39CC /* landscape-home-video.png */,
 				2776EDE114031EF90017EF4D /* landscape-search.png */,
 				27B3187A13DCE48E0088B87F /* landscape-category.png */,
 				2731247C13DC843C0056EBA3 /* landscape-library.png */,
@@ -655,6 +668,7 @@
 		2731246F13DB7B910056EBA3 /* bg-portrait */ = {
 			isa = PBXGroup;
 			children = (
+				274A6A9614106E0400DE39CC /* portrait-home-video.png */,
 				2776EDE314031F060017EF4D /* portrait-search.png */,
 				27B3187B13DCE48E0088B87F /* portrait-category.png */,
 				2731247D13DC843E0056EBA3 /* portrait-library.png */,
@@ -693,6 +707,17 @@
 				27F537E913D51BA000A9B2A5 /* popover-languages.png */,
 			);
 			name = other;
+			sourceTree = "<group>";
+		};
+		274A6A9114106B1700DE39CC /* homepage */ = {
+			isa = PBXGroup;
+			children = (
+				274A6A9C141075BA00DE39CC /* HomeVideoLandscape.xib */,
+				274A6A9A1410745900DE39CC /* HomeEbookLandscape.xib */,
+				274A6A981410722800DE39CC /* HomeEbookPortrait.xib */,
+				274A6A9214106B4F00DE39CC /* HomeVideoPortrait.xib */,
+			);
+			name = homepage;
 			sourceTree = "<group>";
 		};
 		2757476013FA124D0093E65C /* Core */ = {
@@ -890,6 +915,7 @@
 		27D23AE613D4602D000D3FD5 /* XIBs */ = {
 			isa = PBXGroup;
 			children = (
+				274A6A9114106B1700DE39CC /* homepage */,
 				2776EDA6140050EB0017EF4D /* table-cells */,
 				27B3188F13ED9FF60088B87F /* StartUpController.xib */,
 				27B3188413DCE7C30088B87F /* CategoryController.xib */,
@@ -1401,6 +1427,12 @@
 				BC92F986140D977A00EEEF26 /* icon-case-study.png in Resources */,
 				274A6A8B14105A8700DE39CC /* VideoController.xib in Resources */,
 				274A6A8E14105AF000DE39CC /* img-novideo.png in Resources */,
+				274A6A9314106B4F00DE39CC /* HomeVideoPortrait.xib in Resources */,
+				274A6A9514106DE800DE39CC /* landscape-home-video.png in Resources */,
+				274A6A9714106E0400DE39CC /* portrait-home-video.png in Resources */,
+				274A6A991410722800DE39CC /* HomeEbookPortrait.xib in Resources */,
+				274A6A9B1410745900DE39CC /* HomeEbookLandscape.xib in Resources */,
+				274A6A9D141075BA00DE39CC /* HomeVideoLandscape.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

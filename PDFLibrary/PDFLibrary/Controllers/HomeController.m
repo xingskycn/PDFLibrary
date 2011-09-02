@@ -12,8 +12,11 @@
 
 #import "VersionDAO.h"
 #import "CategoryDAO.h"
+#import "DocumentDAO.h"
 
+#import "Document.h"
 #import "FileSystem.h"
+
 
 @implementation HomeController
 BOOL alreadyCallUpdateService = NO;
@@ -33,21 +36,44 @@ BOOL alreadyCallUpdateService = NO;
 }
 
 
-- (IBAction) btnFeaturedPressed {
+// ********************************
+
+
+- (void)loadFeaturedView {
     
-    DocumentController * controller;
-    if(document.isEbook) {
-        controller = [[DocumentController alloc] initWithNibName:@"EbookController" bundle:nil];      
+    NSString * nibPortrait  = @"";
+    NSString * nibLandscape = @"";
+    
+    if (document.isEbook) {
+            
+        nibPortrait  = @"HomeEbookPortrait";
+        nibLandscape = @"HomeEbookLandscape";
+            
     } else {
-        controller = [[DocumentController alloc] initWithNibName:@"VideoController" bundle:nil];    
-    } 
-    [self.navigationController pushViewController:controller animated:YES];
-    [controller release];
+
+        nibPortrait  = @"HomeVideoPortrait";
+        nibLandscape = @"HomeVideoLandscape";        
+        
+    }
+    
+    
+    ScrollViewDocumentCommonController * controllerP = 
+        [[ScrollViewDocumentCommonController alloc] initWithNibName:nibPortrait bundle:nil];
+
+    
+    ScrollViewDocumentCommonController * controllerL = 
+    [[ScrollViewDocumentCommonController alloc] initWithNibName:nibLandscape bundle:nil];
+    
+    
+    controllerL.document = document;
+    controllerL.delegate = self;
+    controllerP.document = document;
+    controllerP.delegate = self;
+    
+    [viewForFeaturedPortrait addSubview:controllerP.view];
+    [viewForFeaturedLandscape addSubview:controllerL.view];
     
 }
-
-
-// ********************************
 
 
 - (void)viewWillAppear:(BOOL)animated
@@ -78,7 +104,12 @@ BOOL alreadyCallUpdateService = NO;
     }
     
     [self setMenuControllers];    
-    [self setGestureRecognizer:self];    
+    [self setGestureRecognizer:self];   
+    
+    document = [DocumentDAO getDocumentForHomepage];
+    document.description = [NSString stringWithFormat:@"%@...",
+                            [document.description substringToIndex:230]];
+    [self loadFeaturedView];
 
 }
 
@@ -141,6 +172,7 @@ BOOL alreadyCallUpdateService = NO;
 {
     [VersionDAO saveNewUpdates:data];
     [ServiceImage downloadNewImages];
+    document = [DocumentDAO getDocumentForHomepage];
     [self loadCategories];
     [self setMenuControllers];
     
@@ -150,6 +182,26 @@ BOOL alreadyCallUpdateService = NO;
 - (void)serviceFailed:(NSString * )errorMsg 
 {
     [self.indicatorController.view removeFromSuperview];
+}
+
+
+- (void)goToDocument:(Document *)_document {
+    
+    DocumentController * controller;
+    if(document.isEbook) {
+        controller = [[DocumentController alloc] initWithNibName:@"EbookController" bundle:nil];      
+    } else {
+        controller = [[DocumentController alloc] initWithNibName:@"VideoController" bundle:nil];    
+    } 
+
+    [self.navigationController pushViewController:controller animated:YES];
+    [controller updateViewFromDocument:document];        
+    [controller release];
+    
+}
+
+- (void)removeFromLibrary:(Document *)document {
+    // not used here
 }
 
 @end

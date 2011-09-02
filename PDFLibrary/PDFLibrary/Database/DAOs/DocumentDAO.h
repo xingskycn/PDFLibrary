@@ -30,6 +30,8 @@ typedef enum {
                             sort:(int)sortId;
 
 + (Document *)getDocumentById:(NSInteger)id;
++ (Document *)getDocumentForHomepage;
+
 + (void)updateLibraryStatus:(BOOL)inLibrary forDocument:(NSInteger)documentId;
 
 @end

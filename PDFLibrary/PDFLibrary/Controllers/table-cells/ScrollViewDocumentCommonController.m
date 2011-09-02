@@ -13,7 +13,7 @@
 @implementation ScrollViewDocumentCommonController
 @synthesize btnTitle, btnFeatured, btnThumbail, btnDescription, btnLastUpdateTitle, 
 btnLastUpdateValue, btnSubtitlesAvailablesTitle, btnMyLibrary,
-document, delegate, btnCaseStudy;
+document, delegate, btnCaseStudy, btnUpperTitle;
 
 
 - (id)initWithDocument:(Document*)doc:(BOOL)hideLibrary
@@ -79,8 +79,10 @@ document, delegate, btnCaseStudy;
     [self showSubtitles];
     [self setDocumentImage];
     
-    [self.btnTitle       setTitle:self.document.title forState:UIControlStateNormal];
-    [self.btnDescription setTitle:self.document.upperTitle forState:UIControlStateNormal];
+    [self.btnTitle       setTitle:self.document.title       forState:UIControlStateNormal];
+    [self.btnUpperTitle  setTitle:self.document.upperTitle  forState:UIControlStateNormal];
+    [self.btnDescription setTitle:self.document.description forState:UIControlStateNormal];
+    
     [self.btnLastUpdateValue setTitle:[FileSystem formatDate:self.document.updateDate] 
                              forState:UIControlStateNormal];
     

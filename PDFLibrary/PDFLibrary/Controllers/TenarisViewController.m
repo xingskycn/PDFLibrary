@@ -9,7 +9,7 @@
 #import "TenarisViewController.h"
 
 #import "HomeController.h"
-#import "EbookController.h"
+#import "DocumentController.h"
 #import "LibraryController.h"
 #import "CategoryController.h"
 #import "ContactController.h"

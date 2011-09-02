@@ -605,14 +605,6 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">btnDescription</string>
-						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="122370363"/>
-					</object>
-					<int key="connectionID">16</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">btnTitle</string>
 						<reference key="source" ref="372490531"/>
 						<reference key="destination" ref="424286037"/>
@@ -867,6 +859,14 @@
 						<int key="IBEventType">7</int>
 					</object>
 					<int key="connectionID">62</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">btnUpperTitle</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="122370363"/>
+					</object>
+					<int key="connectionID">63</int>
 				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -1139,7 +1139,7 @@
 				<reference key="dict.values" ref="0"/>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">62</int>
+			<int key="maxID">63</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -1192,9 +1192,11 @@
 							<string>btnSubtitlesAvailablesTitle</string>
 							<string>btnThumbail</string>
 							<string>btnTitle</string>
+							<string>btnUpperTitle</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>UIButton</string>
 							<string>UIButton</string>
 							<string>UIButton</string>
 							<string>UIButton</string>
@@ -1219,6 +1221,7 @@
 							<string>btnSubtitlesAvailablesTitle</string>
 							<string>btnThumbail</string>
 							<string>btnTitle</string>
+							<string>btnUpperTitle</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
@@ -1256,6 +1259,10 @@
 							</object>
 							<object class="IBToOneOutletInfo">
 								<string key="name">btnTitle</string>
+								<string key="candidateClassName">UIButton</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">btnUpperTitle</string>
 								<string key="candidateClassName">UIButton</string>
 							</object>
 						</object>

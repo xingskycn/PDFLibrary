@@ -158,6 +158,26 @@
 }
 
 
++ (Document *)getDocumentForHomepage {
+    Document * item = nil;
+    NSString * sql = @"SELECT * FROM Document WHERE MainScreenFeatured = 1";
+    const char * sqlstatement = [sql UTF8String];
+    sqlite3_stmt* compiled;
+    sqlite3* db = [DBManager getInstance].database;
+    int prepare = sqlite3_prepare_v2(db, sqlstatement, -1, &compiled, NULL);
+    if(prepare == SQLITE_OK)
+    {
+        while(sqlite3_step(compiled) == SQLITE_ROW)
+        {
+            item = [self castFromStatement:compiled] ;
+        }
+        sqlite3_finalize(compiled);
+    }
+    
+    return item;    
+}
+
+
 + (NSArray *)getDocuments
 {
 	NSMutableArray * list = [[NSMutableArray alloc] init];
