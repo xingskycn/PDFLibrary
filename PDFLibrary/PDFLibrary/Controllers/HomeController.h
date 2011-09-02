@@ -11,10 +11,13 @@
 #import "TenarisViewController.h"
 #import "ServiceManager.h"
 #import "ServiceImage.h"
-
+#import "Document.h"
+#import "DocumentDAO.h"
 
 @interface HomeController : TenarisViewController<UIGestureRecognizerDelegate, ServiceManagerDelegate> {
 
+    Document * document;
+    
 }
 
 - (void)loadCategories;

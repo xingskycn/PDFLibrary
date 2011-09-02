@@ -70,7 +70,12 @@
 
 - (void)goToDocument:(Document *)document {
     
-    EbookController * controller = [[EbookController alloc] init];    
+    EbookController * controller;
+    if(document.isEbook) {
+        controller = [[EbookController alloc] init];    
+    } else {
+        controller = [[EbookController alloc] initWithNibName:@"VideoController" bundle:nil];    
+    }
     [self.nav pushViewController:controller animated:YES];
     [controller updateViewFromDocument:document];
     [controller release];

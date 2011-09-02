@@ -59,6 +59,8 @@
 		2731248113DC84410056EBA3 /* portrait-library.png in Resources */ = {isa = PBXBuildFile; fileRef = 2731247D13DC843E0056EBA3 /* portrait-library.png */; };
 		2731248513DC86120056EBA3 /* LibraryController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2731248313DC86120056EBA3 /* LibraryController.xib */; };
 		274A6A89140EEBE900DE39CC /* ScrollViewDocumentCommonController.m in Sources */ = {isa = PBXBuildFile; fileRef = 274A6A88140EEBE900DE39CC /* ScrollViewDocumentCommonController.m */; };
+		274A6A8B14105A8700DE39CC /* VideoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 274A6A8A14105A8700DE39CC /* VideoController.xib */; };
+		274A6A8E14105AF000DE39CC /* img-novideo.png in Resources */ = {isa = PBXBuildFile; fileRef = 274A6A8C14105AF000DE39CC /* img-novideo.png */; };
 		2757476313FA12790093E65C /* ServiceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2757476213FA12790093E65C /* ServiceManager.m */; };
 		2757476613FA18E60093E65C /* Version.m in Sources */ = {isa = PBXBuildFile; fileRef = 2757476513FA18E60093E65C /* Version.m */; };
 		2757476913FA19300093E65C /* VersionDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 2757476813FA19300093E65C /* VersionDAO.m */; };
@@ -336,6 +338,8 @@
 		2731248313DC86120056EBA3 /* LibraryController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LibraryController.xib; path = XIBs/LibraryController.xib; sourceTree = "<group>"; };
 		274A6A87140EEBE900DE39CC /* ScrollViewDocumentCommonController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ScrollViewDocumentCommonController.h; path = "Controllers/table-cells/ScrollViewDocumentCommonController.h"; sourceTree = "<group>"; };
 		274A6A88140EEBE900DE39CC /* ScrollViewDocumentCommonController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ScrollViewDocumentCommonController.m; path = "Controllers/table-cells/ScrollViewDocumentCommonController.m"; sourceTree = "<group>"; };
+		274A6A8A14105A8700DE39CC /* VideoController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = VideoController.xib; path = XIBs/VideoController.xib; sourceTree = "<group>"; };
+		274A6A8C14105AF000DE39CC /* img-novideo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "img-novideo.png"; path = "Resources/Images/img-novideo.png"; sourceTree = "<group>"; };
 		2757476113FA12790093E65C /* ServiceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ServiceManager.h; path = Services/Core/ServiceManager.h; sourceTree = "<group>"; };
 		2757476213FA12790093E65C /* ServiceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ServiceManager.m; path = Services/Core/ServiceManager.m; sourceTree = "<group>"; };
 		2757476413FA18E60093E65C /* Version.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Version.h; path = Database/Domain/Version.h; sourceTree = "<group>"; };
@@ -684,6 +688,7 @@
 				2731247213DB98DF0056EBA3 /* img-listing-filtered-portrait.png */,
 				2731243813DA25120056EBA3 /* img-ebook-medium.png */,
 				2731242313D9FCC50056EBA3 /* img-ebook-big.png */,
+				274A6A8C14105AF000DE39CC /* img-novideo.png */,
 				27F537E813D51BA000A9B2A5 /* popover-categories.png */,
 				27F537E913D51BA000A9B2A5 /* popover-languages.png */,
 			);
@@ -892,6 +897,7 @@
 				2731244213DB7B270056EBA3 /* FiltersController.xib */,
 				2731243513DA24B40056EBA3 /* RequestCopyController.xib */,
 				2731242E13D9FF0E0056EBA3 /* EbookController.xib */,
+				274A6A8A14105A8700DE39CC /* VideoController.xib */,
 				27F537F413D9C58100A9B2A5 /* ContactController.xib */,
 				27D23B0213D46EBC000D3FD5 /* HomeController.xib */,
 				27D23AE713D460FF000D3FD5 /* MainWindow.xib */,
@@ -1393,6 +1399,8 @@
 				BC92F97C140D686C00EEEF26 /* btn-play.png in Resources */,
 				BC92F984140D69E200EEEF26 /* ScrollViewVideo.xib in Resources */,
 				BC92F986140D977A00EEEF26 /* icon-case-study.png in Resources */,
+				274A6A8B14105A8700DE39CC /* VideoController.xib in Resources */,
+				274A6A8E14105AF000DE39CC /* img-novideo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
