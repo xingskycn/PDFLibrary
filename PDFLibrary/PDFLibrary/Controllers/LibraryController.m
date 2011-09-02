@@ -154,7 +154,7 @@
     
     DocumentController * controller;
     if(document.isEbook) {
-        controller = [[DocumentController alloc] init];    
+        controller = [[DocumentController alloc] initWithNibName:@"EbookController" bundle:nil];    
     } else {
         controller = [[DocumentController alloc] initWithNibName:@"VideoController" bundle:nil];    
     } 

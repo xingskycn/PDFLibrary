@@ -855,12 +855,12 @@
 		27D23AD113D45F5A000D3FD5 /* PDFLibrary */ = {
 			isa = PBXGroup;
 			children = (
+				27D23AE613D4602D000D3FD5 /* XIBs */,
 				27EA042C13F8512700E6D3DE /* Services */,
 				27EA042B13F8511900E6D3DE /* Database */,
 				27D23AED13D461DE000D3FD5 /* Resources */,
 				27D23AEC13D461C6000D3FD5 /* Controllers */,
 				27D23AE513D46017000D3FD5 /* Core */,
-				27D23AE613D4602D000D3FD5 /* XIBs */,
 				27D23AD213D45F5A000D3FD5 /* Supporting Files */,
 			);
 			path = PDFLibrary;
